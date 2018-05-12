@@ -30,6 +30,7 @@
         {
             this.pnlNavBar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlActivoProveedor = new System.Windows.Forms.Panel();
             this.pnlActivoEmpleados = new System.Windows.Forms.Panel();
             this.pnlActivoClientes = new System.Windows.Forms.Panel();
             this.pnlActivoMateriales = new System.Windows.Forms.Panel();
@@ -37,6 +38,7 @@
             this.pnlActivoPago = new System.Windows.Forms.Panel();
             this.pnlActivoVentas = new System.Windows.Forms.Panel();
             this.pnlActivoPedidos = new System.Windows.Forms.Panel();
+            this.btnProveedores = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnMateriales = new System.Windows.Forms.Button();
@@ -48,8 +50,6 @@
             this.pnlActivoUsuario = new System.Windows.Forms.Panel();
             this.btnUsuario = new System.Windows.Forms.Button();
             this.pnlCuerpo = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pnlActivoProveedor = new System.Windows.Forms.Panel();
             this.pnlNavBar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,7 +65,7 @@
             this.pnlNavBar.Location = new System.Drawing.Point(0, 0);
             this.pnlNavBar.Margin = new System.Windows.Forms.Padding(0);
             this.pnlNavBar.Name = "pnlNavBar";
-            this.pnlNavBar.Size = new System.Drawing.Size(198, 535);
+            this.pnlNavBar.Size = new System.Drawing.Size(198, 590);
             this.pnlNavBar.TabIndex = 0;
             // 
             // panel1
@@ -79,7 +79,7 @@
             this.panel1.Controls.Add(this.pnlActivoPago);
             this.panel1.Controls.Add(this.pnlActivoVentas);
             this.panel1.Controls.Add(this.pnlActivoPedidos);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnProveedores);
             this.panel1.Controls.Add(this.btnEmpleados);
             this.panel1.Controls.Add(this.btnClientes);
             this.panel1.Controls.Add(this.btnMateriales);
@@ -90,8 +90,17 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(198, 477);
+            this.panel1.Size = new System.Drawing.Size(198, 532);
             this.panel1.TabIndex = 1;
+            // 
+            // pnlActivoProveedor
+            // 
+            this.pnlActivoProveedor.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlActivoProveedor.Location = new System.Drawing.Point(0, 385);
+            this.pnlActivoProveedor.Name = "pnlActivoProveedor";
+            this.pnlActivoProveedor.Size = new System.Drawing.Size(6, 33);
+            this.pnlActivoProveedor.TabIndex = 0;
+            this.pnlActivoProveedor.Visible = false;
             // 
             // pnlActivoEmpleados
             // 
@@ -155,6 +164,28 @@
             this.pnlActivoPedidos.Size = new System.Drawing.Size(6, 33);
             this.pnlActivoPedidos.TabIndex = 0;
             this.pnlActivoPedidos.Visible = false;
+            // 
+            // btnProveedores
+            // 
+            this.btnProveedores.BackColor = System.Drawing.Color.Transparent;
+            this.btnProveedores.FlatAppearance.BorderSize = 0;
+            this.btnProveedores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProveedores.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedores.ForeColor = System.Drawing.Color.DimGray;
+            this.btnProveedores.Image = global::ProyectoBigonHnos.Properties.Resources.proveedor_icon;
+            this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProveedores.Location = new System.Drawing.Point(0, 378);
+            this.btnProveedores.Margin = new System.Windows.Forms.Padding(0);
+            this.btnProveedores.Name = "btnProveedores";
+            this.btnProveedores.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnProveedores.Size = new System.Drawing.Size(198, 48);
+            this.btnProveedores.TabIndex = 1;
+            this.btnProveedores.Text = "Proveedores";
+            this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProveedores.UseVisualStyleBackColor = false;
+            this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
             // 
             // btnEmpleados
             // 
@@ -316,7 +347,7 @@
             this.panel2.Controls.Add(this.pnlActivoUsuario);
             this.panel2.Controls.Add(this.btnUsuario);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 477);
+            this.panel2.Location = new System.Drawing.Point(0, 532);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(198, 58);
             this.panel2.TabIndex = 1;
@@ -358,44 +389,13 @@
             this.pnlCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCuerpo.Location = new System.Drawing.Point(198, 0);
             this.pnlCuerpo.Name = "pnlCuerpo";
-            this.pnlCuerpo.Size = new System.Drawing.Size(749, 535);
+            this.pnlCuerpo.Size = new System.Drawing.Size(793, 590);
             this.pnlCuerpo.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Image = global::ProyectoBigonHnos.Properties.Resources.empleados_icon;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 378);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(198, 48);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Proveedores";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnEmpleados_Click);
-            // 
-            // pnlActivoProveedor
-            // 
-            this.pnlActivoProveedor.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlActivoProveedor.Location = new System.Drawing.Point(0, 387);
-            this.pnlActivoProveedor.Name = "pnlActivoProveedor";
-            this.pnlActivoProveedor.Size = new System.Drawing.Size(6, 33);
-            this.pnlActivoProveedor.TabIndex = 0;
-            this.pnlActivoProveedor.Visible = false;
             // 
             // VistaPrincipal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(947, 535);
+            this.ClientSize = new System.Drawing.Size(991, 590);
             this.Controls.Add(this.pnlCuerpo);
             this.Controls.Add(this.pnlNavBar);
             this.Name = "VistaPrincipal";
@@ -429,7 +429,7 @@
         private System.Windows.Forms.Panel pnlActivoVentas;
         private System.Windows.Forms.Panel pnlActivoPedidos;
         private System.Windows.Forms.Panel pnlActivoUsuario;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnProveedores;
         private System.Windows.Forms.Panel pnlActivoProveedor;
     }
 }
