@@ -47,11 +47,24 @@ namespace ProyectoBigonHnos.controladores
 
         public void listarProvedores()
         {
-            string nombre = "";
+            string calle = "";
+            int numero = 0;
+            string localidad = "";
+            string provincia = "";
+
 
             for (int i = 0; i < Negocio.proveedores.Count(); i++)
             {
                 vista.mostrarProveedor(Negocio.proveedores[i].razonSocial);
+                vista.mostrarTelefono(Negocio.proveedores[i].Telefonos[0].Numero);
+
+                calle = Negocio.proveedores[i].Direcciones[0].Calle;
+                numero = Negocio.proveedores[i].Direcciones[0].Numero;
+                localidad = Negocio.proveedores[i].Direcciones[0].Localidad.Nombre;
+                provincia = Negocio.proveedores[i].Direcciones[0].Localidad.Prov.Nombre;
+
+                vista.mostrarDireccion(calle, numero, localidad, provincia);
+
             }
         }
 
@@ -66,6 +79,11 @@ namespace ProyectoBigonHnos.controladores
 
                 vista.mostrarInformacion(nombre, cuit);
             }
+        }
+
+        public void eliminarProveedor(string razonSocial)
+        {
+            Negocio.borrarProveedor(razonSocial);
         }
     }
 }

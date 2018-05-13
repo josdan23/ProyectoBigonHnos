@@ -12,8 +12,8 @@ namespace ProyectoBigonHnos.dominio
         public string razonSocial { get; set; }
         public string cuit;
         
-        private List<Telefono> Telefonos { get; set; }
-        private List<Direccion> Direcciones { get; set; }
+        public List<Telefono> Telefonos { get; set; }
+        public List<Direccion> Direcciones { get; set; }
 
         public Proveedor(int idProveedor, string razonSocial, string cuit)
         {
