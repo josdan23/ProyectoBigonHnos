@@ -117,16 +117,11 @@ namespace ProyectoBigonHnos.dominio
         //METODO PARA CARGAR PROVEEDORES DE PRUEBA
         public void cargarProveedores()
         {
-            Proveedor prov = new Proveedor(1, "proveedor1", "cuil1");
+            Proveedor prov = new Proveedor( "proveedor1", "cuil1");
             prov.agregarTelefono(new Telefono("nasdfasdf"));
             prov.agregarDireccion(new Direccion("calle1", 233, "sanmiguel", "tucuman"));
             proveedores.Add(prov);
-            //proveedores.Add(new Proveedor(1, "proveedor1", "cuil1"));
-            //proveedores.Add(new Proveedor(2, "proveedor2", "cuil2"));
-            //proveedores.Add(new Proveedor(3, "proveedor3", "cuil3"));
-            //proveedores.Add(new Proveedor(4, "proveedor4", "cuil4"));
-            //proveedores.Add(new Proveedor(5, "proveedor5", "cuil5"));
-            //proveedores.Add(new Proveedor(6, "proveedor6", "cuil6"));
+    
         }
 
         public void cargarVentasConfirmadas(Venta venta)

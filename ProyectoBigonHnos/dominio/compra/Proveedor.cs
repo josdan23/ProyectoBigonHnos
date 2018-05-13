@@ -15,9 +15,9 @@ namespace ProyectoBigonHnos.dominio
         public List<Telefono> Telefonos { get; set; }
         public List<Direccion> Direcciones { get; set; }
 
-        public Proveedor(int idProveedor, string razonSocial, string cuit)
+        public Proveedor(string razonSocial, string cuit)
         {
-            this.idProveedor = idProveedor;
+            //this.idProveedor = idProveedor;
             this.razonSocial = razonSocial;
             this.cuit = cuit;
             Telefonos = new List<Telefono>();

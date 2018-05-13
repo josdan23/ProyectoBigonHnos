@@ -137,6 +137,12 @@
     <Compile Include="vista\pedidos\PedidosView.Designer.cs">
       <DependentUpon>PedidosView.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\proveedor\NuevoProveedorView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\proveedor\NuevoProveedorView.Designer.cs">
+      <DependentUpon>NuevoProveedorView.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\proveedor\ProveedorView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\pedidos\PedidosView.resx">
       <DependentUpon>PedidosView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\proveedor\NuevoProveedorView.resx">
+      <DependentUpon>NuevoProveedorView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\proveedor\ProveedorView.resx">
       <DependentUpon>ProveedorView.cs</DependentUpon>

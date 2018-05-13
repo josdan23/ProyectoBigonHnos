@@ -79,5 +79,12 @@ namespace ProyectoBigonHnos.vista.proveedor
             cboxProveedores.Items.Clear();
             controlador.listarProvedores();
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            NuevoProveedorView vista = new NuevoProveedorView(controlador);
+            vista.ShowDialog();
+            refrescarLista();
+        }
     }
 }

@@ -23,9 +23,9 @@ namespace ProyectoBigonHnos.controladores
             Negocio = Negocio.instancia();
         }
 
-        public void nuevoProveedor(int idProveedor, string razonSocial, string cuit)
+        public void nuevoProveedor( string razonSocial, string cuit)
         {
-            Proveedor = new Proveedor(idProveedor, razonSocial, cuit);
+            Proveedor = new Proveedor( razonSocial, cuit);
         }
 
         public void agregarTelefono(string numeroTelefono)
@@ -56,14 +56,7 @@ namespace ProyectoBigonHnos.controladores
             for (int i = 0; i < Negocio.proveedores.Count(); i++)
             {
                 vista.mostrarProveedor(Negocio.proveedores[i].razonSocial);
-                vista.mostrarTelefono(Negocio.proveedores[i].Telefonos[0].Numero);
-
-                calle = Negocio.proveedores[i].Direcciones[0].Calle;
-                numero = Negocio.proveedores[i].Direcciones[0].Numero;
-                localidad = Negocio.proveedores[i].Direcciones[0].Localidad.Nombre;
-                provincia = Negocio.proveedores[i].Direcciones[0].Localidad.Prov.Nombre;
-
-                vista.mostrarDireccion(calle, numero, localidad, provincia);
+                
 
             }
         }
@@ -78,6 +71,12 @@ namespace ProyectoBigonHnos.controladores
                 string cuit = proveedor.cuit;
 
                 vista.mostrarInformacion(nombre, cuit);
+                vista.mostrarTelefono(proveedor.Telefonos[0].Numero);
+                vista.mostrarDireccion(
+                    proveedor.Direcciones[0].Calle,
+                    proveedor.Direcciones[0].Numero,
+                    proveedor.Direcciones[0].Localidad.Nombre,
+                    proveedor.Direcciones[0].Localidad.Prov.Nombre);
             }
         }
 
