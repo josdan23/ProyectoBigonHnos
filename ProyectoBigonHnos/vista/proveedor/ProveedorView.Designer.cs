@@ -51,6 +51,8 @@
             this.lblLocalidad = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.lblProvincia = new System.Windows.Forms.Label();
+            this.lblIdProveedor = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -126,6 +128,7 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -154,7 +157,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 190);
+            this.label2.Location = new System.Drawing.Point(53, 229);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 3;
@@ -163,7 +166,7 @@
             // lblRazonSocial
             // 
             this.lblRazonSocial.AutoSize = true;
-            this.lblRazonSocial.Location = new System.Drawing.Point(52, 213);
+            this.lblRazonSocial.Location = new System.Drawing.Point(53, 252);
             this.lblRazonSocial.Name = "lblRazonSocial";
             this.lblRazonSocial.Size = new System.Drawing.Size(35, 13);
             this.lblRazonSocial.TabIndex = 3;
@@ -172,7 +175,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 270);
+            this.label4.Location = new System.Drawing.Point(53, 309);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(24, 13);
             this.label4.TabIndex = 3;
@@ -181,7 +184,7 @@
             // lblCuit
             // 
             this.lblCuit.AutoSize = true;
-            this.lblCuit.Location = new System.Drawing.Point(52, 292);
+            this.lblCuit.Location = new System.Drawing.Point(53, 331);
             this.lblCuit.Name = "lblCuit";
             this.lblCuit.Size = new System.Drawing.Size(35, 13);
             this.lblCuit.TabIndex = 3;
@@ -190,7 +193,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(267, 190);
+            this.label3.Location = new System.Drawing.Point(268, 229);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 3;
@@ -199,7 +202,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(547, 190);
+            this.label5.Location = new System.Drawing.Point(548, 229);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 3;
@@ -208,7 +211,7 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(267, 222);
+            this.lblTelefono.Location = new System.Drawing.Point(268, 261);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(54, 13);
             this.lblTelefono.TabIndex = 3;
@@ -217,7 +220,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(547, 222);
+            this.label7.Location = new System.Drawing.Point(548, 261);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 13);
             this.label7.TabIndex = 3;
@@ -226,7 +229,7 @@
             // lblCalle
             // 
             this.lblCalle.AutoSize = true;
-            this.lblCalle.Location = new System.Drawing.Point(636, 222);
+            this.lblCalle.Location = new System.Drawing.Point(637, 261);
             this.lblCalle.Name = "lblCalle";
             this.lblCalle.Size = new System.Drawing.Size(52, 13);
             this.lblCalle.TabIndex = 3;
@@ -235,7 +238,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(547, 257);
+            this.label9.Location = new System.Drawing.Point(548, 296);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 13);
             this.label9.TabIndex = 3;
@@ -244,7 +247,7 @@
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(636, 257);
+            this.lblNumero.Location = new System.Drawing.Point(637, 296);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(52, 13);
             this.lblNumero.TabIndex = 3;
@@ -253,7 +256,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(547, 292);
+            this.label11.Location = new System.Drawing.Point(548, 331);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 13);
             this.label11.TabIndex = 3;
@@ -262,7 +265,7 @@
             // lblLocalidad
             // 
             this.lblLocalidad.AutoSize = true;
-            this.lblLocalidad.Location = new System.Drawing.Point(636, 292);
+            this.lblLocalidad.Location = new System.Drawing.Point(637, 331);
             this.lblLocalidad.Name = "lblLocalidad";
             this.lblLocalidad.Size = new System.Drawing.Size(52, 13);
             this.lblLocalidad.TabIndex = 3;
@@ -271,7 +274,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(547, 328);
+            this.label13.Location = new System.Drawing.Point(548, 367);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(51, 13);
             this.label13.TabIndex = 3;
@@ -280,11 +283,29 @@
             // lblProvincia
             // 
             this.lblProvincia.AutoSize = true;
-            this.lblProvincia.Location = new System.Drawing.Point(636, 328);
+            this.lblProvincia.Location = new System.Drawing.Point(637, 367);
             this.lblProvincia.Name = "lblProvincia";
             this.lblProvincia.Size = new System.Drawing.Size(52, 13);
             this.lblProvincia.TabIndex = 3;
             this.lblProvincia.Text = "Direccion";
+            // 
+            // lblIdProveedor
+            // 
+            this.lblIdProveedor.AutoSize = true;
+            this.lblIdProveedor.Location = new System.Drawing.Point(53, 191);
+            this.lblIdProveedor.Name = "lblIdProveedor";
+            this.lblIdProveedor.Size = new System.Drawing.Size(35, 13);
+            this.lblIdProveedor.TabIndex = 3;
+            this.lblIdProveedor.Text = "label2";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(52, 167);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 13);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Id Proveedor";
             // 
             // ProveedorView
             // 
@@ -301,6 +322,8 @@
             this.Controls.Add(this.lblCalle);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblIdProveedor);
             this.Controls.Add(this.lblRazonSocial);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.label3);
@@ -343,5 +366,7 @@
         private System.Windows.Forms.Label lblLocalidad;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lblProvincia;
+        private System.Windows.Forms.Label lblIdProveedor;
+        private System.Windows.Forms.Label label8;
     }
 }

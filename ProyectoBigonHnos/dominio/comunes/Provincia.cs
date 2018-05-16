@@ -12,7 +12,7 @@ namespace ProyectoBigonHnos.dominio
 
         public Provincia(string nombre)
         {
-            this.Nombre = nombre;
+            Nombre = nombre;
         }
 
         public void mostrar()

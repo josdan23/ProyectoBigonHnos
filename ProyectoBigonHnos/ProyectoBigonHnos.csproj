@@ -137,6 +137,13 @@
     <Compile Include="vista\pedidos\PedidosView.Designer.cs">
       <DependentUpon>PedidosView.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\proveedor\EditarProveedorVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\proveedor\EditarProveedorVista.Designer.cs">
+      <DependentUpon>EditarProveedorVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\proveedor\IProveedorView.cs" />
     <Compile Include="vista\proveedor\NuevoProveedorView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\pedidos\PedidosView.resx">
       <DependentUpon>PedidosView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\proveedor\EditarProveedorVista.resx">
+      <DependentUpon>EditarProveedorVista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\proveedor\NuevoProveedorView.resx">
       <DependentUpon>NuevoProveedorView.cs</DependentUpon>

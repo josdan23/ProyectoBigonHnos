@@ -34,7 +34,7 @@ namespace ProyectoBigonHnos.vista.proveedor
             string localidad = tboxLocalidad.Text;
             string provincia = tboxProvincia.Text;
 
-            controlador.nuevoProveedor(razonSocial, cuit);
+            controlador.crearNuevoProveedor(razonSocial, cuit);
             controlador.agregarTelefono(telefono);
             controlador.agregarDireccion(calle, numero, localidad, provincia);
             controlador.confirmarNuevoProveedor();

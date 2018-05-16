@@ -1,9 +1,4 @@
 ﻿using ProyectoBigonHnos.dominio;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ProyectoBigonHnos.vista;
 
 namespace ProyectoBigonHnos.controladores
@@ -18,7 +13,7 @@ namespace ProyectoBigonHnos.controladores
 
         public GestionarClientesControlador(ClientesView vista)
         {
-            Negocio = Negocio.instancia();
+            Negocio = Negocio.getNegocio();
             this.vista = vista;
         }
 
@@ -71,7 +66,12 @@ namespace ProyectoBigonHnos.controladores
 
             foreach(Direccion dir in cliente.Direcciones)
             {
-                vista.mostrarDireccion(dir.Numero.ToString() , dir.Calle, dir.Localidad.Nombre, dir.Localidad.Prov.Nombre);
+                vista.mostrarDireccion(
+                    dir.Numero.ToString(),
+                    dir.Calle, 
+                    dir.Localidad.Nombre, 
+                    dir.Localidad.Provincia.Nombre
+                    );
             }
         }
 

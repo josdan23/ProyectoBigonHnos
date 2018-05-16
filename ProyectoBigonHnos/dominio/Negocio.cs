@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio
 {
@@ -18,10 +16,9 @@ namespace ProyectoBigonHnos.dominio
         private List<Venta> ventasRealizadas;
         private List<Empleado> empleados;
 
-        public Negocio (CatalogoDeMateriales catalogo)
+        private Negocio (CatalogoDeMateriales catalogo)
         {
 
-            //catalogo = new CatalogoDeMateriales();
             this.catalogo = catalogo;
             proveedores = new List<Proveedor>();
             clientes = new List<Cliente>();
@@ -71,7 +68,7 @@ namespace ProyectoBigonHnos.dominio
         {
             foreach (Proveedor proveedor in proveedores)
             {
-                if (idProveedor == proveedor.getIdProveedor() )
+                if (idProveedor == proveedor.IdProveedor )
                     return proveedor;
             }
             return null;
@@ -81,10 +78,19 @@ namespace ProyectoBigonHnos.dominio
         {
             foreach( Proveedor proveedor in proveedores)
             {
-                if (razonSocial.Equals(proveedor.razonSocial))
+                if (razonSocial.Equals(proveedor.RazonSocial))
                     return proveedor;
             }
             return null;
+        }
+
+        public void actualizarProveedor(int idProveedor, Proveedor proveedor)
+        {
+            for (int i = 0; i < proveedores.Count(); i++)
+            {
+                if (proveedores[i].IdProveedor == idProveedor)
+                    proveedores[i] = proveedor;
+            }
         }
 
         public Pedido buscarPedido(int idPedido )
@@ -117,9 +123,14 @@ namespace ProyectoBigonHnos.dominio
         //METODO PARA CARGAR PROVEEDORES DE PRUEBA
         public void cargarProveedores()
         {
-            Proveedor prov = new Proveedor( "proveedor1", "cuil1");
-            prov.agregarTelefono(new Telefono("nasdfasdf"));
-            prov.agregarDireccion(new Direccion("calle1", 233, "sanmiguel", "tucuman"));
+            Proveedor prov = new Proveedor( );
+            prov.RazonSocial = "rzonSocial";
+            prov.Cuit = "cuit";
+            Console.WriteLine("hola");
+            //prov.agregarTelefono(new Telefono("nasdfasdf"));
+            prov.agregarNuevoTelefono("telefono1");
+            //prov.agregarDireccion(new Direccion("calle1", 233, "sanmiguel", "tucuman"));
+            prov.agregarNuevaDireccion("calle1", 233, "samiguel", "tucuman");
             proveedores.Add(prov);
     
         }
@@ -157,7 +168,7 @@ namespace ProyectoBigonHnos.dominio
         }
 
 
-        public static Negocio instancia()
+        public static Negocio getNegocio()
         {
             if (negocio is null)
                 negocio = new Negocio();
@@ -180,7 +191,7 @@ namespace ProyectoBigonHnos.dominio
         {
             for (int i = 0; i < proveedores.Count; i++)
             {
-                if (proveedores[i].razonSocial.Equals(razonSocial))
+                if (proveedores[i].RazonSocial.Equals(razonSocial))
                 {
                     proveedores.RemoveAt(i);
                     Console.WriteLine("proveedor borrado");

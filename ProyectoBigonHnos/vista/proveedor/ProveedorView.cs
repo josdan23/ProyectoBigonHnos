@@ -11,7 +11,7 @@ using ProyectoBigonHnos.controladores;
 
 namespace ProyectoBigonHnos.vista.proveedor
 {
-    partial class ProveedorView : UserControl
+    partial class ProveedorView : UserControl, IProveedorView
     {
         private GestionarProveedorControlador controlador;
 
@@ -22,47 +22,30 @@ namespace ProyectoBigonHnos.vista.proveedor
             controlador.listarProvedores();
         }
 
-        public void mostrarProveedor(string nombre)
+        public void listarProveedores(string razonSocial)
         {
-            cboxProveedores.Items.Add(nombre);
-
-        }
-
-        public void mostrarInformacion(string razonSocial, string cuit)
-        {
-            lblRazonSocial.Text = razonSocial;
-            lblCuit.Text = cuit;
-        }
-
-        public void mostrarTelefono(string numero)
-        {
-            lblTelefono.Text = numero;
-        }
-
-        public void mostrarDireccion(string calle, int numero, string localidad, string provincia)
-        {
-            lblCalle.Text = calle;
-            lblNumero.Text = $"{numero}";
-            lblLocalidad.Text = localidad;
-            lblProvincia.Text = provincia;
+            cboxProveedores.Items.Add(razonSocial);
         }
 
         private void onSeleccionarItem(object sender, EventArgs e)
         {
+            controlador.obtenerDetalleDeProveedor(obtenerNombreDeItemSeleccionado());
+
             btnEliminar.Enabled = true;
-
-            string item = (string)cboxProveedores.SelectedItem;
-
-            controlador.obtenerDetalle(item);
+            btnEditar.Enabled = true;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            string razonSocial = (string)cboxProveedores.SelectedItem;
-
-            controlador.eliminarProveedor(razonSocial);
+        { 
+            controlador.eliminarProveedor(obtenerNombreDeItemSeleccionado());
             refrescarLista();
             
+        }
+
+
+        private string obtenerNombreDeItemSeleccionado()
+        {
+            return (string) cboxProveedores.SelectedItem;
         }
 
         public void refrescarLista()
@@ -85,6 +68,54 @@ namespace ProyectoBigonHnos.vista.proveedor
             NuevoProveedorView vista = new NuevoProveedorView(controlador);
             vista.ShowDialog();
             refrescarLista();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            int idProveedorSeleccionado = int.Parse(lblIdProveedor.Text);
+            EditarProveedorVista vista = new EditarProveedorVista(idProveedorSeleccionado);
+            vista.ShowDialog();
+            refrescarLista();
+        }
+
+        public void mostrarIdProveedor(int id)
+        {
+            lblIdProveedor.Text = id.ToString();
+        }
+
+        public void mostrarRazonSocial(string razonSocial)
+        {
+            lblRazonSocial.Text = razonSocial;
+        }
+
+        public void mostrarCuit(string cuit)
+        {
+            lblCuit.Text = cuit;
+        }
+
+        public void mostrarCalle(string calle)
+        {
+            lblCalle.Text = calle;
+        }
+
+        public void mostrarNumero(int numero)
+        {
+            lblNumero.Text = numero.ToString();
+        }
+
+        public void mostrarLocalidad(string localidad)
+        {
+            lblLocalidad.Text = localidad;
+        }
+
+        public void mostrarProvincia(string provincia)
+        {
+            lblProvincia.Text = provincia;
+        }
+
+        public void mostrarTelefono(string telefono)
+        {
+            lblTelefono.Text = telefono;
         }
     }
 }

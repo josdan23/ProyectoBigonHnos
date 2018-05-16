@@ -8,42 +8,56 @@ namespace ProyectoBigonHnos.dominio
 {
     class Proveedor
     {
-        private int idProveedor { get; set; }
-        public string razonSocial { get; set; }
-        public string cuit;
-        
-        public List<Telefono> Telefonos { get; set; }
-        public List<Direccion> Direcciones { get; set; }
+        public static int contadorId = 0;
+
+        private int idProveedor;
+        private string razonSocial;
+        private string cuit;
+        private List<Telefono> telefonos;
+        private List<Direccion> direcciones;
+
+
+        public Proveedor()
+        {
+            idProveedor = contadorId;
+            contadorId++;
+            Console.WriteLine(contadorId);
+            telefonos = new List<Telefono>();
+            direcciones = new List<Direccion>();
+        }
 
         public Proveedor(string razonSocial, string cuit)
         {
-            //this.idProveedor = idProveedor;
-            this.razonSocial = razonSocial;
-            this.cuit = cuit;
+            RazonSocial = razonSocial;
+            Cuit = cuit;
             Telefonos = new List<Telefono>();
             Direcciones = new List<Direccion>();
         }
 
+        public int IdProveedor { get => idProveedor; set => idProveedor = value; }
+        public string RazonSocial { get => razonSocial; set => razonSocial = value; }
+        public string Cuit { get => cuit; set => cuit = value; }
+        public List<Telefono> Telefonos { get => telefonos; set => telefonos = value; }
+        public List<Direccion> Direcciones { get => direcciones; set => direcciones = value; }
+
         public void mostrar()
         {
-            Console.WriteLine(idProveedor);
-            Console.WriteLine(razonSocial);
-            Console.WriteLine(cuit);
+            Console.WriteLine(IdProveedor);
+            Console.WriteLine(RazonSocial);
+            Console.WriteLine(Cuit);
         }
 
-        public int getIdProveedor()
+        public void agregarNuevaDireccion(string calle, int numero, string localidad, string provincia)
         {
-            return idProveedor;
+            Direccion nuevaDireccion = new Direccion(calle, numero, localidad, provincia);
+            Direcciones.Add(nuevaDireccion);
         }
 
-        public void agregarDireccion(Direccion direccion)
+        public void agregarNuevoTelefono(String numeroDeTelefono)
         {
-            Direcciones.Add(direccion);
+            Telefono nuevoTelefono = new Telefono(numeroDeTelefono);
+            Telefonos.Add(nuevoTelefono);
         }
 
-        public void agregarTelefono(Telefono telefono)
-        {
-            Telefonos.Add(telefono);
-        }
     }
 }
