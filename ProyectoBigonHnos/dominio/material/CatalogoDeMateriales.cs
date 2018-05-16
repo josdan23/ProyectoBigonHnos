@@ -23,7 +23,7 @@ namespace ProyectoBigonHnos.dominio
         {
             foreach (Material mat in materiales)
             {
-                if (idMaterial == mat.getIdMaterial())
+                if (idMaterial == mat.IdMaterial)
                 {
                     Console.WriteLine($"bug {idMaterial} ");
                     return mat;
@@ -43,14 +43,14 @@ namespace ProyectoBigonHnos.dominio
         public void crearMaterial(string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
         { 
             id = id + 1;
-            materiales.Add(new Material(id, descripcion, cantidad,precio, stockDisponible, stockMinimo));
+            materiales.Add(new Material(descripcion, cantidad,precio, stockDisponible, stockMinimo));
         }
 
         public void borrarMaterial(int idMaterial)
         {
             for (int i = 0; i < materiales.Count; i++)
             {
-                if (materiales.ElementAt(i).idMaterial == idMaterial)
+                if (materiales.ElementAt(i).IdMaterial == idMaterial)
                 {
                     materiales.RemoveAt(i);
                 }
@@ -62,7 +62,7 @@ namespace ProyectoBigonHnos.dominio
         {
             for (int i = 0; i < materiales.Count; i++)
             {
-                if (idMaterial == materiales.ElementAt(i).getIdMaterial())
+                if (idMaterial == materiales.ElementAt(i).IdMaterial)
                     materiales.ElementAt(i).modificarAtributos(descripcion, cantidad, precio, stockDisponible, stockMinimo);
             }
         }
@@ -82,14 +82,14 @@ namespace ProyectoBigonHnos.dominio
             Material material;
             for (int i = 0; i < materiales.Count; i++)
             {
-                if (materiales[i].idMaterial == id)
+                if (materiales[i].IdMaterial == id)
                 {
                     material = materiales[i];
-                    material.descripcion = descripcion;
-                    material.cantidad = cantidad;
-                    material.precio = precio;
-                    material.stockMinimo = stockMinimo;
-                    material.stockDisponible = stockDisponible;
+                    material.Descripcion = descripcion;
+                    material.Cantidad = cantidad;
+                    material.Precio = precio;
+                    material.StockMinimo = stockMinimo;
+                    material.StockDisponible = stockDisponible;
                     materiales[i] = material;
                 }
             }

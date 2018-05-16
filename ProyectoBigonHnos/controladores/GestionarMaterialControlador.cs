@@ -49,12 +49,12 @@ namespace ProyectoBigonHnos.controladores
 
             foreach(Material material in catalogo.materiales)
             {
-                idMaterial = material.idMaterial;
-                descripcion = material.descripcion;
-                cantidad = material.cantidad;
-                precio = material.precio;
-                stockDisponible = material.stockDisponible;
-                stockMinimo = material.stockMinimo;
+                idMaterial = material.IdMaterial;
+                descripcion = material.Descripcion;
+                cantidad = material.Cantidad;
+                precio = material.Precio;
+                stockDisponible = material.StockDisponible;
+                stockMinimo = material.StockMinimo;
 
                 vista.mostrarMaterial(idMaterial, descripcion, cantidad, precio, stockDisponible, stockMinimo);
             }

@@ -8,52 +8,47 @@ namespace ProyectoBigonHnos.dominio
 {
     class Material
     {
-        public int idMaterial { get; set; }
-        public string descripcion { get; set; }
-        public double precio { get; set; }
-        public int stockDisponible { get; set; }
-        public int stockMinimo { get; set; }
-        public int cantidad;
+        private static int contadorId = 0;
 
-        public Material(int idMaterial, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
+        public int IdMaterial { get; set; }
+        public string Descripcion { get; set; }
+        public double Precio { get; set; }
+        public int StockDisponible { get; set; }
+        public int StockMinimo { get; set; }
+        public int Cantidad;
+
+        public Material(string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
         {
-            this.idMaterial = idMaterial;
-            this.descripcion = descripcion;
-            this.precio = precio;
-            this.stockDisponible = stockDisponible;
-            this.stockMinimo = stockMinimo;
-            this.cantidad = cantidad;
+            contadorId++;
+
+            IdMaterial = contadorId;
+            Descripcion = descripcion;
+            Precio = precio;
+            StockDisponible = stockDisponible;
+            StockMinimo = stockMinimo;
+            Cantidad = cantidad;
         }
 
         public void mostrar()
         {
             Console.WriteLine("DESCRIPCIOIN DEL MATERIAL");
-            Console.WriteLine("idMaterial: " + idMaterial);
-            Console.WriteLine("descripcion: " + descripcion);
-            Console.WriteLine("cantidad:" + cantidad);
-            Console.WriteLine("precio: " + precio);
-            Console.WriteLine("stock disponible: " + stockDisponible);
-            Console.WriteLine("stock minimo: " + stockMinimo);
+            Console.WriteLine("idMaterial: " + IdMaterial);
+            Console.WriteLine("descripcion: " + Descripcion);
+            Console.WriteLine("cantidad:" + Cantidad);
+            Console.WriteLine("precio: " + Precio);
+            Console.WriteLine("stock disponible: " + StockDisponible);
+            Console.WriteLine("stock minimo: " + StockMinimo);
             Console.WriteLine();
         }
 
-        public void setIdMaterial(int idMaterial)
-        {
-            this.idMaterial = idMaterial;
-        }
-
-        public int getIdMaterial()
-        {
-            return idMaterial;
-        }
 
         public void modificarAtributos(String descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
         {
-            this.descripcion = descripcion;
-            this.precio = precio;
-            this.stockDisponible = stockDisponible;
-            this.stockMinimo = stockMinimo;
-            this.cantidad = cantidad;
+            this.Descripcion = descripcion;
+            this.Precio = precio;
+            this.StockDisponible = stockDisponible;
+            this.StockMinimo = stockMinimo;
+            this.Cantidad = cantidad;
         }
     }
 }
