@@ -42,13 +42,6 @@ namespace ProyectoBigonHnos.dominio
         }
 
 
-        public void modificarAtributos(String descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
-        {
-            this.Descripcion = descripcion;
-            this.Precio = precio;
-            this.StockDisponible = stockDisponible;
-            this.StockMinimo = stockMinimo;
-            this.Cantidad = cantidad;
-        }
+     
     }
 }

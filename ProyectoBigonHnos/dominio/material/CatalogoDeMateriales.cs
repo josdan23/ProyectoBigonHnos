@@ -11,12 +11,10 @@ namespace ProyectoBigonHnos.dominio
         public static CatalogoDeMateriales catalogo;
 
         public List<Material> materiales { get; set; }
-        private static int id; 
 
         public CatalogoDeMateriales()
         {
             materiales = new List<Material>();
-            id = 0;
         }
 
         public Material obtenerMaterial(int idMaterial)
@@ -25,7 +23,6 @@ namespace ProyectoBigonHnos.dominio
             {
                 if (idMaterial == mat.IdMaterial)
                 {
-                    Console.WriteLine($"bug {idMaterial} ");
                     return mat;
                 }
             }
@@ -42,7 +39,6 @@ namespace ProyectoBigonHnos.dominio
 
         public void crearMaterial(string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
         { 
-            id = id + 1;
             materiales.Add(new Material(descripcion, cantidad,precio, stockDisponible, stockMinimo));
         }
 
@@ -55,15 +51,23 @@ namespace ProyectoBigonHnos.dominio
                     materiales.RemoveAt(i);
                 }
             }
-            
         }
 
         public void modificarMaterial(int idMaterial, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
         {
+            Material material;
+
             for (int i = 0; i < materiales.Count; i++)
             {
                 if (idMaterial == materiales.ElementAt(i).IdMaterial)
-                    materiales.ElementAt(i).modificarAtributos(descripcion, cantidad, precio, stockDisponible, stockMinimo);
+                {
+                    material = materiales.ElementAt(i);
+                    material.Descripcion = descripcion;
+                    material.Cantidad = cantidad;
+                    material.Precio = precio;
+                    material.StockDisponible = stockDisponible;
+                    material.StockMinimo = stockMinimo;
+                }
             }
         }
 
