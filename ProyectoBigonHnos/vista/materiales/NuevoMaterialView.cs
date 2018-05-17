@@ -11,15 +11,14 @@ using System.Windows.Forms;
 
 namespace ProyectoBigonHnos.vista.materiales
 {
-    partial class NuevoMaterialView : Form
+    partial class NuevoMaterialView : Form, IMaterialesView
     {
         GestionarMaterialControlador controlador;
 
-        public NuevoMaterialView(GestionarMaterialControlador controlador)
+        public NuevoMaterialView()
         {
             InitializeComponent();
-
-            this.controlador = controlador;
+            controlador = new GestionarMaterialControlador(this);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,8 +30,12 @@ namespace ProyectoBigonHnos.vista.materiales
             int stockMinimo = int.Parse(tboxMinimo.Text);
 
             controlador.agregarNuevoMaterial(descripcion, cantidad, precio, stockMinimo, stockDisponible);
-
             Dispose();
+        }
+
+        public void mostrarMaterial(int id, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
+        {
+
         }
     }
 }

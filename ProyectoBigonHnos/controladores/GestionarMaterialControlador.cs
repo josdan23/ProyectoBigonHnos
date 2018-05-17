@@ -5,20 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.vista;
+using ProyectoBigonHnos.vista.materiales;
 
 namespace ProyectoBigonHnos.controladores
 {
     class GestionarMaterialControlador
     {
         private CatalogoDeMateriales catalogo;
-        private MaterialView vista;
+        private IMaterialesView vista;
         
-        public GestionarMaterialControlador(MaterialView vista)
+        public GestionarMaterialControlador(IMaterialesView vista)
         {
             this.vista = vista;
+            catalogo = CatalogoDeMateriales.getInstancia();
 
-            this.catalogo = CatalogoDeMateriales.instacia();
-            cargarMateriales();
+            //cargarMateriales();
         }
 
         public void agregarNuevoMaterial(String descripcion, int cantidad, double precio, int stockMinimo, int stockDisponible)
@@ -29,17 +30,15 @@ namespace ProyectoBigonHnos.controladores
         public void eliminarMaterial (int idMaterial)
         {
             catalogo.borrarMaterial(idMaterial);
-            
         }
 
         public void modificarMaterial(int idMaterial, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
         {
-            catalogo.modificarMaterial(idMaterial, descripcion, cantidad, precio, stockDisponible, stockMinimo);
+            catalogo.editarMaterial(idMaterial, descripcion, cantidad, precio, stockDisponible, stockMinimo);
         }
 
         public void listarMateriales()
         {
-
             string descripcion = "";
             int cantidad = 0;
             double precio = 0.0;
@@ -70,9 +69,17 @@ namespace ProyectoBigonHnos.controladores
             agregarNuevoMaterial("madera6", 21, 31.2, 10, 12);
         }
 
-        public void editarMaterial(int id, string descripcion, int cantidad, double precio, int stockMinimo, int stockDisponible)
+        public void detalleMaterial (int idMaterial)
         {
-            catalogo.editarMaterial(id, descripcion, cantidad, precio, stockMinimo, stockDisponible);
+            Material material = catalogo.obtenerMaterial(idMaterial);
+
+            vista.mostrarMaterial(
+                material.IdMaterial,
+                material.Descripcion,
+                material.Cantidad,
+                material.Precio,
+                material.StockDisponible,
+                material.StockMinimo);
         }
     }
 }

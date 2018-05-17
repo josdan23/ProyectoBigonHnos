@@ -8,6 +8,8 @@ namespace ProyectoBigonHnos.dominio
 {
     class CatalogoDeMateriales
     {
+        public const int INDICE_NO_ENCONTRADO = -1;
+
         public static CatalogoDeMateriales catalogo;
 
         public List<Material> materiales { get; set; }
@@ -15,6 +17,15 @@ namespace ProyectoBigonHnos.dominio
         public CatalogoDeMateriales()
         {
             materiales = new List<Material>();
+        }
+
+        public static CatalogoDeMateriales getInstancia()
+        {
+            if (catalogo is null)
+            {
+                catalogo = new CatalogoDeMateriales();
+            }
+            return catalogo;
         }
 
         public Material obtenerMaterial(int idMaterial)
@@ -44,59 +55,39 @@ namespace ProyectoBigonHnos.dominio
 
         public void borrarMaterial(int idMaterial)
         {
+            int indice = getIndiceBuscandoPorId(idMaterial);
+
+            if (indice != INDICE_NO_ENCONTRADO)
+                materiales.RemoveAt(indice);
+        }
+
+
+        public void editarMaterial(int id, string descripcion, int cantidad, double precio, int stockMinimo, int stockDisponible)
+        {
+
+            int indice = getIndiceBuscandoPorId(id);
+
+            if (indice != INDICE_NO_ENCONTRADO)
+            {
+                materiales[indice].Descripcion = descripcion;
+                materiales[indice].Cantidad = cantidad;
+                materiales[indice].Precio = precio;
+                materiales[indice].StockMinimo = stockMinimo;
+                materiales[indice].StockDisponible = stockDisponible;
+            }
+        }
+
+        private int getIndiceBuscandoPorId(int idMaterial)
+        {
             for (int i = 0; i < materiales.Count; i++)
             {
                 if (materiales.ElementAt(i).IdMaterial == idMaterial)
                 {
-                    materiales.RemoveAt(i);
+                    return i;
                 }
             }
-        }
 
-        public void modificarMaterial(int idMaterial, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
-        {
-            Material material;
-
-            for (int i = 0; i < materiales.Count; i++)
-            {
-                if (idMaterial == materiales.ElementAt(i).IdMaterial)
-                {
-                    material = materiales.ElementAt(i);
-                    material.Descripcion = descripcion;
-                    material.Cantidad = cantidad;
-                    material.Precio = precio;
-                    material.StockDisponible = stockDisponible;
-                    material.StockMinimo = stockMinimo;
-                }
-            }
-        }
-
-
-        public static CatalogoDeMateriales instacia()
-        {
-            if (catalogo is null)
-            {
-                catalogo = new CatalogoDeMateriales();
-            }
-            return catalogo;
-        }
-
-        public void editarMaterial(int id, string descripcion, int cantidad, double precio, int stockMinimo, int stockDisponible)
-        {
-            Material material;
-            for (int i = 0; i < materiales.Count; i++)
-            {
-                if (materiales[i].IdMaterial == id)
-                {
-                    material = materiales[i];
-                    material.Descripcion = descripcion;
-                    material.Cantidad = cantidad;
-                    material.Precio = precio;
-                    material.StockMinimo = stockMinimo;
-                    material.StockDisponible = stockDisponible;
-                    materiales[i] = material;
-                }
-            }
+            return INDICE_NO_ENCONTRADO;
         }
 
     }

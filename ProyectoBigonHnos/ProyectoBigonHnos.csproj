@@ -113,6 +113,7 @@
     <Compile Include="vista\materiales\EditarMaterialView.Designer.cs">
       <DependentUpon>EditarMaterialView.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\materiales\IMaterialesView.cs" />
     <Compile Include="vista\materiales\MaterialView.cs">
       <SubType>UserControl</SubType>
     </Compile>

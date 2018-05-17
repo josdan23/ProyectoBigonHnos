@@ -1,6 +1,6 @@
-﻿namespace ProyectoBigonHnos.vista
+﻿namespace ProyectoBigonHnos.vista.materiales
 {
-    partial class EditarMaterialVista
+    partial class EditarMaterialView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,157 +28,159 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tboxMinimo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tboxStockDisponible = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tboxCantidad = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tboxPrecio = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tboxDescripcion = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tboxIdMaterial = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // tboxMinimo
             // 
-            this.button1.Location = new System.Drawing.Point(676, 380);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(567, 380);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(165, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Descripcion";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(168, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(165, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Cantidad";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(168, 107);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(165, 146);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Precio";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(168, 162);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(165, 197);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Cantidad";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(168, 213);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
+            this.tboxMinimo.Location = new System.Drawing.Point(80, 299);
+            this.tboxMinimo.Name = "tboxMinimo";
+            this.tboxMinimo.Size = new System.Drawing.Size(100, 20);
+            this.tboxMinimo.TabIndex = 17;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(165, 242);
+            this.label5.Location = new System.Drawing.Point(77, 282);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Stock Disponible";
+            this.label5.Size = new System.Drawing.Size(71, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Stock Minimo";
             // 
-            // textBox5
+            // tboxStockDisponible
             // 
-            this.textBox5.Location = new System.Drawing.Point(168, 258);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 3;
+            this.tboxStockDisponible.Location = new System.Drawing.Point(80, 253);
+            this.tboxStockDisponible.Name = "tboxStockDisponible";
+            this.tboxStockDisponible.Size = new System.Drawing.Size(100, 20);
+            this.tboxStockDisponible.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(77, 236);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Stock disponible";
+            // 
+            // tboxCantidad
+            // 
+            this.tboxCantidad.Location = new System.Drawing.Point(80, 202);
+            this.tboxCantidad.Name = "tboxCantidad";
+            this.tboxCantidad.Size = new System.Drawing.Size(100, 20);
+            this.tboxCantidad.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(77, 185);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Cantidad";
+            // 
+            // tboxPrecio
+            // 
+            this.tboxPrecio.Location = new System.Drawing.Point(80, 145);
+            this.tboxPrecio.Name = "tboxPrecio";
+            this.tboxPrecio.Size = new System.Drawing.Size(100, 20);
+            this.tboxPrecio.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(77, 128);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Precio";
+            // 
+            // tboxDescripcion
+            // 
+            this.tboxDescripcion.Location = new System.Drawing.Point(80, 101);
+            this.tboxDescripcion.Name = "tboxDescripcion";
+            this.tboxDescripcion.Size = new System.Drawing.Size(100, 20);
+            this.tboxDescripcion.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(77, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Descripcion";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(556, 344);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(649, 344);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(165, 288);
+            this.label6.Location = new System.Drawing.Point(77, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Stock Minimo";
+            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Id Material";
             // 
-            // textBox6
+            // tboxIdMaterial
             // 
-            this.textBox6.Location = new System.Drawing.Point(168, 304);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 3;
+            this.tboxIdMaterial.Location = new System.Drawing.Point(80, 49);
+            this.tboxIdMaterial.Name = "tboxIdMaterial";
+            this.tboxIdMaterial.ReadOnly = true;
+            this.tboxIdMaterial.Size = new System.Drawing.Size(100, 20);
+            this.tboxIdMaterial.TabIndex = 7;
             // 
-            // EditarMaterialVista
+            // EditarMaterialView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tboxMinimo);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tboxStockDisponible);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tboxCantidad);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tboxPrecio);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tboxIdMaterial);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.tboxDescripcion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "EditarMaterialVista";
-            this.Text = "EditarMaterialVista";
+            this.Name = "EditarMaterialView";
+            this.Text = "EditarMaterialView";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,19 +188,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tboxMinimo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tboxStockDisponible;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox tboxCantidad;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tboxPrecio;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tboxDescripcion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tboxIdMaterial;
     }
 }

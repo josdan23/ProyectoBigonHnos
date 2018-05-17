@@ -87,6 +87,14 @@ namespace ProyectoBigonHnos.vista
             pnlActivoUsuario.Show();
         }
 
+       
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            ocultarPaneles();
+            pnlActivoProveedor.Show();
+            agregarVista(new ProveedorView());
+        }
+
         public void agregarVista(UserControl usercontrol)
         {
             pnlCuerpo.Controls.Clear();
@@ -94,11 +102,5 @@ namespace ProyectoBigonHnos.vista
             pnlCuerpo.Controls.Add(usercontrol);
         }
 
-        private void btnProveedores_Click(object sender, EventArgs e)
-        {
-            ocultarPaneles();
-            pnlActivoProveedor.Show();
-            agregarVista(new ProveedorView());
-        }
     }
 }

@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoBigonHnos.controladores;
 using ProyectoBigonHnos.vista.materiales;
 
 namespace ProyectoBigonHnos.vista
 {
-    public partial class MaterialView : UserControl
+    public partial class MaterialView : UserControl, IMaterialesView
     {
         private GestionarMaterialControlador controlador;
             
@@ -25,11 +18,6 @@ namespace ProyectoBigonHnos.vista
 
         }
         
-        public void mostrarMaterial(int id, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
-        {
-            dgvMateriales.Rows.Add(id, descripcion, cantidad, precio, stockDisponible, stockMinimo);
-        }
-
         public void refrescarTabla()
         {
             dgvMateriales.Rows.Clear();
@@ -38,8 +26,6 @@ namespace ProyectoBigonHnos.vista
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //int id = (int) dgvMateriales.CurrentRow.Cells[0].Value;
-
             if (dgvMateriales.CurrentRow.Cells[0].Value != null)
             {
                 int id = int.Parse(dgvMateriales.CurrentRow.Cells[0].Value.ToString());
@@ -55,20 +41,29 @@ namespace ProyectoBigonHnos.vista
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            EditarMaterialVista vista = new EditarMaterialVista();
+            int id = obtenerIdMaterialSeleccionado();
+            EditarMaterialView vista = new EditarMaterialView(id);
+            Console.WriteLine(id);
             vista.ShowDialog();
             refrescarTabla();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            NuevoMaterialView vista = new NuevoMaterialView(controlador);
+            NuevoMaterialView vista = new NuevoMaterialView();
             vista.ShowDialog();
             Console.WriteLine("NUEVO ELEMENTOO");
             refrescarTabla();
-
         }
 
-       
+        public void mostrarMaterial(int id, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
+        {
+            dgvMateriales.Rows.Add(id, descripcion, cantidad, precio, stockDisponible, stockMinimo);
+        }
+
+        public int obtenerIdMaterialSeleccionado()
+        {
+            return (int) dgvMateriales.CurrentRow.Cells[0].Value;
+        }
     }
 }
