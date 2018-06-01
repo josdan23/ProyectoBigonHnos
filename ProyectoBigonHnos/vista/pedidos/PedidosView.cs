@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoBigonHnos.vista.pedidos;
 
 namespace ProyectoBigonHnos.vista
 {
-    public partial class PedidosView : UserControl
+    partial class PedidosView : UserControl
     {
         public PedidosView()
         {
             InitializeComponent();
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            NuevoPedidoView vista = new NuevoPedidoView();
+            vista.ShowDialog();
         }
     }
 }

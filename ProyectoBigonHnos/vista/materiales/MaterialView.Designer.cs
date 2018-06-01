@@ -65,7 +65,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(207, 53);
+            this.panel3.Size = new System.Drawing.Size(226, 53);
             this.panel3.TabIndex = 1;
             // 
             // label1

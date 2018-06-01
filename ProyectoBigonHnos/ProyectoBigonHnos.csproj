@@ -132,6 +132,12 @@
     <Compile Include="vista\materiales\NuevoMaterialView.Designer.cs">
       <DependentUpon>NuevoMaterialView.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\pedidos\NuevoPedidoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\pedidos\NuevoPedidoView.Designer.cs">
+      <DependentUpon>NuevoPedidoView.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\pedidos\PedidosView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\materiales\NuevoMaterialView.resx">
       <DependentUpon>NuevoMaterialView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\pedidos\NuevoPedidoView.resx">
+      <DependentUpon>NuevoPedidoView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\pedidos\PedidosView.resx">
       <DependentUpon>PedidosView.cs</DependentUpon>
