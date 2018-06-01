@@ -132,11 +132,29 @@
     <Compile Include="vista\materiales\NuevoMaterialView.Designer.cs">
       <DependentUpon>NuevoMaterialView.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\pedidos\AgregarClienteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\pedidos\AgregarClienteView.Designer.cs">
+      <DependentUpon>AgregarClienteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\pedidos\NuevoComponenteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\pedidos\NuevoComponenteView.Designer.cs">
+      <DependentUpon>NuevoComponenteView.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\pedidos\NuevoPedidoView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\pedidos\NuevoPedidoView.Designer.cs">
       <DependentUpon>NuevoPedidoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\pedidos\NuevoProductoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\pedidos\NuevoProductoView.Designer.cs">
+      <DependentUpon>NuevoProductoView.cs</DependentUpon>
     </Compile>
     <Compile Include="vista\pedidos\PedidosView.cs">
       <SubType>UserControl</SubType>
@@ -203,8 +221,17 @@
     <EmbeddedResource Include="vista\materiales\NuevoMaterialView.resx">
       <DependentUpon>NuevoMaterialView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vista\pedidos\AgregarClienteView.resx">
+      <DependentUpon>AgregarClienteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\pedidos\NuevoComponenteView.resx">
+      <DependentUpon>NuevoComponenteView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\pedidos\NuevoPedidoView.resx">
       <DependentUpon>NuevoPedidoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\pedidos\NuevoProductoView.resx">
+      <DependentUpon>NuevoProductoView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\pedidos\PedidosView.resx">
       <DependentUpon>PedidosView.cs</DependentUpon>

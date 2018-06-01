@@ -26,5 +26,23 @@ namespace ProyectoBigonHnos.vista.pedidos
         {
 
         }
+
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+            AgregarClienteView vista = new AgregarClienteView();
+            vista.ShowDialog();
+        }
+
+        private void btnNuevoProducto_Click(object sender, EventArgs e)
+        {
+            NuevoProductoView vista = new NuevoProductoView();
+            vista.ShowDialog();
+        }
+
+        private void btnNuevoComponente_Click(object sender, EventArgs e)
+        {
+            NuevoComponenteView vista = new NuevoComponenteView();
+            vista.ShowDialog();
+        }
     }
 }
