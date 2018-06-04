@@ -36,13 +36,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tboxDescripcion = new System.Windows.Forms.TextBox();
+            this.tboxAlto = new System.Windows.Forms.TextBox();
+            this.tboxAncho = new System.Windows.Forms.TextBox();
+            this.tboxProfundidad = new System.Windows.Forms.TextBox();
+            this.tboxColorP = new System.Windows.Forms.TextBox();
+            this.tboxColorS = new System.Windows.Forms.TextBox();
+            this.tboxCantidad = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -68,105 +68,105 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(71, 128);
+            this.label3.Location = new System.Drawing.Point(109, 128);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.Size = new System.Drawing.Size(25, 13);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Descripción";
+            this.label3.Text = "Alto";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 167);
+            this.label4.Location = new System.Drawing.Point(96, 167);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Descripción";
+            this.label4.Text = "Ancho";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(71, 206);
+            this.label5.Location = new System.Drawing.Point(70, 206);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 13);
+            this.label5.Size = new System.Drawing.Size(64, 13);
             this.label5.TabIndex = 1;
-            this.label5.Text = "Descripción";
+            this.label5.Text = "Profundidad";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(71, 243);
+            this.label6.Location = new System.Drawing.Point(63, 243);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 13);
+            this.label6.Size = new System.Drawing.Size(71, 13);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Descripción";
+            this.label6.Text = "Color Primario";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(71, 282);
+            this.label7.Location = new System.Drawing.Point(46, 282);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 13);
+            this.label7.Size = new System.Drawing.Size(88, 13);
             this.label7.TabIndex = 1;
-            this.label7.Text = "Descripción";
+            this.label7.Text = "Color Secundario";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(71, 322);
+            this.label8.Location = new System.Drawing.Point(85, 322);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 13);
+            this.label8.Size = new System.Drawing.Size(49, 13);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Descripción";
+            this.label8.Text = "Cantidad";
             // 
-            // textBox1
+            // tboxDescripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(140, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 2;
+            this.tboxDescripcion.Location = new System.Drawing.Point(140, 84);
+            this.tboxDescripcion.Name = "tboxDescripcion";
+            this.tboxDescripcion.Size = new System.Drawing.Size(200, 20);
+            this.tboxDescripcion.TabIndex = 2;
             // 
-            // textBox2
+            // tboxAlto
             // 
-            this.textBox2.Location = new System.Drawing.Point(140, 125);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 2;
+            this.tboxAlto.Location = new System.Drawing.Point(140, 125);
+            this.tboxAlto.Name = "tboxAlto";
+            this.tboxAlto.Size = new System.Drawing.Size(200, 20);
+            this.tboxAlto.TabIndex = 2;
             // 
-            // textBox3
+            // tboxAncho
             // 
-            this.textBox3.Location = new System.Drawing.Point(140, 164);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 20);
-            this.textBox3.TabIndex = 2;
+            this.tboxAncho.Location = new System.Drawing.Point(140, 164);
+            this.tboxAncho.Name = "tboxAncho";
+            this.tboxAncho.Size = new System.Drawing.Size(200, 20);
+            this.tboxAncho.TabIndex = 2;
             // 
-            // textBox4
+            // tboxProfundidad
             // 
-            this.textBox4.Location = new System.Drawing.Point(140, 203);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 20);
-            this.textBox4.TabIndex = 2;
+            this.tboxProfundidad.Location = new System.Drawing.Point(140, 203);
+            this.tboxProfundidad.Name = "tboxProfundidad";
+            this.tboxProfundidad.Size = new System.Drawing.Size(200, 20);
+            this.tboxProfundidad.TabIndex = 2;
             // 
-            // textBox5
+            // tboxColorP
             // 
-            this.textBox5.Location = new System.Drawing.Point(140, 240);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(200, 20);
-            this.textBox5.TabIndex = 2;
+            this.tboxColorP.Location = new System.Drawing.Point(140, 240);
+            this.tboxColorP.Name = "tboxColorP";
+            this.tboxColorP.Size = new System.Drawing.Size(200, 20);
+            this.tboxColorP.TabIndex = 2;
             // 
-            // textBox6
+            // tboxColorS
             // 
-            this.textBox6.Location = new System.Drawing.Point(140, 279);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(200, 20);
-            this.textBox6.TabIndex = 2;
+            this.tboxColorS.Location = new System.Drawing.Point(140, 279);
+            this.tboxColorS.Name = "tboxColorS";
+            this.tboxColorS.Size = new System.Drawing.Size(200, 20);
+            this.tboxColorS.TabIndex = 2;
             // 
-            // textBox7
+            // tboxCantidad
             // 
-            this.textBox7.Location = new System.Drawing.Point(140, 319);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(200, 20);
-            this.textBox7.TabIndex = 2;
+            this.tboxCantidad.Location = new System.Drawing.Point(140, 319);
+            this.tboxCantidad.Name = "tboxCantidad";
+            this.tboxCantidad.Size = new System.Drawing.Size(200, 20);
+            this.tboxCantidad.TabIndex = 2;
             // 
             // button1
             // 
@@ -176,6 +176,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -185,6 +186,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // NuevoProductoView
             // 
@@ -193,13 +195,13 @@
             this.ClientSize = new System.Drawing.Size(447, 421);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tboxCantidad);
+            this.Controls.Add(this.tboxColorS);
+            this.Controls.Add(this.tboxColorP);
+            this.Controls.Add(this.tboxProfundidad);
+            this.Controls.Add(this.tboxAncho);
+            this.Controls.Add(this.tboxAlto);
+            this.Controls.Add(this.tboxDescripcion);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -225,13 +227,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tboxDescripcion;
+        private System.Windows.Forms.TextBox tboxAlto;
+        private System.Windows.Forms.TextBox tboxAncho;
+        private System.Windows.Forms.TextBox tboxProfundidad;
+        private System.Windows.Forms.TextBox tboxColorP;
+        private System.Windows.Forms.TextBox tboxColorS;
+        private System.Windows.Forms.TextBox tboxCantidad;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }

@@ -33,6 +33,7 @@ namespace ProyectoBigonHnos.vista.pedidos
         private void btnNuevoProducto_Click(object sender, EventArgs e)
         {
             NuevoProductoView vista = new NuevoProductoView();
+            vista.unirControlador(controlador);
             vista.ShowDialog();
         }
 
@@ -47,6 +48,11 @@ namespace ProyectoBigonHnos.vista.pedidos
             this.controlador = controlador;
             controlador.unirVista(this);
             Console.WriteLine("estoy en vista de nuevo pedido");
+        }
+
+        public void mostrarDescripcion(string descripcion)
+        {
+            
         }
     }
 }
