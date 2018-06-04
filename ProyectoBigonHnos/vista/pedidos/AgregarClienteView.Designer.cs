@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.tbBuscarDni = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,16 +40,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblDni = new System.Windows.Forms.Label();
+            this.lblNumero = new System.Windows.Forms.Label();
+            this.lblCalle = new System.Windows.Forms.Label();
+            this.lblProvincia = new System.Windows.Forms.Label();
+            this.lblLocalidad = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -61,21 +61,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar Cliente";
             // 
-            // button1
+            // btnBuscar
             // 
-            this.button1.Location = new System.Drawing.Point(240, 58);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBuscar.Location = new System.Drawing.Point(240, 58);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // textBox1
+            // tbBuscarDni
             // 
-            this.textBox1.Location = new System.Drawing.Point(87, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 20);
-            this.textBox1.TabIndex = 3;
+            this.tbBuscarDni.Location = new System.Drawing.Point(87, 60);
+            this.tbBuscarDni.Name = "tbBuscarDni";
+            this.tbBuscarDni.Size = new System.Drawing.Size(136, 20);
+            this.tbBuscarDni.TabIndex = 3;
             // 
             // label2
             // 
@@ -158,124 +159,126 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "TELEFONO";
             // 
-            // label11
+            // lblNombre
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(172, 105);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 13);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "NOMBRE";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(172, 105);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(54, 13);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "NOMBRE";
             // 
-            // label12
+            // lblApellido
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(172, 140);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "APELLIDO";
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(172, 140);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(59, 13);
+            this.lblApellido.TabIndex = 0;
+            this.lblApellido.Text = "APELLIDO";
             // 
-            // label13
+            // lblDni
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(172, 178);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(26, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "DNI";
+            this.lblDni.AutoSize = true;
+            this.lblDni.Location = new System.Drawing.Point(172, 178);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(26, 13);
+            this.lblDni.TabIndex = 0;
+            this.lblDni.Text = "DNI";
             // 
-            // label14
+            // lblNumero
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(172, 215);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(55, 13);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "NUMERO";
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Location = new System.Drawing.Point(172, 215);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(55, 13);
+            this.lblNumero.TabIndex = 0;
+            this.lblNumero.Text = "NUMERO";
             // 
-            // label15
+            // lblCalle
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(172, 251);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(40, 13);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "CALLE";
+            this.lblCalle.AutoSize = true;
+            this.lblCalle.Location = new System.Drawing.Point(172, 251);
+            this.lblCalle.Name = "lblCalle";
+            this.lblCalle.Size = new System.Drawing.Size(40, 13);
+            this.lblCalle.TabIndex = 0;
+            this.lblCalle.Text = "CALLE";
             // 
-            // label16
+            // lblProvincia
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(172, 289);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(65, 13);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "PROVINCIA";
+            this.lblProvincia.AutoSize = true;
+            this.lblProvincia.Location = new System.Drawing.Point(172, 289);
+            this.lblProvincia.Name = "lblProvincia";
+            this.lblProvincia.Size = new System.Drawing.Size(65, 13);
+            this.lblProvincia.TabIndex = 0;
+            this.lblProvincia.Text = "PROVINCIA";
             // 
-            // label17
+            // lblLocalidad
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(172, 323);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(67, 13);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "LOCALIDAD";
+            this.lblLocalidad.AutoSize = true;
+            this.lblLocalidad.Location = new System.Drawing.Point(172, 323);
+            this.lblLocalidad.Name = "lblLocalidad";
+            this.lblLocalidad.Size = new System.Drawing.Size(67, 13);
+            this.lblLocalidad.TabIndex = 0;
+            this.lblLocalidad.Text = "LOCALIDAD";
             // 
-            // label18
+            // lblTelefono
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(172, 360);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(64, 13);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "TELEFONO";
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(172, 360);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(64, 13);
+            this.lblTelefono.TabIndex = 0;
+            this.lblTelefono.Text = "TELEFONO";
             // 
-            // button2
+            // btnGuardar
             // 
-            this.button2.Location = new System.Drawing.Point(240, 407);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnGuardar.Location = new System.Drawing.Point(240, 407);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 2;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // button3
+            // btnCancelar
             // 
-            this.button3.Location = new System.Drawing.Point(150, 407);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(150, 407);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // AgregarCliente
+            // AgregarClienteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(353, 462);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
+            this.Controls.Add(this.tbBuscarDni);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.lblTelefono);
+            this.Controls.Add(this.lblLocalidad);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label16);
+            this.Controls.Add(this.lblProvincia);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label15);
+            this.Controls.Add(this.lblCalle);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.lblNumero);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.lblDni);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "AgregarCliente";
+            this.Name = "AgregarClienteView";
             this.Text = "AgregarCliente";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -285,8 +288,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox tbBuscarDni;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -296,15 +299,15 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblDni;
+        private System.Windows.Forms.Label lblNumero;
+        private System.Windows.Forms.Label lblCalle;
+        private System.Windows.Forms.Label lblProvincia;
+        private System.Windows.Forms.Label lblLocalidad;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

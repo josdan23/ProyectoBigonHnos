@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProyectoBigonHnos.dominio;
+using System;
 using System.Windows.Forms;
 
 namespace ProyectoBigonHnos.vista.pedidos
 {
-    partial class NuevoPedidoView : Form
+    partial class NuevoPedidoView : Form, IPedidoView
     {
+        PedidoControlador controlador;
+
         public NuevoPedidoView()
         {
             InitializeComponent();
@@ -30,6 +26,7 @@ namespace ProyectoBigonHnos.vista.pedidos
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
             AgregarClienteView vista = new AgregarClienteView();
+            vista.unirControlador(controlador);
             vista.ShowDialog();
         }
 
@@ -43,6 +40,13 @@ namespace ProyectoBigonHnos.vista.pedidos
         {
             NuevoComponenteView vista = new NuevoComponenteView();
             vista.ShowDialog();
+        }
+
+        public void unirControlador(PedidoControlador controlador)
+        {
+            this.controlador = controlador;
+            controlador.unirVista(this);
+            Console.WriteLine("estoy en vista de nuevo pedido");
         }
     }
 }

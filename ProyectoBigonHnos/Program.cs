@@ -62,7 +62,7 @@ namespace ProyectoBigonHnos
         public static void probarNuevoPedido()
         {
 
-            PedidoControlador controlador = new PedidoControlador(negocio);
+            PedidoControlador controlador = new PedidoControlador();
 
             controlador.crearNuevoPedido();
             controlador.agregarProducto("cocina", 2.1, 3.5, 2.5, "blanco", "beige", 1);
