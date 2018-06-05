@@ -11,12 +11,12 @@ namespace ProyectoBigonHnos.dominio
 
         private static int id = 0;
         public int idPedido { get; set; }
-        private DateTime fechaDePedido;
-        private DateTime fechaDeEntrega;
-        private string estado;
-        private Cliente cliente;
+        public DateTime fechaDePedido;
+        public DateTime fechaDeEntrega;
+        public string estado;
+        public Cliente cliente{ get; set;}
 
-        private List<LineaDePedido> lineasDePedido;
+        public List<LineaDePedido> lineasDePedido;
 
         public Pedido()
         {

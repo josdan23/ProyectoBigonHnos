@@ -37,14 +37,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tboxDescripcion = new System.Windows.Forms.TextBox();
+            this.tboxAlto = new System.Windows.Forms.TextBox();
+            this.tboxAncho = new System.Windows.Forms.TextBox();
+            this.tboxProfundidad = new System.Windows.Forms.TextBox();
+            this.tboxColorP = new System.Windows.Forms.TextBox();
+            this.tboxColorS = new System.Windows.Forms.TextBox();
+            this.tboxCantidad = new System.Windows.Forms.TextBox();
+            this.cboxMaterial = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -130,62 +130,62 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Material";
             // 
-            // textBox1
+            // tboxDescripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(152, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 20);
-            this.textBox1.TabIndex = 1;
+            this.tboxDescripcion.Location = new System.Drawing.Point(152, 71);
+            this.tboxDescripcion.Name = "tboxDescripcion";
+            this.tboxDescripcion.Size = new System.Drawing.Size(141, 20);
+            this.tboxDescripcion.TabIndex = 1;
             // 
-            // textBox2
+            // tboxAlto
             // 
-            this.textBox2.Location = new System.Drawing.Point(152, 108);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 20);
-            this.textBox2.TabIndex = 1;
+            this.tboxAlto.Location = new System.Drawing.Point(152, 108);
+            this.tboxAlto.Name = "tboxAlto";
+            this.tboxAlto.Size = new System.Drawing.Size(141, 20);
+            this.tboxAlto.TabIndex = 1;
             // 
-            // textBox3
+            // tboxAncho
             // 
-            this.textBox3.Location = new System.Drawing.Point(152, 145);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(141, 20);
-            this.textBox3.TabIndex = 1;
+            this.tboxAncho.Location = new System.Drawing.Point(152, 145);
+            this.tboxAncho.Name = "tboxAncho";
+            this.tboxAncho.Size = new System.Drawing.Size(141, 20);
+            this.tboxAncho.TabIndex = 1;
             // 
-            // textBox4
+            // tboxProfundidad
             // 
-            this.textBox4.Location = new System.Drawing.Point(152, 182);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(141, 20);
-            this.textBox4.TabIndex = 1;
+            this.tboxProfundidad.Location = new System.Drawing.Point(152, 182);
+            this.tboxProfundidad.Name = "tboxProfundidad";
+            this.tboxProfundidad.Size = new System.Drawing.Size(141, 20);
+            this.tboxProfundidad.TabIndex = 1;
             // 
-            // textBox5
+            // tboxColorP
             // 
-            this.textBox5.Location = new System.Drawing.Point(152, 219);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(141, 20);
-            this.textBox5.TabIndex = 1;
+            this.tboxColorP.Location = new System.Drawing.Point(152, 219);
+            this.tboxColorP.Name = "tboxColorP";
+            this.tboxColorP.Size = new System.Drawing.Size(141, 20);
+            this.tboxColorP.TabIndex = 1;
             // 
-            // textBox6
+            // tboxColorS
             // 
-            this.textBox6.Location = new System.Drawing.Point(152, 256);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(141, 20);
-            this.textBox6.TabIndex = 1;
+            this.tboxColorS.Location = new System.Drawing.Point(152, 256);
+            this.tboxColorS.Name = "tboxColorS";
+            this.tboxColorS.Size = new System.Drawing.Size(141, 20);
+            this.tboxColorS.TabIndex = 1;
             // 
-            // textBox7
+            // tboxCantidad
             // 
-            this.textBox7.Location = new System.Drawing.Point(152, 293);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(141, 20);
-            this.textBox7.TabIndex = 1;
+            this.tboxCantidad.Location = new System.Drawing.Point(152, 293);
+            this.tboxCantidad.Name = "tboxCantidad";
+            this.tboxCantidad.Size = new System.Drawing.Size(141, 20);
+            this.tboxCantidad.TabIndex = 1;
             // 
-            // comboBox1
+            // cboxMaterial
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(152, 330);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(141, 21);
-            this.comboBox1.TabIndex = 2;
+            this.cboxMaterial.FormattingEnabled = true;
+            this.cboxMaterial.Location = new System.Drawing.Point(152, 330);
+            this.cboxMaterial.Name = "cboxMaterial";
+            this.cboxMaterial.Size = new System.Drawing.Size(141, 21);
+            this.cboxMaterial.TabIndex = 2;
             // 
             // button1
             // 
@@ -195,6 +195,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -204,6 +205,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // NuevoComponenteView
             // 
@@ -212,14 +214,14 @@
             this.ClientSize = new System.Drawing.Size(415, 450);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cboxMaterial);
+            this.Controls.Add(this.tboxCantidad);
+            this.Controls.Add(this.tboxColorS);
+            this.Controls.Add(this.tboxColorP);
+            this.Controls.Add(this.tboxProfundidad);
+            this.Controls.Add(this.tboxAncho);
+            this.Controls.Add(this.tboxAlto);
+            this.Controls.Add(this.tboxDescripcion);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -247,14 +249,14 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox tboxDescripcion;
+        private System.Windows.Forms.TextBox tboxAlto;
+        private System.Windows.Forms.TextBox tboxAncho;
+        private System.Windows.Forms.TextBox tboxProfundidad;
+        private System.Windows.Forms.TextBox tboxColorP;
+        private System.Windows.Forms.TextBox tboxColorS;
+        private System.Windows.Forms.TextBox tboxCantidad;
+        private System.Windows.Forms.ComboBox cboxMaterial;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }

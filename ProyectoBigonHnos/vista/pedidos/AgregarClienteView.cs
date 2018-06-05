@@ -78,5 +78,10 @@ namespace ProyectoBigonHnos.vista.pedidos
         {
             Dispose();
         }
+
+        public void ActualizarVista()
+        {
+            Console.WriteLine("vista de agregar cliente");
+        }
     }
 }

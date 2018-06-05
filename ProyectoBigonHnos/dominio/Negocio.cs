@@ -10,11 +10,11 @@ namespace ProyectoBigonHnos.dominio
         public static Negocio negocio;
 
         public List<Cliente> clientes { get; set; }
-        private CatalogoDeMateriales catalogo;
-        public List<Proveedor> proveedores;
-        private List<Pedido> pedidosRealizados;
-        private List<Venta> ventasRealizadas;
-        private List<Empleado> empleados;
+        public CatalogoDeMateriales catalogo { get; set; }
+        public List<Proveedor> proveedores { get; set; }
+        public List<Pedido> pedidosRealizados { get; set; }
+        public List<Venta> ventasRealizadas { get; set; }
+        public List<Empleado> empleados { get; set; }
 
         private Negocio (CatalogoDeMateriales catalogo)
         {
@@ -31,7 +31,7 @@ namespace ProyectoBigonHnos.dominio
 
         public Negocio()
         {
-            catalogo = new CatalogoDeMateriales();
+            catalogo = CatalogoDeMateriales.getInstancia();
           
             proveedores = new List<Proveedor>();
             clientes = new List<Cliente>();

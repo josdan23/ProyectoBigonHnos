@@ -8,15 +8,15 @@ namespace ProyectoBigonHnos.dominio
 {
     class Producto
     { 
-        private string descripcion { get; set; }
-        private double alto { get; set; }
-        private double ancho { get; set; }
-        private double profundidad { get; set; }
-        private string colorPrimario { get; set; }
-        private string colorSecundario { get; set; }
+        public string descripcion { get; set; }
+        public double alto { get; set; }
+        public double ancho { get; set; }
+        public double profundidad { get; set; }
+        public string colorPrimario { get; set; }
+        public string colorSecundario { get; set; }
  
 
-        private List<Componente> componentes;
+        public List<Componente> componentes { get; set; }
 
         public Producto(string descripcion, double alto, double ancho, double profundidad, string colorPrimario, string colorSecundario)
         {

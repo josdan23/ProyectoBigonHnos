@@ -8,14 +8,14 @@ namespace ProyectoBigonHnos.dominio
 {
     class Componente
     {
-        private string descripcion { get; set; }
-        private double altura { get; set; }
-        private double ancho { get; set; }
-        private double profundidad { get; set; }
-        private string colorPrimario { get; set; }
-        private string colorSecundario { get; set; }
-        private int cantidad { get; set; }
-        private Material material;
+        public string descripcion { get; set; }
+        public double altura { get; set; }
+        public double ancho { get; set; }
+        public double profundidad { get; set; }
+        public string colorPrimario { get; set; }
+        public string colorSecundario { get; set; }
+        public int cantidad { get; set; }
+        public Material material;
 
         public Componente(string descripcion, double altura, double ancho, double profundidad, string colorPrimario, string colorSecundario, int cantidad, Material material)
         {

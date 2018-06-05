@@ -53,7 +53,6 @@ namespace ProyectoBigonHnos.vista.pedidos
         {
             this.controlador = controlador;
             controlador.unirVista(this);
-            Console.WriteLine("estoy en la nuevoProducto");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,13 +74,17 @@ namespace ProyectoBigonHnos.vista.pedidos
                 colorSecundario,
                 cantidad);
 
-            Console.WriteLine("producto agregado");
             Dispose();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        public void ActualizarVista()
+        {
+            Console.WriteLine("Actualizar: vista de producto");
         }
     }
 }

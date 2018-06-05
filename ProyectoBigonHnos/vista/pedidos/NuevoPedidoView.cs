@@ -11,6 +11,7 @@ namespace ProyectoBigonHnos.vista.pedidos
         public NuevoPedidoView()
         {
             InitializeComponent();
+            lblFechaPedido.Text = $"{DateTime.Now}";
         }
 
         private void NuevoPedidoView_Load(object sender, EventArgs e)
@@ -28,6 +29,7 @@ namespace ProyectoBigonHnos.vista.pedidos
             AgregarClienteView vista = new AgregarClienteView();
             vista.unirControlador(controlador);
             vista.ShowDialog();
+            ActualizarVista();
         }
 
         private void btnNuevoProducto_Click(object sender, EventArgs e)
@@ -35,12 +37,15 @@ namespace ProyectoBigonHnos.vista.pedidos
             NuevoProductoView vista = new NuevoProductoView();
             vista.unirControlador(controlador);
             vista.ShowDialog();
+            ActualizarVista();
         }
 
         private void btnNuevoComponente_Click(object sender, EventArgs e)
         {
             NuevoComponenteView vista = new NuevoComponenteView();
+            vista.unirControlador(controlador);
             vista.ShowDialog();
+            ActualizarVista();
         }
 
         public void unirControlador(PedidoControlador controlador)
@@ -50,9 +55,90 @@ namespace ProyectoBigonHnos.vista.pedidos
             Console.WriteLine("estoy en vista de nuevo pedido");
         }
 
-        public void mostrarDescripcion(string descripcion)
+
+        private void btnGuardarPedido_Click(object sender, EventArgs e)
         {
-            
+            controlador.agregarFechaDeEntrega(dateTimePicker1.Value.Date);
+            controlador.confirmarPedido();
+            Dispose();
+        }
+
+        private void btnCancelarPedido_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        public void mostrarNombre(string nombre)
+        {
+            lblNombre.Text = nombre;
+        }
+
+        public void mostrarApellido(String apellido)
+        {
+            lblApellido.Text = apellido;
+        }
+
+        public void mostrarDni(string dni)
+        {
+            lblDni.Text = dni;
+        }
+
+        public void mostrarDireccion(string calle, int numero, string provincia)
+        {
+            lblDireccion.Text = $"{calle}, {numero} - {provincia}";
+        }
+
+        public void mostrarTelefono(string telefono)
+        {
+            lblTelefono.Text = telefono;
+        }
+
+        public void mostrarMail(string mail)
+        {
+            lblMail.Text = mail;
+        }
+
+        public void ActualizarVista()
+        {
+            dgvComponentes.Rows.Clear();
+            dgvProductos.Rows.Clear();
+            controlador.unirVista(this);
+            controlador.mostrarCliente();
+            controlador.mostrarProductos();
+            controlador.mostrarComponentes(0);
+            controlador.mostrarTotal();
+        }
+
+        public void listarProducto(string descripcion, double alto, double ancho, double prof, string colorP, string colorS, int cant, double precio)
+        {
+            dgvProductos.Rows.Add(
+                descripcion,
+                alto,
+                ancho,
+                prof,
+                colorP,
+                colorS,
+                cant,
+                precio);
+        }
+
+        public void listarComponente(string descripcion, double alto, double ancho, double prof, string colorP, string colorS, int cant, string material, double precio)
+        {
+            dgvComponentes.Rows.Add(
+                descripcion,
+                alto,
+                ancho, 
+                prof,
+                colorP,
+                colorS,
+                cant,
+                material,
+                precio);
+        }
+
+        public void mostrarTotal(string total)
+        {
+            lblTotal.Text = total;
         }
     }
 }

@@ -35,14 +35,14 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPedidos = new System.Windows.Forms.DataGridView();
             this.columnPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -129,17 +129,17 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // dataGridView1
+            // dgvPedidos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columnPedido,
             this.columnCliente,
             this.columnFecha});
-            this.dataGridView1.Location = new System.Drawing.Point(41, 107);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(425, 230);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvPedidos.Location = new System.Drawing.Point(41, 107);
+            this.dgvPedidos.Name = "dgvPedidos";
+            this.dgvPedidos.Size = new System.Drawing.Size(425, 230);
+            this.dgvPedidos.TabIndex = 2;
             // 
             // columnPedido
             // 
@@ -160,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPedidos);
             this.Controls.Add(this.panel1);
             this.Name = "PedidosView";
             this.Size = new System.Drawing.Size(634, 378);
@@ -168,7 +168,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -181,7 +181,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPedidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnPedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnFecha;

@@ -34,10 +34,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblMail = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblDni = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvComponentes = new System.Windows.Forms.DataGridView();
             this.colDescripcionComp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAltoComp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAnchoCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,27 +61,31 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblFechaPedido = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnNuevoProducto = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.columnDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnAlto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnAncho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnProfundidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnColorPrimario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnColorSecundario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAlto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAncho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProfundidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colColorPrimario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colColorSecundario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComponentes)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -92,9 +103,16 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblMail);
+            this.panel1.Controls.Add(this.lblTelefono);
+            this.panel1.Controls.Add(this.lblDireccion);
+            this.panel1.Controls.Add(this.lblDni);
+            this.panel1.Controls.Add(this.lblNombre);
+            this.panel1.Controls.Add(this.lblApellido);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 39);
+            this.panel1.Location = new System.Drawing.Point(16, 39);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(475, 110);
             this.panel1.TabIndex = 1;
@@ -135,6 +153,15 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "DNI";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(38, 110);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(54, 13);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "NOMBRE";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -143,6 +170,60 @@
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "NOMBRE";
+            // 
+            // lblMail
+            // 
+            this.lblMail.AutoSize = true;
+            this.lblMail.Location = new System.Drawing.Point(322, 77);
+            this.lblMail.Name = "lblMail";
+            this.lblMail.Size = new System.Drawing.Size(10, 13);
+            this.lblMail.TabIndex = 0;
+            this.lblMail.Text = "-";
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(322, 47);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(10, 13);
+            this.lblTelefono.TabIndex = 0;
+            this.lblTelefono.Text = "-";
+            // 
+            // lblDireccion
+            // 
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Location = new System.Drawing.Point(322, 14);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(10, 13);
+            this.lblDireccion.TabIndex = 0;
+            this.lblDireccion.Text = "-";
+            // 
+            // lblDni
+            // 
+            this.lblDni.AutoSize = true;
+            this.lblDni.Location = new System.Drawing.Point(88, 77);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(10, 13);
+            this.lblDni.TabIndex = 0;
+            this.lblDni.Text = "-";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(88, 47);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(10, 13);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "-";
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(88, 14);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(10, 13);
+            this.lblApellido.TabIndex = 0;
+            this.lblApellido.Text = "-";
             // 
             // label2
             // 
@@ -156,7 +237,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Teal;
-            this.panel2.Controls.Add(this.dataGridView2);
+            this.panel2.Controls.Add(this.dgvComponentes);
             this.panel2.Controls.Add(this.btnCancelarPedido);
             this.panel2.Controls.Add(this.btnGuardarPedido);
             this.panel2.Controls.Add(this.btnNuevoComponente);
@@ -167,10 +248,10 @@
             this.panel2.Size = new System.Drawing.Size(1030, 258);
             this.panel2.TabIndex = 2;
             // 
-            // dataGridView2
+            // dgvComponentes
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvComponentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvComponentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDescripcionComp,
             this.colAltoComp,
             this.colAnchoCom,
@@ -180,10 +261,10 @@
             this.colMaterialCom,
             this.colCantidadCom,
             this.colPrecioCom});
-            this.dataGridView2.Location = new System.Drawing.Point(16, 44);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(984, 124);
-            this.dataGridView2.TabIndex = 3;
+            this.dgvComponentes.Location = new System.Drawing.Point(16, 44);
+            this.dgvComponentes.Name = "dgvComponentes";
+            this.dgvComponentes.Size = new System.Drawing.Size(984, 124);
+            this.dgvComponentes.TabIndex = 3;
             // 
             // colDescripcionComp
             // 
@@ -238,6 +319,7 @@
             this.btnCancelarPedido.TabIndex = 2;
             this.btnCancelarPedido.Text = "Cancelar";
             this.btnCancelarPedido.UseVisualStyleBackColor = true;
+            this.btnCancelarPedido.Click += new System.EventHandler(this.btnCancelarPedido_Click);
             // 
             // btnGuardarPedido
             // 
@@ -247,6 +329,7 @@
             this.btnGuardarPedido.TabIndex = 2;
             this.btnGuardarPedido.Text = "Guardar";
             this.btnGuardarPedido.UseVisualStyleBackColor = true;
+            this.btnGuardarPedido.Click += new System.EventHandler(this.btnGuardarPedido_Click);
             // 
             // btnNuevoComponente
             // 
@@ -272,6 +355,7 @@
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel3.Controls.Add(this.btnBuscarCliente);
             this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.panel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -290,7 +374,11 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.dateTimePicker1);
+            this.panel5.Controls.Add(this.lblTotal);
+            this.panel5.Controls.Add(this.lblFechaPedido);
             this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Location = new System.Drawing.Point(533, 0);
@@ -298,29 +386,63 @@
             this.panel5.Size = new System.Drawing.Size(497, 159);
             this.panel5.TabIndex = 0;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(180, 70);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 4;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(177, 106);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(31, 13);
+            this.lblTotal.TabIndex = 3;
+            this.lblTotal.Text = "Total";
+            // 
+            // lblFechaPedido
+            // 
+            this.lblFechaPedido.AutoSize = true;
+            this.lblFechaPedido.Location = new System.Drawing.Point(177, 38);
+            this.lblFechaPedido.Name = "lblFechaPedido";
+            this.lblFechaPedido.Size = new System.Drawing.Size(80, 13);
+            this.lblFechaPedido.TabIndex = 2;
+            this.lblFechaPedido.Text = "lblFechaPedido";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(58, 86);
+            this.label9.Location = new System.Drawing.Point(115, 106);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 13);
+            this.label9.Size = new System.Drawing.Size(34, 13);
             this.label9.TabIndex = 0;
-            this.label9.Text = " PRECIO";
+            this.label9.Text = "Total:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(58, 70);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(95, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Fecha de Entrega:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(58, 53);
+            this.label8.Location = new System.Drawing.Point(58, 39);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 13);
+            this.label8.Size = new System.Drawing.Size(91, 13);
             this.label8.TabIndex = 0;
-            this.label8.Text = "FECHA";
+            this.label8.Text = "Fecha de Pedido:";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.panel4.Controls.Add(this.btnNuevoProducto);
-            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.dgvProductos);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 159);
@@ -338,62 +460,62 @@
             this.btnNuevoProducto.UseVisualStyleBackColor = true;
             this.btnNuevoProducto.Click += new System.EventHandler(this.btnNuevoProducto_Click);
             // 
-            // dataGridView1
+            // dgvProductos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.columnDescripcion,
-            this.columnAlto,
-            this.columnAncho,
-            this.columnProfundidad,
-            this.columnColorPrimario,
-            this.columnColorSecundario,
-            this.columnCantidad,
-            this.columnPrecio});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 58);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(984, 152);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colDescripcion,
+            this.colAlto,
+            this.colAncho,
+            this.colProfundidad,
+            this.colColorPrimario,
+            this.colColorSecundario,
+            this.colCantidad,
+            this.colPrecio});
+            this.dgvProductos.Location = new System.Drawing.Point(16, 58);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.Size = new System.Drawing.Size(984, 152);
+            this.dgvProductos.TabIndex = 1;
             // 
-            // columnDescripcion
+            // colDescripcion
             // 
-            this.columnDescripcion.HeaderText = "Descripción";
-            this.columnDescripcion.Name = "columnDescripcion";
+            this.colDescripcion.HeaderText = "Descripción";
+            this.colDescripcion.Name = "colDescripcion";
             // 
-            // columnAlto
+            // colAlto
             // 
-            this.columnAlto.HeaderText = "Alto";
-            this.columnAlto.Name = "columnAlto";
+            this.colAlto.HeaderText = "Alto";
+            this.colAlto.Name = "colAlto";
             // 
-            // columnAncho
+            // colAncho
             // 
-            this.columnAncho.HeaderText = "Ancho";
-            this.columnAncho.Name = "columnAncho";
+            this.colAncho.HeaderText = "Ancho";
+            this.colAncho.Name = "colAncho";
             // 
-            // columnProfundidad
+            // colProfundidad
             // 
-            this.columnProfundidad.HeaderText = "Profundidad";
-            this.columnProfundidad.Name = "columnProfundidad";
+            this.colProfundidad.HeaderText = "Profundidad";
+            this.colProfundidad.Name = "colProfundidad";
             // 
-            // columnColorPrimario
+            // colColorPrimario
             // 
-            this.columnColorPrimario.HeaderText = "Color Primario";
-            this.columnColorPrimario.Name = "columnColorPrimario";
+            this.colColorPrimario.HeaderText = "Color Primario";
+            this.colColorPrimario.Name = "colColorPrimario";
             // 
-            // columnColorSecundario
+            // colColorSecundario
             // 
-            this.columnColorSecundario.HeaderText = "Color Secundario";
-            this.columnColorSecundario.Name = "columnColorSecundario";
+            this.colColorSecundario.HeaderText = "Color Secundario";
+            this.colColorSecundario.Name = "colColorSecundario";
             // 
-            // columnCantidad
+            // colCantidad
             // 
-            this.columnCantidad.HeaderText = "Cantidad";
-            this.columnCantidad.Name = "columnCantidad";
+            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.Name = "colCantidad";
             // 
-            // columnPrecio
+            // colPrecio
             // 
-            this.columnPrecio.HeaderText = "Precio";
-            this.columnPrecio.Name = "columnPrecio";
+            this.colPrecio.HeaderText = "Precio";
+            this.colPrecio.Name = "colPrecio";
             // 
             // label10
             // 
@@ -411,7 +533,6 @@
             this.ClientSize = new System.Drawing.Size(1030, 651);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Name = "NuevoPedidoView";
@@ -421,13 +542,13 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComponentes)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -446,7 +567,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvComponentes;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcionComp;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAltoComp;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAnchoCom;
@@ -464,16 +585,27 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnNuevoProducto;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnDescripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnAlto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnAncho;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnProfundidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnColorPrimario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnColorSecundario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnCantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnPrecio;
+        private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnBuscarCliente;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblMail;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblDni;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAlto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAncho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colProfundidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colColorPrimario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colColorSecundario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblFechaPedido;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
