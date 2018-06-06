@@ -8,7 +8,9 @@ namespace ProyectoBigonHnos.dominio.venta
 {
     class Venta
     {
+        private static int contador = 0;
 
+        public  int IdVenta { get; set; }
         public DateTime fechaDeVenta { get; set; }
         public string estado { get; set; }
         public double iva { get; set; }
@@ -27,6 +29,9 @@ namespace ProyectoBigonHnos.dominio.venta
 
         public Venta()
         {
+            IdVenta = contador;
+            contador++;
+
             fechaDeVenta = DateTime.Now;
             estado = "nueva";
             iva = 0.21;
