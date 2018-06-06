@@ -8,42 +8,43 @@ namespace ProyectoBigonHnos.dominio.venta
 {
     class Venta
     {
-        private DateTime fechaDeVenta;
-        private string estado;
-        private double iva;
-        private double precio;
-        private string tipoFactura;
-        private double interes;
-        private int nroCuotas;
+
+        public DateTime fechaDeVenta { get; set; }
+        public string estado { get; set; }
+        public double iva { get; set; }
+        public double precio {get; set;}
+        public string tipoFactura { get; set; }
+        public double interes { get; set; }
+        public int nroCuotas { get; set; }
 
         public Empleado Empleado { get; set; }
 
-        private Cliente cliente;
+        public Cliente Cliente { get; set; }
 
-        private List<LineaDeVenta> lineasDeVenta;
-        private Pedido pedido;
-        private Pago pago;
+        public List<LineaDeVenta> lineasDeVenta { get; set; }
+        public Pedido pedido { get; set; }
+        public Pago pago { get; set; }
 
         public Venta()
         {
-            this.fechaDeVenta = DateTime.Now;
-            this.estado = "nueva";
-            this.iva = 0.21;
-            this.tipoFactura = "A";
+            fechaDeVenta = DateTime.Now;
+            estado = "nueva";
+            iva = 0.21;
+            tipoFactura = "A";
         }
 
         public Venta(Empleado empleado)
         {
-            this.fechaDeVenta = DateTime.Now;
-            this.estado = "nueva";
-            this.iva = 0.21;
-            this.tipoFactura = "A";
+            fechaDeVenta = DateTime.Now;
+            estado = "nueva";
+            iva = 0.21;
+            tipoFactura = "A";
             Empleado = empleado;
         }
 
         public void agregarCliente(Cliente cliente)
         {
-            this.cliente = cliente;
+            Cliente = cliente;
         }
 
         public void agregarPedido(Pedido pedido)
@@ -66,7 +67,7 @@ namespace ProyectoBigonHnos.dominio.venta
 
             CalculadorDeIntereses calculador = new CalculadorDeIntereses();
 
-            this.interes = calculador.calcularInteresPorCuotas(nroCuotas);
+            interes = calculador.calcularInteresPorCuotas(nroCuotas);
 
         }
 
@@ -77,7 +78,7 @@ namespace ProyectoBigonHnos.dominio.venta
 
         public void confirmar()
         {
-            this.estado = "Realizado";
+            estado = "Realizado";
             Pago pago = new Pago(this.nroCuotas);
         
         }
