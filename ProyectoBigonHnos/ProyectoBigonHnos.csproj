@@ -182,6 +182,13 @@
     <Compile Include="vista\proveedor\ProveedorView.Designer.cs">
       <DependentUpon>ProveedorView.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\ventas\IVentaView.cs" />
+    <Compile Include="vista\ventas\NuevaVentaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\ventas\NuevaVentaView.Designer.cs">
+      <DependentUpon>NuevaVentaView.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\ventas\VentasView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -245,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\proveedor\ProveedorView.resx">
       <DependentUpon>ProveedorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\ventas\NuevaVentaView.resx">
+      <DependentUpon>NuevaVentaView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\ventas\VentasView.resx">
       <DependentUpon>VentasView.cs</DependentUpon>

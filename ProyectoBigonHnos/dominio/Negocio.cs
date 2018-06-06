@@ -74,6 +74,11 @@ namespace ProyectoBigonHnos.dominio
             return null;
         }
 
+        internal void BorrarVenta(int idVenta)
+        {
+            //BORRAR VENTA CON EL ID
+        }
+
         public Proveedor buscarProveedor(string razonSocial)
         {
             foreach( Proveedor proveedor in proveedores)

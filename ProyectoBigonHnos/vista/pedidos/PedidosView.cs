@@ -7,7 +7,6 @@ namespace ProyectoBigonHnos.vista
 {
     partial class PedidosView : UserControl, IPedidoView
     {
-    
         public PedidoControlador Controlador { get; set; }
 
         public PedidosView()

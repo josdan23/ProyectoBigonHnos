@@ -36,6 +36,8 @@ namespace ProyectoBigonHnos.dominio.venta
             estado = "nueva";
             iva = 0.21;
             tipoFactura = "A";
+
+            lineasDeVenta = new List<LineaDeVenta>();
         }
 
         public Venta(Empleado empleado)
