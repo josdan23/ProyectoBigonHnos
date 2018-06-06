@@ -170,5 +170,10 @@ namespace ProyectoBigonHnos.dominio
             view.mostrarTotal(pedido.obtenerTotal().ToString());
         }
 
+        public void eliminarPedido(int idPedido)
+        {
+            Negocio.getNegocio().borrarPedido(idPedido);
+        }
+
     }
 }

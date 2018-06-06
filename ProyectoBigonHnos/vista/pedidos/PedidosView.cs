@@ -48,5 +48,14 @@ namespace ProyectoBigonHnos.vista
         {
             dgvPedidos.Rows.Clear();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int idPedidoSeleccionado = int.Parse(dgvPedidos.CurrentRow.Cells[0].Value.ToString());
+
+            Console.WriteLine(idPedidoSeleccionado);
+            Controlador.eliminarPedido(idPedidoSeleccionado);
+            ActualizarVista();
+        }
     }
 }

@@ -199,5 +199,17 @@ namespace ProyectoBigonHnos.dominio
                 }
             }
         }
+
+        public void borrarPedido(int idPedido)
+        {
+            for (int i = 0; i < pedidosRealizados.Count; i++)
+            {
+                if(pedidosRealizados[i].idPedido == idPedido)
+                {
+                    pedidosRealizados.RemoveAt(i);
+                    Console.WriteLine("pedido eliminado");
+                }
+            }
+        }
     }
 }
