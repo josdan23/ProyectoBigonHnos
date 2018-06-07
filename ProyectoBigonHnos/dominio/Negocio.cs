@@ -74,9 +74,14 @@ namespace ProyectoBigonHnos.dominio
             return null;
         }
 
-        internal void BorrarVenta(int idVenta)
+        //BORRAR VENTA CON EL ID
+        public void BorrarVenta(int idVenta)
         {
-            //BORRAR VENTA CON EL ID
+            for (int i=0; i < ventasRealizadas.Count; i++)
+            {
+                if (ventasRealizadas[i].IdVenta == idVenta)
+                    ventasRealizadas.RemoveAt(i);
+            }
         }
 
         public Proveedor buscarProveedor(string razonSocial)

@@ -44,6 +44,7 @@ namespace ProyectoBigonHnos.vista
             int idVenta = int.Parse(dgvVentas.CurrentRow.Cells[0].Value.ToString());
 
             Controlador.eliminarVenta(idVenta);
+            ActualizarVista();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
