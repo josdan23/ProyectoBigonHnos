@@ -21,8 +21,6 @@ namespace ProyectoBigonHnos.vista
             this.controlador = controlador;
         }
 
-      
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string dni = tboxDni.Text;
@@ -41,7 +39,12 @@ namespace ProyectoBigonHnos.vista
             controlador.agregarTelefono(telefono);
             controlador.confirmarNuevoCliente();
 
-            this.Dispose();
+            Dispose();
+        }
+
+        private void Cancelar_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }
