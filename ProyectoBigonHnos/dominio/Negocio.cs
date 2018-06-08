@@ -64,6 +64,17 @@ namespace ProyectoBigonHnos.dominio
             return catalogo.obtenerMaterial(idMaterial);
         }
 
+        public void borrarEmpleado(string legajo)
+        {
+            for (int i = 0; i < empleados.Count(); i++)
+            {
+                if (empleados[i].Legajo == legajo)
+                {
+                    empleados.RemoveAt(i);
+                }
+            }
+        }
+
         public Proveedor buscarProveedor(int idProveedor)
         {
             foreach (Proveedor proveedor in proveedores)

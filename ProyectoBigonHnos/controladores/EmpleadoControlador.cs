@@ -65,6 +65,11 @@ namespace ProyectoBigonHnos.controladores
             Empleado.agregarCueta(username, password, perfil);
         }
 
+        internal void eliminarEmpleado(string legajo)
+        {
+            Negocio.getNegocio().borrarEmpleado(legajo);
+        }
+
         public void eliminarFamiliar()
         {
             //Eliminar familiar de el usuario actual

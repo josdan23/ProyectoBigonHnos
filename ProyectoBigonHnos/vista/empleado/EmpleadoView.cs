@@ -53,5 +53,13 @@ namespace ProyectoBigonHnos.vista.empleado
         {
             dgvEmpleados.Rows.Clear();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string legajo = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
+
+            Controlador.eliminarEmpleado(legajo);
+            ActualizarVista();
+        }
     }
 }
