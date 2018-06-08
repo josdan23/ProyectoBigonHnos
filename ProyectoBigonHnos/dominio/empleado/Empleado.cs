@@ -9,16 +9,20 @@ namespace ProyectoBigonHnos.dominio
     class Empleado : Persona
     {       
         public string Legajo { get; set; }
-
         public string Categoria { get; set; }
         public string Cuil { get; set; }
 
         public DateTime FechaIngreso { get; set; }
         public DateTime FechaEgreso { get; set; }
-        
-        public Usuario Usuario { get; set; }
 
+        public Usuario Usuario { get; set; }
         public List<GrupoFamiliar> Familiares { get; set; }
+
+
+        public Empleado()
+        {
+            Familiares = new List<GrupoFamiliar>();
+        }
 
         public Empleado(string nombre, string apellido, string dni, string categoria, string cuil, string password, string perfil, DateTime fechaIngreso) : base (nombre,apellido,dni)
         { 
@@ -30,21 +34,44 @@ namespace ProyectoBigonHnos.dominio
             Familiares = new List<GrupoFamiliar>();
         }
 
+        public void agregarInformacionPersonal(string nombre, string apellido, string dni, string cuil)
+        {
+            Nombre = nombre;
+            Apellido = apellido;
+            Dni = dni;
+            Cuil = cuil;
+        }
+
+        internal void agregarCategoria(string categoria)
+        {
+            Categoria = categoria;
+        }
+
+        internal void agregarLegajo(string legajo)
+        {
+            Legajo = legajo;
+        }
+
         public void agregarDomicilio(string calle, int numero, string localidad, string provincia)
         {
             Direccion dir = new Direccion(calle, numero, localidad, provincia);
-            this.agregarDireccion(dir);
+            agregarDireccion(dir);
         }
 
         public void agregarTelefono(string numeroTelefono)
         {
             Telefono tel = new Telefono(numeroTelefono);
-            this.agregarTelefono(tel);
+            agregarTelefono(tel);
         } 
 
         public void agregarFamiliar(string dni, string parentesco, DateTime fechaNacimiento, bool discapacidad)
         {
             Familiares.Add(new GrupoFamiliar(dni, parentesco, fechaNacimiento, discapacidad));
+        }
+
+        public void agregarCueta (string nombreUsuario, string password, string perfil)
+        {
+            Usuario = new Usuario(nombreUsuario, password, perfil); 
         }
 
         public void mostrar()

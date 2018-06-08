@@ -165,6 +165,7 @@ namespace ProyectoBigonHnos.dominio
         public void agregarEmpleado(Empleado empleado)
         {
             empleados.Add(empleado);
+            Console.WriteLine("El empleado se ha guardado");
         }
 
         public void agregarCliente(Cliente cliente)

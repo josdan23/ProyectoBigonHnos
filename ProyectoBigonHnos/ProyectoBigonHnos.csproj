@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controladores\EmpleadoControlador.cs" />
     <Compile Include="controladores\GestionarClientesControlador.cs" />
     <Compile Include="controladores\GestionarEmpleadoControlador.cs" />
     <Compile Include="controladores\GestionarProveedorControlador.cs" />
@@ -106,6 +107,19 @@
     </Compile>
     <Compile Include="vista\clientes\EditarClienteView.Designer.cs">
       <DependentUpon>EditarClienteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\empleado\EmpleadoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vista\empleado\EmpleadoView.Designer.cs">
+      <DependentUpon>EmpleadoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\empleado\IEmpleadosView.cs" />
+    <Compile Include="vista\empleado\NuevoEmpleadoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\empleado\NuevoEmpleadoView.Designer.cs">
+      <DependentUpon>NuevoEmpleadoView.cs</DependentUpon>
     </Compile>
     <Compile Include="vista\materiales\EditarMaterialView.cs">
       <SubType>Form</SubType>
@@ -216,6 +230,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\clientes\EditarClienteView.resx">
       <DependentUpon>EditarClienteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\empleado\EmpleadoView.resx">
+      <DependentUpon>EmpleadoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\empleado\NuevoEmpleadoView.resx">
+      <DependentUpon>NuevoEmpleadoView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\materiales\EditarMaterialView.resx">
       <DependentUpon>EditarMaterialView.cs</DependentUpon>

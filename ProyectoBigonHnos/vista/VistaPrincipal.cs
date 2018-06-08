@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoBigonHnos.dominio;
+using ProyectoBigonHnos.vista.empleado;
 using ProyectoBigonHnos.vista.proveedor;
 
 namespace ProyectoBigonHnos.vista
@@ -78,6 +79,7 @@ namespace ProyectoBigonHnos.vista
         {
             ocultarPaneles();
             pnlActivoEmpleados.Show();
+            agregarVista(new EmpleadoView());
            
         }
 

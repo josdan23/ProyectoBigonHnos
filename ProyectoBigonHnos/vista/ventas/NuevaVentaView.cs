@@ -30,6 +30,7 @@ namespace ProyectoBigonHnos.vista.ventas
         {
             Controlador = controlador;
             controlador.unirVista(this);
+            Console.WriteLine("nueva venta");
         }
 
         public void limpiar()

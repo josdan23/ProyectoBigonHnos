@@ -26,7 +26,8 @@ namespace ProyectoBigonHnos.vista
         public void UnirControlador(VentaControlador controlador)
         {
             Controlador = controlador;
-            Controlador.unirVista(this); 
+            Controlador.unirVista(this);
+            Console.WriteLine("ventas vie");
         }
 
         private void label1_Click(object sender, EventArgs e)
