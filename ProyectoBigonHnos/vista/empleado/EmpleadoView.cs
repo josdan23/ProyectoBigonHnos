@@ -61,5 +61,11 @@ namespace ProyectoBigonHnos.vista.empleado
             Controlador.eliminarEmpleado(legajo);
             ActualizarVista();
         }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            DetalleEmpleadoView vista = new DetalleEmpleadoView();
+            vista.ShowDialog();
+        }
     }
 }

@@ -80,9 +80,11 @@ namespace ProyectoBigonHnos.controladores
             Negocio.getNegocio().agregarEmpleado(Empleado);
         }
 
-        public void mostrarInfoEmpleado()
+        public void mostrarInfoEmpleado(string legajo)
         {
-            //mostrar informacion de un empleado
+            Empleado empleado = Negocio.getNegocio().buscarEmpleado();
+
+            
         }
 
         public void mostrarGrupoFamiliar()
