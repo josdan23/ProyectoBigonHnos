@@ -82,7 +82,7 @@ namespace ProyectoBigonHnos.controladores
 
         public void mostrarInfoEmpleado(string legajo)
         {
-            Empleado empleado = Negocio.getNegocio().buscarEmpleado();
+            //Empleado empleado = Negocio.getNegocio().buscarEmpleado();
 
             
         }

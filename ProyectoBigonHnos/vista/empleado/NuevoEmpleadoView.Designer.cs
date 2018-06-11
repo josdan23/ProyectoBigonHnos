@@ -52,6 +52,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.tboxPerfil = new System.Windows.Forms.TextBox();
             this.dgvFamiliares = new System.Windows.Forms.DataGridView();
+            this.colDni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colParentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDiscapacidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
             this.tboxCuil = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -71,10 +75,6 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
-            this.colDni = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colParentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDiscapacidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.chboxDiscapacidad = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFamiliares)).BeginInit();
@@ -158,9 +158,10 @@
             // 
             // dtpFechaIngreso
             // 
+            this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaIngreso.Location = new System.Drawing.Point(28, 326);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
-            this.dtpFechaIngreso.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaIngreso.Size = new System.Drawing.Size(109, 20);
             this.dtpFechaIngreso.TabIndex = 3;
             // 
             // label5
@@ -200,7 +201,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(150, 372);
+            this.label8.Location = new System.Drawing.Point(152, 310);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 13);
             this.label8.TabIndex = 0;
@@ -215,7 +216,7 @@
             // 
             // tboxCategoria
             // 
-            this.tboxCategoria.Location = new System.Drawing.Point(153, 388);
+            this.tboxCategoria.Location = new System.Drawing.Point(154, 326);
             this.tboxCategoria.Name = "tboxCategoria";
             this.tboxCategoria.Size = new System.Drawing.Size(100, 20);
             this.tboxCategoria.TabIndex = 2;
@@ -255,7 +256,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(274, 416);
+            this.label11.Location = new System.Drawing.Point(149, 372);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(30, 13);
             this.label11.TabIndex = 0;
@@ -263,7 +264,7 @@
             // 
             // tboxPerfil
             // 
-            this.tboxPerfil.Location = new System.Drawing.Point(277, 432);
+            this.tboxPerfil.Location = new System.Drawing.Point(152, 388);
             this.tboxPerfil.Name = "tboxPerfil";
             this.tboxPerfil.Size = new System.Drawing.Size(100, 20);
             this.tboxPerfil.TabIndex = 2;
@@ -280,6 +281,29 @@
             this.dgvFamiliares.Name = "dgvFamiliares";
             this.dgvFamiliares.Size = new System.Drawing.Size(444, 250);
             this.dgvFamiliares.TabIndex = 4;
+            // 
+            // colDni
+            // 
+            this.colDni.HeaderText = "Dni";
+            this.colDni.Name = "colDni";
+            // 
+            // colParentesco
+            // 
+            this.colParentesco.HeaderText = "Parentesco";
+            this.colParentesco.Name = "colParentesco";
+            this.colParentesco.ReadOnly = true;
+            // 
+            // colFechaNacimiento
+            // 
+            this.colFechaNacimiento.HeaderText = "Fecha de Nacimiento";
+            this.colFechaNacimiento.Name = "colFechaNacimiento";
+            this.colFechaNacimiento.ReadOnly = true;
+            // 
+            // colDiscapacidad
+            // 
+            this.colDiscapacidad.HeaderText = "Discapacidad";
+            this.colDiscapacidad.Name = "colDiscapacidad";
+            this.colDiscapacidad.ReadOnly = true;
             // 
             // label12
             // 
@@ -438,29 +462,6 @@
             this.label21.Size = new System.Drawing.Size(53, 13);
             this.label21.TabIndex = 0;
             this.label21.Text = "Familiares";
-            // 
-            // colDni
-            // 
-            this.colDni.HeaderText = "Dni";
-            this.colDni.Name = "colDni";
-            // 
-            // colParentesco
-            // 
-            this.colParentesco.HeaderText = "Parentesco";
-            this.colParentesco.Name = "colParentesco";
-            this.colParentesco.ReadOnly = true;
-            // 
-            // colFechaNacimiento
-            // 
-            this.colFechaNacimiento.HeaderText = "Fecha de Nacimiento";
-            this.colFechaNacimiento.Name = "colFechaNacimiento";
-            this.colFechaNacimiento.ReadOnly = true;
-            // 
-            // colDiscapacidad
-            // 
-            this.colDiscapacidad.HeaderText = "Discapacidad";
-            this.colDiscapacidad.Name = "colDiscapacidad";
-            this.colDiscapacidad.ReadOnly = true;
             // 
             // dtpFechaNacimiento
             // 
