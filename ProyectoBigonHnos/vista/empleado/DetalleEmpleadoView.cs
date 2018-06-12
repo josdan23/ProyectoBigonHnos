@@ -28,6 +28,7 @@ namespace ProyectoBigonHnos.vista.empleado
         public void UnirControlador(EmpleadoControlador controlador)
         {
             Controlador = controlador;
+            Controlador.unirVista(this);
         }
 
         public void mostrarInfoPersona(string nombre, string apellido, string dni, string cuit)
@@ -74,6 +75,11 @@ namespace ProyectoBigonHnos.vista.empleado
                 fechaNac.ToString(),
                 discapacidad.ToString()
                 );
+        }
+
+        public void mostrarDetalle(string legajoSeleccionado)
+        {
+            Controlador.mostraDetalleDeEmpleado(legajoSeleccionado);
         }
     }
 }

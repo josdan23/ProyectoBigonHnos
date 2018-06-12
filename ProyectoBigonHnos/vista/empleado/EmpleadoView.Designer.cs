@@ -34,6 +34,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.Detalle = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.colLegajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +43,7 @@
             this.colDni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFechaIngreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Detalle = new System.Windows.Forms.Button();
+            this.btnDetalle = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -120,6 +121,21 @@
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
             // 
+            // Detalle
+            // 
+            this.Detalle.FlatAppearance.BorderSize = 0;
+            this.Detalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Detalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Detalle.Image = global::ProyectoBigonHnos.Properties.Resources.nuevo_icon;
+            this.Detalle.Location = new System.Drawing.Point(315, 8);
+            this.Detalle.Name = "Detalle";
+            this.Detalle.Size = new System.Drawing.Size(91, 42);
+            this.Detalle.TabIndex = 0;
+            this.Detalle.Text = "Detalle";
+            this.Detalle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Detalle.UseVisualStyleBackColor = true;
+            this.Detalle.Click += new System.EventHandler(this.btnDetalle_Click);
+            // 
             // btnNuevo
             // 
             this.btnNuevo.FlatAppearance.BorderSize = 0;
@@ -181,25 +197,21 @@
             this.colCategoria.HeaderText = "Categoria";
             this.colCategoria.Name = "colCategoria";
             // 
-            // Detalle
+            // btnDetalle
             // 
-            this.Detalle.FlatAppearance.BorderSize = 0;
-            this.Detalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Detalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Detalle.Image = global::ProyectoBigonHnos.Properties.Resources.nuevo_icon;
-            this.Detalle.Location = new System.Drawing.Point(315, 8);
-            this.Detalle.Name = "Detalle";
-            this.Detalle.Size = new System.Drawing.Size(91, 42);
-            this.Detalle.TabIndex = 0;
-            this.Detalle.Text = "Detalle";
-            this.Detalle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Detalle.UseVisualStyleBackColor = true;
-            this.Detalle.Click += new System.EventHandler(this.btnDetalle_Click);
+            this.btnDetalle.Location = new System.Drawing.Point(647, 94);
+            this.btnDetalle.Name = "btnDetalle";
+            this.btnDetalle.Size = new System.Drawing.Size(75, 23);
+            this.btnDetalle.TabIndex = 3;
+            this.btnDetalle.Text = "Detalle";
+            this.btnDetalle.UseVisualStyleBackColor = true;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click_1);
             // 
             // EmpleadoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.dgvEmpleados);
             this.Controls.Add(this.panel1);
             this.Name = "EmpleadoView";
@@ -230,5 +242,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaIngreo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCategoria;
         private System.Windows.Forms.Button Detalle;
+        private System.Windows.Forms.Button btnDetalle;
     }
 }

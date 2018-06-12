@@ -105,6 +105,19 @@ namespace ProyectoBigonHnos.dominio
             return null;
         }
 
+        internal Empleado buscarEmpleado(string legajoSeleccionado)
+        {
+            for ( int i = 0; i < empleados.Count(); i++)
+            {
+                if (empleados[i].Legajo == legajoSeleccionado)
+                {
+                    return empleados[i];
+                }
+            }
+
+            return null;
+        }
+
         public void actualizarProveedor(int idProveedor, Proveedor proveedor)
         {
             for (int i = 0; i < proveedores.Count(); i++)
