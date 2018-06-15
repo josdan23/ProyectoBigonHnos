@@ -60,6 +60,7 @@
     <Compile Include="controladores\GestionarClientesControlador.cs" />
     <Compile Include="controladores\GestionarEmpleadoControlador.cs" />
     <Compile Include="controladores\GestionarProveedorControlador.cs" />
+    <Compile Include="controladores\LoginControlador.cs" />
     <Compile Include="controladores\VentaControlador.cs" />
     <Compile Include="dominio\material\CatalogoDeMateriales.cs" />
     <Compile Include="dominio\Cliente.cs" />
@@ -126,6 +127,12 @@
     </Compile>
     <Compile Include="vista\empleado\NuevoEmpleadoView.Designer.cs">
       <DependentUpon>NuevoEmpleadoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="vista\materiales\EditarMaterialView.cs">
       <SubType>Form</SubType>
@@ -245,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\empleado\NuevoEmpleadoView.resx">
       <DependentUpon>NuevoEmpleadoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\materiales\EditarMaterialView.resx">
       <DependentUpon>EditarMaterialView.cs</DependentUpon>
