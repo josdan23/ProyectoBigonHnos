@@ -26,7 +26,6 @@ namespace ProyectoBigonHnos
 
             Application.EnableVisualStyles();
             Application.Run(vista);
-
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.vista;
 using ProyectoBigonHnos.vista.login;
+using System;
 
 namespace ProyectoBigonHnos.controladores
 {
@@ -12,8 +13,8 @@ namespace ProyectoBigonHnos.controladores
 
         public static LoginControlador getInstance()
         {
-            if (Controlador == null)   
-                Controlador =  new LoginControlador();
+            if (Controlador == null)
+                Controlador = new LoginControlador();
 
             return Controlador;
         }
@@ -30,7 +31,6 @@ namespace ProyectoBigonHnos.controladores
                 if (empleado.Usuario.Username == usuario && empleado.Usuario.Password == password)
                 {
                     EmpleadoLogeado = empleado;
-
                     mostrarVistaPrincipal();
                 }
             }
@@ -44,6 +44,11 @@ namespace ProyectoBigonHnos.controladores
             view.ShowDialog();
 
             Vista.Dispose();
+        }
+
+        public Empleado obtenerEmpleadoLogeado()
+        { 
+            return EmpleadoLogeado;
         }
     }
 }
