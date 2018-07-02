@@ -62,6 +62,9 @@
     <Compile Include="controladores\GestionarProveedorControlador.cs" />
     <Compile Include="controladores\LoginControlador.cs" />
     <Compile Include="controladores\VentaControlador.cs" />
+    <Compile Include="dominio\liquidacion\Concepto.cs" />
+    <Compile Include="dominio\liquidacion\LineaLiquidacion.cs" />
+    <Compile Include="dominio\liquidacion\Liquidacion.cs" />
     <Compile Include="dominio\material\CatalogoDeMateriales.cs" />
     <Compile Include="dominio\Cliente.cs" />
     <Compile Include="dominio\pedido\Componente.cs" />
@@ -318,5 +321,6 @@
     <None Include="Resources\View Details_32px.png" />
     <None Include="Resources\PedidoIcon.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
