@@ -8,7 +8,7 @@ namespace ProyectoBigonHnos.dominio.liquidacion
 {
     class Concepto
     {
-        int IdConcepto { get; set; }
+        public int IdConcepto { get; set; }
         string Tipo { get; set; }
         string Descripcion { get; set; }
         double Cantidad { get; set; }
@@ -16,9 +16,8 @@ namespace ProyectoBigonHnos.dominio.liquidacion
 
         public Concepto() { }
 
-        public Concepto(int idConcepto, string tipo, string descripcion, double cantidad, bool obligatorio)
+        public Concepto(string tipo, string descripcion, double cantidad, bool obligatorio)
         {
-            IdConcepto = idConcepto;
             Tipo = tipo;
             Descripcion = descripcion;
             Cantidad = cantidad;

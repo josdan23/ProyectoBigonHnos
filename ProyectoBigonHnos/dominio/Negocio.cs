@@ -1,4 +1,5 @@
-﻿using ProyectoBigonHnos.dominio.venta;
+﻿using ProyectoBigonHnos.dominio.liquidacion;
+using ProyectoBigonHnos.dominio.venta;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,10 @@ namespace ProyectoBigonHnos.dominio
         public List<Proveedor> proveedores { get; set; }
         public List<Pedido> pedidosRealizados { get; set; }
         public List<Venta> ventasRealizadas { get; set; }
+        public List<Concepto> conceptos { get; set; }
+
+        
+
         public List<Empleado> empleados { get; set; }
 
         private Negocio (CatalogoDeMateriales catalogo)
@@ -243,6 +248,24 @@ namespace ProyectoBigonHnos.dominio
                 {
                     pedidosRealizados.RemoveAt(i);
                     Console.WriteLine("pedido eliminado");
+                }
+            }
+        }
+
+
+        public void agregarConcepto(Concepto concepto)
+        {
+            conceptos.Add(concepto);
+        }
+
+        public void borrarConcepto(int idConcepto)
+        {
+            for (int i = 0; i < conceptos.Count; i++)
+            {
+                if (conceptos[i].IdConcepto == idConcepto)
+                {
+                    pedidosRealizados.RemoveAt(i);
+                    Console.WriteLine("Concepto eliminado");
                 }
             }
         }

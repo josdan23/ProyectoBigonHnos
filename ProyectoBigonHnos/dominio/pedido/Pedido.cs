@@ -10,6 +10,7 @@ namespace ProyectoBigonHnos.dominio
     {
 
         private static int id = 0;
+
         public int idPedido { get; set; }
         public DateTime fechaDePedido;
         public DateTime fechaDeEntrega;
