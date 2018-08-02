@@ -17,7 +17,7 @@ namespace ProyectoBigonHnos.controladores
             Concepto = new Concepto(tipo, descripcion, cantidad, obligatorio);
             Negocio.getNegocio().agregarConcepto(Concepto);
         }
-
+            
         public void eliminarConcepto(int idConcepto)
         {
             Negocio.getNegocio().borrarConcepto(idConcepto);
@@ -28,5 +28,9 @@ namespace ProyectoBigonHnos.controladores
             //buscar el Concepto por el id y agregar la informacion del concept
         }
 
+        public void listarConceptos()
+        {
+            //listar en la vista todos los conceptos
+        }
     }
 }

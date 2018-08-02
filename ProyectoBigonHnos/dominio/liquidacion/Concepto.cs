@@ -1,28 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProyectoBigonHnos.dominio.liquidacion
+﻿namespace ProyectoBigonHnos.dominio.liquidacion
 {
     class Concepto
     {
-        public int IdConcepto { get; set; }
-        string Tipo { get; set; }
-        string Descripcion { get; set; }
-        double Cantidad { get; set; }
-        bool Obligatorio { get; set; }
+        //public int IdConcepto { get; set; }
+        public TipoConcepto Tipo { get; set; }
+        public string Descripcion { get; set; } 
+        public double porcentaje { get; set; }
+        public bool Obligatorio { get; set; }
 
-        public Concepto() { }
-
-        public Concepto(string tipo, string descripcion, double cantidad, bool obligatorio)
+        public Concepto(TipoConcepto tipo, string descripcion, double porcentaje, bool obligatorio)
         {
-            Tipo = tipo;
+            Tipo = tipo; 
             Descripcion = descripcion;
-            Cantidad = cantidad;
+            porcentaje = porcentaje;
             Obligatorio = obligatorio;
         }
-
     }
+
+    enum TipoConcepto 
+    {
+        DESCUENTO,
+        REMUNERATIVO,
+        NO_REMUNERATIVO
+    };
 }

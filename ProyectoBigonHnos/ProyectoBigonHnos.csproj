@@ -64,6 +64,7 @@
     <Compile Include="controladores\LoginControlador.cs" />
     <Compile Include="controladores\VentaControlador.cs" />
     <Compile Include="dominio\liquidacion\Concepto.cs" />
+    <Compile Include="dominio\liquidacion\ConceptosDatos.cs" />
     <Compile Include="dominio\liquidacion\LineaLiquidacion.cs" />
     <Compile Include="dominio\liquidacion\Liquidacion.cs" />
     <Compile Include="dominio\material\CatalogoDeMateriales.cs" />
