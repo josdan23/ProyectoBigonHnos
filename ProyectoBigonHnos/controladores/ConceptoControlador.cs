@@ -12,7 +12,7 @@ namespace ProyectoBigonHnos.controladores
 
         }
 
-        public void nuevoConcepto(string tipo, string descripcion, double cantidad, bool obligatorio)
+        public void nuevoConcepto(TipoConcepto tipo, string descripcion, double cantidad, bool obligatorio)
         {
             Concepto = new Concepto(tipo, descripcion, cantidad, obligatorio);
             Negocio.getNegocio().agregarConcepto(Concepto);

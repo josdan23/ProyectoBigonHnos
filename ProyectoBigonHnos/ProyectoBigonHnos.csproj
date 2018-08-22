@@ -61,6 +61,7 @@
     <Compile Include="controladores\GestionarClientesControlador.cs" />
     <Compile Include="controladores\GestionarEmpleadoControlador.cs" />
     <Compile Include="controladores\GestionarProveedorControlador.cs" />
+    <Compile Include="controladores\LiquidacionControlador.cs" />
     <Compile Include="controladores\LoginControlador.cs" />
     <Compile Include="controladores\VentaControlador.cs" />
     <Compile Include="dominio\liquidacion\Concepto.cs" />

@@ -11,20 +11,11 @@ namespace ProyectoBigonHnos.dominio.liquidacion
         //int IdLiquidacion { get; set; }
         public int PeriodoLiquidacion { get; set; }
         public string LugarPago { get; set; }
-        public double Total { get; set;}
         public Empleado Empleado { get; set; }
         public List<LineaLiquidacion> LineasLiquidacion { get; set; }
 
-        double SueldoBasico { get; set; }
-
-        public Liquidacion(Empleado empleado, int periodo, string lugarPago, double sueldoBasico)
+        public Liquidacion()
         {
-            Empleado = empleado;
-            PeriodoLiquidacion = periodo;
-            LugarPago = lugarPago;
-            SueldoBasico = sueldoBasico;
-
-            Total = 0.0;
             LineasLiquidacion = new List<LineaLiquidacion>();
         }
 
@@ -33,35 +24,75 @@ namespace ProyectoBigonHnos.dominio.liquidacion
             Empleado = empleado;
             PeriodoLiquidacion = periodo;
             LugarPago = lugarPago;
-
-            Total = 0.0;
             LineasLiquidacion = new List<LineaLiquidacion>();
         }
 
-        public void agregarLineaLiquidacion(int cantidad, Concepto concepto)
+        public void agregarLineaLiquidacion(int cantidad, Concepto concepto, double valorBase)
         {
-            LineasLiquidacion.Add(new LineaLiquidacion(cantidad, concepto));
+            LineasLiquidacion.Add(new LineaLiquidacion(cantidad, concepto, valorBase));
         }
 
-        public double getTotal()
+        public double GetImporteTotal()
         {
-            return Total; //recorrer todas las lineas para sumar y restar el sueldo total
+            var totalRemunerativo = getTotalRemunerativo();
+            var totalNoRemunerativo = getTotalNoRemunerativo();
+            var totalDescuento = getTotalDescuento();
+
+            var total = totalRemunerativo + totalNoRemunerativo - totalDescuento;
+            return total; //recorrer todas las lineas para sumar y restar el sueldo total
         }
 
         public double getTotalRemunerativo()
         {
-            return 0.0; //retornar el total de remunerativo
+            var totalRemunerativo = 0.0;
+            foreach (LineaLiquidacion linea in LineasLiquidacion)
+            {
+                if (linea.Concepto.Tipo == TipoConcepto.REMUNERATIVO)
+                    totalRemunerativo = totalRemunerativo + linea.getImporte();
+            }
+            return totalRemunerativo;
         }
 
         public double getTotalNoRemunerativo()
         {
-            return 0.0;  //retornar el total de no remunerativo
+            var totalNoRemunerativo = 0.0;
+            foreach (LineaLiquidacion linea in LineasLiquidacion)
+            {
+                if (linea.Concepto.Tipo == TipoConcepto.NO_REMUNERATIVO)
+                    totalNoRemunerativo = totalNoRemunerativo + linea.getImporte();
+            }
+            return totalNoRemunerativo;
         }
 
         public double getTotalDescuento()
         {
-            return 0.0;  //retornar el total del descuento
+            var totalDescuento = 0.0;
+            foreach (LineaLiquidacion linea in LineasLiquidacion)
+            {
+                if (linea.Concepto.Tipo == TipoConcepto.DESCUENTO)
+                    totalDescuento = totalDescuento + linea.getImporte();
+            }
+            return totalDescuento;
         }
 
+        public void Imprimir() { 
+        
+            Console.WriteLine("---------------------------");
+            Console.WriteLine("Empleado: \t{0},{1} - {2}", Empleado.Apellido, Empleado.Nombre, Empleado.Dni);
+            Console.WriteLine("Lugar de pago: \t{0}", LugarPago);
+            Console.WriteLine("Periodo: \t{0}\n", PeriodoLiquidacion);
+
+            Console.WriteLine("DETALLE");
+            Console.WriteLine("+++++++++++++++++++++++++++");
+
+            foreach (LineaLiquidacion linea in LineasLiquidacion)
+            {
+                Console.WriteLine(linea.ToString());
+            }
+
+            Console.WriteLine("\nTotal Remunerativo: \t{0}",getTotalRemunerativo());
+            Console.WriteLine("Total No Remunerativo:\t{0}", getTotalNoRemunerativo());
+            Console.WriteLine("Total Descuento:\t{0}", getTotalDescuento());
+        }
     }
 }
