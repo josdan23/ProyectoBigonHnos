@@ -25,12 +25,11 @@ namespace ProyectoBigonHnos.controladores
     {
         Liquidacion liquidacion;
         Empleado empleado;
-        int periodo;
-        string lugarPago;
 
         public void iniciarLiquidacion()
         {
             liquidacion = new Liquidacion();
+            //cargarConceptosObligatorios();
         }
 
         public void buscarEmpleado(string legajo)
@@ -49,8 +48,9 @@ namespace ProyectoBigonHnos.controladores
             liquidacion.LugarPago = lugarPago;
         }
 
-        public void agregarLineaLiquidacion(Concepto concepto, int cantidad, double valorBase)
+        public void agregarLineaLiquidacion(int idConcepto, int cantidad, double valorBase)
         {
+            Concepto concepto = Negocio.getNegocio().buscarConcepto(idConcepto);
             liquidacion.agregarLineaLiquidacion(cantidad, concepto, valorBase);
         }
 
@@ -58,6 +58,17 @@ namespace ProyectoBigonHnos.controladores
         {
             //se guarda la liquidacion en la base de datos.
             liquidacion.Imprimir();
+        }
+
+        private void cargarConceptosObligatorios()
+        {
+            foreach ( Concepto concepto in Negocio.getNegocio().conceptos)
+            {
+                if (concepto.Obligatorio)
+                {
+                    agregarLineaLiquidacion(concepto.IdConcepto, 1, 2000);
+                }
+            }
         }
     }
 }

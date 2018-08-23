@@ -8,8 +8,11 @@
         public double Porcentaje { get; set; }
         public bool Obligatorio { get; set; }
 
+        private static int contador = 0;
+
         public Concepto(TipoConcepto tipo, string descripcion, double porcentaje, bool obligatorio)
         {
+            IdConcepto = contador++;
             Tipo = tipo; 
             Descripcion = descripcion;
             Obligatorio = obligatorio;

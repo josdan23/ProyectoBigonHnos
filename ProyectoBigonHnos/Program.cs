@@ -31,7 +31,7 @@ namespace ProyectoBigonHnos
             //Application.EnableVisualStyles();
             //Application.Run(vista);
 
-
+            agregarConceptos();
 
             liquidacionControlador();
             Console.ReadKey();
@@ -64,10 +64,22 @@ namespace ProyectoBigonHnos
             controlador.agregarPeriodo(1);
             controlador.agregarLugarPago("banco nacion");
 
-
-
-            controlador.agregarLineaLiquidacion(new Concepto(TipoConcepto.REMUNERATIVO, "sueldo basico", 100, true), 2, 2500);
+            controlador.agregarLineaLiquidacion(2, 2, 2500);
+            controlador.agregarLineaLiquidacion(1, 2, 2500);
+            controlador.agregarLineaLiquidacion(4, 2, 2500);
             controlador.confimarLiquidacion();
+        }
+
+        static void agregarConceptos()
+        {
+            ConceptoControlador controlador = new ConceptoControlador();
+
+            controlador.nuevoConcepto(TipoConcepto.REMUNERATIVO, "sueldo basico", 100, true);
+            controlador.nuevoConcepto(TipoConcepto.REMUNERATIVO, "otro remunerativo", 2, true);
+            controlador.nuevoConcepto(TipoConcepto.REMUNERATIVO, "basico", 1, true);
+            controlador.nuevoConcepto(TipoConcepto.NO_REMUNERATIVO, "aumento1", 10, true);
+            controlador.nuevoConcepto(TipoConcepto.NO_REMUNERATIVO, "aumento2", 1, true);
+            controlador.nuevoConcepto(TipoConcepto.DESCUENTO, "un descuento", 1, true);
         }
     }
 }

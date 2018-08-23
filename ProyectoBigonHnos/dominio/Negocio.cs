@@ -16,9 +16,6 @@ namespace ProyectoBigonHnos.dominio
         public List<Pedido> pedidosRealizados { get; set; }
         public List<Venta> ventasRealizadas { get; set; }
         public List<Concepto> conceptos { get; set; }
-
-        
-
         public List<Empleado> empleados { get; set; }
 
         private Negocio (CatalogoDeMateriales catalogo)
@@ -32,6 +29,7 @@ namespace ProyectoBigonHnos.dominio
             cargarProveedores();
             pedidosRealizados = new List<Pedido>();
             ventasRealizadas = new List<Venta>();
+            conceptos = new List<Concepto>();
         }
 
         public Negocio()
@@ -45,6 +43,7 @@ namespace ProyectoBigonHnos.dominio
             cargarProveedores();
             pedidosRealizados = new List<Pedido>();
             ventasRealizadas = new List<Venta>();
+            conceptos = new List<Concepto>();
         }
 
 
@@ -268,6 +267,16 @@ namespace ProyectoBigonHnos.dominio
                     Console.WriteLine("Concepto eliminado");
                 }
             }
+        }
+
+        public Concepto buscarConcepto(int idConcepto)
+        {
+            foreach (Concepto concepto in conceptos)
+            {
+                if (concepto.IdConcepto == idConcepto)
+                    return concepto;
+            }
+            return null;
         }
     }
 }
