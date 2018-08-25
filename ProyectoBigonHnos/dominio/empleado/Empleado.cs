@@ -58,6 +58,13 @@ namespace ProyectoBigonHnos.dominio
             agregarDireccion(dir);
         }
 
+        internal void agregarInfoUsuario(string username, string password, bool esAdmin)
+        {
+            Usuario.Username = username;
+            Usuario.Password = password;
+            Usuario.Administrador = esAdmin;
+        }
+
         public void agregarTelefono(string numeroTelefono)
         {
             Telefono tel = new Telefono(numeroTelefono);

@@ -10,18 +10,23 @@ namespace ProyectoBigonHnos.dominio
     {
         public string Username { get; set; }
         public string Password { get; set; }
-        public string Perfil { get; set; }
+        public bool Administrador { get; set; }
 
-        public Usuario(string username, string password, string perfil)
+        public Usuario(string username, string password, bool administrador)
         {
             Username = username;
             Password = password;
-            Perfil = perfil;
+            Administrador = administrador;
         }
 
         public override string ToString()
         {
             return $"Username: {Username}\nPassword: {Password}\nPerfil: {Perfil}";
+        }
+
+        public bool esAdmin()
+        {
+            return Administrador;
         }
     }
 }

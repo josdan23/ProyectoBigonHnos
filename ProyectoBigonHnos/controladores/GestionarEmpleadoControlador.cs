@@ -17,9 +17,9 @@ namespace ProyectoBigonHnos.controladores
             Negocio = negocio;
         }
 
-        public void nuevoEmpleado(string nombre, string apellido, string dni, string categoria, string cuil, string password, string perfil, DateTime fechaIngreso)
+        public void nuevoEmpleado(string nombre, string apellido, string dni, string categoria, string cuil, string password, string esAdmin, DateTime fechaIngreso)
         {
-            Empleado = new Empleado(nombre, apellido, dni, categoria, cuil, password, perfil, fechaIngreso);
+            Empleado = new Empleado(nombre, apellido, dni, categoria, cuil, password, esAdmin, fechaIngreso);
         }
 
         public void agregarTelefono(string telefono)
@@ -50,6 +50,11 @@ namespace ProyectoBigonHnos.controladores
         public void egresoEmpleado(DateTime fechaEgreso)
         {
             Empleado.egreso(fechaEgreso);
+        }
+
+        public void agregarUsuario(string username, string password, bool esAdmin)
+        {
+            Empleado.agregarInfoUsuario(username, password, esAdmin);
         }
 
     }
