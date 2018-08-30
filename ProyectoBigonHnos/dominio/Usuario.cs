@@ -21,7 +21,7 @@ namespace ProyectoBigonHnos.dominio
 
         public override string ToString()
         {
-            return $"Username: {Username}\nPassword: {Password}\nPerfil: {Perfil}";
+            return $"Username: {Username}\nPassword: {Password}\nEsAdmin: {Administrador}";
         }
 
         public bool esAdmin()

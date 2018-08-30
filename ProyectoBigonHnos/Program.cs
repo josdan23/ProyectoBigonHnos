@@ -21,7 +21,7 @@ namespace ProyectoBigonHnos
             controlador.crearEmpleado();
             controlador.agregarInformacionPersonal("yapura", "daniel", "23234234", "234234234");
             controlador.agregarLegajo("1111");
-            controlador.agregarUsuario("daniel", "daniel", "admin");
+            controlador.agregarUsuario("daniel", "daniel", true);
             controlador.confimarEmpleado();
            
 

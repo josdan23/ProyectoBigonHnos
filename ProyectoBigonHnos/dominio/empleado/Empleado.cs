@@ -24,13 +24,13 @@ namespace ProyectoBigonHnos.dominio
             Familiares = new List<GrupoFamiliar>();
         }
 
-        public Empleado(string nombre, string apellido, string dni, string categoria, string cuil, string password, string perfil, DateTime fechaIngreso) : base (nombre,apellido,dni)
+        public Empleado(string nombre, string apellido, string dni, string categoria, string cuil, string password, bool admin, DateTime fechaIngreso) : base (nombre,apellido,dni)
         { 
             Categoria = categoria;
             Cuil = cuil;
             FechaIngreso = fechaIngreso;
 
-            Usuario = new Usuario(nombre, password, perfil);
+            Usuario = new Usuario(nombre, password, admin);
             Familiares = new List<GrupoFamiliar>();
         }
 
@@ -76,9 +76,9 @@ namespace ProyectoBigonHnos.dominio
             Familiares.Add(new GrupoFamiliar(dni, parentesco, fechaNacimiento, discapacidad));
         }
 
-        public void agregarCueta (string nombreUsuario, string password, string perfil)
+        public void agregarCuenta (string nombreUsuario, string password, bool admin)
         {
-            Usuario = new Usuario(nombreUsuario, password, perfil); 
+            Usuario = new Usuario(nombreUsuario, password, admin); 
         }
 
         public void mostrar()

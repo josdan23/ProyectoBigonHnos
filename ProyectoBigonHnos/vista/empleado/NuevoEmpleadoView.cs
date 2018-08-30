@@ -48,7 +48,7 @@ namespace ProyectoBigonHnos.vista.empleado
             Controlador.agregarUsuario(
                 tboxUserName.Text,
                 tboxPassword.Text,
-                tboxPerfil.Text);
+                Boolean.Parse(tboxPerfil.Text));
 
             Controlador.agregarCategoria(tboxCategoria.Text);
             Controlador.agregarLegajo(tboxLegajo.Text);

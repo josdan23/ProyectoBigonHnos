@@ -183,9 +183,9 @@ namespace ProyectoBigonHnos.dominio
             pedidosRealizados.Add(pedido);
         }
 
-        public void nuevoEmpleado(string nombre, string apellido, string dni, string categoria, string cuil, string password, string perfil, DateTime fechaIngreso)
+        public void nuevoEmpleado(string nombre, string apellido, string dni, string categoria, string cuil, string password, bool admin, DateTime fechaIngreso)
         {
-            Empleado empleado = new Empleado(nombre, apellido, dni, categoria, cuil, password, perfil, fechaIngreso);
+            Empleado empleado = new Empleado(nombre, apellido, dni, categoria, cuil, password, admin, fechaIngreso);
 
             //agregarEmpleado(empleado);
         }

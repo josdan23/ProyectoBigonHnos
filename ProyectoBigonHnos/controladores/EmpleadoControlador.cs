@@ -60,9 +60,9 @@ namespace ProyectoBigonHnos.controladores
             Empleado.agregarFamiliar(dni, parentesco, fechaNacimiento, discapacidad);
         }
 
-        public void agregarUsuario(string username, string password, string perfil)
+        public void agregarUsuario(string username, string password, bool admin)
         {
-            Empleado.agregarCueta(username, password, perfil);
+            Empleado.agregarCuenta(username, password, admin);
         }
 
         internal void eliminarEmpleado(string legajo)
@@ -110,7 +110,7 @@ namespace ProyectoBigonHnos.controladores
                 empleado.Legajo,
                 empleado.Usuario.Username,
                 empleado.Usuario.Password,
-                empleado.Usuario.Perfil,
+                empleado.Usuario.Administrador,
                 empleado.Categoria);
 
             view.mostrarInfoPersona(

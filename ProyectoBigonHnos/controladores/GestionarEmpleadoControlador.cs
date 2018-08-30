@@ -17,7 +17,7 @@ namespace ProyectoBigonHnos.controladores
             Negocio = negocio;
         }
 
-        public void nuevoEmpleado(string nombre, string apellido, string dni, string categoria, string cuil, string password, string esAdmin, DateTime fechaIngreso)
+        public void nuevoEmpleado(string nombre, string apellido, string dni, string categoria, string cuil, string password, bool esAdmin, DateTime fechaIngreso)
         {
             Empleado = new Empleado(nombre, apellido, dni, categoria, cuil, password, esAdmin, fechaIngreso);
         }
