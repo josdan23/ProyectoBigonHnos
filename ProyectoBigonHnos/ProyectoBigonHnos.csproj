@@ -64,6 +64,11 @@
     <Compile Include="controladores\LiquidacionControlador.cs" />
     <Compile Include="controladores\LoginControlador.cs" />
     <Compile Include="controladores\VentaControlador.cs" />
+    <Compile Include="data\CRUD.cs" />
+    <Compile Include="data\EmpleadoDAO.cs" />
+    <Compile Include="data\EmpleadoDAOImpl.cs" />
+    <Compile Include="data\Proveedor\ProveedorDAO.cs" />
+    <Compile Include="data\Proveedor\ProveedorDAOImpl.cs" />
     <Compile Include="dominio\liquidacion\Concepto.cs" />
     <Compile Include="dominio\liquidacion\ConceptosDatos.cs" />
     <Compile Include="dominio\liquidacion\LineaLiquidacion.cs" />

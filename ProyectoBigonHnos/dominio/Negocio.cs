@@ -1,4 +1,6 @@
-﻿using ProyectoBigonHnos.dominio.liquidacion;
+﻿using ProyectoBigonHnos.data;
+using ProyectoBigonHnos.data.Proveedor;
+using ProyectoBigonHnos.dominio.liquidacion;
 using ProyectoBigonHnos.dominio.venta;
 using System;
 using System.Collections.Generic;
@@ -18,6 +20,7 @@ namespace ProyectoBigonHnos.dominio
         public List<Concepto> conceptos { get; set; }
         public List<Empleado> empleados { get; set; }
 
+        private CRUD<Proveedor> proveedorDao;
         private Negocio (CatalogoDeMateriales catalogo)
         {
 
@@ -30,6 +33,8 @@ namespace ProyectoBigonHnos.dominio
             pedidosRealizados = new List<Pedido>();
             ventasRealizadas = new List<Venta>();
             conceptos = new List<Concepto>();
+
+            proveedorDao = new ProveedorDAOImpl();
         }
 
         public Negocio()
@@ -44,6 +49,8 @@ namespace ProyectoBigonHnos.dominio
             pedidosRealizados = new List<Pedido>();
             ventasRealizadas = new List<Venta>();
             conceptos = new List<Concepto>();
+
+            proveedorDao = new ProveedorDAOImpl();
         }
 
 
@@ -79,15 +86,6 @@ namespace ProyectoBigonHnos.dominio
             }
         }
 
-        public Proveedor buscarProveedor(int idProveedor)
-        {
-            foreach (Proveedor proveedor in proveedores)
-            {
-                if (idProveedor == proveedor.IdProveedor )
-                    return proveedor;
-            }
-            return null;
-        }
 
         //BORRAR VENTA CON EL ID
         public void BorrarVenta(int idVenta)
@@ -99,15 +97,7 @@ namespace ProyectoBigonHnos.dominio
             }
         }
 
-        public Proveedor buscarProveedor(string razonSocial)
-        {
-            foreach( Proveedor proveedor in proveedores)
-            {
-                if (razonSocial.Equals(proveedor.RazonSocial))
-                    return proveedor;
-            }
-            return null;
-        }
+    
 
         internal Empleado buscarEmpleado(string legajoSeleccionado)
         {
@@ -122,14 +112,6 @@ namespace ProyectoBigonHnos.dominio
             return null;
         }
 
-        public void actualizarProveedor(int idProveedor, Proveedor proveedor)
-        {
-            for (int i = 0; i < proveedores.Count(); i++)
-            {
-                if (proveedores[i].IdProveedor == idProveedor)
-                    proveedores[i] = proveedor;
-            }
-        }
 
         public Pedido buscarPedido(int idPedido )
         {
@@ -158,20 +140,6 @@ namespace ProyectoBigonHnos.dominio
         }
 
 
-        //METODO PARA CARGAR PROVEEDORES DE PRUEBA
-        public void cargarProveedores()
-        {
-            Proveedor prov = new Proveedor( );
-            prov.RazonSocial = "rzonSocial";
-            prov.Cuit = "cuit";
-            Console.WriteLine("hola");
-            //prov.agregarTelefono(new Telefono("nasdfasdf"));
-            prov.agregarNuevoTelefono("telefono1");
-            //prov.agregarDireccion(new Direccion("calle1", 233, "sanmiguel", "tucuman"));
-            prov.agregarNuevaDireccion("calle1", 233, "samiguel", "tucuman");
-            proveedores.Add(prov);
-    
-        }
 
         public void cargarVentasConfirmadas(Venta venta)
         {
@@ -201,11 +169,7 @@ namespace ProyectoBigonHnos.dominio
             clientes.Add(cliente);
         }
 
-        public void agregarProveedor(Proveedor proveedor)
-        {
-            proveedores.Add(proveedor);
-        }
-
+        
 
         public static Negocio getNegocio()
         {
@@ -226,6 +190,65 @@ namespace ProyectoBigonHnos.dominio
             }
         }
 
+
+
+        //METODO PARA CARGAR PROVEEDORES DE PRUEBA
+        public void cargarProveedores()
+        {
+            Proveedor prov = new Proveedor();
+            prov.RazonSocial = "rzonSocial";
+            prov.Cuit = "cuit";
+            Console.WriteLine("hola");
+            //prov.agregarTelefono(new Telefono("nasdfasdf"));
+            prov.agregarNuevoTelefono("telefono1");
+            //prov.agregarDireccion(new Direccion("calle1", 233, "sanmiguel", "tucuman"));
+            prov.agregarNuevaDireccion("calle1", 233, "samiguel", "tucuman");
+            proveedores.Add(prov);
+
+        }
+
+        public Proveedor buscarProveedor(int idProveedor)
+        {/*
+            foreach (Proveedor proveedor in proveedores)
+            {
+                if (idProveedor == proveedor.IdProveedor )
+                    return proveedor;
+            }
+            return null;*/
+
+            return proveedorDao.leerPorId(idProveedor);
+        }
+
+        public Proveedor buscarProveedor(string razonSocial)
+        {
+            foreach (Proveedor proveedor in proveedores)
+            {
+                if (razonSocial.Equals(proveedor.RazonSocial))
+                    return proveedor;
+            }
+            return null;
+        }
+
+        public void actualizarProveedor(int idProveedor, Proveedor proveedor)
+        {
+            /*
+            for (int i = 0; i < proveedores.Count(); i++)
+            {
+                if (proveedores[i].IdProveedor == idProveedor)
+                    proveedores[i] = proveedor;
+            }*/
+
+            proveedorDao.actualizar(proveedor);
+        }
+
+        public void agregarProveedor(Proveedor proveedor)
+        {
+            //proveedores.Add(proveedor);
+
+            proveedorDao.registrar(proveedor);
+        }
+
+
         public void borrarProveedor(string razonSocial)
         {
             for (int i = 0; i < proveedores.Count; i++)
@@ -239,6 +262,11 @@ namespace ProyectoBigonHnos.dominio
             }
         }
 
+        public void borrarProveedor(int idProveedor)
+        {
+            proveedorDao.eliminar(idProveedor);
+        }
+
         public void borrarPedido(int idPedido)
         {
             for (int i = 0; i < pedidosRealizados.Count; i++)
@@ -249,6 +277,11 @@ namespace ProyectoBigonHnos.dominio
                     Console.WriteLine("pedido eliminado");
                 }
             }
+        }
+
+        public List<Proveedor> obtenerTodosProveedores()
+        {
+            return proveedorDao.listarTodos();
         }
 
 

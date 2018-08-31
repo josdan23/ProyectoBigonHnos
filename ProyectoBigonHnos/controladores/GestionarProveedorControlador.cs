@@ -1,5 +1,6 @@
 ﻿using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.vista.proveedor;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ProyectoBigonHnos.controladores
@@ -41,10 +42,10 @@ namespace ProyectoBigonHnos.controladores
         }
 
         public void listarProvedores()
-        {
-            for (int i = 0; i < Negocio.proveedores.Count(); i++)
+        { 
+            foreach (Proveedor prov in Negocio.obtenerTodosProveedores())
             {
-                vista.listarProveedores(Negocio.proveedores[i].RazonSocial);
+                vista.listarProveedores(prov.RazonSocial);
             }
         }
 
