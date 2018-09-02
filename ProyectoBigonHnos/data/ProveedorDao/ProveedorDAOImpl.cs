@@ -9,12 +9,16 @@ namespace ProyectoBigonHnos.data.Proveedor
 {
     class ProveedorDAOImpl : ProveedorDAO
     {
+
+        private DBConector con;
+
         //actua como base de datos
         List<dominio.Proveedor> listaProveedoresDB;
 
         public ProveedorDAOImpl()
         {
             listaProveedoresDB = new List<dominio.Proveedor>();
+            con = DBConector.getInstance();
         }
 
         public void actualizar(dominio.Proveedor t)
@@ -48,7 +52,7 @@ namespace ProyectoBigonHnos.data.Proveedor
 
         public void registrar(dominio.Proveedor t)
         {
-            listaProveedoresDB.Add(t);
+            listaProveedoresDB.Add(t);            
         }
     }
 }

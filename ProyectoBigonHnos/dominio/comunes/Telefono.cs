@@ -4,6 +4,7 @@ namespace ProyectoBigonHnos.dominio
 {
     class Telefono
     {
+        public int IdTelefono { get; set; }
         public string Numero { get; set; }
 
         public Telefono(string numero)
@@ -14,6 +15,11 @@ namespace ProyectoBigonHnos.dominio
         public void mostrar()
         {
             Console.WriteLine(Numero);
+        }
+
+        public override string ToString()
+        {
+            return String.Format("id: {0}\nNumero: {1}", IdTelefono, Numero);
         }
     }
 }

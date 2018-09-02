@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using ProyectoBigonHnos.controladores;
 using ProyectoBigonHnos.vista.login;
 using ProyectoBigonHnos.dominio.liquidacion;
+using ProyectoBigonHnos.data.TelefonoDao;
 
 namespace ProyectoBigonHnos
 {
@@ -28,8 +29,8 @@ namespace ProyectoBigonHnos
             Login vista = new Login();
             vista.unirControlador(LoginControlador.getInstance());
 
-            Application.EnableVisualStyles();
-            Application.Run(vista);
+            //Application.EnableVisualStyles();
+            //Application.Run(vista);
 
             //agregarConceptos();
 
