@@ -28,10 +28,10 @@ namespace ProyectoBigonHnos.controladores
             Cliente.agregarTelefono(tel);
         }
 
-        public void agregarDireccion(string calle, int numero, string localidad, string provincia)
+        public void agregarDomicilio(string calle, int numero, string localidad, string provincia)
         {
-            Direccion dir = new Direccion(calle, numero, localidad, provincia);
-            Cliente.agregarDireccion(dir);
+            Domicilio dir = new Domicilio(calle, numero, localidad, provincia);
+            Cliente.agregarDomicilio(dir);
         }
 
         public void confirmarNuevoCliente()
@@ -64,9 +64,9 @@ namespace ProyectoBigonHnos.controladores
                 vista.mostrarTelefono(telefono.Numero);
             }
 
-            foreach(Direccion dir in cliente.Direcciones)
+            foreach(Domicilio dir in cliente.Domicilioes)
             {
-                vista.mostrarDireccion(
+                vista.mostrarDomicilio(
                     dir.Numero.ToString(),
                     dir.Calle, 
                     dir.Localidad.Nombre, 

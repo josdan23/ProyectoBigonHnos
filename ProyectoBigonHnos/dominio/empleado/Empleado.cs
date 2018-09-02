@@ -54,8 +54,8 @@ namespace ProyectoBigonHnos.dominio
 
         public void agregarDomicilio(string calle, int numero, string localidad, string provincia)
         {
-            Direccion dir = new Direccion(calle, numero, localidad, provincia);
-            agregarDireccion(dir);
+            Domicilio dir = new Domicilio(calle, numero, localidad, provincia);
+            agregarDomicilio(dir);
         }
 
         internal void agregarInfoUsuario(string username, string password, bool esAdmin)
@@ -98,7 +98,7 @@ namespace ProyectoBigonHnos.dominio
                 tel.mostrar();
             }
 
-            foreach (Direccion dir in Direcciones)
+            foreach (Domicilio dir in Domicilioes)
             {
                 dir.mostrar();
             }

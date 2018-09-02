@@ -24,7 +24,7 @@ namespace ProyectoBigonHnos.vista
             tboxApellido.Text = Text;
         }
 
-        public void mostrarDireccion(string calle, int numero, string localidad, string provincia)
+        public void mostrarDomicilio(string calle, int numero, string localidad, string provincia)
         {
             tboxCalle.Text = calle;
             tboxNumero.Text = $"{numero}";

@@ -39,7 +39,7 @@ namespace ProyectoBigonHnos.vista.empleado
             tboxCuit.Text = cuit;
         }
 
-        public void mostrarDireccion(string calle, int numero, string localidad, string provincia)
+        public void mostrarDomicilio(string calle, int numero, string localidad, string provincia)
         {
             tboxCalle.Text = calle;
             tboxNumero.Text = numero.ToString();

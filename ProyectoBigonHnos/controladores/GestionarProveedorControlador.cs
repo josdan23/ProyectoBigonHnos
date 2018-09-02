@@ -30,9 +30,9 @@ namespace ProyectoBigonHnos.controladores
             Proveedor.agregarNuevoTelefono(numeroDeTelefono);
         }
 
-        public void agregarDireccion(string calle, int numero, string localidad, string provincia)
+        public void agregarDomicilio(string calle, int numero, string localidad, string provincia)
         {
-            Proveedor.agregarNuevaDireccion(calle, numero, localidad, provincia);
+            Proveedor.agregarNuevaDomicilio(calle, numero, localidad, provincia);
         }
 
         public void confirmarNuevoProveedor()
@@ -65,10 +65,10 @@ namespace ProyectoBigonHnos.controladores
             vista.mostrarRazonSocial(proveedor.RazonSocial);
             vista.mostrarCuit(proveedor.Cuit);
             vista.mostrarTelefono(proveedor.Telefonos[0].Numero);
-            vista.mostrarCalle(proveedor.Direcciones[0].Calle);
-            vista.mostrarNumero(proveedor.Direcciones[0].Numero);
-            vista.mostrarLocalidad(proveedor.Direcciones[0].Localidad.Nombre);
-            vista.mostrarProvincia(proveedor.Direcciones[0].Localidad.Provincia.Nombre);
+            vista.mostrarCalle(proveedor.Domicilios[0].Calle);
+            vista.mostrarNumero(proveedor.Domicilios[0].Numero);
+            vista.mostrarLocalidad(proveedor.Domicilios[0].Localidad.Nombre);
+            vista.mostrarProvincia(proveedor.Domicilios[0].Localidad.Provincia.Nombre);
         }
 
         public void obtenerDetalleDeProveedor(int idProveedor)
@@ -102,9 +102,9 @@ namespace ProyectoBigonHnos.controladores
             Proveedor.agregarNuevoTelefono(nuevoNumero);
         }
 
-        public void editarDireccion(string nuevaCalle, int nuevoNumero, string nuevaLocalidad, string nuevaProvincia)
+        public void editarDomicilio(string nuevaCalle, int nuevoNumero, string nuevaLocalidad, string nuevaProvincia)
         {
-            Proveedor.agregarNuevaDireccion(nuevaCalle, nuevoNumero, nuevaLocalidad, nuevaProvincia);
+            Proveedor.agregarNuevaDomicilio(nuevaCalle, nuevoNumero, nuevaLocalidad, nuevaProvincia);
         }
 
         public void buscarProveedor(string razonSocial)

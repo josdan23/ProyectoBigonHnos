@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio
 {
-    class Direccion
+    class Domicilio
     {
         public string Calle { get; set; }
         public int Numero { get; set; }
         public Localidad Localidad { get; set; }
 
-        public Direccion(string nombreCalle, int numero, string nombreLocalidad, string nombreProvincia)
+        public Domicilio(string nombreCalle, int numero, string nombreLocalidad, string nombreProvincia)
         {
             this.Calle = nombreCalle;
             this.Numero = numero;

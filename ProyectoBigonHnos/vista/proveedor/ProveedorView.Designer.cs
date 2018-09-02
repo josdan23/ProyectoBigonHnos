@@ -206,7 +206,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Direccion";
+            this.label5.Text = "Domicilio";
             // 
             // lblTelefono
             // 
@@ -233,7 +233,7 @@
             this.lblCalle.Name = "lblCalle";
             this.lblCalle.Size = new System.Drawing.Size(52, 13);
             this.lblCalle.TabIndex = 3;
-            this.lblCalle.Text = "Direccion";
+            this.lblCalle.Text = "Domicilio";
             // 
             // label9
             // 
@@ -251,7 +251,7 @@
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(52, 13);
             this.lblNumero.TabIndex = 3;
-            this.lblNumero.Text = "Direccion";
+            this.lblNumero.Text = "Domicilio";
             // 
             // label11
             // 
@@ -269,7 +269,7 @@
             this.lblLocalidad.Name = "lblLocalidad";
             this.lblLocalidad.Size = new System.Drawing.Size(52, 13);
             this.lblLocalidad.TabIndex = 3;
-            this.lblLocalidad.Text = "Direccion";
+            this.lblLocalidad.Text = "Domicilio";
             // 
             // label13
             // 
@@ -287,7 +287,7 @@
             this.lblProvincia.Name = "lblProvincia";
             this.lblProvincia.Size = new System.Drawing.Size(52, 13);
             this.lblProvincia.TabIndex = 3;
-            this.lblProvincia.Text = "Direccion";
+            this.lblProvincia.Text = "Domicilio";
             // 
             // lblIdProveedor
             // 

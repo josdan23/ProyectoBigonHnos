@@ -29,8 +29,8 @@ namespace ProyectoBigonHnos
             Login vista = new Login();
             vista.unirControlador(LoginControlador.getInstance());
 
-            //Application.EnableVisualStyles();
-            //Application.Run(vista);
+            Application.EnableVisualStyles();
+            Application.Run(vista);
 
             //agregarConceptos();
 

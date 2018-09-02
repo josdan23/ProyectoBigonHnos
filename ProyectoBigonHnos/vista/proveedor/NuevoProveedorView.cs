@@ -36,7 +36,7 @@ namespace ProyectoBigonHnos.vista.proveedor
 
             controlador.crearNuevoProveedor(razonSocial, cuit);
             controlador.agregarTelefono(telefono);
-            controlador.agregarDireccion(calle, numero, localidad, provincia);
+            controlador.agregarDomicilio(calle, numero, localidad, provincia);
             controlador.confirmarNuevoProveedor();
             Dispose();
 

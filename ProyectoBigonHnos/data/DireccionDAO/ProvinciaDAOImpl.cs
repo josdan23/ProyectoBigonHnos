@@ -5,13 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using ProyectoBigonHnos.dominio;
 
-namespace ProyectoBigonHnos.data
+namespace ProyectoBigonHnos.data.DomicilioDAO
 {
-    class EmpleadoDAOImpl : IEmpleadoDAO
+    class ProvinciaDAOImpl : IProvinciaDAO
     {
-        List<Empleado> listaEmpleados;
+        private DBConector db;
 
-        public void actualizar(Empleado t)
+        public ProvinciaDAOImpl()
+        {
+            db = DBConector.getInstance();
+        }
+
+        public void actualizar(Provincia t)
         {
             throw new NotImplementedException();
         }
@@ -21,19 +26,21 @@ namespace ProyectoBigonHnos.data
             throw new NotImplementedException();
         }
 
-        public Empleado leerPorId(int id)
+        public Provincia leerPorId(int id)
         {
             throw new NotImplementedException();
         }
 
-        public List<Empleado> listarTodos()
+        public List<Provincia> listarTodos()
         {
             throw new NotImplementedException();
         }
 
-        public void registrar(Empleado t)
+        public void registrar(Provincia t)
         {
-            throw new NotImplementedException();
+            string query = String.Format("insert into provincia (nombre)");
+
+            db.ejectuarQuery(query);
         }
     }
 }

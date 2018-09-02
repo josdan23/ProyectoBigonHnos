@@ -7,7 +7,7 @@ using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.data.Proveedor
 {
-    class ProveedorDAOImpl : ProveedorDAO
+    class ProveedorDAOImpl : IProveedorDAO
     {
 
         private DBConector con;

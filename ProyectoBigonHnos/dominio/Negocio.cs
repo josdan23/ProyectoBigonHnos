@@ -131,7 +131,7 @@ namespace ProyectoBigonHnos.dominio
             cliente.agregarTelefono(new Telefono("42067"));
             cliente.agregarTelefono(new Telefono("42068"));
             cliente.agregarTelefono(new Telefono("42069"));
-            cliente.agregarDireccion(new Direccion("calle1", 1, "localidad1", "provincia1"));
+            cliente.agregarDomicilio(new Domicilio("calle1", 1, "localidad1", "provincia1"));
             clientes.Add(cliente);
             clientes.Add(new Cliente("nombre2", "apellido2", "dni2"));
             clientes.Add(new Cliente("nombre3", "apellido3", "dni3"));
@@ -201,8 +201,8 @@ namespace ProyectoBigonHnos.dominio
             Console.WriteLine("hola");
             //prov.agregarTelefono(new Telefono("nasdfasdf"));
             prov.agregarNuevoTelefono("telefono1");
-            //prov.agregarDireccion(new Direccion("calle1", 233, "sanmiguel", "tucuman"));
-            prov.agregarNuevaDireccion("calle1", 233, "samiguel", "tucuman");
+            //prov.agregarDomicilio(new Domicilio("calle1", 233, "sanmiguel", "tucuman"));
+            prov.agregarNuevaDomicilio("calle1", 233, "samiguel", "tucuman");
             proveedores.Add(prov);
 
         }

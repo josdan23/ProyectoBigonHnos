@@ -35,7 +35,7 @@ namespace ProyectoBigonHnos.vista
             string telefono = tboxTelefono.Text;
 
             controlador.nuevoCliente(nombre, apellido, dni);
-            controlador.agregarDireccion(calle, numero, localidad, provincia);
+            controlador.agregarDomicilio(calle, numero, localidad, provincia);
             controlador.agregarTelefono(telefono);
             controlador.confirmarNuevoCliente();
 

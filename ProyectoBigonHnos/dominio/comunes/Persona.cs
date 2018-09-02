@@ -9,12 +9,12 @@ namespace ProyectoBigonHnos.dominio
         public string Dni { get; set; }
 
         public List<Telefono> Telefonos { get; set; }
-        public List<Direccion> Direcciones { get; set; }
+        public List<Domicilio> Domicilioes { get; set; }
 
         public Persona()
         {
             Telefonos = new List<Telefono>();
-            Direcciones = new List<Direccion>();
+            Domicilioes = new List<Domicilio>();
         }
 
         public Persona( string nombre, string apellido, string dni)
@@ -23,7 +23,7 @@ namespace ProyectoBigonHnos.dominio
             Apellido = apellido;
             Dni = dni;
             Telefonos = new List<Telefono>();
-            Direcciones = new List<Direccion>();
+            Domicilioes = new List<Domicilio>();
         }
 
         public void agregarTelefono(Telefono telefono)
@@ -31,9 +31,9 @@ namespace ProyectoBigonHnos.dominio
             Telefonos.Add(telefono);
         }
 
-        public void agregarDireccion(Direccion direccion)
+        public void agregarDomicilio(Domicilio Domicilio)
         {
-            Direcciones.Add(direccion);
+            Domicilioes.Add(Domicilio);
         }
     }
 }

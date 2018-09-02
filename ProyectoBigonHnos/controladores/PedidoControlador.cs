@@ -72,10 +72,10 @@ namespace ProyectoBigonHnos.dominio
                 agregarClienteView.mostrarNombre(cliente.Nombre);
                 agregarClienteView.mostrarApellido(cliente.Apellido);
                 agregarClienteView.mostrarDni(cliente.Dni);
-                agregarClienteView.mostrarCalle(cliente.Direcciones[0].Calle);
-                agregarClienteView.mostrarNumero(cliente.Direcciones[0].Numero);
-                agregarClienteView.mostrarLocalidad(cliente.Direcciones[0].Localidad.Nombre);
-                agregarClienteView.mostrarProvincia(cliente.Direcciones[0].Localidad.Provincia.Nombre);
+                agregarClienteView.mostrarCalle(cliente.Domicilioes[0].Calle);
+                agregarClienteView.mostrarNumero(cliente.Domicilioes[0].Numero);
+                agregarClienteView.mostrarLocalidad(cliente.Domicilioes[0].Localidad.Nombre);
+                agregarClienteView.mostrarProvincia(cliente.Domicilioes[0].Localidad.Provincia.Nombre);
                 agregarClienteView.mostrarTelefono(cliente.Telefonos[0].Numero);
 
             }
@@ -104,10 +104,10 @@ namespace ProyectoBigonHnos.dominio
                 view.mostrarDni(pedido.cliente.Dni);
                 view.mostrarTelefono(pedido.cliente.Telefonos[0].Numero);
 
-                view.mostrarDireccion(
-                    pedido.cliente.Direcciones[0].Calle,
-                    pedido.cliente.Direcciones[0].Numero,
-                    pedido.cliente.Direcciones[0].Localidad.Provincia.Nombre);
+                view.mostrarDomicilio(
+                    pedido.cliente.Domicilioes[0].Calle,
+                    pedido.cliente.Domicilioes[0].Numero,
+                    pedido.cliente.Domicilioes[0].Localidad.Provincia.Nombre);
             }
         }
 

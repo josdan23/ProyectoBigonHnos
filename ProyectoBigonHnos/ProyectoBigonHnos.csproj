@@ -66,6 +66,8 @@
     <Compile Include="controladores\VentaControlador.cs" />
     <Compile Include="data\CRUD.cs" />
     <Compile Include="data\DBConector.cs" />
+    <Compile Include="data\DireccionDAO\IProvinciaDAO.cs" />
+    <Compile Include="data\DireccionDAO\ProvinciaDAOImpl.cs" />
     <Compile Include="data\EmpleadoDAO\IEmpleadoDAO.cs" />
     <Compile Include="data\EmpleadoDAO\EmpleadoDAOImpl.cs" />
     <Compile Include="data\ProveedorDao\IProveedorDAO.cs" />
@@ -83,7 +85,7 @@
     <Compile Include="controladores\CompraControlador.cs" />
     <Compile Include="controladores\GestionarMaterialControlador.cs" />
     <Compile Include="dominio\compra\LineaDeCompra.cs" />
-    <Compile Include="dominio\comunes\Direccion.cs" />
+    <Compile Include="dominio\comunes\Domicilio.cs" />
     <Compile Include="dominio\empleado\Empleado.cs" />
     <Compile Include="dominio\comunes\Localidad.cs" />
     <Compile Include="dominio\empleado\GrupoFamiliar.cs" />

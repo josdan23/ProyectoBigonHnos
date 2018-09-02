@@ -38,7 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblMail = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
-            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblDomicilio = new System.Windows.Forms.Label();
             this.lblDni = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
@@ -107,7 +107,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.lblMail);
             this.panel1.Controls.Add(this.lblTelefono);
-            this.panel1.Controls.Add(this.lblDireccion);
+            this.panel1.Controls.Add(this.lblDomicilio);
             this.panel1.Controls.Add(this.lblDni);
             this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Controls.Add(this.lblApellido);
@@ -142,7 +142,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 13);
             this.label5.TabIndex = 0;
-            this.label5.Text = "DIRECCION";
+            this.label5.Text = "Domicilio";
             // 
             // label4
             // 
@@ -189,14 +189,14 @@
             this.lblTelefono.TabIndex = 0;
             this.lblTelefono.Text = "-";
             // 
-            // lblDireccion
+            // lblDomicilio
             // 
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(322, 14);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(10, 13);
-            this.lblDireccion.TabIndex = 0;
-            this.lblDireccion.Text = "-";
+            this.lblDomicilio.AutoSize = true;
+            this.lblDomicilio.Location = new System.Drawing.Point(322, 14);
+            this.lblDomicilio.Name = "lblDomicilio";
+            this.lblDomicilio.Size = new System.Drawing.Size(10, 13);
+            this.lblDomicilio.TabIndex = 0;
+            this.lblDomicilio.Text = "-";
             // 
             // lblDni
             // 
@@ -591,7 +591,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblMail;
         private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblDomicilio;
         private System.Windows.Forms.Label lblDni;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblApellido;

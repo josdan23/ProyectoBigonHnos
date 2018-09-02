@@ -83,9 +83,9 @@ namespace ProyectoBigonHnos.vista.pedidos
             lblDni.Text = dni;
         }
 
-        public void mostrarDireccion(string calle, int numero, string provincia)
+        public void mostrarDomicilio(string calle, int numero, string provincia)
         {
-            lblDireccion.Text = $"{calle}, {numero} - {provincia}";
+            lblDomicilio.Text = $"{calle}, {numero} - {provincia}";
         }
 
         public void mostrarTelefono(string telefono)

@@ -14,7 +14,7 @@ namespace ProyectoBigonHnos.dominio
         private string razonSocial;
         private string cuit;
         private List<Telefono> telefonos;
-        private List<Direccion> direcciones;
+        private List<Domicilio> domicilios;
 
 
         public Proveedor()
@@ -23,7 +23,7 @@ namespace ProyectoBigonHnos.dominio
             contadorId++;
             Console.WriteLine(contadorId);
             telefonos = new List<Telefono>();
-            direcciones = new List<Direccion>();
+            domicilios = new List<Domicilio>();
         }
 
         public Proveedor(string razonSocial, string cuit)
@@ -31,14 +31,14 @@ namespace ProyectoBigonHnos.dominio
             RazonSocial = razonSocial;
             Cuit = cuit;
             Telefonos = new List<Telefono>();
-            Direcciones = new List<Direccion>();
+            domicilios = new List<Domicilio>();
         }
 
         public int IdProveedor { get => idProveedor; set => idProveedor = value; }
         public string RazonSocial { get => razonSocial; set => razonSocial = value; }
         public string Cuit { get => cuit; set => cuit = value; }
         public List<Telefono> Telefonos { get => telefonos; set => telefonos = value; }
-        public List<Direccion> Direcciones { get => direcciones; set => direcciones = value; }
+        public List<Domicilio> Domicilios { get => domicilios; set => domicilios = value; }
 
         public void mostrar()
         {
@@ -47,10 +47,10 @@ namespace ProyectoBigonHnos.dominio
             Console.WriteLine(Cuit);
         }
 
-        public void agregarNuevaDireccion(string calle, int numero, string localidad, string provincia)
+        public void agregarNuevaDomicilio(string calle, int numero, string localidad, string provincia)
         {
-            Direccion nuevaDireccion = new Direccion(calle, numero, localidad, provincia);
-            Direcciones.Add(nuevaDireccion);
+            Domicilio nuevaDomicilio = new Domicilio(calle, numero, localidad, provincia);
+            Domicilios.Add(nuevaDomicilio);
         }
 
         public void agregarNuevoTelefono(String numeroDeTelefono)

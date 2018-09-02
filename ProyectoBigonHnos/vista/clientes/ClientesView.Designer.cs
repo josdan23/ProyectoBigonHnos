@@ -334,7 +334,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 2;
-            this.label7.Text = "Direccion";
+            this.label7.Text = "Domicilio";
             this.label7.Click += new System.EventHandler(this.label3_Click);
             // 
             // label8

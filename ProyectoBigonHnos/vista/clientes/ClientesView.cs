@@ -85,7 +85,7 @@ namespace ProyectoBigonHnos.vista
             dgvTelefonos.Rows.Add(numero);
         }
 
-        public void mostrarDireccion(string numero, string calle, string localidad, string provincia)
+        public void mostrarDomicilio(string numero, string calle, string localidad, string provincia)
         {
             tboxNumero.Text = numero;
             tboxCalle.Text = calle;

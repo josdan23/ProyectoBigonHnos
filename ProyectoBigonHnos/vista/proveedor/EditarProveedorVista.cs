@@ -86,7 +86,7 @@ namespace ProyectoBigonHnos.vista.proveedor
             controlador.editarRazonSocial(razonSocial);
             controlador.editarCuit(cuit);
             controlador.editarTelefono(telefono);
-            controlador.editarDireccion(calle, numero, localidad, provincia);
+            controlador.editarDomicilio(calle, numero, localidad, provincia);
             controlador.guadarProveedorActualizado(idProveedorSeleccionado);
             
             Dispose();

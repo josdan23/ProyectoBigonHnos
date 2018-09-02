@@ -37,7 +37,7 @@ namespace ProyectoBigonHnos.vista.empleado
                 tboxDni.Text,
                 tboxCuil.Text);
 
-            Controlador.agregarDireccion(
+            Controlador.agregarDomicilio(
                 tboxCalle.Text,
                 int.Parse(tboxNumero.Text),
                 tboxLocalidad.Text,

@@ -34,7 +34,7 @@ namespace ProyectoBigonHnos.controladores
             Empleado.agregarInformacionPersonal(nombre, apellido, dni, cuil);
         }
 
-        public void agregarDireccion(string calle, int numero, string localidad, string provincia)
+        public void agregarDomicilio(string calle, int numero, string localidad, string provincia)
         {
             Empleado.agregarDomicilio(calle, numero, localidad, provincia);
         }
@@ -119,11 +119,11 @@ namespace ProyectoBigonHnos.controladores
                 empleado.Dni,
                 empleado.Cuil);
 
-            view.mostrarDireccion(
-                empleado.Direcciones[0].Calle,
-                empleado.Direcciones[0].Numero,
-                empleado.Direcciones[0].Localidad.Nombre,
-                empleado.Direcciones[0].Localidad.Provincia.Nombre);
+            view.mostrarDomicilio(
+                empleado.Domicilioes[0].Calle,
+                empleado.Domicilioes[0].Numero,
+                empleado.Domicilioes[0].Localidad.Nombre,
+                empleado.Domicilioes[0].Localidad.Provincia.Nombre);
 
             view.mostrarTelefono(
                 empleado.Telefonos[0].Numero);
