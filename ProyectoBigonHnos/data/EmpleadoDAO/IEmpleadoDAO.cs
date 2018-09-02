@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.data
 {
-    interface EmpleadoDAO: CRUD<dominio.Empleado>
+    interface IEmpleadoDAO: CRUD<dominio.Empleado>
     {
     }
 }

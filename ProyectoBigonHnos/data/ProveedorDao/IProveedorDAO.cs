@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.data.Proveedor
 {
-    interface ProveedorDAO: CRUD<dominio.Proveedor>
+    interface IProveedorDAO: CRUD<dominio.Proveedor>
     {
     }
 }
