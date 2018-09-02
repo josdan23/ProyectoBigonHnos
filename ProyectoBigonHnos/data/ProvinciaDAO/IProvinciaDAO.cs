@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoBigonHnos.data.DomicilioDAO
+namespace ProyectoBigonHnos.data.ProvinciaDAO
 {
     interface IProvinciaDAO : CRUD<dominio.Provincia>
     {
