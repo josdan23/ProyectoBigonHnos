@@ -8,6 +8,7 @@ namespace ProyectoBigonHnos.data
 {
     interface CRUD<T>
     {
+
         List<T> listarTodos();
         void registrar(T t);
         T leerPorId(int id);

@@ -8,7 +8,13 @@ namespace ProyectoBigonHnos.dominio
 {
     class Provincia
     {
+        public int IdProvincia { get; set; }
         public string Nombre { get; set; }
+
+        public Provincia()
+        {
+
+        }
 
         public Provincia(string nombre)
         {
@@ -18,6 +24,11 @@ namespace ProyectoBigonHnos.dominio
         public void mostrar()
         {
             Console.WriteLine(Nombre);
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Nombre: {0}", Nombre);
         }
     }
 }

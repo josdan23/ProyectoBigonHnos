@@ -10,6 +10,8 @@ using ProyectoBigonHnos.controladores;
 using ProyectoBigonHnos.vista.login;
 using ProyectoBigonHnos.dominio.liquidacion;
 using ProyectoBigonHnos.data.TelefonoDao;
+using ProyectoBigonHnos.data.DomicilioDAO;
+using ProyectoBigonHnos.data.ProvinciaDAO;
 
 namespace ProyectoBigonHnos
 {
@@ -24,18 +26,18 @@ namespace ProyectoBigonHnos
             controlador.agregarLegajo("1111");
             controlador.agregarUsuario("daniel", "daniel", true);
             controlador.confimarEmpleado();
-           
+
 
             Login vista = new Login();
             vista.unirControlador(LoginControlador.getInstance());
 
-            Application.EnableVisualStyles();
-            Application.Run(vista);
+            //Application.EnableVisualStyles();
+            //Application.Run(vista);
 
             //agregarConceptos();
-
             //liquidacionControlador();
             //Console.ReadKey();
+
         }
 
         static void liquidacion()
@@ -46,12 +48,12 @@ namespace ProyectoBigonHnos
             double valorbase = 4000;
 
             Liquidacion liquidacion = new Liquidacion(empleado, 2, "Banco Nacion");
-            liquidacion.agregarLineaLiquidacion(1, new Concepto(TipoConcepto.REMUNERATIVO, "sueldo basico", 100, true), valorbase);
-            liquidacion.agregarLineaLiquidacion(2, new Concepto(TipoConcepto.REMUNERATIVO, "otro remunerativo", 2, true), valorbase);
-            liquidacion.agregarLineaLiquidacion(1, new Concepto(TipoConcepto.REMUNERATIVO, "basico", 1, true), valorbase);
-            liquidacion.agregarLineaLiquidacion(1, new Concepto(TipoConcepto.NO_REMUNERATIVO, "aumento1", 10, true), valorbase);
-            liquidacion.agregarLineaLiquidacion(1, new Concepto(TipoConcepto.NO_REMUNERATIVO, "aumento2", 1, true), valorbase);
-            liquidacion.agregarLineaLiquidacion(1, new Concepto(TipoConcepto.DESCUENTO, "un descuento", 1, true), valorbase);
+            liquidacion.agregarLineaLiquidacion(1, new Concepto(TipoConcepto.REMUNERATIVO, "concepto1", 100, true), valorbase);
+            liquidacion.agregarLineaLiquidacion(2, new Concepto(TipoConcepto.REMUNERATIVO, "concepto2", 2, true), valorbase);
+            liquidacion.agregarLineaLiquidacion(1, new Concepto(TipoConcepto.REMUNERATIVO, "concepto3", 1, true), valorbase);
+            liquidacion.agregarLineaLiquidacion(1, new Concepto(TipoConcepto.NO_REMUNERATIVO, "concepto4", 10, true), valorbase);
+            liquidacion.agregarLineaLiquidacion(1, new Concepto(TipoConcepto.NO_REMUNERATIVO, "concepto5", 1, true), valorbase);
+            liquidacion.agregarLineaLiquidacion(1, new Concepto(TipoConcepto.DESCUENTO, "concepto6", 1, true), valorbase);
 
             liquidacion.Imprimir();
             Console.WriteLine(liquidacion.GetImporteTotal());

@@ -4,6 +4,7 @@ namespace ProyectoBigonHnos.dominio
 {
     class Localidad
     {
+        public int idProvincia {get; set;}
         public string Nombre { get; set; }
         public Provincia Provincia { get; set; }
 
