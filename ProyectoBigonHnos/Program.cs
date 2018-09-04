@@ -12,6 +12,7 @@ using ProyectoBigonHnos.dominio.liquidacion;
 using ProyectoBigonHnos.data.TelefonoDao;
 using ProyectoBigonHnos.data.DomicilioDAO;
 using ProyectoBigonHnos.data.ProvinciaDAO;
+using ProyectoBigonHnos.data.Localidad;
 
 namespace ProyectoBigonHnos
 {
@@ -37,6 +38,20 @@ namespace ProyectoBigonHnos
             //agregarConceptos();
             //liquidacionControlador();
             //Console.ReadKey();
+
+            ILocalidadDAO dao = new LocalidadDAOImpl();
+
+            Localidad localidad = dao.leerPorId(2);
+
+            Console.WriteLine(localidad.ToString());
+            Console.ReadKey();
+
+            IProvinciaDAO daoPro = new ProvinciaDAOImpl();
+            Provincia p = daoPro.leerPorId(3);
+
+            localidad.Provincia = p;
+
+            dao.actualizar(localidad);
 
         }
 
