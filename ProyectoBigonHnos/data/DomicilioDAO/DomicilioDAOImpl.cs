@@ -38,8 +38,6 @@ namespace ProyectoBigonHnos.data.DomicilioDAO
         {
             int idLocalidad = leerPorId(id).Localidad.IdLocalidad;
 
-            Console.WriteLine(idLocalidad);
-
             string query = String.Format("delete from domicilio where id_domicilio = {0};", id);
             db.ejectuarQuery(query);
 

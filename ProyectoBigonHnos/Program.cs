@@ -13,6 +13,7 @@ using ProyectoBigonHnos.data.TelefonoDao;
 using ProyectoBigonHnos.data.DomicilioDAO;
 using ProyectoBigonHnos.data.ProvinciaDAO;
 using ProyectoBigonHnos.data.Localidad;
+using ProyectoBigonHnos.data.Persona;
 
 namespace ProyectoBigonHnos
 {
@@ -39,7 +40,13 @@ namespace ProyectoBigonHnos
             //liquidacionControlador();
             //Console.ReadKey();
 
+            
 
+            IPersonaDAO dao = new PersonaDAOImpl();
+
+            Persona persona = dao.leerPorId(3);
+            persona.Nombre = "maria claudia";
+            dao.eliminar(4);
         }
 
         static void liquidacion()

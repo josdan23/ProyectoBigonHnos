@@ -70,6 +70,8 @@
     <Compile Include="data\DomicilioDAO\IDomicilioDAO.cs" />
     <Compile Include="data\Localidad\ILocalidadDAO.cs" />
     <Compile Include="data\Localidad\LocalidadDAOImpl.cs" />
+    <Compile Include="data\Persona\IPersonaDAO.cs" />
+    <Compile Include="data\Persona\PersonaDAOImpl.cs" />
     <Compile Include="data\ProvinciaDAO\IProvinciaDAO.cs" />
     <Compile Include="data\ProvinciaDAO\ProvinciaDAOImpl.cs" />
     <Compile Include="data\EmpleadoDAO\IEmpleadoDAO.cs" />

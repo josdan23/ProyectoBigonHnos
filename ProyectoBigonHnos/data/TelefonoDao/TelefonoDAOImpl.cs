@@ -37,7 +37,10 @@ namespace ProyectoBigonHnos.data.TelefonoDao
             
             foreach (List<Object> lista in registro)
             {
-                return new Telefono( (string) lista.ElementAt(1));
+                Telefono telefono = new Telefono();
+                telefono.Numero = (string)lista.ElementAt(1);
+                telefono.IdTelefono = (int)lista.ElementAt(0);
+                return telefono;
             }
             return null;
         }
@@ -52,7 +55,11 @@ namespace ProyectoBigonHnos.data.TelefonoDao
 
             foreach (List<Object> lista in registro)
             {
-                todosLosTelefonosRegistrados.Add( new Telefono((string)lista.ElementAt(1)));
+                Telefono telefono = new Telefono();
+                telefono.IdTelefono = (int)lista.ElementAt(0);
+                telefono.Numero = (string)lista.ElementAt(1);
+
+                todosLosTelefonosRegistrados.Add( telefono);
             }
             return todosLosTelefonosRegistrados;
 

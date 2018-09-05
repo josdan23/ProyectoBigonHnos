@@ -7,6 +7,8 @@ namespace ProyectoBigonHnos.dominio
         public int IdTelefono { get; set; }
         public string Numero { get; set; }
 
+        public Telefono() { }
+
         public Telefono(string numero)
         {
             this.Numero = numero;

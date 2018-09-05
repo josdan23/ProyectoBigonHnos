@@ -37,7 +37,7 @@ namespace ProyectoBigonHnos.data
             SqlCommand comando = new SqlCommand(query, con);
             comando.ExecuteNonQuery();
 
-            Console.WriteLine("se registro en la base de datos");
+            Console.WriteLine("se ejecuto consulta en la base de datos");
 
             con.Close();
         }
