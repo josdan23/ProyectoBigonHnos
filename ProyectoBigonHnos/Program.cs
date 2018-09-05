@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading.Tasks;   
 using System.Windows.Forms;
 using ProyectoBigonHnos.controladores;
 using ProyectoBigonHnos.vista.login;
@@ -39,19 +39,6 @@ namespace ProyectoBigonHnos
             //liquidacionControlador();
             //Console.ReadKey();
 
-            ILocalidadDAO dao = new LocalidadDAOImpl();
-
-            Localidad localidad = dao.leerPorId(2);
-
-            Console.WriteLine(localidad.ToString());
-            Console.ReadKey();
-
-            IProvinciaDAO daoPro = new ProvinciaDAOImpl();
-            Provincia p = daoPro.leerPorId(3);
-
-            localidad.Provincia = p;
-
-            dao.actualizar(localidad);
 
         }
 

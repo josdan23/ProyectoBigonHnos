@@ -20,21 +20,28 @@ namespace ProyectoBigonHnos.data.DomicilioDAO
 
         public void actualizar(Domicilio t)
         {
-            string query = String.Format("update domicilio set calle = {0}, numero = {1}, localidad_id_localidad = {2} where id_domicilio = {3};",
+            string query = String.Format("update domicilio set calle = \'{0}\', numero = {1}, localidad_id_localidad = {2} where id_domicilio = {3};",
                 t.Calle,
                 t.Numero,
                 t.Localidad.IdLocalidad,
                 t.IdDomicilio);
+
+            Console.WriteLine(t.Calle);
+            Console.WriteLine(t.Numero);
+            Console.WriteLine(t.Localidad.IdLocalidad);
+            Console.WriteLine(t.IdDomicilio);
 
             db.ejectuarQuery(query);
         }
 
         public void eliminar(int id)
         {
+            int idLocalidad = leerPorId(id).Localidad.IdLocalidad;
+
+            Console.WriteLine(idLocalidad);
+
             string query = String.Format("delete from domicilio where id_domicilio = {0};", id);
             db.ejectuarQuery(query);
-
-            int idLocalidad = leerPorId(id).Localidad.IdLocalidad;
 
             ILocalidadDAO daoLocalidad = new LocalidadDAOImpl();
             daoLocalidad.eliminar(idLocalidad);
@@ -42,11 +49,12 @@ namespace ProyectoBigonHnos.data.DomicilioDAO
 
         public Domicilio leerPorId(int id)
         {
-            string query = String.Format("select * from domicilio where id_localidad = {0};",id);
+            string query = String.Format("select * from domicilio where id_domicilio = {0};",id);
 
             List<List<Object>> todosLosRegistros =  db.consultarQuery(query);
 
             Domicilio domicilioRegistrado = new Domicilio();
+            domicilioRegistrado.IdDomicilio = (int)todosLosRegistros.ElementAt(0).ElementAt(0);
             domicilioRegistrado.Calle = (string)todosLosRegistros.ElementAt(0).ElementAt(1);
             domicilioRegistrado.Numero = (int)todosLosRegistros.ElementAt(0).ElementAt(2);
 
