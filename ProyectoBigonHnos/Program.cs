@@ -14,6 +14,7 @@ using ProyectoBigonHnos.data.DomicilioDAO;
 using ProyectoBigonHnos.data.ProvinciaDAO;
 using ProyectoBigonHnos.data.Localidad;
 using ProyectoBigonHnos.data.Persona;
+using ProyectoBigonHnos.data.Usuario;
 
 namespace ProyectoBigonHnos
 {
@@ -41,12 +42,17 @@ namespace ProyectoBigonHnos
             //Console.ReadKey();
 
             
+            IUsuarioDAO dao = new UsuarioDAOImpl();
+            Usuario usuario = dao.leerPorId(2);
+            Console.WriteLine(usuario.ToString());
+            Console.ReadKey();
 
-            IPersonaDAO dao = new PersonaDAOImpl();
+            usuario.Username = "barto";
+            usuario.Administrador = true;
 
-            Persona persona = dao.leerPorId(3);
-            persona.Nombre = "maria claudia";
-            dao.eliminar(4);
+            dao.actualizar(usuario);
+
+            dao.eliminar(1);
         }
 
         static void liquidacion()

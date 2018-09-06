@@ -80,6 +80,8 @@
     <Compile Include="data\ProveedorDao\ProveedorDAOImpl.cs" />
     <Compile Include="data\TelefonoDao\ITelefonoDao.cs" />
     <Compile Include="data\TelefonoDao\TelefonoDAOImpl.cs" />
+    <Compile Include="data\Usuario\IUsuarioDAO.cs" />
+    <Compile Include="data\Usuario\UsuarioDAOImpl.cs" />
     <Compile Include="dominio\liquidacion\Concepto.cs" />
     <Compile Include="dominio\liquidacion\ConceptosDatos.cs" />
     <Compile Include="dominio\liquidacion\LineaLiquidacion.cs" />
