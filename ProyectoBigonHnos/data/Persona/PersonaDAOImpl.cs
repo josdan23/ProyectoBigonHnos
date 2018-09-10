@@ -15,18 +15,22 @@ namespace ProyectoBigonHnos.data.Persona
 
         public PersonaDAOImpl()
         {
-            db = new DBConector();
+            db = DBConector.getInstance();
         }
 
         public void actualizar(dominio.Persona t)
         {
-            string query = String.Format("update persona set dni = \'{0}\', nombre = \'{1}\', apellido = \'{2}\', telefono_id_telefono = {3}, domicilio_id_domicilio = {4} where id_persona = {5};",
+            string query = String.Format("update persona set dni = \'{0}\', nombre = \'{1}\', apellido = \'{2}\'  where id_persona = {3};",
                 t.Dni,
                 t.Nombre,
                 t.Apellido,
-                t.Telefonos.ElementAt(0).IdTelefono,
-                t.Domicilioes.ElementAt(0).IdDomicilio,
                 t.IdPersona);
+
+            IDomicilioDAO dao = new DomicilioDAOImpl();
+            dao.actualizar(t.Domicilioes.ElementAt(0));
+
+            ITelefonoDao daoTelefono = new TelefonoDAOImpl();
+            daoTelefono.actualizar(t.Telefonos.ElementAt(0));
 
             db.ejectuarQuery(query);
         }

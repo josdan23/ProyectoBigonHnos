@@ -8,6 +8,7 @@ namespace ProyectoBigonHnos.dominio
 {
     class Cliente : Persona
     {
+        public int IdCliente { get; set; }
 
         public Cliente(string nombre, string apellido, string dni): base(nombre, apellido, dni)
         {
@@ -30,6 +31,11 @@ namespace ProyectoBigonHnos.dominio
         public string getDni()
         {
             return Dni;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("IdCliente: {0}\n{1}",IdCliente, base.ToString());
         }
     }
 }

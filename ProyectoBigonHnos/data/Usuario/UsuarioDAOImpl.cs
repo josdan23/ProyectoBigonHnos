@@ -13,7 +13,7 @@ namespace ProyectoBigonHnos.data.Usuario
 
         public UsuarioDAOImpl()
         {
-            db = new DBConector();
+            db = DBConector.getInstance();
         }
 
         public void actualizar(dominio.Usuario t)

@@ -17,7 +17,7 @@ namespace ProyectoBigonHnos.data
         private string security = "True";
         private SqlConnection con;
 
-        public DBConector()
+        private DBConector()
         {
             string conexion = string.Format("server={0}; database={1} ; integrated security={2};",server,database,security);
             con = new SqlConnection(conexion);

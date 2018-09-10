@@ -36,5 +36,16 @@ namespace ProyectoBigonHnos.dominio
         {
             Domicilioes.Add(Domicilio);
         }
+
+        public override string ToString()
+        {
+            return string.Format("IdPersona: {0}\nNombre: {1}\nApellido: {2}\nDni: {3}\nDomicilio: {4}\nTelefono: {5}",
+                IdPersona, 
+                Nombre, 
+                Apellido, 
+                Dni,
+                Domicilioes[0],
+                Telefonos[0]);
+        }
     }
 }

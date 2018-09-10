@@ -64,6 +64,8 @@
     <Compile Include="controladores\LiquidacionControlador.cs" />
     <Compile Include="controladores\LoginControlador.cs" />
     <Compile Include="controladores\VentaControlador.cs" />
+    <Compile Include="data\Cliente\ClienteDAOImpl.cs" />
+    <Compile Include="data\Cliente\IClienteDAO.cs" />
     <Compile Include="data\CRUD.cs" />
     <Compile Include="data\DBConector.cs" />
     <Compile Include="data\DomicilioDAO\DomicilioDAOImpl.cs" />
