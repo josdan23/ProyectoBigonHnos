@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ProyectoBigonHnos.dominio;
+using ProyectoBigonHnos.data.DomicilioDao;
+using ProyectoBigonHnos.data.TelefonoDao;
 
 namespace ProyectoBigonHnos.data.PersonaDao
 {
@@ -50,10 +49,22 @@ namespace ProyectoBigonHnos.data.PersonaDao
 
         public void registrar(Persona t)
         {
+            IDomicilioDAO daoDomicilio = new DomicilioDaoListImpl();
+            daoDomicilio.registrar(t.Domicilioes[0]);
+
+            ITelefonoDao daoTelefono = new TelefonoDaoListImpl();
+            daoTelefono.registrar(t.Telefonos[0]);
+
+            //t.Telefonos[0].IdTelefono = daoTelefono.listarTodos().Last<Telefono>().IdTelefono;
+            //t.Domicilioes[0].IdDomicilio = daoDomicilio.listarTodos().Last<Domicilio>().IdDomicilio;
+
             t.IdPersona = IdContador;
             IdContador++;
 
             todasLasPersonas.Add(t);
+
+            
+            
         }
     }
 }

@@ -39,7 +39,7 @@ namespace ProyectoBigonHnos.dominio
 
         public override string ToString()
         {
-            return string.Format("IdPersona: {0}\nNombre: {1}\nApellido: {2}\nDni: {3}\nDomicilio: {4}\nTelefono: {5}",
+            return string.Format("IdPersona: {0}\nNombre: {1}\nApellido: {2}\nDni: {3}\nDomicilio \n{4}\nTelefono: {5}",
                 IdPersona, 
                 Nombre, 
                 Apellido, 

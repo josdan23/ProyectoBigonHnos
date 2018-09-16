@@ -10,6 +10,9 @@ using ProyectoBigonHnos.controladores;
 using ProyectoBigonHnos.vista.login;
 using ProyectoBigonHnos.dominio.liquidacion;
 using ProyectoBigonHnos.data.TelefonoDao;
+using ProyectoBigonHnos.data;
+using ProyectoBigonHnos.data.PersonaDao;
+using ProyectoBigonHnos.data.DomicilioDao;
 
 namespace ProyectoBigonHnos
 {
@@ -32,9 +35,7 @@ namespace ProyectoBigonHnos
             //Application.EnableVisualStyles();
             //Application.Run(vista);
 
-            //agregarConceptos();
-            //liquidacionControlador();
-            //Console.ReadKey();
+            
 
             Console.ReadKey();
         }

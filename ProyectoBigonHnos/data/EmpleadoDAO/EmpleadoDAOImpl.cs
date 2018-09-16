@@ -9,8 +9,6 @@ namespace ProyectoBigonHnos.data.EmpleadoDao
 {
     class EmpleadoDAOImpl : IEmpleadoDAO
     {
-        List<Empleado> listaEmpleados;
-
         public void actualizar(Empleado t)
         {
             throw new NotImplementedException();

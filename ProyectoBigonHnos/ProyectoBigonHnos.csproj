@@ -67,17 +67,30 @@
     <Compile Include="data\ClienteDao\ClienteDAOImpl.cs" />
     <Compile Include="data\ClienteDao\ClienteDaoListImpl.cs" />
     <Compile Include="data\ClienteDao\IClienteDAO.cs" />
+    <Compile Include="data\ComponenteDao\IComponenteDao.cs" />
+    <Compile Include="data\CompraDao\ICompraDao.cs" />
+    <Compile Include="data\ConceptoDao\IConceptoDao.cs" />
     <Compile Include="data\CRUD.cs" />
     <Compile Include="data\DBConector.cs" />
     <Compile Include="data\DomicilioDao\DomicilioDAOImpl.cs" />
     <Compile Include="data\DomicilioDao\DomicilioDaoListImpl.cs" />
     <Compile Include="data\DomicilioDao\IDomicilioDAO.cs" />
+    <Compile Include="data\EmpleadoDao\EmpleadoDaoListImpl.cs" />
+    <Compile Include="data\GrupoFamiliarDao\IGrupoFamiliarDao.cs" />
+    <Compile Include="data\LineaCompraDao\ILineaCompraDao.cs" />
+    <Compile Include="data\LineaLiquidacionDao\ILineaLiquidacionDao.cs" />
+    <Compile Include="data\LineaPedidoDao\ILineaPedidoDao.cs" />
+    <Compile Include="data\LineaVentaDao\ILineaVentaDao.cs" />
+    <Compile Include="data\LiquidacionDao\ILiquidacionDao.cs" />
     <Compile Include="data\LocalidadDao\ILocalidadDAO.cs" />
     <Compile Include="data\LocalidadDao\LocalidadDAOImpl.cs" />
     <Compile Include="data\LocalidadDao\LocalidadDaoListImpl.cs" />
+    <Compile Include="data\MaterialDao\IMaterialDao.cs" />
+    <Compile Include="data\PedidoDao\IPedidoDao.cs" />
     <Compile Include="data\PersonaDao\IPersonaDAO.cs" />
     <Compile Include="data\PersonaDao\PersonaDAOImpl.cs" />
     <Compile Include="data\PersonaDao\PersonaDaoListImpl.cs" />
+    <Compile Include="data\ProductoDao\IProductoDao.cs" />
     <Compile Include="data\ProveedorDao\ProveedorDaoListImpl.cs" />
     <Compile Include="data\ProvinciaDao\IProvinciaDAO.cs" />
     <Compile Include="data\ProvinciaDao\ProvinciaDAOImpl.cs" />
@@ -352,6 +365,8 @@
     <None Include="Resources\View Details_32px.png" />
     <None Include="Resources\PedidoIcon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="data\VentaDao\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

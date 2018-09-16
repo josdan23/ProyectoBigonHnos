@@ -24,7 +24,7 @@ namespace ProyectoBigonHnos.dominio
 
         public override string ToString()
         {
-            return string.Format("Localidad: {0} \nProvincia: {1}", Nombre, Provincia.Nombre);
+            return string.Format("idLocalidad: {0}\nLocalidad: {1}\nProvincia\n{2}",IdLocalidad, Nombre, Provincia);
         }
 
     }

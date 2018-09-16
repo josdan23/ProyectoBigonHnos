@@ -10,7 +10,7 @@ namespace ProyectoBigonHnos.data.ProvinciaDao
 {
     class ProvinciaDaoListImpl : IProvinciaDAO
     {
-        private static List<dominio.Provincia> todasLasProvincias = new List<dominio.Provincia>();
+        private static List<Provincia> todasLasProvincias = new List<Provincia>();
         private static int idContador = 0;
         
 

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProyectoBigonHnos.data.LocalidadDao;
+using ProyectoBigonHnos.data.ProvinciaDao;
 using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.data.DomicilioDao
@@ -55,6 +57,13 @@ namespace ProyectoBigonHnos.data.DomicilioDao
 
         public void registrar(Domicilio t)
         {
+
+            ILocalidadDAO dao = new LocalidadDaoListImpl();
+            dao.registrar(t.Localidad);
+
+            IProvinciaDAO daoP = new ProvinciaDaoListImpl();
+            daoP.registrar(t.Localidad.Provincia);
+
             t.IdDomicilio = IdContador;
             IdContador++;
 

@@ -1,15 +1,14 @@
-﻿using ProyectoBigonHnos.data.Cliente;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.data.ClienteDao
 {
     class ClienteDaoListImpl : IClienteDAO
     {
-        static private List<dominio.Cliente> Clientes = new List<dominio.Cliente>();
+        static private List<Cliente> Clientes = new List<Cliente>();
         static int id = 0;
 
-        public void actualizar(dominio.Cliente t)
+        public void actualizar(Cliente t)
         {
             for (int i = 0; i < Clientes.Count; i++)
             {
@@ -27,7 +26,7 @@ namespace ProyectoBigonHnos.data.ClienteDao
             }
         }
 
-        public dominio.Cliente leerPorId(int id)
+        public Cliente leerPorId(int id)
         {
 
             for (int i = 0; i < Clientes.Count; i++)
@@ -39,12 +38,12 @@ namespace ProyectoBigonHnos.data.ClienteDao
             return null;
         }
 
-        public List<dominio.Cliente> listarTodos()
+        public List<Cliente> listarTodos()
         {
             return Clientes;
         }
 
-        public void registrar(dominio.Cliente t)
+        public void registrar(Cliente t)
         {
             id++;
             t.IdCliente = id;

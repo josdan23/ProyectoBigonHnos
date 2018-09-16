@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ProyectoBigonHnos.data.DomicilioDAO;
+using ProyectoBigonHnos.data.DomicilioDao;
 using ProyectoBigonHnos.data.TelefonoDao;
 using ProyectoBigonHnos.dominio;
 
@@ -18,7 +16,7 @@ namespace ProyectoBigonHnos.data.PersonaDao
             db = DBConector.getInstance();
         }
 
-        public void actualizar(dominio.Persona t)
+        public void actualizar(Persona t)
         {
             string query = String.Format("update persona set dni = \'{0}\', nombre = \'{1}\', apellido = \'{2}\'  where id_persona = {3};",
                 t.Dni,
@@ -52,7 +50,7 @@ namespace ProyectoBigonHnos.data.PersonaDao
 
         }
 
-        public dominio.Persona leerPorId(int id)
+        public Persona leerPorId(int id)
         {
             string query = String.Format("select * from persona where id_persona = {0}", id);
 
@@ -63,11 +61,11 @@ namespace ProyectoBigonHnos.data.PersonaDao
             return null;
         }
 
-        public List<dominio.Persona> listarTodos()
+        public List<Persona> listarTodos()
         {
             string query = String.Format("select * from persona;");
 
-            List<dominio.Persona> todasLasPersonas = new List<dominio.Persona>();
+            List<Persona> todasLasPersonas = new List<Persona>();
 
             foreach (List<Object> unRegistro in db.consultarQuery(query))
             {
@@ -77,7 +75,7 @@ namespace ProyectoBigonHnos.data.PersonaDao
             return todasLasPersonas;
         }
 
-        public void registrar(dominio.Persona t)
+        public void registrar(Persona t)
         {
 
             ITelefonoDao daoTelefono = new TelefonoDAOImpl();
@@ -102,9 +100,9 @@ namespace ProyectoBigonHnos.data.PersonaDao
             db.ejectuarQuery(query);
         }
 
-        private dominio.Persona parsePersona (List<Object> registro)
+        private Persona parsePersona (List<Object> registro)
         {
-            dominio.Persona nuevaPersona = new dominio.Persona();
+            Persona nuevaPersona = new Persona();
 
             nuevaPersona.IdPersona = (int) registro.ElementAt(0);
             nuevaPersona.Dni = (string) registro.ElementAt(1);

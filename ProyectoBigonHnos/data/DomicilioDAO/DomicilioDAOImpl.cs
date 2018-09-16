@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ProyectoBigonHnos.data.Localidad;
+using ProyectoBigonHnos.data.LocalidadDao;
 using ProyectoBigonHnos.dominio;
 
-namespace ProyectoBigonHnos.data.DomicilioDAO
+namespace ProyectoBigonHnos.data.DomicilioDao
 {
     class DomicilioDAOImpl : IDomicilioDAO
     {

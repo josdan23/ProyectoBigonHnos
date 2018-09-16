@@ -32,7 +32,7 @@ namespace ProyectoBigonHnos.dominio
 
         public override string ToString()
         {
-            return string.Format("Calle: {0}\nNumero: {1} \n{2}", Calle, Numero, Localidad.ToString());
+            return string.Format("idDomicilio: {0}\nCalle: {1}\nNumero: {2}\n{3}",IdDomicilio, Calle, Numero, Localidad);
         }
     }
 }

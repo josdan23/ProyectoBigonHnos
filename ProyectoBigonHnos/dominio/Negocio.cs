@@ -1,10 +1,10 @@
-﻿using ProyectoBigonHnos.data;
-using ProyectoBigonHnos.data.Proveedor;
+﻿using ProyectoBigonHnos.data.ProveedorDao;
 using ProyectoBigonHnos.dominio.liquidacion;
 using ProyectoBigonHnos.dominio.venta;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ProyectoBigonHnos.data;
 
 namespace ProyectoBigonHnos.dominio
 {
