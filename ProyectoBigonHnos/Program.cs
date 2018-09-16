@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using ProyectoBigonHnos.controladores;
 using ProyectoBigonHnos.vista.login;
 using ProyectoBigonHnos.dominio.liquidacion;
-using ProyectoBigonHnos.data.Cliente;
+using ProyectoBigonHnos.data.TelefonoDao;
 
 namespace ProyectoBigonHnos
 {
@@ -36,24 +36,7 @@ namespace ProyectoBigonHnos
             //liquidacionControlador();
             //Console.ReadKey();
 
-            Cliente cliente = new Cliente("maria", "chocobar", "22342342");
-            Telefono telefono = new Telefono("381381831");
-            Domicilio domicilio = new Domicilio("nuevaCalle", 234, "belén", "chubut");
-
-            cliente.agregarDomicilio(domicilio);
-            cliente.agregarTelefono(telefono);
-
-            IClienteDAO dao = new ClienteDAOImpl() ;
-            Cliente nuevoCliente = dao.leerPorId(1);
-            Console.WriteLine(nuevoCliente);
             Console.ReadKey();
-
-            nuevoCliente.Nombre = "lolito";
-            dao.actualizar(nuevoCliente);
-            Console.WriteLine(nuevoCliente);
-            Console.ReadKey();
-
-
         }
 
         static void liquidacion()

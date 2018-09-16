@@ -7,7 +7,7 @@ using ProyectoBigonHnos.data.DomicilioDAO;
 using ProyectoBigonHnos.data.TelefonoDao;
 using ProyectoBigonHnos.dominio;
 
-namespace ProyectoBigonHnos.data.Persona
+namespace ProyectoBigonHnos.data.PersonaDao
 {
     class PersonaDAOImpl : IPersonaDAO
     {

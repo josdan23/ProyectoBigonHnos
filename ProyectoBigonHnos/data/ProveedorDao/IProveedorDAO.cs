@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProyectoBigonHnos.dominio;
 
 
-namespace ProyectoBigonHnos.data.Proveedor
+namespace ProyectoBigonHnos.data.ProveedorDao
 {
-    interface IProveedorDAO: CRUD<dominio.Proveedor>
+    interface IProveedorDAO: CRUD<Proveedor>
     {
     }
 }

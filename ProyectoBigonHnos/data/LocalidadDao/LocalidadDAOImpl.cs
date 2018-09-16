@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ProyectoBigonHnos.data.ProvinciaDAO;
 using ProyectoBigonHnos.dominio;
 
-namespace ProyectoBigonHnos.data.Localidad
+namespace ProyectoBigonHnos.data.LocalidadDao
 {
     class LocalidadDAOImpl : ILocalidadDAO
     {

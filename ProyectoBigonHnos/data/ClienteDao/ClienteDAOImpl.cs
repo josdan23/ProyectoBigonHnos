@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ProyectoBigonHnos.data.Persona;
+using ProyectoBigonHnos.data.PersonaDao;
 using ProyectoBigonHnos.dominio;
 
-namespace ProyectoBigonHnos.data.Cliente
+namespace ProyectoBigonHnos.data.ClienteDao
 {
     class ClienteDAOImpl : IClienteDAO
     {
@@ -42,7 +42,7 @@ namespace ProyectoBigonHnos.data.Cliente
 
             foreach (List<Object> unRegistro in db.consultarQuery(query))
             {
-                dominio.Cliente cliente = parseCliente(unRegistro);
+                Cliente cliente = parseCliente(unRegistro);
                 return cliente;
             }
 

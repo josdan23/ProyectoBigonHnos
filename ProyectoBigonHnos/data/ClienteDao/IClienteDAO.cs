@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProyectoBigonHnos.dominio;
 
-namespace ProyectoBigonHnos.data.Cliente
+namespace ProyectoBigonHnos.data.ClienteDao
 {
-    interface IClienteDAO : CRUD<dominio.Cliente>
+    interface IClienteDAO : CRUD<Cliente>
     {
     }
 }

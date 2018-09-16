@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProyectoBigonHnos.dominio;
 
-namespace ProyectoBigonHnos.data.Usuario
+namespace ProyectoBigonHnos.data.UsuarioDao
 {
-    interface IUsuarioDAO : CRUD<dominio.Usuario>
+    interface IUsuarioDAO : CRUD<Usuario>
     {
     }
 }

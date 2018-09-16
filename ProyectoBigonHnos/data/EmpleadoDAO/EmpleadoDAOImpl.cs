@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ProyectoBigonHnos.dominio;
 
-namespace ProyectoBigonHnos.data
+namespace ProyectoBigonHnos.data.EmpleadoDao
 {
     class EmpleadoDAOImpl : IEmpleadoDAO
     {

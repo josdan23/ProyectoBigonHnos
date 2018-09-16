@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProyectoBigonHnos.dominio;
 
-namespace ProyectoBigonHnos.data.Localidad
+
+namespace ProyectoBigonHnos.data.PersonaDao
 {
-    interface ILocalidadDAO : CRUD<dominio.Localidad>
+    interface IPersonaDAO : CRUD<Persona>
     {
-
     }
 }

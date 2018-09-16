@@ -12,6 +12,7 @@ namespace ProyectoBigonHnos.dominio
         public string Username { get; set; }
         public string Password { get; set; }
         public bool Administrador { get; set; }
+        public bool Activo { get; set; }
 
         public Usuario(string username, string password, bool administrador)
         {
