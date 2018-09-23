@@ -8,6 +8,7 @@ namespace ProyectoBigonHnos.dominio
 {
     class GrupoFamiliar
     {
+        public int IdGrupoFamiliar { get; set; }
         public string Dni { get; set; }
         public string Parentesco { get; set; }
         public DateTime FechaNacimiento { get; set; }

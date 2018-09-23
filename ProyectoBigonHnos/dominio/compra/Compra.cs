@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace ProyectoBigonHnos.dominio
 {
     class Compra
-    { 
+    {
+        public int IdCompra { get; set; }
         private DateTime fechaCompra;
         private string estado;
         private Proveedor proveedor;

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using ProyectoBigonHnos.data;
+using ProyectoBigonHnos.data.ClienteDao;
 
 namespace ProyectoBigonHnos.dominio
 {

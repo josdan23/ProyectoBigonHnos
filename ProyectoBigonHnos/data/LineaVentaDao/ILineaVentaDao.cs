@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProyectoBigonHnos.dominio.venta;
 
 
 namespace ProyectoBigonHnos.data.LineaVentaDao
 {
-    interface ILineaVentaDao : CRUD<LineaLiquidacion>
+    interface ILineaVentaDao : CRUD<LineaDeVenta>
     {
     }
 }

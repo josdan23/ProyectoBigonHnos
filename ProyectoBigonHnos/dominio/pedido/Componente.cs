@@ -8,6 +8,7 @@ namespace ProyectoBigonHnos.dominio
 {
     class Componente
     {
+        public int IdComponente { get; set; }
         public string descripcion { get; set; }
         public double altura { get; set; }
         public double ancho { get; set; }

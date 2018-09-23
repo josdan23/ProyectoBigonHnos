@@ -8,6 +8,7 @@ namespace ProyectoBigonHnos.dominio.venta
 {
     class LineaDeVenta
     {
+        public int IdLineaVenta { get; set; }
         public int cantidad { get; set; }
         public Producto producto { get; set; }
 
