@@ -50,6 +50,12 @@ namespace ProyectoBigonHnos.data
             dao.eliminar(id);
         }
 
+        public void eliminarObjeto<T> (int id)
+        {
+            CRUD<T> dao = DaoFactory.instanciarDao<T>();
+            dao.eliminar(id);
+        }
+
         public T obtenerObjeto<T> (int id)
         {
             CRUD<T> dao = DaoFactory.instanciarDao<T>();

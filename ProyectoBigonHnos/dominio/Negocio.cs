@@ -18,28 +18,13 @@ namespace ProyectoBigonHnos.dominio
     {
         private static Negocio negocio;
 
-        private CRUD<Proveedor> proveedorDao;
-        private CRUD<Cliente> clieteDao;
-        private CRUD<Empleado> empleadoDao;
-        private CRUD<Material> materialDao;
-        private CRUD<Venta> ventaDao;
-        private CRUD<Pedido> pedidoDao;
-        private CRUD<Concepto> conceptoDao;
-
         private CatalogoDeMateriales catalogo;
 
-
+        private PersistenciaFacade persistencia;
 
         public Negocio()
         {
-            catalogo = CatalogoDeMateriales.getInstancia();
-            proveedorDao = new ProveedorDaoListImpl();
-            clieteDao = new ClienteDaoListImpl();
-            empleadoDao = new EmpleadoDaoListImpl();
-            materialDao = new MaterialDaoListImpl();
-            ventaDao = new VentaDaoListImpl();
-            pedidoDao = new PedidoDaoListImpl();
-            conceptoDao = new ConceptoDaoListImpl();
+            persistencia = PersistenciaFacade.getInstance();
     }
 
         public static Negocio getNegocio()
@@ -60,14 +45,17 @@ namespace ProyectoBigonHnos.dominio
 
         internal IEnumerable<Cliente> obtenerTodosClientes()
         {
-            
-            return clieteDao.listarTodos();
+
+            //return clieteDao.listarTodos();
+
+            return persistencia.obtenerTodos<Cliente>();
         }
 
         public Cliente buscarCliente(string dni)
         {
-
-            foreach( var unCliente in clieteDao.listarTodos())
+            List<Cliente> listaClientes = persistencia.obtenerTodos<Cliente>();
+            //foreach( var unCliente in clieteDao.listarTodos())
+            foreach (var unCliente in listaClientes)
             {
                 if (dni.Equals(unCliente.Dni))
                     return unCliente;
@@ -79,17 +67,21 @@ namespace ProyectoBigonHnos.dominio
         public void agregarCliente(Cliente cliente)
         {
 
-            clieteDao.registrar(cliente);
+            //clieteDao.registrar(cliente);
+            persistencia.registrarObjeto(cliente);
         }
 
         public void borrarCliente(string dni)
         {
-            List<Cliente> listaDeClientes = clieteDao.listarTodos();
+            //List<Cliente> listaDeClientes = clieteDao.listarTodos();
+            List<Cliente> listaDeClientes = persistencia.obtenerTodos<Cliente>();
 
             for (int i = 0; i < listaDeClientes.Count; i++)
             {
                 if (listaDeClientes.ElementAt(i).Dni == dni)
-                    clieteDao.eliminar(listaDeClientes.ElementAt(i).IdCliente);
+                    //clieteDao.eliminar(listaDeClientes.ElementAt(i).IdCliente);
+                    persistencia.eliminarObjeto<Cliente>( listaDeClientes.ElementAt(i).IdCliente);
+                    
             }
 
         }
@@ -105,47 +97,54 @@ namespace ProyectoBigonHnos.dominio
         //VENTA
         internal IEnumerable<Venta> obtenerTodasVentasRealizadas()
         {
-            return ventaDao.listarTodos();
+            //return ventaDao.listarTodos();
+            return persistencia.obtenerTodos<Venta>();
         }
 
         public void BorrarVenta(int idVenta)
         {
-            ventaDao.eliminar(idVenta);
+            //ventaDao.eliminar(idVenta);
+            persistencia.eliminarObjeto<Venta>(idVenta);
 
         }
 
         public void cargarVentasConfirmadas(Venta venta)
         {
-            ventaDao.registrar(venta);
+            //ventaDao.registrar(venta);
+            persistencia.registrarObjeto(venta);
         }
 
 
         //EMPLEADO
         public List<Empleado> obtenerTodosEmpleados()
         {
-            return empleadoDao.listarTodos();
+            //return empleadoDao.listarTodos();
+            return persistencia.obtenerTodos<Empleado>();
         }
 
         public void borrarEmpleado(string legajo)
         {
-            List<Empleado> listaEmpleados = empleadoDao.listarTodos();
+            //List<Empleado> listaEmpleados = empleadoDao.listarTodos();
+            List<Empleado> listaEmpleados = persistencia.obtenerTodos<Empleado>();
 
             for ( int i = 0; i < listaEmpleados.Count; i++)
             {
                 if (listaEmpleados[i].Legajo == legajo)
-                    empleadoDao.eliminar(listaEmpleados[i].IdEmpleado);
+                    persistencia.eliminarObjeto<Empleado>(listaEmpleados[i].IdEmpleado);
             }
         }
 
         internal Empleado buscarEmpleado(string legajoSeleccionado)
         {
 
-            List<Empleado> listaEmpleados = empleadoDao.listarTodos();
+            //List<Empleado> listaEmpleados = empleadoDao.listarTodos();
+            List<Empleado> listaEmpleados = persistencia.obtenerTodos<Empleado>();
 
             for (int i = 0; i < listaEmpleados.Count; i++)
             {
                 if (listaEmpleados[i].Legajo == legajoSeleccionado)
-                    return empleadoDao.leerPorId(listaEmpleados[i].IdEmpleado);
+                    //return empleadoDao.leerPorId(listaEmpleados[i].IdEmpleado);
+                    return persistencia.obtenerObjeto<Empleado>(listaEmpleados[i].IdEmpleado);
             }
             return null;
         }
@@ -157,61 +156,72 @@ namespace ProyectoBigonHnos.dominio
 
         public void agregarEmpleado(Empleado empleado)
         {
-            empleadoDao.registrar(empleado);
+            //empleadoDao.registrar(empleado);
+            persistencia.registrarObjeto(empleado);
         }
 
 
         //PEDIDOS
         internal IEnumerable<Pedido> obtenerTodosPedidosRealizados()
         {
-            return pedidoDao.listarTodos();
+            //return pedidoDao.listarTodos();
+            return persistencia.obtenerTodos<Pedido>();
         }
 
         public Pedido buscarPedido(int idPedido)
         {
-            return pedidoDao.leerPorId(idPedido);
+            //return pedidoDao.leerPorId(idPedido);
+            return persistencia.obtenerObjeto<Pedido>(idPedido);
         }
 
         internal IEnumerable<Pedido> obtenerTodosPedidos()
         {
-            return pedidoDao.listarTodos();
+            //return pedidoDao.listarTodos();
+            return persistencia.obtenerTodos<Pedido>();
         }
 
         public void cargarPedidosRealizados(Pedido pedido)
         {
-            pedidoDao.registrar(pedido);
+            //pedidoDao.registrar(pedido);
+            persistencia.registrarObjeto(pedido);
         }
 
         public void borrarPedido(int idPedido)
         {
-            pedidoDao.eliminar(idPedido);
+            //pedidoDao.eliminar(idPedido);
+            persistencia.eliminarObjeto<Pedido>(idPedido);
         }
 
 
         //CONCEPTOS
         internal IEnumerable<Concepto> obtenerTodosConceptos()
         {
-            return conceptoDao.listarTodos();
+            //return conceptoDao.listarTodos();
+            return persistencia.obtenerTodos<Concepto>();
         }
 
         public void agregarConcepto(Concepto concepto)
         {
-            conceptoDao.registrar(concepto);
+            //conceptoDao.registrar(concepto);
+            persistencia.registrarObjeto(concepto);
         }
 
         public void borrarConcepto(int idConcepto)
         {
-            conceptoDao.eliminar(idConcepto);
+            //conceptoDao.eliminar(idConcepto);
+            persistencia.eliminarObjeto<Concepto>(idConcepto);
         }
 
         public Concepto buscarConcepto(int idConcepto)
         {
-            return conceptoDao.leerPorId(idConcepto);
+            //return conceptoDao.leerPorId(idConcepto);
+            return persistencia.obtenerObjeto<Concepto>(idConcepto);
         }
 
         internal void actualizarConcepto(Concepto concepto)
         {
-            conceptoDao.actualizar(concepto);
+            //conceptoDao.actualizar(concepto);
+            persistencia.actualiarObjeto(concepto);
         }
 
         //PROVEEDORES
@@ -227,21 +237,25 @@ namespace ProyectoBigonHnos.dominio
             prov.agregarNuevaDomicilio("calle1", 233, "samiguel", "tucuman");
             //proveedores.Add(prov);
 
-            proveedorDao.registrar(prov);
+            //proveedorDao.registrar(prov);
+            persistencia.registrarObjeto(prov);
 
         }
 
         public Proveedor buscarProveedor(int idProveedor)
-        { 
-            return proveedorDao.leerPorId(idProveedor);
+        {
+            //return proveedorDao.leerPorId(idProveedor);
+            return persistencia.obtenerObjeto<Proveedor>(idProveedor);
         }
 
         public Proveedor buscarProveedor(string razonSocial)
         {
-            foreach (var unProveedor in proveedorDao.listarTodos())
+            List<Proveedor> listaProveedores = persistencia.obtenerTodos<Proveedor>();
+            foreach (var unProveedor in listaProveedores)
             {
                 if (unProveedor.RazonSocial == razonSocial)
-                    return proveedorDao.leerPorId(unProveedor.IdProveedor);
+                    //return proveedorDao.leerPorId(unProveedor.IdProveedor);
+                    return persistencia.obtenerObjeto<Proveedor>(unProveedor.IdProveedor);
             }
 
             return null;
@@ -249,29 +263,42 @@ namespace ProyectoBigonHnos.dominio
 
         public void actualizarProveedor(int idProveedor, Proveedor proveedor)
         {
-            proveedorDao.actualizar(proveedor);
+
+            //proveedorDao.actualizar(proveedor); 
+            persistencia.actualiarObjeto(proveedor);
         }
 
         public void agregarProveedor(Proveedor proveedor)
         {
-            proveedorDao.registrar(proveedor);
+            //proveedorDao.registrar(proveedor);
+            persistencia.registrarObjeto(proveedor);
         }
 
         public void borrarProveedor(string razonSocial)
         {
-            foreach (var unProveedor in proveedorDao.listarTodos())
-                if (unProveedor.RazonSocial == razonSocial)
-                    proveedorDao.eliminar(unProveedor.IdProveedor);
+            List<Proveedor> listaProveedores = persistencia.obtenerTodos<Proveedor>();
+            //foreach (var unProveedor in listaProveedores)
+            //    if (unProveedor.RazonSocial == razonSocial)
+            //        //proveedorDao.eliminar(unProveedor.IdProveedor);
+            //        persistencia.eliminarObjeto<Proveedor>(unProveedor.IdProveedor);
+
+            for (int i = 0; i < listaProveedores.Count; i++)
+            {
+                if(listaProveedores.ElementAt(i).RazonSocial == razonSocial)
+                    persistencia.eliminarObjeto<Proveedor>(listaProveedores.ElementAt(i).IdProveedor);
+            }
         }
 
         public void borrarProveedor(int idProveedor)
         {
-            proveedorDao.eliminar(idProveedor);
+            //proveedorDao.eliminar(idProveedor);
+            persistencia.eliminarObjeto<Proveedor>(idProveedor);
         }
 
         public List<Proveedor> obtenerTodosProveedores()
         {
-            return proveedorDao.listarTodos();
+            //return proveedorDao.listarTodos();
+            return persistencia.obtenerTodos<Proveedor>();
         }
     }
 }

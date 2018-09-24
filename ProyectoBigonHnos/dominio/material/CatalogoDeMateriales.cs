@@ -18,11 +18,15 @@ namespace ProyectoBigonHnos.dominio
 
         private CRUD<Material> dao { get; set; }
 
+        private PersistenciaFacade persistencia;
+
         public CatalogoDeMateriales()
         {
             //materiales = new List<Material>();
 
             dao = new MaterialDaoListImpl();
+
+            persistencia = PersistenciaFacade.getInstance();
         }
 
         public static CatalogoDeMateriales getInstancia()
@@ -45,12 +49,14 @@ namespace ProyectoBigonHnos.dominio
             //}
             //return null;
 
-            return dao.leerPorId(idMaterial);
+            //return dao.leerPorId(idMaterial);
+
+            return persistencia.obtenerObjeto<Material>(idMaterial);
         }
 
         public void mostrarCatalogo()
         {
-            foreach (Material material in dao.listarTodos())
+            foreach (Material material in persistencia.obtenerTodos<Material>())
             {
                 material.mostrar();
             }
@@ -59,7 +65,9 @@ namespace ProyectoBigonHnos.dominio
         public void crearMaterial(string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
         {
             //materiales.Add(new Material(descripcion, cantidad,precio, stockDisponible, stockMinimo));
-            dao.registrar(new Material(descripcion, cantidad, precio, stockDisponible, stockMinimo));
+            //dao.registrar(new Material(descripcion, cantidad, precio, stockDisponible, stockMinimo));
+            persistencia.registrarObjeto(new Material(descripcion, cantidad, precio, stockDisponible, stockMinimo));
+
         }
 
         public void borrarMaterial(int idMaterial)
@@ -69,7 +77,8 @@ namespace ProyectoBigonHnos.dominio
             //if (indice != INDICE_NO_ENCONTRADO)
             //    materiales.RemoveAt(indice);
 
-            dao.eliminar(idMaterial);
+            //dao.eliminar(idMaterial);
+            persistencia.eliminarObjeto<Material>(idMaterial);
         }
 
 
@@ -89,12 +98,14 @@ namespace ProyectoBigonHnos.dominio
 
             Material material = new Material(descripcion, cantidad, precio, stockDisponible, stockMinimo);
             material.IdMaterial = id;
-            dao.actualizar(material);
+            //dao.actualizar(material);
+            persistencia.actualiarObjeto(material);
         }
 
         public List<Material> obtenerMateriales()
         {
-            return dao.listarTodos();
+            //return dao.listarTodos();
+            return persistencia.obtenerTodos<Material>();
         }
 
         //private int getIndiceBuscandoPorId(int idMaterial)
