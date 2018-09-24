@@ -13,6 +13,8 @@ using ProyectoBigonHnos.data.TelefonoDao;
 using ProyectoBigonHnos.data;
 using ProyectoBigonHnos.data.PersonaDao;
 using ProyectoBigonHnos.data.DomicilioDao;
+using System.Reflection;
+using ProyectoBigonHnos.dominio.venta;
 
 namespace ProyectoBigonHnos
 {
@@ -33,9 +35,39 @@ namespace ProyectoBigonHnos
             vista.unirControlador(LoginControlador.getInstance());
 
             //Application.EnableVisualStyles();
-            //Application.Run(vista);
+            //Application.Run(vista);            
 
-            
+            Persona t = new Persona("daniel", "yaprua", "232342");
+            t.agregarTelefono(new Telefono("234234"));
+            t.agregarDomicilio(new Domicilio("asdfa", 1, "santa maria", "Catamarca"));
+            Persona t1 = new Persona("daniel", "yaprua", "232342");
+            t1.agregarTelefono(new Telefono("234234"));
+            t1.agregarDomicilio(new Domicilio("asdfa", 1, "santa maria", "Catamarca"));
+            Persona t2 = new Persona("daniel", "yaprua", "232342");
+            t2.agregarTelefono(new Telefono("234234"));
+            t2.agregarDomicilio(new Domicilio("asdfa", 1, "santa maria", "Catamarca"));
+            Persona t3 = new Persona("daniel", "yaprua", "232342");
+            t3.agregarTelefono(new Telefono("234234"));
+            t3.agregarDomicilio(new Domicilio("asdfa", 1, "santa maria", "Catamarca"));
+            Persona t4 = new Persona("daniel", "yaprua", "232342");
+            t4.agregarTelefono(new Telefono("234234"));
+            t4.agregarDomicilio(new Domicilio("asdfa", 1, "santa maria", "Catamarca"));
+
+            PersistenciaFacade.getInstance().registrarObjeto(t);
+            PersistenciaFacade.getInstance().registrarObjeto(t1);
+            PersistenciaFacade.getInstance().registrarObjeto(t2);
+            PersistenciaFacade.getInstance().registrarObjeto(t3);
+            PersistenciaFacade.getInstance().registrarObjeto(t4);
+
+            Persona tel = PersistenciaFacade.getInstance().obtenerObjeto<Persona>(0);
+            Console.WriteLine(tel);
+
+            PersistenciaFacade.getInstance().eliminarObjeto(t, 0);
+
+            foreach (Persona d in PersistenciaFacade.getInstance().obtenerTodos<Persona>())
+            {
+                Console.WriteLine(d);
+            }
 
             Console.ReadKey();
         }

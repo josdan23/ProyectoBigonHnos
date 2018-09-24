@@ -28,6 +28,8 @@ namespace ProyectoBigonHnos.data.TelefonoDao
                 if (todosLosTelefonos[i].IdTelefono == id)
                     todosLosTelefonos.RemoveAt(i);
             }
+
+            Console.WriteLine("telefono eliminado");
         }
 
         public Telefono leerPorId(int id)
@@ -52,6 +54,11 @@ namespace ProyectoBigonHnos.data.TelefonoDao
             id++;
 
             todosLosTelefonos.Add(t);
+
+            Console.WriteLine("telefono registrado");
         }
+
+        
+            
     }
 }

@@ -61,7 +61,7 @@ namespace ProyectoBigonHnos.controladores
         {
             VentasView view = (VentasView) Vista;
 
-            foreach (Venta venta in Negocio.getNegocio().ventasRealizadas)
+            foreach (Venta venta in Negocio.getNegocio().obtenerTodasVentasRealizadas())
             {
                     view.listarVenta(
                         venta.IdVenta,
@@ -80,7 +80,7 @@ namespace ProyectoBigonHnos.controladores
         {
             NuevaVentaView view = (NuevaVentaView)Vista;
 
-            foreach (Pedido pedido in Negocio.getNegocio().pedidosRealizados)
+            foreach (Pedido pedido in Negocio.getNegocio().obtenerTodosPedidosRealizados())
             {
                 if (pedido.cliente.Dni == dniClienteFiltro)
                 {

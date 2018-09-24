@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.data.LineaPedidoDao
 {
-    interface ILineaPedidoDao : CRUD<LineaDePedido>
+    interface ILineaPedidoDao : CRUD<LineaPedido>
     {
     }
 }

@@ -10,10 +10,10 @@ namespace ProyectoBigonHnos.data.LineaVentaDao
 {
     class LineaVentaDaoListImpl : ILineaVentaDao
     {
-        private static List<LineaDeVenta> todasLasLineasVenta = new List<LineaDeVenta>();
+        private static List<LineaVenta> todasLasLineasVenta = new List<LineaVenta>();
         private static int IdContador = 0;
 
-        public void actualizar(LineaDeVenta t)
+        public void actualizar(LineaVenta t)
         {
             for (int i = 0; i < todasLasLineasVenta.Count; i++)
             {
@@ -31,7 +31,7 @@ namespace ProyectoBigonHnos.data.LineaVentaDao
             }
         }
 
-        public LineaDeVenta leerPorId(int id)
+        public LineaVenta leerPorId(int id)
         {
             for(int i = 0; i <todasLasLineasVenta.Count; i++)
             {
@@ -42,12 +42,12 @@ namespace ProyectoBigonHnos.data.LineaVentaDao
             return null;
         }
 
-        public List<LineaDeVenta> listarTodos()
+        public List<LineaVenta> listarTodos()
         {
             return todasLasLineasVenta;
         }
 
-        public void registrar(LineaDeVenta t)
+        public void registrar(LineaVenta t)
         {
             t.IdLineaVenta = IdContador;
             IdContador++;

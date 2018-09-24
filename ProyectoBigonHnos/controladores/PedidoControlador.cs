@@ -86,7 +86,7 @@ namespace ProyectoBigonHnos.dominio
             if (vista.GetType() == typeof(NuevoComponenteView))
             {
                 NuevoComponenteView viewNuevoComponente = (NuevoComponenteView)vista;
-                foreach (Material unMaterial in CatalogoDeMateriales.getInstancia().materiales)
+                foreach (Material unMaterial in CatalogoDeMateriales.getInstancia().obtenerMateriales())
                 {
                     viewNuevoComponente.listarMaterial(unMaterial.IdMaterial, unMaterial.Descripcion);
                 }
@@ -115,7 +115,7 @@ namespace ProyectoBigonHnos.dominio
         {
             NuevoPedidoView view = (NuevoPedidoView)vista;
 
-            foreach (LineaDePedido lp in pedido.obtenerLineasDePedido())
+            foreach (LineaPedido lp in pedido.obtenerLineasDePedido())
             {
 
                 view.listarProducto(
@@ -158,7 +158,7 @@ namespace ProyectoBigonHnos.dominio
         {
             PedidosView view = (PedidosView) vista;
 
-            foreach (Pedido pedido in Negocio.getNegocio().pedidosRealizados)
+            foreach (Pedido pedido in Negocio.getNegocio().obtenerTodosPedidos())
             {
                 view.listarPedido(pedido.idPedido.ToString(), pedido.cliente.Apellido, pedido.fechaDePedido);
             }

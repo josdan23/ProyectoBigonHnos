@@ -9,7 +9,7 @@ using ProyectoBigonHnos.dominio.venta;
 
 namespace ProyectoBigonHnos.data.LineaVentaDao
 {
-    interface ILineaVentaDao : CRUD<LineaDeVenta>
+    interface ILineaVentaDao : CRUD<LineaVenta>
     {
     }
 }

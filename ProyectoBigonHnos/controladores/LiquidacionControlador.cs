@@ -62,7 +62,7 @@ namespace ProyectoBigonHnos.controladores
 
         private void cargarConceptosObligatorios()
         {
-            foreach ( Concepto concepto in Negocio.getNegocio().conceptos)
+            foreach ( Concepto concepto in Negocio.getNegocio().obtenerTodosConceptos())
             {
                 if (concepto.Obligatorio)
                 {

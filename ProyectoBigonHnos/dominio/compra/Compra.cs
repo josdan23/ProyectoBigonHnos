@@ -12,13 +12,13 @@ namespace ProyectoBigonHnos.dominio
         private DateTime fechaCompra;
         private string estado;
         private Proveedor proveedor;
-        private List<LineaDeCompra> lineasDeCompra;
+        private List<LineaCompra> lineasDeCompra;
 
         public Compra()
         {
             this.fechaCompra = DateTime.Now;
             this.estado = "nuevo";
-            lineasDeCompra = new List<LineaDeCompra>();
+            lineasDeCompra = new List<LineaCompra>();
         }
 
         public void agregarProveedor(Proveedor proveedor)
@@ -28,7 +28,7 @@ namespace ProyectoBigonHnos.dominio
 
         public void crearLineaDeCompra(Material material, int cantidad)
         {
-            LineaDeCompra lc = new LineaDeCompra(material, cantidad);
+            LineaCompra lc = new LineaCompra(material, cantidad);
             lineasDeCompra.Add(lc);
         }
 
@@ -41,7 +41,7 @@ namespace ProyectoBigonHnos.dominio
         {
             double total = 0.0;
 
-            foreach (LineaDeCompra lc in lineasDeCompra)
+            foreach (LineaCompra lc in lineasDeCompra)
             {
                 total += lc.obtenerSubTotal();
             }
@@ -54,7 +54,7 @@ namespace ProyectoBigonHnos.dominio
             Console.WriteLine(fechaCompra);
             Console.WriteLine(proveedor);
             Console.WriteLine(estado);
-            foreach (LineaDeCompra lc in lineasDeCompra)
+            foreach (LineaCompra lc in lineasDeCompra)
             {
                 lc.mostrar();
             }

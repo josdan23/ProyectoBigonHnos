@@ -9,10 +9,10 @@ namespace ProyectoBigonHnos.data.LineaCompraDao
 {
     class LineaCompraDaoListImpl : ILineaCompraDao
     {
-        private static List<LineaDeCompra> todasLasLineasDeCompra = new List<LineaDeCompra>();
+        private static List<LineaCompra> todasLasLineasDeCompra = new List<LineaCompra>();
         private static int IdContador = 0;
 
-        public void actualizar(LineaDeCompra t)
+        public void actualizar(LineaCompra t)
         {
             for (int i = 0; i < todasLasLineasDeCompra.Count; i++)
             {
@@ -32,7 +32,7 @@ namespace ProyectoBigonHnos.data.LineaCompraDao
 
         }
 
-        public LineaDeCompra leerPorId(int id)
+        public LineaCompra leerPorId(int id)
         {
             for ( int i = 0; i < todasLasLineasDeCompra.Count; i++)
             {
@@ -43,12 +43,12 @@ namespace ProyectoBigonHnos.data.LineaCompraDao
             return null;
         }
 
-        public List<LineaDeCompra> listarTodos()
+        public List<LineaCompra> listarTodos()
         {
             return todasLasLineasDeCompra;
         }
 
-        public void registrar(LineaDeCompra t)
+        public void registrar(LineaCompra t)
         {
             t.IdLineaCompra = IdContador;
             IdContador++;

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio
 {
-    class LineaDePedido
+    class LineaPedido
     {
         public int IdLineaPedido { get; set; }
         public int cantidad { get; set; }
         public Producto producto { get; set; }
 
-        public LineaDePedido() { }
+        public LineaPedido() { }
 
-        public LineaDePedido(int cantidad)
+        public LineaPedido(int cantidad)
         {
             this.cantidad = cantidad;
         }

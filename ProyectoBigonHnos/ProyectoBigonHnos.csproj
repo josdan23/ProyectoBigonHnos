@@ -74,6 +74,8 @@
     <Compile Include="data\ConceptoDao\ConceptoDaoListImpl.cs" />
     <Compile Include="data\ConceptoDao\IConceptoDao.cs" />
     <Compile Include="data\CRUD.cs" />
+    <Compile Include="data\DaoFactory.cs" />
+    <Compile Include="data\PersistenciaFacade.cs" />
     <Compile Include="data\DBConector.cs" />
     <Compile Include="data\DomicilioDao\DomicilioDAOImpl.cs" />
     <Compile Include="data\DomicilioDao\DomicilioDaoListImpl.cs" />
@@ -129,12 +131,12 @@
     <Compile Include="dominio\compra\Compra.cs" />
     <Compile Include="controladores\CompraControlador.cs" />
     <Compile Include="controladores\GestionarMaterialControlador.cs" />
-    <Compile Include="dominio\compra\LineaDeCompra.cs" />
+    <Compile Include="dominio\compra\LineaCompra.cs" />
     <Compile Include="dominio\comunes\Domicilio.cs" />
     <Compile Include="dominio\empleado\Empleado.cs" />
     <Compile Include="dominio\comunes\Localidad.cs" />
     <Compile Include="dominio\empleado\GrupoFamiliar.cs" />
-    <Compile Include="dominio\pedido\LineaDePedido.cs" />
+    <Compile Include="dominio\pedido\LineaPedido.cs" />
     <Compile Include="dominio\material\Material.cs" />
     <Compile Include="dominio\Negocio.cs" />
     <Compile Include="dominio\pedido\Pedido.cs" />
@@ -148,7 +150,7 @@
     <Compile Include="dominio\Usuario.cs" />
     <Compile Include="dominio\venta\CalculadorDeIntereses.cs" />
     <Compile Include="dominio\venta\Cuota.cs" />
-    <Compile Include="dominio\venta\LineaDeVenta.cs" />
+    <Compile Include="dominio\venta\LineaVenta.cs" />
     <Compile Include="dominio\venta\Pago.cs" />
     <Compile Include="dominio\venta\Venta.cs" />
     <Compile Include="Program.cs" />

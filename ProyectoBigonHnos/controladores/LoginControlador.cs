@@ -26,7 +26,7 @@ namespace ProyectoBigonHnos.controladores
 
         public void iniciarSesion(string usuario, string password)
         {
-            foreach (Empleado empleado in Negocio.getNegocio().empleados)
+            foreach (Empleado empleado in Negocio.getNegocio().obtenerTodosEmpleados())
             {
                 if (empleado.Usuario.Username == usuario && empleado.Usuario.Password == password)
                 {

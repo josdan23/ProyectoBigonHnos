@@ -43,7 +43,7 @@ namespace ProyectoBigonHnos.controladores
         public void listarClientes()
         {
             
-            foreach (Cliente cliente in Negocio.clientes)
+            foreach (Cliente cliente in Negocio.obtenerTodosClientes())
             {
                 string dni = cliente.Dni;
                 string apellido = cliente.Apellido;

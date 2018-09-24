@@ -9,11 +9,11 @@ namespace ProyectoBigonHnos.data.LineaPedidoDao
 {
     class LineaPedidoDaoListImpl : ILineaPedidoDao
     {
-        private static List<LineaDePedido> todasLasLineasPedidos = new List<LineaDePedido>();
+        private static List<LineaPedido> todasLasLineasPedidos = new List<LineaPedido>();
         private static int IdContador = 0;
 
 
-        public void actualizar(LineaDePedido t)
+        public void actualizar(LineaPedido t)
         {
             for (int i = 0; i < todasLasLineasPedidos.Count; i++)
             {
@@ -31,7 +31,7 @@ namespace ProyectoBigonHnos.data.LineaPedidoDao
             }
         }
 
-        public LineaDePedido leerPorId(int id)
+        public LineaPedido leerPorId(int id)
         {
             for ( int i = 0; i < todasLasLineasPedidos.Count; i++)
             {
@@ -42,12 +42,12 @@ namespace ProyectoBigonHnos.data.LineaPedidoDao
             return null;
         }
 
-        public List<LineaDePedido> listarTodos()
+        public List<LineaPedido> listarTodos()
         {
             return todasLasLineasPedidos;
         }
 
-        public void registrar(LineaDePedido t)
+        public void registrar(LineaPedido t)
         {
             t.IdLineaPedido = IdContador;
             IdContador++;

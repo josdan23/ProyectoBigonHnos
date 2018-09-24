@@ -60,11 +60,6 @@ namespace ProyectoBigonHnos.data.EmpleadoDao
 
             todosLosEmpleados.Add(t);
 
-            IPersonaDAO dao = new PersonaDaoListImpl();
-            dao.registrar(t);
-
-            IUsuarioDAO daoUsuario = new UsuarioDaoListImpl();
-            daoUsuario.registrar(t.Usuario);
         }
     }
 }

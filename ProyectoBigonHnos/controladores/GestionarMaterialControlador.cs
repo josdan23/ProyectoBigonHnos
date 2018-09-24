@@ -46,7 +46,7 @@ namespace ProyectoBigonHnos.controladores
             int stockMinimo = 0;
             int idMaterial = 0;
 
-            foreach(Material material in catalogo.materiales)
+            foreach(Material material in catalogo.obtenerMateriales())
             {
                 idMaterial = material.IdMaterial;
                 descripcion = material.Descripcion;

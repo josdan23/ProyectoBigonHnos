@@ -25,7 +25,11 @@ namespace ProyectoBigonHnos.controladores
 
         public void editarConcepto (int idConcepto, string tipo, string descripcion, double cantidad, bool obligatorio)
         {
-            //buscar el Concepto por el id y agregar la informacion del concept
+            
+            Concepto concepto = new Concepto(TipoConcepto.DESCUENTO, descripcion, cantidad, obligatorio);
+            concepto.IdConcepto = idConcepto;
+
+            Negocio.getNegocio().actualizarConcepto(concepto);
         }
 
         public void listarConceptos()

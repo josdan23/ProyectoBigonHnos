@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.data.LineaCompraDao
 {
-    interface ILineaCompraDao : CRUD<LineaDeCompra>
+    interface ILineaCompraDao : CRUD<LineaCompra>
     {
     }
 }

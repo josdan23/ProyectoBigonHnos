@@ -17,7 +17,7 @@ namespace ProyectoBigonHnos.dominio
         public string estado;
         public Cliente cliente{ get; set;}
 
-        public List<LineaDePedido> lineasDePedido;
+        public List<LineaPedido> lineasDePedido;
 
         public Pedido()
         {
@@ -26,13 +26,13 @@ namespace ProyectoBigonHnos.dominio
             fechaDePedido = DateTime.Now;
             estado = "nuevo";
 
-            lineasDePedido = new List<LineaDePedido>();
+            lineasDePedido = new List<LineaPedido>();
         }
 
 
         public void crearLineaDePedido(string descripcion, double alto, double ancho, double profundidad, string colorPrimario, string colorSecundario, int cantidad)
         {
-            LineaDePedido lp = new LineaDePedido(cantidad);
+            LineaPedido lp = new LineaPedido(cantidad);
             lp.crearProducto(descripcion, alto, ancho, profundidad, colorPrimario, colorSecundario);
             lineasDePedido.Add(lp);
             
@@ -42,7 +42,7 @@ namespace ProyectoBigonHnos.dominio
         public void agregarComponente(string descripcion, double alto, double ancho, double profundidad, string colorPrimario, string colorSecundario, int cantidad, Material material)
         {
             //LineaDePedido lp = lineasDePedido.ElementAt(lineasDePedido.Count - 1);
-            LineaDePedido lp = lineasDePedido.Last();
+            LineaPedido lp = lineasDePedido.Last();
             lp.crearComponente(descripcion, alto, ancho, profundidad, colorPrimario, colorSecundario, cantidad, material);
         }
 
@@ -74,7 +74,7 @@ namespace ProyectoBigonHnos.dominio
             Console.WriteLine(estado);
             cliente.mostrar();
 
-            foreach (LineaDePedido linea in lineasDePedido) {
+            foreach (LineaPedido linea in lineasDePedido) {
                 linea.mostrar();
             }
             
@@ -85,7 +85,7 @@ namespace ProyectoBigonHnos.dominio
             //TODO: obtener subtotal
             double total = 0.0;
 
-            foreach(LineaDePedido lp in lineasDePedido)
+            foreach(LineaPedido lp in lineasDePedido)
             {
                 total += lp.obtenerSubtotal();
             }
@@ -93,7 +93,7 @@ namespace ProyectoBigonHnos.dominio
             return total;
         }
 
-        public List<LineaDePedido> obtenerLineasDePedido()
+        public List<LineaPedido> obtenerLineasDePedido()
         {
             return lineasDePedido;
         }

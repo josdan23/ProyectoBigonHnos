@@ -23,7 +23,7 @@ namespace ProyectoBigonHnos.dominio.venta
 
         public Cliente Cliente { get; set; }
 
-        public List<LineaDeVenta> lineasDeVenta { get; set; }
+        public List<LineaVenta> lineasDeVenta { get; set; }
         public Pedido pedido { get; set; }
         public Pago pago { get; set; }
 
@@ -37,7 +37,7 @@ namespace ProyectoBigonHnos.dominio.venta
             iva = 0.21;
             tipoFactura = "A";
 
-            lineasDeVenta = new List<LineaDeVenta>();
+            lineasDeVenta = new List<LineaVenta>();
         }
 
         public Venta(Empleado empleado)
@@ -59,10 +59,10 @@ namespace ProyectoBigonHnos.dominio.venta
 
             this.pedido = pedido;
 
-            List<LineaDePedido> lineasDePedido = pedido.obtenerLineasDePedido();
+            List<LineaPedido> lineasDePedido = pedido.obtenerLineasDePedido();
             
-            foreach (LineaDePedido lp in lineasDePedido) {
-                LineaDeVenta lv = new LineaDeVenta(lp.cantidad, lp.producto);
+            foreach (LineaPedido lp in lineasDePedido) {
+                LineaVenta lv = new LineaVenta(lp.cantidad, lp.producto);
                 lineasDeVenta.Add(lv);
 
             }
@@ -94,7 +94,7 @@ namespace ProyectoBigonHnos.dominio.venta
         {
             double total = 0.0;
 
-            foreach (LineaDeVenta lv in lineasDeVenta)
+            foreach (LineaVenta lv in lineasDeVenta)
             {
                 total += lv.obtenerSubtotal();
             }

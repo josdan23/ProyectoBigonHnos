@@ -3,6 +3,7 @@ using System.Linq;
 using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.data.DomicilioDao;
 using ProyectoBigonHnos.data.TelefonoDao;
+using System;
 
 namespace ProyectoBigonHnos.data.PersonaDao
 {
@@ -50,10 +51,10 @@ namespace ProyectoBigonHnos.data.PersonaDao
         public void registrar(Persona t)
         {
             IDomicilioDAO daoDomicilio = new DomicilioDaoListImpl();
-            daoDomicilio.registrar(t.Domicilioes[0]);
+            //daoDomicilio.registrar(t.Domicilioes[0]);
 
             ITelefonoDao daoTelefono = new TelefonoDaoListImpl();
-            daoTelefono.registrar(t.Telefonos[0]);
+            //daoTelefono.registrar(t.Telefonos[0]);
 
             //t.Telefonos[0].IdTelefono = daoTelefono.listarTodos().Last<Telefono>().IdTelefono;
             //t.Domicilioes[0].IdDomicilio = daoDomicilio.listarTodos().Last<Domicilio>().IdDomicilio;
@@ -63,7 +64,7 @@ namespace ProyectoBigonHnos.data.PersonaDao
 
             todasLasPersonas.Add(t);
 
-            
+            Console.WriteLine("Registrada persona");
             
         }
     }

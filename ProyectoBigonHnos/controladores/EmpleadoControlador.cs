@@ -143,7 +143,7 @@ namespace ProyectoBigonHnos.controladores
         {
             EmpleadoView view = (EmpleadoView)Vista;
 
-            foreach(Empleado empleado in Negocio.getNegocio().empleados)
+            foreach(Empleado empleado in Negocio.getNegocio().obtenerTodosEmpleados())
             {
                 view.listarEmpleado(
                     empleado.Legajo, // implementar id de empleado

@@ -12,9 +12,9 @@ namespace ProyectoBigonHnos.controladores
         public Empleado Empleado { get; set; }
         public Negocio Negocio { get; set; }
 
-        public GestionarEmpleadoControlador(Negocio negocio)
+        public GestionarEmpleadoControlador()
         {
-            Negocio = negocio;
+            Negocio = Negocio.getNegocio();
         }
 
         public void nuevoEmpleado(string nombre, string apellido, string dni, string categoria, string cuil, string password, bool esAdmin, DateTime fechaIngreso)
