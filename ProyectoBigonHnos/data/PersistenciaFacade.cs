@@ -22,6 +22,7 @@ namespace ProyectoBigonHnos.data
             return instance;
         }
 
+        //metodo para registrar usando reflexion, se determina el tipo dinamicamente en tiempo de ejecucion
         public void registrar (Object x)
         {
             Type t = x.GetType();
