@@ -22,6 +22,13 @@ namespace ProyectoBigonHnos.dominio
             this.Localidad = new Localidad(nombreLocalidad, nombreProvincia);
         }
 
+        public Domicilio(String nombreCalle, int numero, Localidad localidad)
+        {
+            this.Calle = nombreCalle;
+            this.Numero = numero;
+            this.Localidad = localidad;
+        }
+
         public void mostrar()
         { 
             Console.WriteLine(Calle);

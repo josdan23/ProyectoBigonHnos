@@ -56,8 +56,10 @@ namespace ProyectoBigonHnos.dominio
             Console.WriteLine(estado);
             foreach (LineaCompra lc in lineasDeCompra)
             {
-                lc.mostrar();
+                Console.WriteLine(lc);
             }
         }
+
     }
 }
+    

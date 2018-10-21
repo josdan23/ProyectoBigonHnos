@@ -8,20 +8,14 @@ namespace ProyectoBigonHnos.dominio
 {
     class Proveedor
     {
-        public static int contadorId = 0;
-
         private int idProveedor;
         private string razonSocial;
         private string cuit;
         private List<Telefono> telefonos;
         private List<Domicilio> domicilios;
 
-
         public Proveedor()
         {
-            idProveedor = contadorId;
-            contadorId++;
-            Console.WriteLine(contadorId);
             telefonos = new List<Telefono>();
             domicilios = new List<Domicilio>();
         }
@@ -40,13 +34,6 @@ namespace ProyectoBigonHnos.dominio
         public List<Telefono> Telefonos { get => telefonos; set => telefonos = value; }
         public List<Domicilio> Domicilios { get => domicilios; set => domicilios = value; }
 
-        public void mostrar()
-        {
-            Console.WriteLine(IdProveedor);
-            Console.WriteLine(RazonSocial);
-            Console.WriteLine(Cuit);
-        }
-
         public void agregarNuevaDomicilio(string calle, int numero, string localidad, string provincia)
         {
             Domicilio nuevaDomicilio = new Domicilio(calle, numero, localidad, provincia);
@@ -58,6 +45,27 @@ namespace ProyectoBigonHnos.dominio
             Telefono nuevoTelefono = new Telefono(numeroDeTelefono);
             Telefonos.Add(nuevoTelefono);
         }
+
+        public override string ToString()
+        {
+            String cadena = String.Format("\nPROVEEDOR\n" +
+                "IdProveedor: {0}\n" +
+                "RazonSocial: {1}\n" +
+                "Cuit: {2}\n",
+                IdProveedor,
+                RazonSocial,
+                Cuit);
+
+            foreach (Telefono tel in Telefonos)
+                cadena = cadena + tel;
+
+            foreach (Domicilio domi in Domicilios)
+                cadena = cadena + domi;
+
+            return cadena;
+        }
+
+
 
     }
 }

@@ -16,6 +16,12 @@ namespace ProyectoBigonHnos.dominio
             this.Provincia = new Provincia(nombreProvincia);
         }
 
+        public Localidad(string nombre, Provincia provincia)
+        {
+            this.Nombre = nombre;
+            this.Provincia = provincia;
+        }
+
         public void mostrar()
         {
             Console.WriteLine(Nombre);

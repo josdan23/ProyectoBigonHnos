@@ -24,9 +24,15 @@ namespace ProyectoBigonHnos.dominio
             return 0.1;
         }
 
-        public void mostrar()
+        public override string ToString()
         {
-            material.mostrar();
+            return String.Format("\nLINEA DE COMPRA\n" +
+                "IdLineaDeCompra: {0}\n" +
+                "Cantidad: {1}\n" +
+                "Materiales: {2}",
+                IdLineaCompra,
+                cantidad,
+                material);
         }
     }
 }

@@ -8,8 +8,6 @@ namespace ProyectoBigonHnos.dominio
 {
     class Material
     {
-        private static int contadorId = 0;
-
         public int IdMaterial { get; set; }
         public string Descripcion { get; set; }
         public double Precio { get; set; }
@@ -19,9 +17,6 @@ namespace ProyectoBigonHnos.dominio
 
         public Material(string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
         {
-            contadorId++;
-
-            IdMaterial = contadorId;
             Descripcion = descripcion;
             Precio = precio;
             StockDisponible = stockDisponible;
@@ -29,19 +24,27 @@ namespace ProyectoBigonHnos.dominio
             Cantidad = cantidad;
         }
 
-        public void mostrar()
+        public override string ToString()
         {
-            Console.WriteLine("DESCRIPCIOIN DEL MATERIAL");
-            Console.WriteLine("idMaterial: " + IdMaterial);
-            Console.WriteLine("descripcion: " + Descripcion);
-            Console.WriteLine("cantidad:" + Cantidad);
-            Console.WriteLine("precio: " + Precio);
-            Console.WriteLine("stock disponible: " + StockDisponible);
-            Console.WriteLine("stock minimo: " + StockMinimo);
-            Console.WriteLine();
+            String mensaje = string.Format(
+                "\nDESCRIPCIÓN DEL MATERIAL\n" +
+                "Id Material: {0}\n" +
+                "Descripción: {1}\n" +
+                "Cantidad: {2}\n" +
+                "Precio: {3}" +
+                "Stock Disponible: {4}" +
+                "Stock Minimo: {5}\n",
+                IdMaterial,
+                Descripcion,
+                Cantidad,
+                Precio,
+                StockDisponible,
+                StockMinimo);
+
+            return mensaje;
         }
 
 
-     
+
     }
 }

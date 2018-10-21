@@ -39,7 +39,7 @@ namespace ProyectoBigonHnos.dominio
             Console.WriteLine(colorPrimario);
             Console.WriteLine(colorSecundario);
             Console.WriteLine(cantidad);
-            material.mostrar();
+            Console.WriteLine(material);
             Console.WriteLine();
         }
     }

@@ -36,7 +36,7 @@ namespace ProyectoBigonHnos.dominio
         {
             foreach (Material material in persistencia.obtenerTodos<Material>())
             {
-                material.mostrar();
+                Console.WriteLine(material);
             }
         }
 

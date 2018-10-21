@@ -23,16 +23,6 @@ namespace ProyectoBigonHnos.dominio
             Console.WriteLine();
         }
 
-        public void setDni(String dni)
-        {
-            Dni = dni;
-        }
-
-        public string getDni()
-        {
-            return Dni;
-        }
-
         public override string ToString()
         {
             return string.Format("IdCliente: {0}\n{1}",IdCliente, base.ToString());
