@@ -69,6 +69,12 @@ namespace ProyectoBigonHnos.dominio
             }
         }
 
+        internal void eliminarCompra(int id)
+        {
+            PersistenciaFacade.getInstance().eliminarObjeto<Compra>(id);
+            vista.ActualizarVista();
+        }
+
         internal void mostrarMateriales()
         {
 

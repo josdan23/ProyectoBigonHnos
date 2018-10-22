@@ -60,5 +60,12 @@ namespace ProyectoBigonHnos.vista
         {
             comprasRealizadasDataGrid.Rows.Add(id, proveedor, fecha, estado);
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(comprasRealizadasDataGrid.CurrentRow.Cells[0].Value.ToString());
+
+            controlador.eliminarCompra(id);
+        }
     }
 }
