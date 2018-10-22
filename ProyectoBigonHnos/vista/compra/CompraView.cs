@@ -18,11 +18,15 @@ namespace ProyectoBigonHnos.vista
         public CompraView()
         {
             InitializeComponent();
+            UnirControlador(new CompraControlador());
+            ActualizarVista();
+            
         }
 
         public void ActualizarVista()
         {
-            throw new NotImplementedException();
+            comprasRealizadasDataGrid.Rows.Clear();
+            controlador.cargarComprasRealizadas();
         }
 
         public void limpiar()
@@ -41,11 +45,19 @@ namespace ProyectoBigonHnos.vista
             v.UnirControlador(new CompraControlador());
             v.ShowDialog();
             
+            controlador.UnirVista(this);
+            ActualizarVista();
+
         }
 
         public void close()
         {
-            Dispose();
+            Dispose();  
+        }
+
+        public void mostrarCompra(int id, string proveedor, DateTime fecha, string estado)
+        {
+            comprasRealizadasDataGrid.Rows.Add(id, proveedor, fecha, estado);
         }
     }
 }

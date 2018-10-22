@@ -57,6 +57,18 @@ namespace ProyectoBigonHnos.dominio
             
         }
 
+        internal void cargarComprasRealizadas()
+        {
+            List<Compra> comprasRealizadas = PersistenciaFacade.getInstance().obtenerTodos<Compra>();
+
+            CompraView view = (CompraView)vista;
+
+            foreach (Compra comp in comprasRealizadas)
+            {
+                view.mostrarCompra(comp.IdCompra, comp.proveedor.RazonSocial, comp.fechaCompra, comp.estado);
+            }
+        }
+
         internal void mostrarMateriales()
         {
 

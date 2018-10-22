@@ -35,9 +35,15 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.comprasRealizadasDataGrid = new System.Windows.Forms.DataGridView();
+            this.colIdCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFechaCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comprasRealizadasDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -122,10 +128,44 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // comprasRealizadasDataGrid
+            // 
+            this.comprasRealizadasDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.comprasRealizadasDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colIdCompra,
+            this.colProveedor,
+            this.colFechaCompra,
+            this.colEstado});
+            this.comprasRealizadasDataGrid.Location = new System.Drawing.Point(67, 107);
+            this.comprasRealizadasDataGrid.Name = "comprasRealizadasDataGrid";
+            this.comprasRealizadasDataGrid.Size = new System.Drawing.Size(600, 306);
+            this.comprasRealizadasDataGrid.TabIndex = 1;
+            // 
+            // colIdCompra
+            // 
+            this.colIdCompra.HeaderText = "Id compra";
+            this.colIdCompra.Name = "colIdCompra";
+            // 
+            // colProveedor
+            // 
+            this.colProveedor.HeaderText = "Proveedor";
+            this.colProveedor.Name = "colProveedor";
+            // 
+            // colFechaCompra
+            // 
+            this.colFechaCompra.HeaderText = "Fecha";
+            this.colFechaCompra.Name = "colFechaCompra";
+            // 
+            // colEstado
+            // 
+            this.colEstado.HeaderText = "Estado";
+            this.colEstado.Name = "colEstado";
+            // 
             // CompraView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comprasRealizadasDataGrid);
             this.Controls.Add(this.panel1);
             this.Name = "CompraView";
             this.Size = new System.Drawing.Size(798, 487);
@@ -133,6 +173,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.comprasRealizadasDataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -146,5 +187,10 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.DataGridView comprasRealizadasDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIdCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colProveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEstado;
     }
 }
