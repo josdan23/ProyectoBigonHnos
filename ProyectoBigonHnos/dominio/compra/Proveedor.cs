@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio
 {
-    class Proveedor
+    public class Proveedor
     {
         private int idProveedor;
         private string razonSocial;

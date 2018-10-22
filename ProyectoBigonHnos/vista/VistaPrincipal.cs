@@ -59,6 +59,7 @@ namespace ProyectoBigonHnos.vista
         {
             ocultarPaneles();
             pnlActivoCompras.Show();
+            agregarVista(new CompraView());
         }
 
         private void btnMateriales_Click(object sender, EventArgs e)

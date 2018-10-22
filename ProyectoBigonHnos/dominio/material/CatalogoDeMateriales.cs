@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio
 {
-    class CatalogoDeMateriales
+    public class CatalogoDeMateriales
     {
         public static CatalogoDeMateriales catalogo;
         private PersistenciaFacade persistencia;

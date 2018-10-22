@@ -8,7 +8,7 @@ using ProyectoBigonHnos.data;
 
 namespace ProyectoBigonHnos.dominio
 {
-    class Negocio
+    public class Negocio
     {
         private static Negocio negocio;
         private CatalogoDeMateriales catalogo;

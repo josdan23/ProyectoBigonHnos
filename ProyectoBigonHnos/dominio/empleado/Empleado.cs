@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio
 {
-    class Empleado : Persona
+    public class Empleado : Persona
     {   
         public int IdEmpleado { get; set; }
         public string Legajo { get; set; }

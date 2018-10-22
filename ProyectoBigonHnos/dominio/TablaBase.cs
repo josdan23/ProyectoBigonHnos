@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio
 {
-    class TablaBase
+    public class TablaBase
     {
         public int Id { get; set; }
 

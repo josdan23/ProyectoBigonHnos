@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio
 {
-    class Pedido
+    public class Pedido
     {
 
         private static int id = 0;

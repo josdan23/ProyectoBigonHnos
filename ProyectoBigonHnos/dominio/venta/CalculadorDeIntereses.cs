@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio.venta
 {
-    class CalculadorDeIntereses
+    public class CalculadorDeIntereses
     {
         public double calcularInteresPorCuotas(int nroCuotas)
         {

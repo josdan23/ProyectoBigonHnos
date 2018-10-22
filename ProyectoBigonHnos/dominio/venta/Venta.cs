@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio.venta
 {
-    class Venta
+    public class Venta
     {
         private static int contador = 0;
 

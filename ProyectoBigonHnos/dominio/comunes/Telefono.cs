@@ -2,7 +2,7 @@
 
 namespace ProyectoBigonHnos.dominio
 {
-    class Telefono
+    public class Telefono
     {
         public int IdTelefono { get; set; }
         public string Numero { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace ProyectoBigonHnos.dominio.liquidacion
 {
-    class Concepto
+    public class Concepto
     {
         public int IdConcepto { get; set; }
         public TipoConcepto Tipo { get; set; }
@@ -43,7 +43,7 @@
         }
     }
 
-    enum TipoConcepto 
+    public enum TipoConcepto 
     {
         DESCUENTO,
         REMUNERATIVO,

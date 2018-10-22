@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio.venta
 {
-    class LineaVenta
+    public class LineaVenta
     {
         public int IdLineaVenta { get; set; }
         public int cantidad { get; set; }

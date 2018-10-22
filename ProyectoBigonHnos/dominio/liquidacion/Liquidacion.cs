@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio.liquidacion
 {
-    class Liquidacion
+    public class Liquidacion
     {
         public int IdLiquidacion { get; set; }
         public int PeriodoLiquidacion { get; set; }

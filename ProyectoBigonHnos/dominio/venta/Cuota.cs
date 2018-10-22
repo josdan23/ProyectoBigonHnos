@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio.venta
 {
-    class Cuota
+    public class Cuota
     {
         private DateTime fechaVencimento;
         private int nroCuota;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio
 {
-    class Material
+    public class Material
     {
         public int IdMaterial { get; set; }
         public string Descripcion { get; set; }

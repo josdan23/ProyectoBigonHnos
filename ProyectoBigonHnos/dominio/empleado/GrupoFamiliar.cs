@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio
 {
-    class GrupoFamiliar
+    public class GrupoFamiliar
     {
         public int IdGrupoFamiliar { get; set; }
         public string Dni { get; set; }

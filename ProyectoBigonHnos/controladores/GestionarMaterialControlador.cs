@@ -13,13 +13,18 @@ namespace ProyectoBigonHnos.controladores
     {
         private CatalogoDeMateriales catalogo;
         private IMaterialesView vista;
-        
+
         public GestionarMaterialControlador(IMaterialesView vista)
         {
             this.vista = vista;
             catalogo = CatalogoDeMateriales.getInstancia();
 
             //cargarMateriales();
+        }
+
+        public GestionarMaterialControlador()
+        {
+            catalogo = CatalogoDeMateriales.getInstancia();
         }
 
         public void agregarNuevoMaterial(String descripcion, int cantidad, double precio, int stockMinimo, int stockDisponible)

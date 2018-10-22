@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio
 {
-    class Compra
+    public class Compra
     {
         public int IdCompra { get; set; }
-        private DateTime fechaCompra;
-        private string estado;
-        private Proveedor proveedor;
-        private List<LineaCompra> lineasDeCompra;
+        public DateTime fechaCompra;
+        public string estado;
+        public Proveedor proveedor;
+        public List<LineaCompra> lineasDeCompra { get; set; }
 
         public Compra()
         {
@@ -34,6 +34,7 @@ namespace ProyectoBigonHnos.dominio
 
         public void seHaCompletado()
         {
+            fechaCompra = DateTime.Now;
             this.estado = "completado";
         }
 
@@ -51,6 +52,7 @@ namespace ProyectoBigonHnos.dominio
 
         public void mostrar()
         {
+            Console.WriteLine("\nCOMPRA\n");
             Console.WriteLine(fechaCompra);
             Console.WriteLine(proveedor);
             Console.WriteLine(estado);
