@@ -37,6 +37,7 @@ namespace ProyectoBigonHnos.vista
         public void UnirControlador(CompraControlador controlador)
         {
             this.controlador = controlador;
+            controlador.UnirVista(this);
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -45,7 +46,7 @@ namespace ProyectoBigonHnos.vista
             v.UnirControlador(new CompraControlador());
             v.ShowDialog();
             
-            controlador.UnirVista(this);
+            
             ActualizarVista();
 
         }
