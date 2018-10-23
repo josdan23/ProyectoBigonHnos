@@ -10,14 +10,14 @@ namespace ProyectoBigonHnos.dominio
     {
         public int IdCompra { get; set; }
         public DateTime fechaCompra;
-        public string estado;
+        public EstadoCompra estado;
         public Proveedor proveedor;
         public List<LineaCompra> lineasDeCompra { get; set; }
 
         public Compra()
         {
             this.fechaCompra = DateTime.Now;
-            this.estado = "nuevo";
+            this.estado = EstadoCompra.EN_PROCESO;
             lineasDeCompra = new List<LineaCompra>();
         }
 
@@ -35,7 +35,7 @@ namespace ProyectoBigonHnos.dominio
         public void seHaCompletado()
         {
             fechaCompra = DateTime.Now;
-            this.estado = "completado";
+            this.estado = EstadoCompra.EN_PROCESO;
         }
 
         public double obtenerTotal()
@@ -63,5 +63,11 @@ namespace ProyectoBigonHnos.dominio
         }
 
     }
+
+    public enum EstadoCompra
+    {
+        COMPLETADO,
+        EN_PROCESO
+    };
 }
     

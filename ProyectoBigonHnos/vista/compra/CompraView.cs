@@ -46,7 +46,6 @@ namespace ProyectoBigonHnos.vista
             v.UnirControlador(new CompraControlador());
             v.ShowDialog();
             
-            
             ActualizarVista();
 
         }

@@ -21,11 +21,13 @@ namespace ProyectoBigonHnos.vista
         public NuevaCompraView()
         {
             InitializeComponent();
+            ActualizarVista();
         }
 
         public void ActualizarVista()
         {
             compraDataGrid.Rows.Clear();
+            fechaLabel.Text = DateTime.Now.ToString();
         }
 
         public void limpiar()
@@ -51,6 +53,8 @@ namespace ProyectoBigonHnos.vista
             cuitLabel.Text = Text;
             domicilioLabel.Text = domicilio;
             telefonoLabel.Text = telefono;
+
+            
         }
 
         public void agregarMaterialATabla(int id, string descripcion, int stockMinimo, int stockDisponible)

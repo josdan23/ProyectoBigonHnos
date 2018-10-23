@@ -55,6 +55,8 @@
             this.quitarButton = new System.Windows.Forms.Button();
             this.confirmarButton = new System.Windows.Forms.Button();
             this.cancelarButton = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.fechaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.compraDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialesDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -173,9 +175,9 @@
             this.colIdMaterial,
             this.colDescripcion,
             this.colCantidad});
-            this.compraDataGrid.Location = new System.Drawing.Point(641, 61);
+            this.compraDataGrid.Location = new System.Drawing.Point(609, 123);
             this.compraDataGrid.Name = "compraDataGrid";
-            this.compraDataGrid.Size = new System.Drawing.Size(351, 447);
+            this.compraDataGrid.Size = new System.Drawing.Size(409, 385);
             this.compraDataGrid.TabIndex = 3;
             // 
             // colIdMaterial
@@ -196,7 +198,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(627, 35);
+            this.label11.Location = new System.Drawing.Point(606, 98);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(144, 13);
             this.label11.TabIndex = 0;
@@ -284,6 +286,24 @@
             this.cancelarButton.UseVisualStyleBackColor = true;
             this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(606, 28);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Fecha de compra";
+            // 
+            // fechaLabel
+            // 
+            this.fechaLabel.AutoSize = true;
+            this.fechaLabel.Location = new System.Drawing.Point(618, 61);
+            this.fechaLabel.Name = "fechaLabel";
+            this.fechaLabel.Size = new System.Drawing.Size(10, 13);
+            this.fechaLabel.TabIndex = 0;
+            this.fechaLabel.Text = "-";
+            // 
             // NuevaCompraView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,6 +327,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.fechaLabel);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label1);
             this.Name = "NuevaCompraView";
@@ -347,5 +369,7 @@
         private System.Windows.Forms.Button quitarButton;
         private System.Windows.Forms.Button confirmarButton;
         private System.Windows.Forms.Button cancelarButton;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label fechaLabel;
     }
 }

@@ -65,7 +65,7 @@ namespace ProyectoBigonHnos.dominio
 
             foreach (Compra comp in comprasRealizadas)
             {
-                view.mostrarCompra(comp.IdCompra, comp.proveedor.RazonSocial, comp.fechaCompra, comp.estado);
+                view.mostrarCompra(comp.IdCompra, comp.proveedor.RazonSocial, comp.fechaCompra, comp.estado.ToString());
             }
         }
 
