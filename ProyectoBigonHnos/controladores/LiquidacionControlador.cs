@@ -11,20 +11,22 @@
     10. El sistema registra la nueva liquidacion.
 */
 
+using System;
+using System.Collections.Generic;
 using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.dominio.liquidacion;
-using System;   
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ProyectoBigonHnos.data;
+using ProyectoBigonHnos.vista.liquidacion;
 
 namespace ProyectoBigonHnos.controladores
 {
-    class LiquidacionControlador
+    public class LiquidacionControlador
     {
         Liquidacion liquidacion;
         Empleado empleado;
+
+        private ILiquidacionView vista { get; set; }
+
 
         public void iniciarLiquidacion()
         {
@@ -32,10 +34,28 @@ namespace ProyectoBigonHnos.controladores
             //cargarConceptosObligatorios();
         }
 
+        public void unirVista(ILiquidacionView vista)
+        {
+            this.vista = vista;
+        }
+
         public void buscarEmpleado(string legajo)
         {
             empleado = Negocio.getNegocio().buscarEmpleado(legajo);
             liquidacion.Empleado = empleado;
+
+            vista.mostrarDatosEmpleado(empleado.IdEmpleado, empleado.Legajo, empleado.Categoria, empleado.Cuil, empleado.FechaIngreso);
+
+            foreach (GrupoFamiliar familiar in empleado.Familiares)
+            {
+                vista.mostrarFamiliar(
+                    familiar.IdGrupoFamiliar,
+                    familiar.Dni,
+                    familiar.Parentesco,
+                    familiar.FechaNacimiento,
+                    familiar.Discapacidad);
+            }
+
         }
 
         public void agregarPeriodo(int periodo)
@@ -51,24 +71,79 @@ namespace ProyectoBigonHnos.controladores
         public void agregarLineaLiquidacion(int idConcepto, int cantidad, double valorBase)
         {
             Concepto concepto = Negocio.getNegocio().buscarConcepto(idConcepto);
+
             liquidacion.agregarLineaLiquidacion(cantidad, concepto, valorBase);
+
+            int index = liquidacion.LineasLiquidacion.Count;
+
+            double resultado = liquidacion.LineasLiquidacion[index - 1].getImporte();
+
+            switch (concepto.Tipo)
+            {
+                case TipoConcepto.REMUNERATIVO:
+                    vista.mostrarLiquidacion(concepto.Descripcion, concepto.Porcentaje, resultado, 0.0, 0.0);
+                    break;
+                case TipoConcepto.NO_REMUNERATIVO:
+                    vista.mostrarLiquidacion(concepto.Descripcion, concepto.Porcentaje, 0.0, resultado, 0.0);
+                    break;
+                case TipoConcepto.DESCUENTO:
+                    vista.mostrarLiquidacion(concepto.Descripcion, concepto.Porcentaje, 0.0, 0.0, resultado);
+                    break;
+            }
+
+            vista.mostrarTotal(liquidacion.GetImporteTotal());
+            vista.mostrarTotalRemunerativo(liquidacion.getTotalRemunerativo());
+            vista.mostrarTotalNoRemunerativo(liquidacion.getTotalNoRemunerativo());
+            vista.mostrarTotalDescuento(liquidacion.getTotalDescuento());
         }
 
         public void confimarLiquidacion()
         {
             //se guarda la liquidacion en la base de datos.
             liquidacion.Imprimir();
+            PersistenciaFacade.getInstance().registrarObjeto(liquidacion);
+            vista.cerrar();
         }
 
         private void cargarConceptosObligatorios()
         {
-            foreach ( Concepto concepto in Negocio.getNegocio().obtenerTodosConceptos())
+            foreach (Concepto concepto in Negocio.getNegocio().obtenerTodosConceptos())
             {
                 if (concepto.Obligatorio)
                 {
                     agregarLineaLiquidacion(concepto.IdConcepto, 1, 2000);
                 }
             }
+        }
+
+        internal void cancelarLiquidacion()
+        {
+            liquidacion = null;
+            vista.cerrar();
+        }
+
+        public void listarConceptos()
+        {
+            List<Concepto> conceptos = PersistenciaFacade.getInstance().obtenerTodos<Concepto>();
+
+            Dictionary<int, string> conceptosDictionary = new Dictionary<int, string>();
+
+            foreach (Concepto conc in conceptos)
+            {
+                conceptosDictionary.Add(conc.IdConcepto, conc.Descripcion);
+            }
+
+            vista.agregarConceptosALista(conceptosDictionary);
+        }
+
+        internal void eliminarLineaLiquidacion(int index)
+        {
+            liquidacion.LineasLiquidacion.RemoveAt(index);
+
+            vista.mostrarTotalRemunerativo(liquidacion.getTotalRemunerativo());
+            vista.mostrarTotalNoRemunerativo(liquidacion.getTotalNoRemunerativo());
+            vista.mostrarTotalDescuento(liquidacion.getTotalDescuento());
+            vista.mostrarTotal(liquidacion.GetImporteTotal());
         }
     }
 }

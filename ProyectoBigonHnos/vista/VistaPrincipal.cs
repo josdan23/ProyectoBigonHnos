@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.vista.empleado;
+using ProyectoBigonHnos.vista.liquidacion;
 using ProyectoBigonHnos.vista.proveedor;
 
 namespace ProyectoBigonHnos.vista
@@ -39,6 +40,7 @@ namespace ProyectoBigonHnos.vista
             pnlActivoEmpleados.Hide();
             pnlActivoUsuario.Hide();
             pnlActivoProveedor.Hide();
+            pnlActivoLiquidacion.Hide();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
@@ -108,6 +110,18 @@ namespace ProyectoBigonHnos.vista
         private void pnlCuerpo_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ocultarPaneles();
+            pnlActivoLiquidacion.Show();
+            //agregarVista(new LiquidacionView());
+            LiquidacionView vistaLiq = new LiquidacionView();
+            controladores.LiquidacionControlador controller = new controladores.LiquidacionControlador();
+            controller.unirVista(vistaLiq);
+            vistaLiq.UnirControlador(controller);
+            vistaLiq.ShowDialog();
         }
     }
 }

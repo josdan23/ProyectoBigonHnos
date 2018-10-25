@@ -15,6 +15,7 @@ using ProyectoBigonHnos.data.PersonaDao;
 using ProyectoBigonHnos.data.DomicilioDao;
 using System.Reflection;
 using ProyectoBigonHnos.dominio.venta;
+using ProyectoBigonHnos.vista.liquidacion;
 
 namespace ProyectoBigonHnos
 {
@@ -34,8 +35,10 @@ namespace ProyectoBigonHnos
             Login vista = new Login();
             vista.unirControlador(LoginControlador.getInstance());
 
+
+            agregarConceptos();
             Application.EnableVisualStyles();
-            Application.Run(vista);            
+            Application.Run(new VistaPrincipal());            
 
             //Persona t = new Persona("daniel", "yaprua", "232342");
             //t.agregarTelefono(new Telefono("234234"));

@@ -1,4 +1,17 @@
-﻿using ProyectoBigonHnos.dominio.liquidacion;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using ProyectoBigonHnos.controladores;
+
+
+
+using ProyectoBigonHnos.dominio.liquidacion;
 using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.controladores
@@ -33,8 +46,8 @@ namespace ProyectoBigonHnos.controladores
         }
 
         public void listarConceptos()
-        {
-            //listar en la vista todos los conceptos
+        {   
+
         }
     }
 }

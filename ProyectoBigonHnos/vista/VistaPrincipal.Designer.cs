@@ -50,8 +50,10 @@
             this.pnlActivoUsuario = new System.Windows.Forms.Panel();
             this.btnUsuario = new System.Windows.Forms.Button();
             this.pnlCuerpo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlActivoLiquidacion = new System.Windows.Forms.Panel();
+            this.btnLiquidacion = new System.Windows.Forms.Button();
             this.pnlNavBar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -74,6 +76,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.pnlActivoLiquidacion);
+            this.panel1.Controls.Add(this.btnLiquidacion);
             this.panel1.Controls.Add(this.pnlActivoProveedor);
             this.panel1.Controls.Add(this.pnlActivoEmpleados);
             this.panel1.Controls.Add(this.pnlActivoClientes);
@@ -99,7 +103,7 @@
             // pnlActivoProveedor
             // 
             this.pnlActivoProveedor.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlActivoProveedor.Location = new System.Drawing.Point(0, 385);
+            this.pnlActivoProveedor.Location = new System.Drawing.Point(0, 436);
             this.pnlActivoProveedor.Name = "pnlActivoProveedor";
             this.pnlActivoProveedor.Size = new System.Drawing.Size(6, 33);
             this.pnlActivoProveedor.TabIndex = 0;
@@ -108,7 +112,7 @@
             // pnlActivoEmpleados
             // 
             this.pnlActivoEmpleados.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlActivoEmpleados.Location = new System.Drawing.Point(0, 338);
+            this.pnlActivoEmpleados.Location = new System.Drawing.Point(0, 389);
             this.pnlActivoEmpleados.Name = "pnlActivoEmpleados";
             this.pnlActivoEmpleados.Size = new System.Drawing.Size(6, 33);
             this.pnlActivoEmpleados.TabIndex = 0;
@@ -117,7 +121,7 @@
             // pnlActivoClientes
             // 
             this.pnlActivoClientes.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlActivoClientes.Location = new System.Drawing.Point(0, 294);
+            this.pnlActivoClientes.Location = new System.Drawing.Point(0, 341);
             this.pnlActivoClientes.Name = "pnlActivoClientes";
             this.pnlActivoClientes.Size = new System.Drawing.Size(6, 33);
             this.pnlActivoClientes.TabIndex = 0;
@@ -178,7 +182,7 @@
             this.btnProveedores.ForeColor = System.Drawing.Color.DimGray;
             this.btnProveedores.Image = global::ProyectoBigonHnos.Properties.Resources.proveedor_icon;
             this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedores.Location = new System.Drawing.Point(0, 378);
+            this.btnProveedores.Location = new System.Drawing.Point(0, 429);
             this.btnProveedores.Margin = new System.Windows.Forms.Padding(0);
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
@@ -200,7 +204,7 @@
             this.btnEmpleados.ForeColor = System.Drawing.Color.DimGray;
             this.btnEmpleados.Image = global::ProyectoBigonHnos.Properties.Resources.empleados_icon;
             this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleados.Location = new System.Drawing.Point(0, 330);
+            this.btnEmpleados.Location = new System.Drawing.Point(0, 381);
             this.btnEmpleados.Margin = new System.Windows.Forms.Padding(0);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
@@ -222,7 +226,7 @@
             this.btnClientes.ForeColor = System.Drawing.Color.DimGray;
             this.btnClientes.Image = global::ProyectoBigonHnos.Properties.Resources.clientes_icon;
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(0, 282);
+            this.btnClientes.Location = new System.Drawing.Point(0, 333);
             this.btnClientes.Margin = new System.Windows.Forms.Padding(0);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
@@ -398,6 +402,17 @@
             this.pnlCuerpo.TabIndex = 1;
             this.pnlCuerpo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCuerpo_Paint);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(311, 282);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(199, 37);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Bigons Hnos";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -409,16 +424,36 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Bienvenido";
             // 
-            // label2
+            // pnlActivoLiquidacion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(311, 282);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 37);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Bigons Hnos";
+            this.pnlActivoLiquidacion.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlActivoLiquidacion.Location = new System.Drawing.Point(0, 290);
+            this.pnlActivoLiquidacion.Name = "pnlActivoLiquidacion";
+            this.pnlActivoLiquidacion.Size = new System.Drawing.Size(6, 33);
+            this.pnlActivoLiquidacion.TabIndex = 2;
+            this.pnlActivoLiquidacion.Visible = false;
+            // 
+            // btnLiquidacion
+            // 
+            this.btnLiquidacion.BackColor = System.Drawing.Color.Transparent;
+            this.btnLiquidacion.FlatAppearance.BorderSize = 0;
+            this.btnLiquidacion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnLiquidacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLiquidacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLiquidacion.ForeColor = System.Drawing.Color.DimGray;
+            this.btnLiquidacion.Image = global::ProyectoBigonHnos.Properties.Resources.clientes_icon;
+            this.btnLiquidacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLiquidacion.Location = new System.Drawing.Point(0, 282);
+            this.btnLiquidacion.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLiquidacion.Name = "btnLiquidacion";
+            this.btnLiquidacion.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnLiquidacion.Size = new System.Drawing.Size(198, 48);
+            this.btnLiquidacion.TabIndex = 3;
+            this.btnLiquidacion.Text = "Liquidación";
+            this.btnLiquidacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLiquidacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLiquidacion.UseVisualStyleBackColor = false;
+            this.btnLiquidacion.Click += new System.EventHandler(this.button1_Click);
             // 
             // VistaPrincipal
             // 
@@ -463,5 +498,7 @@
         private System.Windows.Forms.Panel pnlActivoProveedor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnlActivoLiquidacion;
+        private System.Windows.Forms.Button btnLiquidacion;
     }
 }

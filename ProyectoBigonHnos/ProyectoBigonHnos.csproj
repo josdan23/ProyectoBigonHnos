@@ -204,6 +204,13 @@
     <Compile Include="vista\empleado\NuevoEmpleadoView.Designer.cs">
       <DependentUpon>NuevoEmpleadoView.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\liquidacion\ILiquidacionView.cs" />
+    <Compile Include="vista\liquidacion\LiquidacionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\liquidacion\LiquidacionView.Designer.cs">
+      <DependentUpon>LiquidacionView.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -334,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\empleado\NuevoEmpleadoView.resx">
       <DependentUpon>NuevoEmpleadoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\liquidacion\LiquidacionView.resx">
+      <DependentUpon>LiquidacionView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
