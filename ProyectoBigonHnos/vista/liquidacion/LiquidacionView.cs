@@ -19,6 +19,7 @@ namespace ProyectoBigonHnos.vista.liquidacion
         public LiquidacionView()
         {
             InitializeComponent();
+            mostrarPeriodoComboBox();
         }
 
         public void ActualizarVista()
@@ -96,7 +97,9 @@ namespace ProyectoBigonHnos.vista.liquidacion
 
         private void confirmarLiquidacionButton_Click(object sender, EventArgs e)
         {
-            int periodo = int.Parse(periodoLiquidacionTextView.Text);
+            //int periodo = int.Parse(periodoLiquidacionTextView.Text);
+            int periodo = int.Parse(periodoComboBox.SelectedValue.ToString());
+
             controlador.agregarPeriodo(periodo);
 
             string lugarDePago = lugarPagoLiquidacionTextView.Text;
@@ -138,6 +141,31 @@ namespace ProyectoBigonHnos.vista.liquidacion
             liquidacionDataGrid.Rows.RemoveAt(index);
 
             controlador.eliminarLineaLiquidacion(index);
+        }
+
+        private void mostrarPeriodoComboBox()
+        {
+            periodoComboBox.DisplayMember = "Text";
+            periodoComboBox.ValueMember = "Value";
+
+            periodoComboBox.Items.Add(new { Text = "Enero", Value = "1" });
+            periodoComboBox.Items.Add(new { Text = "Febrero", Value = "2" });
+            periodoComboBox.Items.Add(new { Text = "Marzo", Value = "3" });
+            periodoComboBox.Items.Add(new { Text = "Abril", Value = "4" });
+            periodoComboBox.Items.Add(new { Text = "Mayo", Value = "5" });
+            periodoComboBox.Items.Add(new { Text = "Junio", Value = "6" });
+            periodoComboBox.Items.Add(new { Text = "Julio", Value = "7" });
+            periodoComboBox.Items.Add(new { Text = "Agosto", Value = "8" });
+            periodoComboBox.Items.Add(new { Text = "Septiembre", Value = "9" });
+            periodoComboBox.Items.Add(new { Text = "Octubre", Value = "10" });
+            periodoComboBox.Items.Add(new { Text = "Noviembre", Value = "11" });
+            periodoComboBox.Items.Add(new { Text = "Diciembre", Value = "12" });
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

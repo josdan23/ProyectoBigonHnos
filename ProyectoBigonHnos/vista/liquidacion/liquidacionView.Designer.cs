@@ -51,7 +51,6 @@
             this.colNoRemunerativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label9 = new System.Windows.Forms.Label();
-            this.periodoLiquidacionTextView = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.lugarPagoLiquidacionTextView = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -79,6 +78,7 @@
             this.totalNoRemunerativoTextView = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.totalDescuentoTextView = new System.Windows.Forms.TextBox();
+            this.periodoComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.familiaresDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liquidacionDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -263,13 +263,6 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Periodo";
             // 
-            // periodoLiquidacionTextView
-            // 
-            this.periodoLiquidacionTextView.Location = new System.Drawing.Point(725, 51);
-            this.periodoLiquidacionTextView.Name = "periodoLiquidacionTextView";
-            this.periodoLiquidacionTextView.Size = new System.Drawing.Size(100, 20);
-            this.periodoLiquidacionTextView.TabIndex = 1;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -283,7 +276,7 @@
             // 
             this.lugarPagoLiquidacionTextView.Location = new System.Drawing.Point(725, 77);
             this.lugarPagoLiquidacionTextView.Name = "lugarPagoLiquidacionTextView";
-            this.lugarPagoLiquidacionTextView.Size = new System.Drawing.Size(100, 20);
+            this.lugarPagoLiquidacionTextView.Size = new System.Drawing.Size(207, 20);
             this.lugarPagoLiquidacionTextView.TabIndex = 1;
             // 
             // label11
@@ -307,7 +300,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(815, 137);
+            this.label13.Location = new System.Drawing.Point(797, 136);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(49, 13);
             this.label13.TabIndex = 0;
@@ -315,7 +308,7 @@
             // 
             // cantidadLiquidacionTextView
             // 
-            this.cantidadLiquidacionTextView.Location = new System.Drawing.Point(881, 133);
+            this.cantidadLiquidacionTextView.Location = new System.Drawing.Point(862, 133);
             this.cantidadLiquidacionTextView.Name = "cantidadLiquidacionTextView";
             this.cantidadLiquidacionTextView.Size = new System.Drawing.Size(100, 20);
             this.cantidadLiquidacionTextView.TabIndex = 1;
@@ -325,9 +318,10 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(998, 137);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 13);
+            this.label14.Size = new System.Drawing.Size(48, 13);
             this.label14.TabIndex = 0;
-            this.label14.Text = "Valor";
+            this.label14.Text = "Aplicar a";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // valorLiquidacionTextView
             // 
@@ -506,11 +500,20 @@
             this.totalDescuentoTextView.Size = new System.Drawing.Size(100, 20);
             this.totalDescuentoTextView.TabIndex = 1;
             // 
+            // periodoComboBox
+            // 
+            this.periodoComboBox.FormattingEnabled = true;
+            this.periodoComboBox.Location = new System.Drawing.Point(725, 50);
+            this.periodoComboBox.Name = "periodoComboBox";
+            this.periodoComboBox.Size = new System.Drawing.Size(121, 21);
+            this.periodoComboBox.TabIndex = 6;
+            // 
             // LiquidacionView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 514);
+            this.Controls.Add(this.periodoComboBox);
             this.Controls.Add(this.codigoLiquidacionComboBox);
             this.Controls.Add(this.liquidacionDataGrid);
             this.Controls.Add(this.familiaresDataGrid);
@@ -526,7 +529,6 @@
             this.Controls.Add(this.totalNoRemunerativoTextView);
             this.Controls.Add(this.totalRemunerativoTextView);
             this.Controls.Add(this.totalLiquidacionTextView);
-            this.Controls.Add(this.periodoLiquidacionTextView);
             this.Controls.Add(this.legajoEmpleadoTextView);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label14);
@@ -581,7 +583,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiscapacidad;
         private System.Windows.Forms.DataGridView liquidacionDataGrid;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox periodoLiquidacionTextView;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox lugarPagoLiquidacionTextView;
         private System.Windows.Forms.Label label11;
@@ -614,5 +615,6 @@
         private System.Windows.Forms.TextBox totalNoRemunerativoTextView;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox totalDescuentoTextView;
+        private System.Windows.Forms.ComboBox periodoComboBox;
     }
 }
