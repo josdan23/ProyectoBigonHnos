@@ -16,6 +16,7 @@ using ProyectoBigonHnos.data.DomicilioDao;
 using System.Reflection;
 using ProyectoBigonHnos.dominio.venta;
 using ProyectoBigonHnos.vista.liquidacion;
+using ProyectoBigonHnos.vista.conceptos;
 
 namespace ProyectoBigonHnos
 {

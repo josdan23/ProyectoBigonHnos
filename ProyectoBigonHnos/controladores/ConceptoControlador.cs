@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoBigonHnos.controladores;
-
-
-
 using ProyectoBigonHnos.dominio.liquidacion;
 using ProyectoBigonHnos.dominio;
+using ProyectoBigonHnos.vista.conceptos;
 
 namespace ProyectoBigonHnos.controladores
 {
-    class ConceptoControlador
+    public class ConceptoControlador
     {
+        private IConceptoView Vista { get; set; }
+
         Concepto Concepto { get; set; }
 
         public ConceptoControlador()
@@ -25,15 +25,30 @@ namespace ProyectoBigonHnos.controladores
 
         }
 
-        public void nuevoConcepto(TipoConcepto tipo, string descripcion, double cantidad, bool obligatorio)
+        public void unirVista(IConceptoView vista)
         {
-            Concepto concp = new Concepto(tipo, descripcion, cantidad, obligatorio);
+            Vista = vista;
+        }
+
+        public void nuevoConcepto(TipoConcepto tipo, string descripcion, double porcentaje, bool obligatorio)
+        {
+            Concepto concp = new Concepto(tipo, descripcion, porcentaje, obligatorio);
             Negocio.getNegocio().agregarConcepto(concp);
         }
             
+        public void nuevoConcepto(int tipo, string descripcion, double porcentaje, bool obligatorio)
+        {
+            Concepto concepto = new Concepto(tipo, descripcion, porcentaje, obligatorio);
+            Negocio.getNegocio().agregarConcepto(concepto);
+            ((ConceptosView)Vista).limpiarCamposNuevoConcepto();
+
+            listarConceptos();
+        }
+
         public void eliminarConcepto(int idConcepto)
         {
             Negocio.getNegocio().borrarConcepto(idConcepto);
+            listarConceptos();
         }
 
         public void editarConcepto (int idConcepto, string tipo, string descripcion, double cantidad, bool obligatorio)
@@ -46,8 +61,24 @@ namespace ProyectoBigonHnos.controladores
         }
 
         public void listarConceptos()
-        {   
+        {
+            Vista.limpiar();
+            foreach (Concepto concepto in Negocio.getNegocio().obtenerTodosConceptos())
+            {
+                Vista.agregarConcepto(concepto.IdConcepto, concepto.Descripcion);
+            }
+        }
 
+        internal void obtenerDetalleConcepto(int idConcepto)
+        {
+            Concepto concepto = Negocio.getNegocio().buscarConcepto(idConcepto);
+
+            Vista.mostrarDetalleConceptos(
+                concepto.IdConcepto,
+                concepto.Descripcion,
+                concepto.Tipo.ToString(),
+                concepto.Porcentaje,
+                concepto.Obligatorio);
         }
     }
 }

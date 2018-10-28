@@ -116,12 +116,14 @@ namespace ProyectoBigonHnos.vista
         {
             ocultarPaneles();
             pnlActivoLiquidacion.Show();
-            //agregarVista(new LiquidacionView());
+            agregarVista(new LiquidacionPanelView());
+            /*
             LiquidacionView vistaLiq = new LiquidacionView();
             controladores.LiquidacionControlador controller = new controladores.LiquidacionControlador();
             controller.unirVista(vistaLiq);
             vistaLiq.UnirControlador(controller);
             vistaLiq.ShowDialog();
+            */
         }
     }
 }

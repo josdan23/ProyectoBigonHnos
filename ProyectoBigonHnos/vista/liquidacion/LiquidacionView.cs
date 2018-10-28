@@ -35,6 +35,7 @@ namespace ProyectoBigonHnos.vista.liquidacion
         public void UnirControlador(LiquidacionControlador controlador)
         {
             this.controlador = controlador;
+            controlador.unirVista(this);
             controlador.iniciarLiquidacion();
             controlador.listarConceptos();
         }

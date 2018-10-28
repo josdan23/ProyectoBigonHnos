@@ -163,6 +163,7 @@ namespace ProyectoBigonHnos.dominio
         public void agregarConcepto(Concepto concepto)
         {
             persistencia.registrarObjeto(concepto);
+            Console.WriteLine("concepto agregado");
         }
 
         public void borrarConcepto(int idConcepto)

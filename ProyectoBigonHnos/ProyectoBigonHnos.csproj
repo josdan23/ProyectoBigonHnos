@@ -185,6 +185,13 @@
     <Compile Include="vista\compra\NuevaCompraView.Designer.cs">
       <DependentUpon>NuevaCompraView.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\conceptos\ConceptosView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\conceptos\ConceptosView.Designer.cs">
+      <DependentUpon>ConceptosView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\conceptos\IConceptoView.cs" />
     <Compile Include="vista\empleado\DetalleEmpleadoView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +212,12 @@
       <DependentUpon>NuevoEmpleadoView.cs</DependentUpon>
     </Compile>
     <Compile Include="vista\liquidacion\ILiquidacionView.cs" />
+    <Compile Include="vista\liquidacion\LiquidacionPanelView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vista\liquidacion\LiquidacionPanelView.Designer.cs">
+      <DependentUpon>LiquidacionPanelView.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\liquidacion\LiquidacionView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,6 +346,9 @@
     <EmbeddedResource Include="vista\compra\NuevaCompraView.resx">
       <DependentUpon>NuevaCompraView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vista\conceptos\ConceptosView.resx">
+      <DependentUpon>ConceptosView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\empleado\DetalleEmpleadoView.resx">
       <DependentUpon>DetalleEmpleadoView.cs</DependentUpon>
     </EmbeddedResource>
@@ -341,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\empleado\NuevoEmpleadoView.resx">
       <DependentUpon>NuevoEmpleadoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\liquidacion\LiquidacionPanelView.resx">
+      <DependentUpon>LiquidacionPanelView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\liquidacion\LiquidacionView.resx">
       <DependentUpon>LiquidacionView.cs</DependentUpon>

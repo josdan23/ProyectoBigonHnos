@@ -20,6 +20,14 @@
             SetPorcentaje(porcentaje);
         }
 
+        public Concepto (int tipo, string descripcion, double porcentaje, bool obligatorio)
+        {
+            Tipo = (TipoConcepto)tipo;
+            Descripcion = descripcion;
+            Obligatorio = obligatorio;
+
+            SetPorcentaje(porcentaje);
+        }
         public double aplicarPorcentaje(double valorBase)
         {
             if (Porcentaje == 0)
