@@ -57,6 +57,7 @@ namespace ProyectoBigonHnos.vista.proveedor
             lblNumero.Text = "";
             lblLocalidad.Text = "";
             lblProvincia.Text = "";
+            lblIdProveedor.Text = "";
 
             cboxProveedores.Text = "";
             cboxProveedores.Items.Clear();

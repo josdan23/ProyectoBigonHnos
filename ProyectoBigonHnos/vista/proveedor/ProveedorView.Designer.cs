@@ -149,6 +149,8 @@
             // 
             // cboxProveedores
             // 
+            this.cboxProveedores.BackColor = System.Drawing.SystemColors.Window;
+            this.cboxProveedores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxProveedores.FormattingEnabled = true;
             this.cboxProveedores.Location = new System.Drawing.Point(29, 105);
             this.cboxProveedores.Name = "cboxProveedores";
