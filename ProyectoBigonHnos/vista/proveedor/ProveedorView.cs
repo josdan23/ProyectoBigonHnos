@@ -61,6 +61,10 @@ namespace ProyectoBigonHnos.vista.proveedor
             cboxProveedores.Text = "";
             cboxProveedores.Items.Clear();
             controlador.listarProvedores();
+
+
+            btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

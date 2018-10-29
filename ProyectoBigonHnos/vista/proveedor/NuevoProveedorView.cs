@@ -41,5 +41,10 @@ namespace ProyectoBigonHnos.vista.proveedor
             Dispose();
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
     }
 }
