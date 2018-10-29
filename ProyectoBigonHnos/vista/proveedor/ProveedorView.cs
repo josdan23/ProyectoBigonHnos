@@ -31,21 +31,23 @@ namespace ProyectoBigonHnos.vista.proveedor
         {
             controlador.obtenerDetalleDeProveedor(obtenerNombreDeItemSeleccionado());
 
+            mostrarTitulos();
+
             btnEliminar.Enabled = true;
             btnEditar.Enabled = true;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
-        { 
+        {
             controlador.eliminarProveedor(obtenerNombreDeItemSeleccionado());
             refrescarLista();
-            
+
         }
 
 
         private string obtenerNombreDeItemSeleccionado()
         {
-            return (string) cboxProveedores.SelectedItem;
+            return (string)cboxProveedores.SelectedItem;
         }
 
         public void refrescarLista()
@@ -121,6 +123,18 @@ namespace ProyectoBigonHnos.vista.proveedor
         public void mostrarTelefono(string telefono)
         {
             lblTelefono.Text = telefono;
+        }
+
+        private void mostrarTitulos()
+        {
+            idProveedorTituloLabel.Text = "Id proveedor";
+            razonSocialProveedorTituloLabel.Text = "Razón social";
+            cuitProveedorTituloLabel.Text = "Cuit";
+            TelefonoProveedorTituloLabel.Text = "Telefono";
+            calleProveedortituloLabel.Text = "Calle";
+            numeroProveedorTituloLabel.Text = "Número";
+            localidadProveedorTituloLabel.Text = "Localidad";
+            provinciaProveedorTituloLabel.Text = "Provincia";
         }
     }
 }
