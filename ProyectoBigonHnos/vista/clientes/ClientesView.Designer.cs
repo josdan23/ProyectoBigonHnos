@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,9 +50,6 @@
             this.tBoxNombre = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dgvTelefonos = new System.Windows.Forms.DataGridView();
-            this.numeroColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -63,11 +59,11 @@
             this.tboxLocalidad = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tboxProvincia = new System.Windows.Forms.TextBox();
+            this.tboxTelefono = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTelefonos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -129,6 +125,7 @@
             // 
             // btnEditar
             // 
+            this.btnEditar.Enabled = false;
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -163,14 +160,14 @@
             this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
             this.dgvClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dniColumn,
@@ -215,7 +212,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(461, 121);
+            this.label2.Location = new System.Drawing.Point(432, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(23, 13);
             this.label2.TabIndex = 2;
@@ -224,7 +221,7 @@
             // tboxDni
             // 
             this.tboxDni.Enabled = false;
-            this.tboxDni.Location = new System.Drawing.Point(464, 137);
+            this.tboxDni.Location = new System.Drawing.Point(435, 162);
             this.tboxDni.Name = "tboxDni";
             this.tboxDni.Size = new System.Drawing.Size(100, 20);
             this.tboxDni.TabIndex = 3;
@@ -232,16 +229,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(461, 91);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(432, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 13);
+            this.label3.Size = new System.Drawing.Size(149, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Información del cliente";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(567, 121);
+            this.label4.Location = new System.Drawing.Point(538, 146);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 2;
@@ -250,7 +248,7 @@
             // tBoxApellido
             // 
             this.tBoxApellido.Enabled = false;
-            this.tBoxApellido.Location = new System.Drawing.Point(570, 137);
+            this.tBoxApellido.Location = new System.Drawing.Point(541, 162);
             this.tBoxApellido.Name = "tBoxApellido";
             this.tBoxApellido.Size = new System.Drawing.Size(100, 20);
             this.tBoxApellido.TabIndex = 3;
@@ -258,7 +256,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(673, 121);
+            this.label5.Location = new System.Drawing.Point(644, 146);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 2;
@@ -267,7 +265,7 @@
             // tBoxNombre
             // 
             this.tBoxNombre.Enabled = false;
-            this.tBoxNombre.Location = new System.Drawing.Point(676, 137);
+            this.tBoxNombre.Location = new System.Drawing.Point(647, 162);
             this.tBoxNombre.Name = "tBoxNombre";
             this.tBoxNombre.Size = new System.Drawing.Size(100, 20);
             this.tBoxNombre.TabIndex = 3;
@@ -275,64 +273,30 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(26, 91);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 13);
+            this.label10.Size = new System.Drawing.Size(110, 17);
             this.label10.TabIndex = 2;
             this.label10.Text = "Lista de clientes";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(461, 296);
+            this.label6.Location = new System.Drawing.Point(431, 320);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 2;
             this.label6.Text = "Telefonos";
             this.label6.Click += new System.EventHandler(this.label3_Click);
             // 
-            // dgvTelefonos
-            // 
-            this.dgvTelefonos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvTelefonos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvTelefonos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
-            this.dgvTelefonos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTelefonos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvTelefonos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTelefonos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numeroColumn,
-            this.dataGridViewTextBoxColumn4});
-            this.dgvTelefonos.Location = new System.Drawing.Point(464, 331);
-            this.dgvTelefonos.Name = "dgvTelefonos";
-            this.dgvTelefonos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvTelefonos.RowHeadersVisible = false;
-            this.dgvTelefonos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvTelefonos.Size = new System.Drawing.Size(345, 78);
-            this.dgvTelefonos.TabIndex = 1;
-            // 
-            // numeroColumn
-            // 
-            this.numeroColumn.HeaderText = "Número";
-            this.numeroColumn.Name = "numeroColumn";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(461, 186);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(432, 216);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.Size = new System.Drawing.Size(64, 17);
             this.label7.TabIndex = 2;
             this.label7.Text = "Domicilio";
             this.label7.Click += new System.EventHandler(this.label3_Click);
@@ -340,7 +304,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(461, 229);
+            this.label8.Location = new System.Drawing.Point(431, 243);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 13);
             this.label8.TabIndex = 2;
@@ -349,7 +313,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(567, 229);
+            this.label9.Location = new System.Drawing.Point(537, 243);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 13);
             this.label9.TabIndex = 2;
@@ -358,7 +322,7 @@
             // tboxCalle
             // 
             this.tboxCalle.Enabled = false;
-            this.tboxCalle.Location = new System.Drawing.Point(464, 245);
+            this.tboxCalle.Location = new System.Drawing.Point(434, 259);
             this.tboxCalle.Name = "tboxCalle";
             this.tboxCalle.Size = new System.Drawing.Size(100, 20);
             this.tboxCalle.TabIndex = 3;
@@ -366,7 +330,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(673, 229);
+            this.label11.Location = new System.Drawing.Point(643, 243);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 13);
             this.label11.TabIndex = 2;
@@ -375,7 +339,7 @@
             // tboxNumero
             // 
             this.tboxNumero.Enabled = false;
-            this.tboxNumero.Location = new System.Drawing.Point(570, 245);
+            this.tboxNumero.Location = new System.Drawing.Point(540, 259);
             this.tboxNumero.Name = "tboxNumero";
             this.tboxNumero.Size = new System.Drawing.Size(100, 20);
             this.tboxNumero.TabIndex = 3;
@@ -383,7 +347,7 @@
             // tboxLocalidad
             // 
             this.tboxLocalidad.Enabled = false;
-            this.tboxLocalidad.Location = new System.Drawing.Point(676, 245);
+            this.tboxLocalidad.Location = new System.Drawing.Point(646, 259);
             this.tboxLocalidad.Name = "tboxLocalidad";
             this.tboxLocalidad.Size = new System.Drawing.Size(100, 20);
             this.tboxLocalidad.TabIndex = 3;
@@ -391,7 +355,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(789, 229);
+            this.label12.Location = new System.Drawing.Point(759, 243);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 13);
             this.label12.TabIndex = 2;
@@ -400,10 +364,18 @@
             // tboxProvincia
             // 
             this.tboxProvincia.Enabled = false;
-            this.tboxProvincia.Location = new System.Drawing.Point(792, 245);
+            this.tboxProvincia.Location = new System.Drawing.Point(762, 259);
             this.tboxProvincia.Name = "tboxProvincia";
             this.tboxProvincia.Size = new System.Drawing.Size(100, 20);
             this.tboxProvincia.TabIndex = 3;
+            // 
+            // tboxTelefono
+            // 
+            this.tboxTelefono.Enabled = false;
+            this.tboxTelefono.Location = new System.Drawing.Point(434, 336);
+            this.tboxTelefono.Name = "tboxTelefono";
+            this.tboxTelefono.Size = new System.Drawing.Size(100, 20);
+            this.tboxTelefono.TabIndex = 3;
             // 
             // ClientesView
             // 
@@ -418,6 +390,7 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.tBoxApellido);
+            this.Controls.Add(this.tboxTelefono);
             this.Controls.Add(this.tboxCalle);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label9);
@@ -429,7 +402,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvTelefonos);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.panel1);
             this.Name = "ClientesView";
@@ -439,7 +411,6 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTelefonos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,9 +439,6 @@
         private System.Windows.Forms.TextBox tBoxNombre;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dgvTelefonos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numeroColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -480,5 +448,6 @@
         private System.Windows.Forms.TextBox tboxLocalidad;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox tboxProvincia;
+        private System.Windows.Forms.TextBox tboxTelefono;
     }
 }

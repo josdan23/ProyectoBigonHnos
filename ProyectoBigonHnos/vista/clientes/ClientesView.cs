@@ -82,7 +82,7 @@ namespace ProyectoBigonHnos.vista
 
         public void mostrarTelefono(string numero)
         {
-            dgvTelefonos.Rows.Add(numero);
+            tboxTelefono.Text = numero;
         }
 
         public void mostrarDomicilio(string numero, string calle, string localidad, string provincia)
@@ -101,7 +101,7 @@ namespace ProyectoBigonHnos.vista
 
         private void limpiarTablaTelefono()
         {
-            dgvTelefonos.Rows.Clear();
+            //dgvTelefonos.Rows.Clear();
         }
 
         public void refrescar()
