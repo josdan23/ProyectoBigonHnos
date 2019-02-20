@@ -46,5 +46,15 @@ namespace ProyectoBigonHnos.vista
         {
             Dispose();
         }
+
+        private void tboxNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tboxLocalidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
