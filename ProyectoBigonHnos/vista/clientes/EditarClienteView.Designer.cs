@@ -46,30 +46,33 @@
             this.tboxProvincia = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tboxTelefono = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(690, 393);
+            this.btnGuardar.Location = new System.Drawing.Point(367, 450);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 0;
+            this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(609, 393);
+            this.btnCancelar.Location = new System.Drawing.Point(286, 450);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 0;
+            this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 55);
+            this.label1.Location = new System.Drawing.Point(157, 133);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 13);
             this.label1.TabIndex = 1;
@@ -77,15 +80,15 @@
             // 
             // tboxDni
             // 
-            this.tboxDni.Location = new System.Drawing.Point(44, 72);
+            this.tboxDni.Location = new System.Drawing.Point(196, 130);
             this.tboxDni.Name = "tboxDni";
             this.tboxDni.Size = new System.Drawing.Size(100, 20);
-            this.tboxDni.TabIndex = 2;
+            this.tboxDni.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(170, 55);
+            this.label2.Location = new System.Drawing.Point(136, 167);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 1;
@@ -93,7 +96,7 @@
             // 
             // tboxApellido
             // 
-            this.tboxApellido.Location = new System.Drawing.Point(173, 72);
+            this.tboxApellido.Location = new System.Drawing.Point(196, 167);
             this.tboxApellido.Name = "tboxApellido";
             this.tboxApellido.Size = new System.Drawing.Size(100, 20);
             this.tboxApellido.TabIndex = 2;
@@ -101,7 +104,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(298, 55);
+            this.label3.Location = new System.Drawing.Point(136, 203);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 1;
@@ -109,15 +112,15 @@
             // 
             // tboxNombre
             // 
-            this.tboxNombre.Location = new System.Drawing.Point(301, 72);
+            this.tboxNombre.Location = new System.Drawing.Point(196, 203);
             this.tboxNombre.Name = "tboxNombre";
             this.tboxNombre.Size = new System.Drawing.Size(100, 20);
-            this.tboxNombre.TabIndex = 2;
+            this.tboxNombre.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 142);
+            this.label4.Location = new System.Drawing.Point(150, 239);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(30, 13);
             this.label4.TabIndex = 1;
@@ -125,15 +128,15 @@
             // 
             // tboxCalle
             // 
-            this.tboxCalle.Location = new System.Drawing.Point(33, 159);
+            this.tboxCalle.Location = new System.Drawing.Point(196, 239);
             this.tboxCalle.Name = "tboxCalle";
             this.tboxCalle.Size = new System.Drawing.Size(100, 20);
-            this.tboxCalle.TabIndex = 2;
+            this.tboxCalle.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(152, 142);
+            this.label5.Location = new System.Drawing.Point(136, 282);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 1;
@@ -141,15 +144,15 @@
             // 
             // tboxNumero
             // 
-            this.tboxNumero.Location = new System.Drawing.Point(155, 159);
+            this.tboxNumero.Location = new System.Drawing.Point(196, 279);
             this.tboxNumero.Name = "tboxNumero";
             this.tboxNumero.Size = new System.Drawing.Size(100, 20);
-            this.tboxNumero.TabIndex = 2;
+            this.tboxNumero.TabIndex = 5;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(269, 142);
+            this.label6.Location = new System.Drawing.Point(127, 322);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 1;
@@ -157,15 +160,15 @@
             // 
             // tboxLocalidad
             // 
-            this.tboxLocalidad.Location = new System.Drawing.Point(272, 159);
+            this.tboxLocalidad.Location = new System.Drawing.Point(196, 322);
             this.tboxLocalidad.Name = "tboxLocalidad";
             this.tboxLocalidad.Size = new System.Drawing.Size(100, 20);
-            this.tboxLocalidad.TabIndex = 2;
+            this.tboxLocalidad.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(436, 142);
+            this.label7.Location = new System.Drawing.Point(129, 360);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 13);
             this.label7.TabIndex = 1;
@@ -173,15 +176,15 @@
             // 
             // tboxProvincia
             // 
-            this.tboxProvincia.Location = new System.Drawing.Point(439, 159);
+            this.tboxProvincia.Location = new System.Drawing.Point(196, 360);
             this.tboxProvincia.Name = "tboxProvincia";
             this.tboxProvincia.Size = new System.Drawing.Size(100, 20);
-            this.tboxProvincia.TabIndex = 2;
+            this.tboxProvincia.TabIndex = 7;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(30, 220);
+            this.label8.Location = new System.Drawing.Point(131, 398);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 13);
             this.label8.TabIndex = 1;
@@ -189,16 +192,40 @@
             // 
             // tboxTelefono
             // 
-            this.tboxTelefono.Location = new System.Drawing.Point(33, 237);
+            this.tboxTelefono.Location = new System.Drawing.Point(196, 395);
             this.tboxTelefono.Name = "tboxTelefono";
             this.tboxTelefono.Size = new System.Drawing.Size(100, 20);
-            this.tboxTelefono.TabIndex = 2;
+            this.tboxTelefono.TabIndex = 8;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(24, 40);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(177, 31);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Editar Cliente";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(456, 103);
+            this.panel1.TabIndex = 12;
             // 
             // EditarClienteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(454, 485);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tboxTelefono);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tboxProvincia);
@@ -217,8 +244,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EditarClienteView";
             this.Text = "EditarClienteView";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +276,7 @@
         private System.Windows.Forms.TextBox tboxProvincia;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tboxTelefono;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel1;
     }
 }
