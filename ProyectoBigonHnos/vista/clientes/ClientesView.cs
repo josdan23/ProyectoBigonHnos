@@ -63,6 +63,7 @@ namespace ProyectoBigonHnos.vista
             {
                 controlador.detalleCliente(dgvClientes.CurrentRow.Cells[0].Value.ToString());
                 btnEliminar.Enabled = true;
+                btnEditar.Enabled = true;
 
             }
         }
