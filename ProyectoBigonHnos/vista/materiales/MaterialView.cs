@@ -15,6 +15,7 @@ namespace ProyectoBigonHnos.vista
 
             controlador = new GestionarMaterialControlador(this);
             refrescarTabla();
+            ocultarBotonesEditarYEliminar();
 
         }
         
@@ -31,11 +32,13 @@ namespace ProyectoBigonHnos.vista
                 int id = int.Parse(dgvMateriales.CurrentRow.Cells[0].Value.ToString());
                 controlador.eliminarMaterial(id);
                 refrescarTabla();
+                ocultarBotonesEditarYEliminar();
             }
         }
 
         private void seleccionarFila(object sender, DataGridViewCellEventArgs e)
         {
+            btnEditar.Enabled = true;
             btnEliminar.Enabled = true;
         }
 
@@ -46,6 +49,7 @@ namespace ProyectoBigonHnos.vista
             Console.WriteLine(id);
             vista.ShowDialog();
             refrescarTabla();
+            ocultarBotonesEditarYEliminar();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -64,6 +68,12 @@ namespace ProyectoBigonHnos.vista
         public int obtenerIdMaterialSeleccionado()
         {
             return (int) dgvMateriales.CurrentRow.Cells[0].Value;
+        }
+
+        private void ocultarBotonesEditarYEliminar()
+        {
+            btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
         }
     }
 }
