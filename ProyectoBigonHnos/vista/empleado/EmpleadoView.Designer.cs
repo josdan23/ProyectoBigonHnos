@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@
             this.colFechaIngreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDetalle = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -153,7 +155,27 @@
             // 
             // dgvEmpleados
             // 
-            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpleados.AllowUserToAddRows = false;
+            this.dgvEmpleados.AllowUserToDeleteRows = false;
+            this.dgvEmpleados.AllowUserToResizeColumns = false;
+            this.dgvEmpleados.AllowUserToResizeRows = false;
+            this.dgvEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEmpleados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvEmpleados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEmpleados.ColumnHeadersHeight = 40;
+            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colLegajo,
             this.colApellido,
@@ -161,56 +183,87 @@
             this.colDni,
             this.colFechaIngreo,
             this.colCategoria});
-            this.dgvEmpleados.Location = new System.Drawing.Point(61, 123);
+            this.dgvEmpleados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvEmpleados.Location = new System.Drawing.Point(61, 116);
             this.dgvEmpleados.Name = "dgvEmpleados";
+            this.dgvEmpleados.ReadOnly = true;
+            this.dgvEmpleados.RowHeadersVisible = false;
+            this.dgvEmpleados.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvEmpleados.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvEmpleados.Size = new System.Drawing.Size(661, 270);
+            this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEmpleados.ShowCellErrors = false;
+            this.dgvEmpleados.ShowCellToolTips = false;
+            this.dgvEmpleados.ShowEditingIcon = false;
+            this.dgvEmpleados.ShowRowErrors = false;
+            this.dgvEmpleados.Size = new System.Drawing.Size(661, 277);
             this.dgvEmpleados.TabIndex = 2;
             // 
             // colLegajo
             // 
             this.colLegajo.HeaderText = "Legajo";
             this.colLegajo.Name = "colLegajo";
+            this.colLegajo.ReadOnly = true;
             // 
             // colApellido
             // 
             this.colApellido.HeaderText = "Apellido";
             this.colApellido.Name = "colApellido";
+            this.colApellido.ReadOnly = true;
             // 
             // colNombre
             // 
             this.colNombre.HeaderText = "Nombre";
             this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
             // 
             // colDni
             // 
             this.colDni.HeaderText = "Dni";
             this.colDni.Name = "colDni";
+            this.colDni.ReadOnly = true;
             // 
             // colFechaIngreo
             // 
             this.colFechaIngreo.HeaderText = "Fecha de Ingreso";
             this.colFechaIngreo.Name = "colFechaIngreo";
+            this.colFechaIngreo.ReadOnly = true;
             // 
             // colCategoria
             // 
             this.colCategoria.HeaderText = "Categoria";
             this.colCategoria.Name = "colCategoria";
+            this.colCategoria.ReadOnly = true;
             // 
             // btnDetalle
             // 
-            this.btnDetalle.Location = new System.Drawing.Point(647, 94);
+            this.btnDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDetalle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetalle.Location = new System.Drawing.Point(647, 78);
             this.btnDetalle.Name = "btnDetalle";
-            this.btnDetalle.Size = new System.Drawing.Size(75, 23);
+            this.btnDetalle.Size = new System.Drawing.Size(75, 32);
             this.btnDetalle.TabIndex = 3;
             this.btnDetalle.Text = "Detalle";
             this.btnDetalle.UseVisualStyleBackColor = true;
             this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click_1);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(57, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(232, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Lista de Empleados registrados";
+            // 
             // EmpleadoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.dgvEmpleados);
             this.Controls.Add(this.panel1);
@@ -222,6 +275,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -243,5 +297,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCategoria;
         private System.Windows.Forms.Button Detalle;
         private System.Windows.Forms.Button btnDetalle;
+        private System.Windows.Forms.Label label2;
     }
 }
