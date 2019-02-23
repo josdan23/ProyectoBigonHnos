@@ -30,6 +30,8 @@
         {
             this.pnlNavBar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlActivoLiquidacion = new System.Windows.Forms.Panel();
+            this.btnLiquidacion = new System.Windows.Forms.Button();
             this.pnlActivoProveedor = new System.Windows.Forms.Panel();
             this.pnlActivoEmpleados = new System.Windows.Forms.Panel();
             this.pnlActivoClientes = new System.Windows.Forms.Panel();
@@ -52,8 +54,6 @@
             this.pnlCuerpo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnlActivoLiquidacion = new System.Windows.Forms.Panel();
-            this.btnLiquidacion = new System.Windows.Forms.Button();
             this.pnlNavBar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -99,6 +99,37 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(198, 532);
             this.panel1.TabIndex = 1;
+            // 
+            // pnlActivoLiquidacion
+            // 
+            this.pnlActivoLiquidacion.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlActivoLiquidacion.Location = new System.Drawing.Point(0, 290);
+            this.pnlActivoLiquidacion.Name = "pnlActivoLiquidacion";
+            this.pnlActivoLiquidacion.Size = new System.Drawing.Size(6, 33);
+            this.pnlActivoLiquidacion.TabIndex = 2;
+            this.pnlActivoLiquidacion.Visible = false;
+            // 
+            // btnLiquidacion
+            // 
+            this.btnLiquidacion.BackColor = System.Drawing.Color.Transparent;
+            this.btnLiquidacion.FlatAppearance.BorderSize = 0;
+            this.btnLiquidacion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnLiquidacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLiquidacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLiquidacion.ForeColor = System.Drawing.Color.DimGray;
+            this.btnLiquidacion.Image = global::ProyectoBigonHnos.Properties.Resources.clientes_icon;
+            this.btnLiquidacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLiquidacion.Location = new System.Drawing.Point(0, 282);
+            this.btnLiquidacion.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLiquidacion.Name = "btnLiquidacion";
+            this.btnLiquidacion.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnLiquidacion.Size = new System.Drawing.Size(198, 48);
+            this.btnLiquidacion.TabIndex = 3;
+            this.btnLiquidacion.Text = "Liquidación";
+            this.btnLiquidacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLiquidacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLiquidacion.UseVisualStyleBackColor = false;
+            this.btnLiquidacion.Click += new System.EventHandler(this.button1_Click);
             // 
             // pnlActivoProveedor
             // 
@@ -392,10 +423,12 @@
             // 
             // pnlCuerpo
             // 
+            this.pnlCuerpo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCuerpo.BackColor = System.Drawing.Color.White;
             this.pnlCuerpo.Controls.Add(this.label2);
             this.pnlCuerpo.Controls.Add(this.label1);
-            this.pnlCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCuerpo.Location = new System.Drawing.Point(198, 0);
             this.pnlCuerpo.Name = "pnlCuerpo";
             this.pnlCuerpo.Size = new System.Drawing.Size(793, 590);
@@ -404,6 +437,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -415,6 +451,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -423,37 +462,6 @@
             this.label1.Size = new System.Drawing.Size(173, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bienvenido";
-            // 
-            // pnlActivoLiquidacion
-            // 
-            this.pnlActivoLiquidacion.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlActivoLiquidacion.Location = new System.Drawing.Point(0, 290);
-            this.pnlActivoLiquidacion.Name = "pnlActivoLiquidacion";
-            this.pnlActivoLiquidacion.Size = new System.Drawing.Size(6, 33);
-            this.pnlActivoLiquidacion.TabIndex = 2;
-            this.pnlActivoLiquidacion.Visible = false;
-            // 
-            // btnLiquidacion
-            // 
-            this.btnLiquidacion.BackColor = System.Drawing.Color.Transparent;
-            this.btnLiquidacion.FlatAppearance.BorderSize = 0;
-            this.btnLiquidacion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnLiquidacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLiquidacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLiquidacion.ForeColor = System.Drawing.Color.DimGray;
-            this.btnLiquidacion.Image = global::ProyectoBigonHnos.Properties.Resources.clientes_icon;
-            this.btnLiquidacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLiquidacion.Location = new System.Drawing.Point(0, 282);
-            this.btnLiquidacion.Margin = new System.Windows.Forms.Padding(0);
-            this.btnLiquidacion.Name = "btnLiquidacion";
-            this.btnLiquidacion.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnLiquidacion.Size = new System.Drawing.Size(198, 48);
-            this.btnLiquidacion.TabIndex = 3;
-            this.btnLiquidacion.Text = "Liquidación";
-            this.btnLiquidacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLiquidacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLiquidacion.UseVisualStyleBackColor = false;
-            this.btnLiquidacion.Click += new System.EventHandler(this.button1_Click);
             // 
             // VistaPrincipal
             // 
