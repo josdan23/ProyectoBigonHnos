@@ -120,5 +120,10 @@ namespace ProyectoBigonHnos.vista
 
             controlador.listarClientes();
         }
+
+        private void ClientesView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
