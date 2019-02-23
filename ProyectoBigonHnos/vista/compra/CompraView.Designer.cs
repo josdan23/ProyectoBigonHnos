@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.colProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFechaCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -131,41 +133,88 @@
             // 
             // comprasRealizadasDataGrid
             // 
-            this.comprasRealizadasDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.comprasRealizadasDataGrid.AllowUserToAddRows = false;
+            this.comprasRealizadasDataGrid.AllowUserToDeleteRows = false;
+            this.comprasRealizadasDataGrid.AllowUserToResizeColumns = false;
+            this.comprasRealizadasDataGrid.AllowUserToResizeRows = false;
+            this.comprasRealizadasDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comprasRealizadasDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.comprasRealizadasDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.comprasRealizadasDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.comprasRealizadasDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.comprasRealizadasDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.comprasRealizadasDataGrid.ColumnHeadersHeight = 40;
+            this.comprasRealizadasDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.comprasRealizadasDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colIdCompra,
             this.colProveedor,
             this.colFechaCompra,
             this.colEstado});
-            this.comprasRealizadasDataGrid.Location = new System.Drawing.Point(67, 107);
+            this.comprasRealizadasDataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.comprasRealizadasDataGrid.Location = new System.Drawing.Point(67, 150);
+            this.comprasRealizadasDataGrid.MultiSelect = false;
             this.comprasRealizadasDataGrid.Name = "comprasRealizadasDataGrid";
-            this.comprasRealizadasDataGrid.Size = new System.Drawing.Size(600, 306);
+            this.comprasRealizadasDataGrid.ReadOnly = true;
+            this.comprasRealizadasDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.comprasRealizadasDataGrid.RowHeadersVisible = false;
+            this.comprasRealizadasDataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.comprasRealizadasDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.comprasRealizadasDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.comprasRealizadasDataGrid.ShowCellErrors = false;
+            this.comprasRealizadasDataGrid.ShowCellToolTips = false;
+            this.comprasRealizadasDataGrid.ShowEditingIcon = false;
+            this.comprasRealizadasDataGrid.ShowRowErrors = false;
+            this.comprasRealizadasDataGrid.Size = new System.Drawing.Size(628, 263);
             this.comprasRealizadasDataGrid.TabIndex = 1;
             // 
             // colIdCompra
             // 
             this.colIdCompra.HeaderText = "Id compra";
             this.colIdCompra.Name = "colIdCompra";
+            this.colIdCompra.ReadOnly = true;
             // 
             // colProveedor
             // 
             this.colProveedor.HeaderText = "Proveedor";
             this.colProveedor.Name = "colProveedor";
+            this.colProveedor.ReadOnly = true;
             // 
             // colFechaCompra
             // 
             this.colFechaCompra.HeaderText = "Fecha";
             this.colFechaCompra.Name = "colFechaCompra";
+            this.colFechaCompra.ReadOnly = true;
             // 
             // colEstado
             // 
             this.colEstado.HeaderText = "Estado";
             this.colEstado.Name = "colEstado";
+            this.colEstado.ReadOnly = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(63, 116);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(216, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Lista de Compras registradas";
             // 
             // CompraView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.comprasRealizadasDataGrid);
             this.Controls.Add(this.panel1);
             this.Name = "CompraView";
@@ -176,6 +225,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.comprasRealizadasDataGrid)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -193,5 +243,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEstado;
+        private System.Windows.Forms.Label label1;
     }
 }
