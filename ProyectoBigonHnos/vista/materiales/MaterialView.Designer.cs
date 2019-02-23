@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.columnPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnStockDisponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnStockMinimo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -137,7 +139,27 @@
             // 
             // dgvMateriales
             // 
-            this.dgvMateriales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMateriales.AllowUserToAddRows = false;
+            this.dgvMateriales.AllowUserToDeleteRows = false;
+            this.dgvMateriales.AllowUserToResizeColumns = false;
+            this.dgvMateriales.AllowUserToResizeRows = false;
+            this.dgvMateriales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMateriales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMateriales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvMateriales.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvMateriales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMateriales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMateriales.ColumnHeadersHeight = 40;
+            this.dgvMateriales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvMateriales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columnId,
             this.columDescripcion,
@@ -145,9 +167,18 @@
             this.columnPrecio,
             this.columnStockDisponible,
             this.columnStockMinimo});
-            this.dgvMateriales.Location = new System.Drawing.Point(35, 92);
+            this.dgvMateriales.EnableHeadersVisualStyles = false;
+            this.dgvMateriales.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvMateriales.Location = new System.Drawing.Point(89, 113);
+            this.dgvMateriales.MinimumSize = new System.Drawing.Size(643, 0);
+            this.dgvMateriales.MultiSelect = false;
             this.dgvMateriales.Name = "dgvMateriales";
-            this.dgvMateriales.Size = new System.Drawing.Size(627, 313);
+            this.dgvMateriales.ReadOnly = true;
+            this.dgvMateriales.RowHeadersVisible = false;
+            this.dgvMateriales.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvMateriales.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvMateriales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMateriales.Size = new System.Drawing.Size(670, 327);
             this.dgvMateriales.TabIndex = 2;
             this.dgvMateriales.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.seleccionarFila);
             // 
@@ -155,36 +186,53 @@
             // 
             this.columnId.HeaderText = "Id";
             this.columnId.Name = "columnId";
+            this.columnId.ReadOnly = true;
             // 
             // columDescripcion
             // 
             this.columDescripcion.HeaderText = "Descripción";
             this.columDescripcion.Name = "columDescripcion";
+            this.columDescripcion.ReadOnly = true;
             // 
             // columnCantidad
             // 
             this.columnCantidad.HeaderText = "Cantidad";
             this.columnCantidad.Name = "columnCantidad";
+            this.columnCantidad.ReadOnly = true;
             // 
             // columnPrecio
             // 
             this.columnPrecio.HeaderText = "Precio";
             this.columnPrecio.Name = "columnPrecio";
+            this.columnPrecio.ReadOnly = true;
             // 
             // columnStockDisponible
             // 
             this.columnStockDisponible.HeaderText = "Stock Disponible";
             this.columnStockDisponible.Name = "columnStockDisponible";
+            this.columnStockDisponible.ReadOnly = true;
             // 
             // columnStockMinimo
             // 
             this.columnStockMinimo.HeaderText = "Stock Minimo";
             this.columnStockMinimo.Name = "columnStockMinimo";
+            this.columnStockMinimo.ReadOnly = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(86, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(202, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Lista de materiales registrados";
             // 
             // MaterialView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvMateriales);
             this.Controls.Add(this.panel1);
             this.Name = "MaterialView";
@@ -195,6 +243,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMateriales)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -214,5 +263,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnStockDisponible;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnStockMinimo;
+        private System.Windows.Forms.Label label2;
     }
 }
