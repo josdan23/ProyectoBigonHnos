@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,6 +37,9 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.dniColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.tboxDni = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,9 +59,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tboxProvincia = new System.Windows.Forms.TextBox();
             this.tboxTelefono = new System.Windows.Forms.TextBox();
-            this.dniColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -167,14 +167,14 @@
             this.dgvClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClientes.ColumnHeadersHeight = 40;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -196,6 +196,24 @@
             this.dgvClientes.Size = new System.Drawing.Size(333, 423);
             this.dgvClientes.TabIndex = 1;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.seleccionarFila);
+            // 
+            // dniColumn
+            // 
+            this.dniColumn.HeaderText = "Dni";
+            this.dniColumn.Name = "dniColumn";
+            this.dniColumn.ReadOnly = true;
+            // 
+            // apellidoColumn
+            // 
+            this.apellidoColumn.HeaderText = "Apellido";
+            this.apellidoColumn.Name = "apellidoColumn";
+            this.apellidoColumn.ReadOnly = true;
+            // 
+            // nombreColumn
+            // 
+            this.nombreColumn.HeaderText = "Nombre";
+            this.nombreColumn.Name = "nombreColumn";
+            this.nombreColumn.ReadOnly = true;
             // 
             // label2
             // 
@@ -261,10 +279,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label10.Location = new System.Drawing.Point(26, 91);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(185, 17);
+            this.label10.Size = new System.Drawing.Size(191, 18);
             this.label10.TabIndex = 2;
             this.label10.Text = "Lista de clientes registrados";
             // 
@@ -364,24 +383,6 @@
             this.tboxTelefono.Name = "tboxTelefono";
             this.tboxTelefono.Size = new System.Drawing.Size(100, 20);
             this.tboxTelefono.TabIndex = 3;
-            // 
-            // dniColumn
-            // 
-            this.dniColumn.HeaderText = "Dni";
-            this.dniColumn.Name = "dniColumn";
-            this.dniColumn.ReadOnly = true;
-            // 
-            // apellidoColumn
-            // 
-            this.apellidoColumn.HeaderText = "Apellido";
-            this.apellidoColumn.Name = "apellidoColumn";
-            this.apellidoColumn.ReadOnly = true;
-            // 
-            // nombreColumn
-            // 
-            this.nombreColumn.HeaderText = "Nombre";
-            this.nombreColumn.Name = "nombreColumn";
-            this.nombreColumn.ReadOnly = true;
             // 
             // panel4
             // 

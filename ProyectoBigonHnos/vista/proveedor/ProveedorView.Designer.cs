@@ -365,7 +365,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.AutoSize = true;
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.TelefonoProveedorTituloLabel);
             this.panel4.Controls.Add(this.provinciaProveedorTituloLabel);
             this.panel4.Controls.Add(this.lblNumero);
