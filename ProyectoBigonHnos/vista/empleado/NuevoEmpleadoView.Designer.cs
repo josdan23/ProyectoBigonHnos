@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGuardarEmpleados = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -122,7 +122,7 @@
             // 
             // tboxApellido
             // 
-            this.tboxApellido.Location = new System.Drawing.Point(26, 41);
+            this.tboxApellido.Location = new System.Drawing.Point(26, 44);
             this.tboxApellido.Name = "tboxApellido";
             this.tboxApellido.Size = new System.Drawing.Size(100, 23);
             this.tboxApellido.TabIndex = 2;
@@ -149,7 +149,7 @@
             // 
             // tboxNombre
             // 
-            this.tboxNombre.Location = new System.Drawing.Point(150, 41);
+            this.tboxNombre.Location = new System.Drawing.Point(150, 44);
             this.tboxNombre.Name = "tboxNombre";
             this.tboxNombre.Size = new System.Drawing.Size(110, 23);
             this.tboxNombre.TabIndex = 2;
@@ -166,7 +166,7 @@
             // 
             // tboxDni
             // 
-            this.tboxDni.Location = new System.Drawing.Point(24, 88);
+            this.tboxDni.Location = new System.Drawing.Point(24, 91);
             this.tboxDni.Name = "tboxDni";
             this.tboxDni.Size = new System.Drawing.Size(100, 23);
             this.tboxDni.TabIndex = 2;
@@ -174,7 +174,7 @@
             // dtpFechaIngreso
             // 
             this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaIngreso.Location = new System.Drawing.Point(29, 35);
+            this.dtpFechaIngreso.Location = new System.Drawing.Point(29, 38);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
             this.dtpFechaIngreso.Size = new System.Drawing.Size(109, 20);
             this.dtpFechaIngreso.TabIndex = 3;
@@ -200,7 +200,7 @@
             // 
             // tboxTelefono
             // 
-            this.tboxTelefono.Location = new System.Drawing.Point(26, 143);
+            this.tboxTelefono.Location = new System.Drawing.Point(26, 146);
             this.tboxTelefono.Name = "tboxTelefono";
             this.tboxTelefono.Size = new System.Drawing.Size(100, 23);
             this.tboxTelefono.TabIndex = 2;
@@ -225,14 +225,14 @@
             // 
             // tboxLegajo
             // 
-            this.tboxLegajo.Location = new System.Drawing.Point(30, 84);
+            this.tboxLegajo.Location = new System.Drawing.Point(30, 87);
             this.tboxLegajo.Name = "tboxLegajo";
             this.tboxLegajo.Size = new System.Drawing.Size(100, 20);
             this.tboxLegajo.TabIndex = 2;
             // 
             // tboxCategoria
             // 
-            this.tboxCategoria.Location = new System.Drawing.Point(155, 35);
+            this.tboxCategoria.Location = new System.Drawing.Point(155, 38);
             this.tboxCategoria.Name = "tboxCategoria";
             this.tboxCategoria.Size = new System.Drawing.Size(100, 20);
             this.tboxCategoria.TabIndex = 2;
@@ -257,14 +257,14 @@
             // 
             // tboxUserName
             // 
-            this.tboxUserName.Location = new System.Drawing.Point(30, 128);
+            this.tboxUserName.Location = new System.Drawing.Point(30, 131);
             this.tboxUserName.Name = "tboxUserName";
             this.tboxUserName.Size = new System.Drawing.Size(100, 20);
             this.tboxUserName.TabIndex = 2;
             // 
             // tboxPassword
             // 
-            this.tboxPassword.Location = new System.Drawing.Point(154, 128);
+            this.tboxPassword.Location = new System.Drawing.Point(154, 131);
             this.tboxPassword.Name = "tboxPassword";
             this.tboxPassword.Size = new System.Drawing.Size(100, 20);
             this.tboxPassword.TabIndex = 2;
@@ -279,14 +279,14 @@
             this.dgvFamiliares.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvFamiliares.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFamiliares.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFamiliares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFamiliares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFamiliares.ColumnHeadersHeight = 40;
             this.dgvFamiliares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvFamiliares.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -344,7 +344,7 @@
             // 
             // tboxCuil
             // 
-            this.tboxCuil.Location = new System.Drawing.Point(150, 88);
+            this.tboxCuil.Location = new System.Drawing.Point(150, 91);
             this.tboxCuil.Name = "tboxCuil";
             this.tboxCuil.Size = new System.Drawing.Size(110, 23);
             this.tboxCuil.TabIndex = 2;
@@ -381,7 +381,7 @@
             // 
             // tboxCalle
             // 
-            this.tboxCalle.Location = new System.Drawing.Point(26, 195);
+            this.tboxCalle.Location = new System.Drawing.Point(26, 198);
             this.tboxCalle.Name = "tboxCalle";
             this.tboxCalle.Size = new System.Drawing.Size(100, 23);
             this.tboxCalle.TabIndex = 2;
@@ -398,21 +398,21 @@
             // 
             // tboxNumero
             // 
-            this.tboxNumero.Location = new System.Drawing.Point(150, 195);
+            this.tboxNumero.Location = new System.Drawing.Point(150, 198);
             this.tboxNumero.Name = "tboxNumero";
             this.tboxNumero.Size = new System.Drawing.Size(100, 23);
             this.tboxNumero.TabIndex = 2;
             // 
             // tboxLocalidad
             // 
-            this.tboxLocalidad.Location = new System.Drawing.Point(26, 254);
+            this.tboxLocalidad.Location = new System.Drawing.Point(26, 257);
             this.tboxLocalidad.Name = "tboxLocalidad";
             this.tboxLocalidad.Size = new System.Drawing.Size(100, 23);
             this.tboxLocalidad.TabIndex = 2;
             // 
             // tboxProvincia
             // 
-            this.tboxProvincia.Location = new System.Drawing.Point(152, 254);
+            this.tboxProvincia.Location = new System.Drawing.Point(152, 257);
             this.tboxProvincia.Name = "tboxProvincia";
             this.tboxProvincia.Size = new System.Drawing.Size(100, 23);
             this.tboxProvincia.TabIndex = 2;
@@ -449,14 +449,14 @@
             // 
             // tboxDniFamiliar
             // 
-            this.tboxDniFamiliar.Location = new System.Drawing.Point(26, 47);
+            this.tboxDniFamiliar.Location = new System.Drawing.Point(26, 49);
             this.tboxDniFamiliar.Name = "tboxDniFamiliar";
             this.tboxDniFamiliar.Size = new System.Drawing.Size(100, 21);
             this.tboxDniFamiliar.TabIndex = 2;
             // 
             // tboxParentescoFamiliar
             // 
-            this.tboxParentescoFamiliar.Location = new System.Drawing.Point(26, 94);
+            this.tboxParentescoFamiliar.Location = new System.Drawing.Point(26, 96);
             this.tboxParentescoFamiliar.Name = "tboxParentescoFamiliar";
             this.tboxParentescoFamiliar.Size = new System.Drawing.Size(100, 21);
             this.tboxParentescoFamiliar.TabIndex = 2;
@@ -500,7 +500,7 @@
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(150, 50);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(150, 52);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(111, 21);
             this.dtpFechaNacimiento.TabIndex = 5;
