@@ -70,9 +70,11 @@ namespace ProyectoBigonHnos.controladores
             Negocio.getNegocio().borrarEmpleado(legajo);
         }
 
-        public void eliminarFamiliar()
+        public void eliminarFamiliar(string dniFamiliar)
         {
-            //Eliminar familiar de el usuario actual
+            Empleado.eliminarFamiliar(dniFamiliar);
+            NuevoEmpleadoView view = (NuevoEmpleadoView)Vista;
+            view.ActualizarVista();
         }
 
         public void confimarEmpleado()

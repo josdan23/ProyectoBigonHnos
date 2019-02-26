@@ -117,5 +117,12 @@ namespace ProyectoBigonHnos.dominio
             FechaEgreso = fechaEgreso;
         }
 
+
+        public void eliminarFamiliar(string dniFamiliar)
+        {
+            int index = Familiares.FindIndex(x => x.Dni == dniFamiliar);
+
+            Familiares.RemoveAt(index);
+        }
     }
 }

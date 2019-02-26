@@ -71,7 +71,7 @@
             this.tboxDniFamiliar = new System.Windows.Forms.TextBox();
             this.tboxParentescoFamiliar = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnBorrarFamiliar = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.chboxDiscapacidad = new System.Windows.Forms.CheckBox();
@@ -474,18 +474,18 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // button4
+            // btnBorrarFamiliar
             // 
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(395, 168);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 32);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Borrar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnBorrarFamiliar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnBorrarFamiliar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrarFamiliar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrarFamiliar.Location = new System.Drawing.Point(395, 168);
+            this.btnBorrarFamiliar.Name = "btnBorrarFamiliar";
+            this.btnBorrarFamiliar.Size = new System.Drawing.Size(75, 32);
+            this.btnBorrarFamiliar.TabIndex = 1;
+            this.btnBorrarFamiliar.Text = "Borrar";
+            this.btnBorrarFamiliar.UseVisualStyleBackColor = true;
+            this.btnBorrarFamiliar.Click += new System.EventHandler(this.btonBorrarFamilar_Click);
             // 
             // label21
             // 
@@ -570,7 +570,7 @@
             this.groupBox3.Controls.Add(this.chboxDiscapacidad);
             this.groupBox3.Controls.Add(this.btnAgregar);
             this.groupBox3.Controls.Add(this.dtpFechaNacimiento);
-            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.btnBorrarFamiliar);
             this.groupBox3.Controls.Add(this.dgvFamiliares);
             this.groupBox3.Controls.Add(this.tboxParentescoFamiliar);
             this.groupBox3.Controls.Add(this.label18);
@@ -660,7 +660,7 @@
         private System.Windows.Forms.TextBox tboxDniFamiliar;
         private System.Windows.Forms.TextBox tboxParentescoFamiliar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnBorrarFamiliar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDni;
         private System.Windows.Forms.DataGridViewTextBoxColumn colParentesco;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaNacimiento;

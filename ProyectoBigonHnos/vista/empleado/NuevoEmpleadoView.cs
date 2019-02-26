@@ -75,9 +75,11 @@ namespace ProyectoBigonHnos.vista.empleado
             ActualizarVista();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btonBorrarFamilar_Click(object sender, EventArgs e)
         {
-
+            String dniFamiliar = dgvFamiliares.CurrentRow.Cells[0].Value.ToString();
+            Controlador.eliminarFamiliar(dniFamiliar);
+            //Console.WriteLine(dniFamiliar);
         }
     }
 }
