@@ -45,10 +45,12 @@ namespace ProyectoBigonHnos.vista.empleado
 
             Controlador.agregarTelefono(tboxTelefono.Text);
 
+
+
             Controlador.agregarUsuario(
                 tboxUserName.Text,
                 tboxPassword.Text,
-                Boolean.Parse(tboxPerfil.Text));
+                ckboxAdministrador.Checked);
 
             Controlador.agregarCategoria(tboxCategoria.Text);
             Controlador.agregarLegajo(tboxLegajo.Text);
@@ -71,6 +73,11 @@ namespace ProyectoBigonHnos.vista.empleado
                 tboxParentescoFamiliar.Text,
                 chboxDiscapacidad.Checked);
             ActualizarVista();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
