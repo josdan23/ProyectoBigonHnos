@@ -77,5 +77,19 @@ namespace ProyectoBigonHnos.vista.empleado
             vista.mostrarDetalle(legajoSeleccionado);
             vista.ShowDialog();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            string legajoSeleccionado = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
+
+            EditarEmpleadoView vista = new EditarEmpleadoView();
+            vista.UnirControlador(Controlador);
+            vista.mostrarDetalle(legajoSeleccionado);
+            vista.ShowDialog();
+
+            Controlador.unirVista(this);
+
+            ActualizarVista();
+        }
     }
 }

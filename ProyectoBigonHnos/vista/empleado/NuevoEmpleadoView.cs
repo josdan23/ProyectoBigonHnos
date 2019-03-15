@@ -55,6 +55,9 @@ namespace ProyectoBigonHnos.vista.empleado
             Controlador.agregarCategoria(tboxCategoria.Text);
             Controlador.agregarLegajo(tboxLegajo.Text);
 
+            
+            Controlador.agregarFechaIngreso(dtpFechaIngreso.Value);
+
             Controlador.confimarEmpleado();
 
             Dispose();

@@ -246,5 +246,10 @@ namespace ProyectoBigonHnos.dominio
         {
             return persistencia.obtenerTodos<Proveedor>();
         }
+
+        internal void actualizarEmpleado(Empleado empleadoActualizado)
+        {
+            persistencia.actualiarObjeto<Empleado>(empleadoActualizado);
+        }
     }
 }

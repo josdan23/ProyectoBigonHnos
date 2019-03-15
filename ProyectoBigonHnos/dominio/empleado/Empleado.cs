@@ -19,7 +19,6 @@ namespace ProyectoBigonHnos.dominio
         public Usuario Usuario { get; set; }
         public List<GrupoFamiliar> Familiares { get; set; }
 
-
         public Empleado()
         {
             Familiares = new List<GrupoFamiliar>();
@@ -110,6 +109,11 @@ namespace ProyectoBigonHnos.dominio
                     Console.WriteLine(familiar);
             }
 
+        }
+
+        public void ingreso(DateTime fechaIngreso)
+        {
+            FechaIngreso = fechaIngreso;
         }
 
         public void egreso(DateTime fechaEgreso)

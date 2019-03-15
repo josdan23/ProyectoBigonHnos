@@ -198,6 +198,12 @@
     <Compile Include="vista\empleado\DetalleEmpleadoView.Designer.cs">
       <DependentUpon>DetalleEmpleadoView.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\empleado\EditarEmpleadoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\empleado\EditarEmpleadoView.Designer.cs">
+      <DependentUpon>EditarEmpleadoView.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\empleado\EmpleadoView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -351,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\empleado\DetalleEmpleadoView.resx">
       <DependentUpon>DetalleEmpleadoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\empleado\EditarEmpleadoView.resx">
+      <DependentUpon>EditarEmpleadoView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\empleado\EmpleadoView.resx">
       <DependentUpon>EmpleadoView.cs</DependentUpon>

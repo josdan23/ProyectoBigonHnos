@@ -3,10 +3,12 @@ using ProyectoBigonHnos.controladores;
 
 namespace ProyectoBigonHnos.vista.empleado
 {
-    interface IEmpleadosView
+    public interface IEmpleadosView
     {
         void UnirControlador(EmpleadoControlador controlador);
 
         void ActualizarVista();
+        
+
     }
 }

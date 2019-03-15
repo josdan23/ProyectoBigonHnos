@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGuardarEmpleados = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -77,8 +77,8 @@
             this.chboxDiscapacidad = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.ckboxAdministrador = new System.Windows.Forms.CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFamiliares)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -103,20 +103,21 @@
             this.btnGuardarEmpleados.Location = new System.Drawing.Point(769, 527);
             this.btnGuardarEmpleados.Name = "btnGuardarEmpleados";
             this.btnGuardarEmpleados.Size = new System.Drawing.Size(75, 32);
-            this.btnGuardarEmpleados.TabIndex = 1;
+            this.btnGuardarEmpleados.TabIndex = 21;
             this.btnGuardarEmpleados.Text = "Guardar";
             this.btnGuardarEmpleados.UseVisualStyleBackColor = true;
             this.btnGuardarEmpleados.Click += new System.EventHandler(this.btnGuardarEmpleados_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(671, 527);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 32);
-            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.TabIndex = 22;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
@@ -125,7 +126,7 @@
             this.tboxApellido.Location = new System.Drawing.Point(26, 44);
             this.tboxApellido.Name = "tboxApellido";
             this.tboxApellido.Size = new System.Drawing.Size(100, 23);
-            this.tboxApellido.TabIndex = 2;
+            this.tboxApellido.TabIndex = 1;
             // 
             // label2
             // 
@@ -169,7 +170,7 @@
             this.tboxDni.Location = new System.Drawing.Point(24, 91);
             this.tboxDni.Name = "tboxDni";
             this.tboxDni.Size = new System.Drawing.Size(100, 23);
-            this.tboxDni.TabIndex = 2;
+            this.tboxDni.TabIndex = 3;
             // 
             // dtpFechaIngreso
             // 
@@ -177,7 +178,7 @@
             this.dtpFechaIngreso.Location = new System.Drawing.Point(29, 38);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
             this.dtpFechaIngreso.Size = new System.Drawing.Size(109, 20);
-            this.dtpFechaIngreso.TabIndex = 3;
+            this.dtpFechaIngreso.TabIndex = 10;
             // 
             // label5
             // 
@@ -203,7 +204,7 @@
             this.tboxTelefono.Location = new System.Drawing.Point(26, 146);
             this.tboxTelefono.Name = "tboxTelefono";
             this.tboxTelefono.Size = new System.Drawing.Size(100, 23);
-            this.tboxTelefono.TabIndex = 2;
+            this.tboxTelefono.TabIndex = 5;
             // 
             // label7
             // 
@@ -228,14 +229,14 @@
             this.tboxLegajo.Location = new System.Drawing.Point(30, 87);
             this.tboxLegajo.Name = "tboxLegajo";
             this.tboxLegajo.Size = new System.Drawing.Size(100, 20);
-            this.tboxLegajo.TabIndex = 2;
+            this.tboxLegajo.TabIndex = 12;
             // 
             // tboxCategoria
             // 
             this.tboxCategoria.Location = new System.Drawing.Point(155, 38);
             this.tboxCategoria.Name = "tboxCategoria";
             this.tboxCategoria.Size = new System.Drawing.Size(100, 20);
-            this.tboxCategoria.TabIndex = 2;
+            this.tboxCategoria.TabIndex = 11;
             // 
             // label9
             // 
@@ -260,14 +261,14 @@
             this.tboxUserName.Location = new System.Drawing.Point(30, 131);
             this.tboxUserName.Name = "tboxUserName";
             this.tboxUserName.Size = new System.Drawing.Size(100, 20);
-            this.tboxUserName.TabIndex = 2;
+            this.tboxUserName.TabIndex = 14;
             // 
             // tboxPassword
             // 
             this.tboxPassword.Location = new System.Drawing.Point(154, 131);
             this.tboxPassword.Name = "tboxPassword";
             this.tboxPassword.Size = new System.Drawing.Size(100, 20);
-            this.tboxPassword.TabIndex = 2;
+            this.tboxPassword.TabIndex = 15;
             // 
             // dgvFamiliares
             // 
@@ -279,14 +280,14 @@
             this.dgvFamiliares.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvFamiliares.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFamiliares.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFamiliares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFamiliares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFamiliares.ColumnHeadersHeight = 40;
             this.dgvFamiliares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvFamiliares.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -347,7 +348,7 @@
             this.tboxCuil.Location = new System.Drawing.Point(150, 91);
             this.tboxCuil.Name = "tboxCuil";
             this.tboxCuil.Size = new System.Drawing.Size(110, 23);
-            this.tboxCuil.TabIndex = 2;
+            this.tboxCuil.TabIndex = 4;
             // 
             // label13
             // 
@@ -384,7 +385,7 @@
             this.tboxCalle.Location = new System.Drawing.Point(26, 198);
             this.tboxCalle.Name = "tboxCalle";
             this.tboxCalle.Size = new System.Drawing.Size(100, 23);
-            this.tboxCalle.TabIndex = 2;
+            this.tboxCalle.TabIndex = 6;
             // 
             // label16
             // 
@@ -401,21 +402,21 @@
             this.tboxNumero.Location = new System.Drawing.Point(150, 198);
             this.tboxNumero.Name = "tboxNumero";
             this.tboxNumero.Size = new System.Drawing.Size(100, 23);
-            this.tboxNumero.TabIndex = 2;
+            this.tboxNumero.TabIndex = 7;
             // 
             // tboxLocalidad
             // 
             this.tboxLocalidad.Location = new System.Drawing.Point(26, 257);
             this.tboxLocalidad.Name = "tboxLocalidad";
             this.tboxLocalidad.Size = new System.Drawing.Size(100, 23);
-            this.tboxLocalidad.TabIndex = 2;
+            this.tboxLocalidad.TabIndex = 8;
             // 
             // tboxProvincia
             // 
             this.tboxProvincia.Location = new System.Drawing.Point(152, 257);
             this.tboxProvincia.Name = "tboxProvincia";
             this.tboxProvincia.Size = new System.Drawing.Size(100, 23);
-            this.tboxProvincia.TabIndex = 2;
+            this.tboxProvincia.TabIndex = 9;
             // 
             // label17
             // 
@@ -452,14 +453,14 @@
             this.tboxDniFamiliar.Location = new System.Drawing.Point(26, 49);
             this.tboxDniFamiliar.Name = "tboxDniFamiliar";
             this.tboxDniFamiliar.Size = new System.Drawing.Size(100, 21);
-            this.tboxDniFamiliar.TabIndex = 2;
+            this.tboxDniFamiliar.TabIndex = 16;
             // 
             // tboxParentescoFamiliar
             // 
             this.tboxParentescoFamiliar.Location = new System.Drawing.Point(26, 96);
             this.tboxParentescoFamiliar.Name = "tboxParentescoFamiliar";
             this.tboxParentescoFamiliar.Size = new System.Drawing.Size(100, 21);
-            this.tboxParentescoFamiliar.TabIndex = 2;
+            this.tboxParentescoFamiliar.TabIndex = 18;
             // 
             // btnAgregar
             // 
@@ -469,7 +470,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(395, 47);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 32);
-            this.btnAgregar.TabIndex = 1;
+            this.btnAgregar.TabIndex = 20;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -503,7 +504,7 @@
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(150, 52);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(111, 21);
-            this.dtpFechaNacimiento.TabIndex = 5;
+            this.dtpFechaNacimiento.TabIndex = 17;
             // 
             // chboxDiscapacidad
             // 
@@ -511,7 +512,7 @@
             this.chboxDiscapacidad.Location = new System.Drawing.Point(150, 97);
             this.chboxDiscapacidad.Name = "chboxDiscapacidad";
             this.chboxDiscapacidad.Size = new System.Drawing.Size(101, 19);
-            this.chboxDiscapacidad.TabIndex = 6;
+            this.chboxDiscapacidad.TabIndex = 19;
             this.chboxDiscapacidad.Text = "Discapacidad";
             this.chboxDiscapacidad.UseVisualStyleBackColor = true;
             // 
@@ -563,6 +564,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Información Empleado";
             // 
+            // ckboxAdministrador
+            // 
+            this.ckboxAdministrador.AutoSize = true;
+            this.ckboxAdministrador.Location = new System.Drawing.Point(156, 84);
+            this.ckboxAdministrador.Name = "ckboxAdministrador";
+            this.ckboxAdministrador.Size = new System.Drawing.Size(55, 17);
+            this.ckboxAdministrador.TabIndex = 13;
+            this.ckboxAdministrador.Text = "Admin";
+            this.ckboxAdministrador.UseVisualStyleBackColor = true;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label19);
@@ -584,21 +595,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Información de Familiares";
             // 
-            // ckboxAdministrador
-            // 
-            this.ckboxAdministrador.AutoSize = true;
-            this.ckboxAdministrador.Location = new System.Drawing.Point(156, 84);
-            this.ckboxAdministrador.Name = "ckboxAdministrador";
-            this.ckboxAdministrador.Size = new System.Drawing.Size(55, 17);
-            this.ckboxAdministrador.TabIndex = 4;
-            this.ckboxAdministrador.Text = "Admin";
-            this.ckboxAdministrador.UseVisualStyleBackColor = true;
-            // 
             // NuevoEmpleadoView
             // 
+            this.AcceptButton = this.btnGuardarEmpleados;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(876, 573);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
