@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.tboxLegajo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,8 +54,6 @@
             this.tboxUsuario = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tboxContrasenia = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.tboxPerfil = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tboxCategoria = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -68,6 +66,7 @@
             this.colFechaNac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDiscapacidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonSalir = new System.Windows.Forms.Button();
+            this.ckboxAdministrador = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFamiliares)).BeginInit();
             this.SuspendLayout();
             // 
@@ -275,27 +274,10 @@
             this.tboxContrasenia.Size = new System.Drawing.Size(100, 20);
             this.tboxContrasenia.TabIndex = 3;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(256, 267);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 13);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Perfil";
-            // 
-            // tboxPerfil
-            // 
-            this.tboxPerfil.Enabled = false;
-            this.tboxPerfil.Location = new System.Drawing.Point(259, 284);
-            this.tboxPerfil.Name = "tboxPerfil";
-            this.tboxPerfil.Size = new System.Drawing.Size(100, 20);
-            this.tboxPerfil.TabIndex = 3;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(373, 267);
+            this.label11.Location = new System.Drawing.Point(261, 268);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(52, 13);
             this.label11.TabIndex = 2;
@@ -304,7 +286,7 @@
             // tboxCategoria
             // 
             this.tboxCategoria.Enabled = false;
-            this.tboxCategoria.Location = new System.Drawing.Point(376, 284);
+            this.tboxCategoria.Location = new System.Drawing.Point(264, 285);
             this.tboxCategoria.Name = "tboxCategoria";
             this.tboxCategoria.Size = new System.Drawing.Size(100, 20);
             this.tboxCategoria.TabIndex = 3;
@@ -352,14 +334,14 @@
             this.dgvFamiliares.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvFamiliares.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFamiliares.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFamiliares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFamiliares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvFamiliares.ColumnHeadersHeight = 40;
             this.dgvFamiliares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvFamiliares.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -367,14 +349,14 @@
             this.colParentesco,
             this.colFechaNac,
             this.colDiscapacidad});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFamiliares.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFamiliares.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvFamiliares.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvFamiliares.Location = new System.Drawing.Point(27, 329);
             this.dgvFamiliares.Name = "dgvFamiliares";
@@ -416,6 +398,7 @@
             // 
             // buttonSalir
             // 
+            this.buttonSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonSalir.Location = new System.Drawing.Point(727, 461);
             this.buttonSalir.Name = "buttonSalir";
             this.buttonSalir.Size = new System.Drawing.Size(75, 23);
@@ -424,24 +407,34 @@
             this.buttonSalir.UseVisualStyleBackColor = true;
             this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
             // 
+            // ckboxAdministrador
+            // 
+            this.ckboxAdministrador.AutoSize = true;
+            this.ckboxAdministrador.Enabled = false;
+            this.ckboxAdministrador.Location = new System.Drawing.Point(406, 287);
+            this.ckboxAdministrador.Name = "ckboxAdministrador";
+            this.ckboxAdministrador.Size = new System.Drawing.Size(89, 17);
+            this.ckboxAdministrador.TabIndex = 6;
+            this.ckboxAdministrador.Text = "Administrador";
+            this.ckboxAdministrador.UseVisualStyleBackColor = true;
+            // 
             // DetalleEmpleadoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonSalir;
             this.ClientSize = new System.Drawing.Size(871, 511);
+            this.Controls.Add(this.ckboxAdministrador);
             this.Controls.Add(this.buttonSalir);
             this.Controls.Add(this.dgvFamiliares);
             this.Controls.Add(this.tboxFechaEgreso);
             this.Controls.Add(this.tboxCategoria);
             this.Controls.Add(this.tboxFechaIngreso);
-            this.Controls.Add(this.tboxPerfil);
             this.Controls.Add(this.tboxContrasenia);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.tboxUsuario);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.Usuario);
             this.Controls.Add(this.tboxTelefono);
@@ -498,8 +491,6 @@
         private System.Windows.Forms.TextBox tboxUsuario;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox tboxContrasenia;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox tboxPerfil;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tboxCategoria;
         private System.Windows.Forms.Label label14;
@@ -512,5 +503,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaNac;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiscapacidad;
         private System.Windows.Forms.Button buttonSalir;
+        private System.Windows.Forms.CheckBox ckboxAdministrador;
     }
 }
