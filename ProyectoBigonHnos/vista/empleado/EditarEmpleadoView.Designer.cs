@@ -74,6 +74,7 @@
             // 
             // button3
             // 
+            this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button3.Location = new System.Drawing.Point(624, 486);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
@@ -413,6 +414,7 @@
             this.dtpFechaEgreso.Name = "dtpFechaEgreso";
             this.dtpFechaEgreso.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaEgreso.TabIndex = 46;
+            this.dtpFechaEgreso.Value = new System.DateTime(1753, 1, 1, 17, 22, 0, 0);
             // 
             // cboxAdministrador
             // 

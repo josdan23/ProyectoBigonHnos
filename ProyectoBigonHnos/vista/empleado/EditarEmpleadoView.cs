@@ -67,7 +67,7 @@ namespace ProyectoBigonHnos.vista.empleado
             dtpFechaIngreso.Value = fechaIngreso;
 
             if (!fechaEgreso.Equals(new DateTime()))
-                dtpFechaEgreso.Value = fechaEgreso;
+                dtpFechaEgreso.Value = fechaEgreso;    
             
         }
 
