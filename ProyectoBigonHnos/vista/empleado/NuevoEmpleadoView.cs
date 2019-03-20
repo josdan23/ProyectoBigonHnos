@@ -76,6 +76,14 @@ namespace ProyectoBigonHnos.vista.empleado
                 tboxParentescoFamiliar.Text,
                 chboxDiscapacidad.Checked);
             ActualizarVista();
+            limpiarCamposNuevoFamiliar();
+        }
+
+        private void limpiarCamposNuevoFamiliar()
+        {
+            tboxDniFamiliar.Text = "";
+            tboxParentescoFamiliar.Text = "";
+            chboxDiscapacidad.Checked = false;
         }
 
         private void btonBorrarFamilar_Click(object sender, EventArgs e)
