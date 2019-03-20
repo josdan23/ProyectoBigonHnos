@@ -171,6 +171,7 @@
             this.dgvEmpleados.Location = new System.Drawing.Point(61, 116);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
+            this.dgvEmpleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvEmpleados.RowHeadersVisible = false;
             this.dgvEmpleados.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvEmpleados.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;

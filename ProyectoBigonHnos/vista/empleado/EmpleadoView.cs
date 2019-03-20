@@ -58,6 +58,8 @@ namespace ProyectoBigonHnos.vista.empleado
             string legajo = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
 
             Controlador.eliminarEmpleado(legajo);
+            Controlador.unirVista(this);
+         
             ActualizarVista();
         }
 
