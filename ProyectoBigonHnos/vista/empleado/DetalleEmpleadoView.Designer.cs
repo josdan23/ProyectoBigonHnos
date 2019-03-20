@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.tboxLegajo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -65,9 +67,7 @@
             this.colParentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFechaNac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDiscapacidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFamiliares)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,6 +82,7 @@
             // 
             // tboxLegajo
             // 
+            this.tboxLegajo.Enabled = false;
             this.tboxLegajo.Location = new System.Drawing.Point(28, 65);
             this.tboxLegajo.Name = "tboxLegajo";
             this.tboxLegajo.Size = new System.Drawing.Size(100, 20);
@@ -98,6 +99,7 @@
             // 
             // tboxApellido
             // 
+            this.tboxApellido.Enabled = false;
             this.tboxApellido.Location = new System.Drawing.Point(28, 119);
             this.tboxApellido.Name = "tboxApellido";
             this.tboxApellido.Size = new System.Drawing.Size(100, 20);
@@ -114,6 +116,7 @@
             // 
             // tboxNombre
             // 
+            this.tboxNombre.Enabled = false;
             this.tboxNombre.Location = new System.Drawing.Point(144, 119);
             this.tboxNombre.Name = "tboxNombre";
             this.tboxNombre.Size = new System.Drawing.Size(100, 20);
@@ -130,6 +133,7 @@
             // 
             // tboxDni
             // 
+            this.tboxDni.Enabled = false;
             this.tboxDni.Location = new System.Drawing.Point(259, 119);
             this.tboxDni.Name = "tboxDni";
             this.tboxDni.Size = new System.Drawing.Size(100, 20);
@@ -146,6 +150,7 @@
             // 
             // tboxCuit
             // 
+            this.tboxCuit.Enabled = false;
             this.tboxCuit.Location = new System.Drawing.Point(376, 119);
             this.tboxCuit.Name = "tboxCuit";
             this.tboxCuit.Size = new System.Drawing.Size(100, 20);
@@ -189,6 +194,7 @@
             // 
             // tboxCalle
             // 
+            this.tboxCalle.Enabled = false;
             this.tboxCalle.Location = new System.Drawing.Point(28, 173);
             this.tboxCalle.Name = "tboxCalle";
             this.tboxCalle.Size = new System.Drawing.Size(100, 20);
@@ -196,6 +202,7 @@
             // 
             // tboxNumero
             // 
+            this.tboxNumero.Enabled = false;
             this.tboxNumero.Location = new System.Drawing.Point(144, 173);
             this.tboxNumero.Name = "tboxNumero";
             this.tboxNumero.Size = new System.Drawing.Size(100, 20);
@@ -203,6 +210,7 @@
             // 
             // tboxLocalidad
             // 
+            this.tboxLocalidad.Enabled = false;
             this.tboxLocalidad.Location = new System.Drawing.Point(259, 173);
             this.tboxLocalidad.Name = "tboxLocalidad";
             this.tboxLocalidad.Size = new System.Drawing.Size(100, 20);
@@ -210,6 +218,7 @@
             // 
             // tboxProvincia
             // 
+            this.tboxProvincia.Enabled = false;
             this.tboxProvincia.Location = new System.Drawing.Point(376, 173);
             this.tboxProvincia.Name = "tboxProvincia";
             this.tboxProvincia.Size = new System.Drawing.Size(100, 20);
@@ -217,6 +226,7 @@
             // 
             // tboxTelefono
             // 
+            this.tboxTelefono.Enabled = false;
             this.tboxTelefono.Location = new System.Drawing.Point(28, 232);
             this.tboxTelefono.Name = "tboxTelefono";
             this.tboxTelefono.Size = new System.Drawing.Size(100, 20);
@@ -242,6 +252,7 @@
             // 
             // tboxUsuario
             // 
+            this.tboxUsuario.Enabled = false;
             this.tboxUsuario.Location = new System.Drawing.Point(28, 284);
             this.tboxUsuario.Name = "tboxUsuario";
             this.tboxUsuario.Size = new System.Drawing.Size(100, 20);
@@ -258,6 +269,7 @@
             // 
             // tboxContrasenia
             // 
+            this.tboxContrasenia.Enabled = false;
             this.tboxContrasenia.Location = new System.Drawing.Point(144, 284);
             this.tboxContrasenia.Name = "tboxContrasenia";
             this.tboxContrasenia.Size = new System.Drawing.Size(100, 20);
@@ -274,6 +286,7 @@
             // 
             // tboxPerfil
             // 
+            this.tboxPerfil.Enabled = false;
             this.tboxPerfil.Location = new System.Drawing.Point(259, 284);
             this.tboxPerfil.Name = "tboxPerfil";
             this.tboxPerfil.Size = new System.Drawing.Size(100, 20);
@@ -290,6 +303,7 @@
             // 
             // tboxCategoria
             // 
+            this.tboxCategoria.Enabled = false;
             this.tboxCategoria.Location = new System.Drawing.Point(376, 284);
             this.tboxCategoria.Name = "tboxCategoria";
             this.tboxCategoria.Size = new System.Drawing.Size(100, 20);
@@ -315,6 +329,7 @@
             // 
             // tboxFechaIngreso
             // 
+            this.tboxFechaIngreso.Enabled = false;
             this.tboxFechaIngreso.Location = new System.Drawing.Point(562, 119);
             this.tboxFechaIngreso.Name = "tboxFechaIngreso";
             this.tboxFechaIngreso.Size = new System.Drawing.Size(100, 20);
@@ -322,6 +337,7 @@
             // 
             // tboxFechaEgreso
             // 
+            this.tboxFechaEgreso.Enabled = false;
             this.tboxFechaEgreso.Location = new System.Drawing.Point(679, 119);
             this.tboxFechaEgreso.Name = "tboxFechaEgreso";
             this.tboxFechaEgreso.Size = new System.Drawing.Size(100, 20);
@@ -329,14 +345,48 @@
             // 
             // dgvFamiliares
             // 
-            this.dgvFamiliares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFamiliares.AllowUserToAddRows = false;
+            this.dgvFamiliares.AllowUserToDeleteRows = false;
+            this.dgvFamiliares.AllowUserToResizeColumns = false;
+            this.dgvFamiliares.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFamiliares.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvFamiliares.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvFamiliares.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFamiliares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvFamiliares.ColumnHeadersHeight = 40;
+            this.dgvFamiliares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvFamiliares.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDniFamiliar,
             this.colParentesco,
             this.colFechaNac,
             this.colDiscapacidad});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFamiliares.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvFamiliares.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvFamiliares.Location = new System.Drawing.Point(27, 329);
             this.dgvFamiliares.Name = "dgvFamiliares";
+            this.dgvFamiliares.ReadOnly = true;
+            this.dgvFamiliares.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvFamiliares.RowHeadersVisible = false;
+            this.dgvFamiliares.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvFamiliares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFamiliares.ShowCellErrors = false;
+            this.dgvFamiliares.ShowCellToolTips = false;
+            this.dgvFamiliares.ShowEditingIcon = false;
+            this.dgvFamiliares.ShowRowErrors = false;
             this.dgvFamiliares.Size = new System.Drawing.Size(775, 99);
             this.dgvFamiliares.TabIndex = 4;
             // 
@@ -344,57 +394,43 @@
             // 
             this.colDniFamiliar.HeaderText = "Dni Familiar";
             this.colDniFamiliar.Name = "colDniFamiliar";
+            this.colDniFamiliar.ReadOnly = true;
             // 
             // colParentesco
             // 
             this.colParentesco.HeaderText = "Parentesco";
             this.colParentesco.Name = "colParentesco";
+            this.colParentesco.ReadOnly = true;
             // 
             // colFechaNac
             // 
             this.colFechaNac.HeaderText = "Fecha de Nacimiento";
             this.colFechaNac.Name = "colFechaNac";
+            this.colFechaNac.ReadOnly = true;
             // 
             // colDiscapacidad
             // 
             this.colDiscapacidad.HeaderText = "Discapacidad";
             this.colDiscapacidad.Name = "colDiscapacidad";
+            this.colDiscapacidad.ReadOnly = true;
             // 
-            // button1
+            // buttonSalir
             // 
-            this.button1.Location = new System.Drawing.Point(704, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Eliminar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(727, 461);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(637, 461);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonSalir.Location = new System.Drawing.Point(727, 461);
+            this.buttonSalir.Name = "buttonSalir";
+            this.buttonSalir.Size = new System.Drawing.Size(75, 23);
+            this.buttonSalir.TabIndex = 5;
+            this.buttonSalir.Text = "Salir";
+            this.buttonSalir.UseVisualStyleBackColor = true;
+            this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
             // 
             // DetalleEmpleadoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.buttonSalir;
             this.ClientSize = new System.Drawing.Size(871, 511);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonSalir);
             this.Controls.Add(this.dgvFamiliares);
             this.Controls.Add(this.tboxFechaEgreso);
             this.Controls.Add(this.tboxCategoria);
@@ -475,8 +511,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colParentesco;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaNac;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiscapacidad;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonSalir;
     }
 }

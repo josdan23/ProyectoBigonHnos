@@ -32,7 +32,6 @@ namespace ProyectoBigonHnos.vista.empleado
         {
             Controlador = controlador;
             Controlador.unirVista(this);
-            Console.WriteLine("VISTA EMPLEADO");
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -60,12 +59,6 @@ namespace ProyectoBigonHnos.vista.empleado
 
             Controlador.eliminarEmpleado(legajo);
             ActualizarVista();
-        }
-
-        private void btnDetalle_Click(object sender, EventArgs e)
-        {
-            DetalleEmpleadoView vista = new DetalleEmpleadoView();
-            vista.ShowDialog();
         }
 
         private void btnDetalle_Click_1(object sender, EventArgs e)
