@@ -64,7 +64,11 @@ namespace ProyectoBigonHnos.vista.empleado
         public void mostrarFechas(DateTime fechaIngreso, DateTime fechaEgreso)
         {
             tboxFechaIngreso.Text = fechaIngreso.ToString();
-            tboxFechaEgreso.Text = fechaEgreso.ToString();
+
+            if (fechaEgreso.Equals(new DateTime()))
+                tboxFechaEgreso.Text = "-/-/-";
+            else
+                tboxFechaEgreso.Text = fechaEgreso.ToString();
         }
 
         public void mostrarFamiliar(string dniFamiliar, string parentesco, DateTime fechaNac, bool discapacidad)
