@@ -35,7 +35,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.Detalle = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.colLegajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,7 +85,6 @@
             // 
             this.panel2.Controls.Add(this.btnEliminar);
             this.panel2.Controls.Add(this.btnEditar);
-            this.panel2.Controls.Add(this.Detalle);
             this.panel2.Controls.Add(this.btnNuevo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(79, 0);
@@ -123,21 +121,6 @@
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // Detalle
-            // 
-            this.Detalle.FlatAppearance.BorderSize = 0;
-            this.Detalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Detalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Detalle.Image = global::ProyectoBigonHnos.Properties.Resources.nuevo_icon;
-            this.Detalle.Location = new System.Drawing.Point(315, 8);
-            this.Detalle.Name = "Detalle";
-            this.Detalle.Size = new System.Drawing.Size(91, 42);
-            this.Detalle.TabIndex = 0;
-            this.Detalle.Text = "Detalle";
-            this.Detalle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Detalle.UseVisualStyleBackColor = true;
-            this.Detalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
             // btnNuevo
             // 
@@ -296,7 +279,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colDni;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaIngreo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCategoria;
-        private System.Windows.Forms.Button Detalle;
         private System.Windows.Forms.Button btnDetalle;
         private System.Windows.Forms.Label label2;
     }
