@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -167,14 +167,14 @@
             this.dgvClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClientes.ColumnHeadersHeight = 40;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -226,10 +226,12 @@
             // 
             // tboxDni
             // 
+            this.tboxDni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tboxDni.Enabled = false;
+            this.tboxDni.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tboxDni.Location = new System.Drawing.Point(10, 33);
             this.tboxDni.Name = "tboxDni";
-            this.tboxDni.Size = new System.Drawing.Size(100, 20);
+            this.tboxDni.Size = new System.Drawing.Size(80, 20);
             this.tboxDni.TabIndex = 3;
             // 
             // label3
@@ -253,10 +255,12 @@
             // 
             // tBoxApellido
             // 
+            this.tBoxApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tBoxApellido.Enabled = false;
+            this.tBoxApellido.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tBoxApellido.Location = new System.Drawing.Point(116, 33);
             this.tBoxApellido.Name = "tBoxApellido";
-            this.tBoxApellido.Size = new System.Drawing.Size(100, 20);
+            this.tBoxApellido.Size = new System.Drawing.Size(80, 20);
             this.tBoxApellido.TabIndex = 3;
             // 
             // label5
@@ -270,10 +274,12 @@
             // 
             // tBoxNombre
             // 
+            this.tBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tBoxNombre.Enabled = false;
+            this.tBoxNombre.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tBoxNombre.Location = new System.Drawing.Point(222, 33);
             this.tBoxNombre.Name = "tBoxNombre";
-            this.tBoxNombre.Size = new System.Drawing.Size(100, 20);
+            this.tBoxNombre.Size = new System.Drawing.Size(80, 20);
             this.tBoxNombre.TabIndex = 3;
             // 
             // label10
@@ -290,7 +296,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 180);
+            this.label6.Location = new System.Drawing.Point(7, 198);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 2;
@@ -311,7 +317,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 135);
+            this.label8.Location = new System.Drawing.Point(7, 133);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 13);
             this.label8.TabIndex = 2;
@@ -320,7 +326,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(113, 135);
+            this.label9.Location = new System.Drawing.Point(113, 133);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 13);
             this.label9.TabIndex = 2;
@@ -328,16 +334,18 @@
             // 
             // tboxCalle
             // 
+            this.tboxCalle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tboxCalle.Enabled = false;
+            this.tboxCalle.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tboxCalle.Location = new System.Drawing.Point(10, 151);
             this.tboxCalle.Name = "tboxCalle";
-            this.tboxCalle.Size = new System.Drawing.Size(100, 20);
+            this.tboxCalle.Size = new System.Drawing.Size(80, 20);
             this.tboxCalle.TabIndex = 3;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(219, 135);
+            this.label11.Location = new System.Drawing.Point(219, 133);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 13);
             this.label11.TabIndex = 2;
@@ -345,24 +353,28 @@
             // 
             // tboxNumero
             // 
+            this.tboxNumero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tboxNumero.Enabled = false;
+            this.tboxNumero.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tboxNumero.Location = new System.Drawing.Point(116, 151);
             this.tboxNumero.Name = "tboxNumero";
-            this.tboxNumero.Size = new System.Drawing.Size(100, 20);
+            this.tboxNumero.Size = new System.Drawing.Size(80, 20);
             this.tboxNumero.TabIndex = 3;
             // 
             // tboxLocalidad
             // 
+            this.tboxLocalidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tboxLocalidad.Enabled = false;
+            this.tboxLocalidad.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tboxLocalidad.Location = new System.Drawing.Point(222, 151);
             this.tboxLocalidad.Name = "tboxLocalidad";
-            this.tboxLocalidad.Size = new System.Drawing.Size(100, 20);
+            this.tboxLocalidad.Size = new System.Drawing.Size(80, 20);
             this.tboxLocalidad.TabIndex = 3;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(335, 135);
+            this.label12.Location = new System.Drawing.Point(335, 133);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 13);
             this.label12.TabIndex = 2;
@@ -370,24 +382,29 @@
             // 
             // tboxProvincia
             // 
+            this.tboxProvincia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tboxProvincia.Enabled = false;
+            this.tboxProvincia.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tboxProvincia.Location = new System.Drawing.Point(338, 151);
             this.tboxProvincia.Name = "tboxProvincia";
-            this.tboxProvincia.Size = new System.Drawing.Size(100, 20);
+            this.tboxProvincia.Size = new System.Drawing.Size(80, 20);
             this.tboxProvincia.TabIndex = 3;
             // 
             // tboxTelefono
             // 
+            this.tboxTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tboxTelefono.Enabled = false;
-            this.tboxTelefono.Location = new System.Drawing.Point(10, 196);
+            this.tboxTelefono.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tboxTelefono.Location = new System.Drawing.Point(10, 216);
             this.tboxTelefono.Name = "tboxTelefono";
-            this.tboxTelefono.Size = new System.Drawing.Size(100, 20);
+            this.tboxTelefono.Size = new System.Drawing.Size(80, 20);
             this.tboxTelefono.TabIndex = 3;
             // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.tBoxApellido);
             this.panel4.Controls.Add(this.tboxProvincia);
             this.panel4.Controls.Add(this.label2);
