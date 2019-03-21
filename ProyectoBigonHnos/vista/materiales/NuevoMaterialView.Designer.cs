@@ -34,8 +34,6 @@
             this.tboxDescripcion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tboxPrecio = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tboxCantidad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tboxStockDisponible = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,7 +45,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(325, 338);
+            this.button1.Location = new System.Drawing.Point(325, 296);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
@@ -57,7 +55,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(232, 338);
+            this.button2.Location = new System.Drawing.Point(232, 296);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 7;
@@ -96,26 +94,10 @@
             this.tboxPrecio.Size = new System.Drawing.Size(100, 20);
             this.tboxPrecio.TabIndex = 2;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(129, 212);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Cantidad";
-            // 
-            // tboxCantidad
-            // 
-            this.tboxCantidad.Location = new System.Drawing.Point(202, 209);
-            this.tboxCantidad.Name = "tboxCantidad";
-            this.tboxCantidad.Size = new System.Drawing.Size(100, 20);
-            this.tboxCantidad.TabIndex = 3;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(93, 249);
+            this.label4.Location = new System.Drawing.Point(93, 214);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 2;
@@ -123,7 +105,7 @@
             // 
             // tboxStockDisponible
             // 
-            this.tboxStockDisponible.Location = new System.Drawing.Point(202, 246);
+            this.tboxStockDisponible.Location = new System.Drawing.Point(202, 211);
             this.tboxStockDisponible.Name = "tboxStockDisponible";
             this.tboxStockDisponible.Size = new System.Drawing.Size(100, 20);
             this.tboxStockDisponible.TabIndex = 4;
@@ -131,7 +113,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(107, 285);
+            this.label5.Location = new System.Drawing.Point(107, 250);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 13);
             this.label5.TabIndex = 2;
@@ -139,7 +121,7 @@
             // 
             // tboxMinimo
             // 
-            this.tboxMinimo.Location = new System.Drawing.Point(202, 282);
+            this.tboxMinimo.Location = new System.Drawing.Point(202, 247);
             this.tboxMinimo.Name = "tboxMinimo";
             this.tboxMinimo.Size = new System.Drawing.Size(100, 20);
             this.tboxMinimo.TabIndex = 5;
@@ -161,7 +143,7 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(436, 93);
             this.panel1.TabIndex = 11;
@@ -171,14 +153,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(436, 384);
+            this.ClientSize = new System.Drawing.Size(436, 343);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tboxMinimo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tboxStockDisponible);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.tboxCantidad);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.tboxPrecio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tboxDescripcion);
@@ -206,8 +186,6 @@
         private System.Windows.Forms.TextBox tboxDescripcion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tboxPrecio;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tboxCantidad;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tboxStockDisponible;
         private System.Windows.Forms.Label label5;

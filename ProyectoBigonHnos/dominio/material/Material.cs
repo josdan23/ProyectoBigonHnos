@@ -15,6 +15,15 @@ namespace ProyectoBigonHnos.dominio
         public int StockMinimo { get; set; }
         public int Cantidad;
 
+        public Material(string descripcion, double precio, int stockDisponible, int stockMinimo)
+        {
+            Descripcion = descripcion;
+            Precio = precio;
+            StockDisponible = stockDisponible;
+            StockMinimo = stockMinimo;
+            Cantidad = stockDisponible;
+        }
+
         public Material(string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
         {
             Descripcion = descripcion;

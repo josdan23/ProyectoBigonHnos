@@ -27,9 +27,9 @@ namespace ProyectoBigonHnos.controladores
             catalogo = CatalogoDeMateriales.getInstancia();
         }
 
-        public void agregarNuevoMaterial(String descripcion, int cantidad, double precio, int stockMinimo, int stockDisponible)
+        public void agregarNuevoMaterial(String descripcion, double precio, int stockMinimo, int stockDisponible)
         {
-            catalogo.crearMaterial(descripcion, cantidad, precio, stockDisponible, stockMinimo);
+            catalogo.crearMaterial(descripcion, precio, stockDisponible, stockMinimo);
         }
 
         public void eliminarMaterial (int idMaterial)
@@ -66,12 +66,12 @@ namespace ProyectoBigonHnos.controladores
 
         private void cargarMateriales()
         {
-            agregarNuevoMaterial("madera1", 23, 31.2, 10, 12);
-            agregarNuevoMaterial("madera2", 234, 31.2, 10, 12);
-            agregarNuevoMaterial("madera3", 53, 31.2, 10, 12);
-            agregarNuevoMaterial("madera4", 82, 31.2, 10, 12);
-            agregarNuevoMaterial("madera5", 13, 31.2, 10, 12);
-            agregarNuevoMaterial("madera6", 21, 31.2, 10, 12);
+            agregarNuevoMaterial("madera1",  31.2, 10, 12);
+            agregarNuevoMaterial("madera2",  31.2, 10, 12);
+            agregarNuevoMaterial("madera3", 31.2, 10, 12);
+            agregarNuevoMaterial("madera4", 31.2, 10, 12);
+            agregarNuevoMaterial("madera5", 31.2, 10, 12);
+            agregarNuevoMaterial("madera6", 31.2, 10, 12);
         }
 
         public void detalleMaterial (int idMaterial)

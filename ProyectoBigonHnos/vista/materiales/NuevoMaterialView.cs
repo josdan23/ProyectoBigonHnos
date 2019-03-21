@@ -25,11 +25,10 @@ namespace ProyectoBigonHnos.vista.materiales
         {
             String descripcion = tboxDescripcion.Text;
             double precio = double.Parse( tboxPrecio.Text);
-            int cantidad = int.Parse(tboxCantidad.Text);
             int stockDisponible = int.Parse(tboxStockDisponible.Text);
             int stockMinimo = int.Parse(tboxMinimo.Text);
 
-            controlador.agregarNuevoMaterial(descripcion, cantidad, precio, stockMinimo, stockDisponible);
+            controlador.agregarNuevoMaterial(descripcion, precio, stockMinimo, stockDisponible);
             Dispose();
         }
 
