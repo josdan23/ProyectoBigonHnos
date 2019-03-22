@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.codigoTextView = new System.Windows.Forms.TextBox();
@@ -88,6 +90,7 @@
             // 
             // buscarButton
             // 
+            this.buscarButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buscarButton.Location = new System.Drawing.Point(233, 61);
             this.buscarButton.Name = "buscarButton";
             this.buscarButton.Size = new System.Drawing.Size(75, 23);
@@ -170,13 +173,39 @@
             // 
             // compraDataGrid
             // 
-            this.compraDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.compraDataGrid.AllowUserToAddRows = false;
+            this.compraDataGrid.AllowUserToDeleteRows = false;
+            this.compraDataGrid.AllowUserToResizeColumns = false;
+            this.compraDataGrid.AllowUserToResizeRows = false;
+            this.compraDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.compraDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.compraDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.compraDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.compraDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.compraDataGrid.ColumnHeadersHeight = 40;
+            this.compraDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.compraDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colIdMaterial,
             this.colDescripcion,
             this.colCantidad});
+            this.compraDataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.compraDataGrid.Location = new System.Drawing.Point(609, 123);
             this.compraDataGrid.Name = "compraDataGrid";
+            this.compraDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.compraDataGrid.RowHeadersVisible = false;
+            this.compraDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.compraDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.compraDataGrid.ShowCellErrors = false;
+            this.compraDataGrid.ShowCellToolTips = false;
+            this.compraDataGrid.ShowEditingIcon = false;
+            this.compraDataGrid.ShowRowErrors = false;
             this.compraDataGrid.Size = new System.Drawing.Size(409, 385);
             this.compraDataGrid.TabIndex = 3;
             // 
@@ -206,14 +235,40 @@
             // 
             // materialesDataGrid
             // 
-            this.materialesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.materialesDataGrid.AllowUserToAddRows = false;
+            this.materialesDataGrid.AllowUserToDeleteRows = false;
+            this.materialesDataGrid.AllowUserToResizeColumns = false;
+            this.materialesDataGrid.AllowUserToResizeRows = false;
+            this.materialesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.materialesDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.materialesDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialesDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.materialesDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.materialesDataGrid.ColumnHeadersHeight = 40;
             this.materialesDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colIdMat,
             this.colDesc,
             this.colStockMinimo,
             this.colStockDisponible});
+            this.materialesDataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.materialesDataGrid.Location = new System.Drawing.Point(43, 282);
             this.materialesDataGrid.Name = "materialesDataGrid";
+            this.materialesDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.materialesDataGrid.RowHeadersVisible = false;
+            this.materialesDataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.materialesDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.materialesDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.materialesDataGrid.ShowCellErrors = false;
+            this.materialesDataGrid.ShowCellToolTips = false;
+            this.materialesDataGrid.ShowEditingIcon = false;
+            this.materialesDataGrid.ShowRowErrors = false;
             this.materialesDataGrid.Size = new System.Drawing.Size(442, 235);
             this.materialesDataGrid.TabIndex = 4;
             // 
@@ -248,9 +303,10 @@
             // 
             // agregarButton
             // 
-            this.agregarButton.Location = new System.Drawing.Point(524, 206);
+            this.agregarButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.agregarButton.Location = new System.Drawing.Point(513, 206);
             this.agregarButton.Name = "agregarButton";
-            this.agregarButton.Size = new System.Drawing.Size(54, 50);
+            this.agregarButton.Size = new System.Drawing.Size(65, 50);
             this.agregarButton.TabIndex = 5;
             this.agregarButton.Text = "Agregar";
             this.agregarButton.UseVisualStyleBackColor = true;
@@ -258,9 +314,9 @@
             // 
             // quitarButton
             // 
-            this.quitarButton.Location = new System.Drawing.Point(524, 282);
+            this.quitarButton.Location = new System.Drawing.Point(513, 282);
             this.quitarButton.Name = "quitarButton";
-            this.quitarButton.Size = new System.Drawing.Size(54, 50);
+            this.quitarButton.Size = new System.Drawing.Size(65, 46);
             this.quitarButton.TabIndex = 5;
             this.quitarButton.Text = "Quitar";
             this.quitarButton.UseVisualStyleBackColor = true;
@@ -268,9 +324,9 @@
             // 
             // confirmarButton
             // 
-            this.confirmarButton.Location = new System.Drawing.Point(938, 528);
+            this.confirmarButton.Location = new System.Drawing.Point(910, 528);
             this.confirmarButton.Name = "confirmarButton";
-            this.confirmarButton.Size = new System.Drawing.Size(54, 30);
+            this.confirmarButton.Size = new System.Drawing.Size(82, 30);
             this.confirmarButton.TabIndex = 5;
             this.confirmarButton.Text = "Confirmar";
             this.confirmarButton.UseVisualStyleBackColor = true;
@@ -278,9 +334,10 @@
             // 
             // cancelarButton
             // 
-            this.cancelarButton.Location = new System.Drawing.Point(858, 528);
+            this.cancelarButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cancelarButton.Location = new System.Drawing.Point(804, 528);
             this.cancelarButton.Name = "cancelarButton";
-            this.cancelarButton.Size = new System.Drawing.Size(54, 30);
+            this.cancelarButton.Size = new System.Drawing.Size(77, 30);
             this.cancelarButton.TabIndex = 5;
             this.cancelarButton.Text = "Cancelar";
             this.cancelarButton.UseVisualStyleBackColor = true;
@@ -308,6 +365,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1047, 582);
             this.Controls.Add(this.cancelarButton);
             this.Controls.Add(this.confirmarButton);
@@ -332,6 +390,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label1);
             this.Name = "NuevaCompraView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "NuevaCompraView";
             ((System.ComponentModel.ISupportInitialize)(this.compraDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialesDataGrid)).EndInit();

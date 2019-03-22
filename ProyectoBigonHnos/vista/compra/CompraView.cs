@@ -42,11 +42,11 @@ namespace ProyectoBigonHnos.vista
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            NuevaCompraView v = new NuevaCompraView();
-            v.UnirControlador(new CompraControlador());
-            v.ShowDialog();
+            NuevaCompraView vista = new NuevaCompraView();
+            vista.UnirControlador(controlador);
+            vista.Show();
             
-            ActualizarVista();
+            //ActualizarVista();
 
         }
 

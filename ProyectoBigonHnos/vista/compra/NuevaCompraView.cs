@@ -21,7 +21,7 @@ namespace ProyectoBigonHnos.vista
         public NuevaCompraView()
         {
             InitializeComponent();
-            ActualizarVista();
+            //ActualizarVista();
         }
 
         public void ActualizarVista()
@@ -35,14 +35,13 @@ namespace ProyectoBigonHnos.vista
             throw new NotImplementedException();
         }
 
-        public void UnirControlador(CompraControlador controlador)
+        public void UnirControlador(CompraControlador controller)
         {
-            this.controlador = controlador;
+            controlador = controller;
+            controlador.UnirVista(this);
 
-            this.controlador.UnirVista(this);
-
-            this.controlador.iniciarNuevaCompra();
-            this.controlador.mostrarMateriales();
+            controlador.iniciarNuevaCompra();
+            controlador.mostrarMateriales();
 
             //listar todos los materiales
         }
@@ -54,7 +53,6 @@ namespace ProyectoBigonHnos.vista
             domicilioLabel.Text = domicilio;
             telefonoLabel.Text = telefono;
 
-            
         }
 
         public void agregarMaterialATabla(int id, string descripcion, int stockMinimo, int stockDisponible)

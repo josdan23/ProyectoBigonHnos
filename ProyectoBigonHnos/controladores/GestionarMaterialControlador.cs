@@ -19,7 +19,7 @@ namespace ProyectoBigonHnos.controladores
             this.vista = vista;
             catalogo = CatalogoDeMateriales.getInstancia();
 
-            //cargarMateriales();
+            cargarMateriales();
         }
 
         public GestionarMaterialControlador()

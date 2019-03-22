@@ -48,8 +48,7 @@ namespace ProyectoBigonHnos.dominio
                 proveedor.Domicilios[0].Localidad.Provincia.Nombre);
 
 
-                NuevaCompraView view = (NuevaCompraView)vista;
-                view.mostratCamposProveedor(
+                ((NuevaCompraView)vista).mostratCamposProveedor(
                     proveedor.RazonSocial, 
                     proveedor.Cuit, 
                     domicilioProveedor, 
@@ -114,9 +113,9 @@ namespace ProyectoBigonHnos.dominio
 
         }
 
-        public void UnirVista(ICompraView vista)
+        public void UnirVista(ICompraView view)
         {
-            this.vista = vista;
+            vista = view;
         }
 
         private void mostrarLineasDeCompra()
