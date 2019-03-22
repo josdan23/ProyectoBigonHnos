@@ -42,6 +42,9 @@
             this.domicilioLabel = new System.Windows.Forms.Label();
             this.telefonoLabel = new System.Windows.Forms.Label();
             this.compraDataGrid = new System.Windows.Forms.DataGridView();
+            this.colIdMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.materialesDataGrid = new System.Windows.Forms.DataGridView();
             this.colIdMat = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,9 +60,6 @@
             this.btnQuitar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.colIdMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.compraDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialesDataGrid)).BeginInit();
             this.panel1.SuspendLayout();
@@ -188,7 +188,9 @@
             this.colCantidad});
             this.compraDataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.compraDataGrid.Location = new System.Drawing.Point(609, 123);
+            this.compraDataGrid.MultiSelect = false;
             this.compraDataGrid.Name = "compraDataGrid";
+            this.compraDataGrid.ReadOnly = true;
             this.compraDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.compraDataGrid.RowHeadersVisible = false;
             this.compraDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -199,6 +201,24 @@
             this.compraDataGrid.ShowRowErrors = false;
             this.compraDataGrid.Size = new System.Drawing.Size(409, 385);
             this.compraDataGrid.TabIndex = 3;
+            // 
+            // colIdMaterial
+            // 
+            this.colIdMaterial.HeaderText = "Id Material";
+            this.colIdMaterial.Name = "colIdMaterial";
+            this.colIdMaterial.ReadOnly = true;
+            // 
+            // colDescripcion
+            // 
+            this.colDescripcion.HeaderText = "Descripción";
+            this.colDescripcion.Name = "colDescripcion";
+            this.colDescripcion.ReadOnly = true;
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.HeaderText = "Cantidad Solicitada";
+            this.colCantidad.Name = "colCantidad";
+            this.colCantidad.ReadOnly = true;
             // 
             // label11
             // 
@@ -235,7 +255,9 @@
             this.colStockDisponible});
             this.materialesDataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.materialesDataGrid.Location = new System.Drawing.Point(43, 282);
+            this.materialesDataGrid.MultiSelect = false;
             this.materialesDataGrid.Name = "materialesDataGrid";
+            this.materialesDataGrid.ReadOnly = true;
             this.materialesDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.materialesDataGrid.RowHeadersVisible = false;
             this.materialesDataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -252,21 +274,25 @@
             // 
             this.colIdMat.HeaderText = "Id Material";
             this.colIdMat.Name = "colIdMat";
+            this.colIdMat.ReadOnly = true;
             // 
             // colDesc
             // 
             this.colDesc.HeaderText = "Descripción";
             this.colDesc.Name = "colDesc";
+            this.colDesc.ReadOnly = true;
             // 
             // colStockMinimo
             // 
             this.colStockMinimo.HeaderText = "Stock Minimo";
             this.colStockMinimo.Name = "colStockMinimo";
+            this.colStockMinimo.ReadOnly = true;
             // 
             // colStockDisponible
             // 
             this.colStockDisponible.HeaderText = "Stock Disponible";
             this.colStockDisponible.Name = "colStockDisponible";
+            this.colStockDisponible.ReadOnly = true;
             // 
             // label12
             // 
@@ -362,21 +388,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(442, 144);
             this.panel1.TabIndex = 8;
-            // 
-            // colIdMaterial
-            // 
-            this.colIdMaterial.HeaderText = "Id Material";
-            this.colIdMaterial.Name = "colIdMaterial";
-            // 
-            // colDescripcion
-            // 
-            this.colDescripcion.HeaderText = "Descripción";
-            this.colDescripcion.Name = "colDescripcion";
-            // 
-            // colCantidad
-            // 
-            this.colCantidad.HeaderText = "Cantidad Solicitada";
-            this.colCantidad.Name = "colCantidad";
             // 
             // NuevaCompraView
             // 
