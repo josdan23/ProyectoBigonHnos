@@ -172,6 +172,12 @@
     <Compile Include="vista\clientes\EditarClienteView.Designer.cs">
       <DependentUpon>EditarClienteView.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\compra\CantidadCompraMaterialView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\compra\CantidadCompraMaterialView.Designer.cs">
+      <DependentUpon>CantidadCompraMaterialView.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\compra\CompraView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -345,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\clientes\EditarClienteView.resx">
       <DependentUpon>EditarClienteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\compra\CantidadCompraMaterialView.resx">
+      <DependentUpon>CantidadCompraMaterialView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\compra\CompraView.resx">
       <DependentUpon>CompraView.cs</DependentUpon>

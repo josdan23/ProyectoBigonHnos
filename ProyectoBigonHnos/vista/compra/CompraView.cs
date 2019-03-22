@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoBigonHnos.dominio;
 
-namespace ProyectoBigonHnos.vista
+namespace ProyectoBigonHnos.vista.compra
 {
     public partial class CompraView : UserControl, ICompraView
     {

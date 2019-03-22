@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoBigonHnos.vista
+namespace ProyectoBigonHnos.vista.compra
 {
     public interface ICompraView
     {

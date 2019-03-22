@@ -1,4 +1,4 @@
-﻿namespace ProyectoBigonHnos.vista { 
+﻿namespace ProyectoBigonHnos.vista.compra { 
 
     partial class CompraView
     {

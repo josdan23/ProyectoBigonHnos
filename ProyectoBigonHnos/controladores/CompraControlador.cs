@@ -1,6 +1,6 @@
 ﻿using ProyectoBigonHnos.controladores;
 using ProyectoBigonHnos.data;
-using ProyectoBigonHnos.vista;
+using ProyectoBigonHnos.vista.compra;
 using System;
 using System.Collections.Generic;
 using System.Linq;

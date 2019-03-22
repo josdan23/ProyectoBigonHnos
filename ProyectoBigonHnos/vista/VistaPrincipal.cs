@@ -11,6 +11,7 @@ using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.vista.empleado;
 using ProyectoBigonHnos.vista.liquidacion;
 using ProyectoBigonHnos.vista.proveedor;
+using ProyectoBigonHnos.vista.compra;
 
 namespace ProyectoBigonHnos.vista
 {

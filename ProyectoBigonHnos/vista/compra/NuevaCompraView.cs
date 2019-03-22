@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using ProyectoBigonHnos.controladores;
 using ProyectoBigonHnos.dominio;
 
-namespace ProyectoBigonHnos.vista
+namespace ProyectoBigonHnos.vista.compra
 {
-     partial class NuevaCompraView : Form, ICompraView
+     public partial class NuevaCompraView : Form, ICompraView
     {
 
         private CompraControlador controlador { get; set; }
@@ -115,8 +115,12 @@ namespace ProyectoBigonHnos.vista
             //llamar a controlador y agregar el material a la compra
             //agregar el material a la tabla
 
+            CantidadCompraMaterialView view = new CantidadCompraMaterialView();
+            view.ShowDialog().ToString();
+
+            int cantidad = view.dataIngresada;
+
             int idMaterial = int.Parse(materialesDataGrid.CurrentRow.Cells[0].Value.ToString());
-            int cantidad = 1;
 
             bool estaAgregado = false;
 
