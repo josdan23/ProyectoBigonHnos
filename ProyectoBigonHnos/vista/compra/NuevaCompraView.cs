@@ -42,6 +42,7 @@ namespace ProyectoBigonHnos.vista
 
             controlador.iniciarNuevaCompra();
             controlador.mostrarMateriales();
+            controlador.mostrarFechaActual();
         }
 
         public void mostratCamposProveedor(string razonSocial, string cuit, string domicilio, string telefono)
@@ -149,6 +150,11 @@ namespace ProyectoBigonHnos.vista
 
             Console.WriteLine("fila eliminada: " + index);
             controlador.cancelarMaterial(index + 1);
+        }
+
+        public void mostrarFechaActualDeCompra(DateTime fechaDeCompra)
+        {
+            fechaLabel.Text = fechaDeCompra.ToString();
         }
     }
 }

@@ -56,6 +56,11 @@ namespace ProyectoBigonHnos.dominio
             
         }
 
+        internal void mostrarFechaActual()
+        {
+            ((NuevaCompraView) vista).mostrarFechaActualDeCompra(compra.fechaCompra);
+        }
+
         internal void cargarComprasRealizadas()
         {
             List<Compra> comprasRealizadas = PersistenciaFacade.getInstance().obtenerTodos<Compra>();
