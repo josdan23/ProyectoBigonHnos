@@ -44,9 +44,9 @@ namespace ProyectoBigonHnos.vista
         {
             NuevaCompraView vista = new NuevaCompraView();
             vista.UnirControlador(controlador);
-            vista.Show();
-            
-            //ActualizarVista();
+            vista.ShowDialog();
+            UnirControlador(controlador);
+            ActualizarVista();
 
         }
 

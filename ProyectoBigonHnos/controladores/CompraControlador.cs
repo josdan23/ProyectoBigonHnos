@@ -38,7 +38,7 @@ namespace ProyectoBigonHnos.dominio
             if (proveedor != null)
             {
                 compra.agregarProveedor(proveedor);
-                Console.WriteLine("proveedor" + proveedor);
+                //Console.WriteLine("proveedor" + proveedor);
             }
 
             String domicilioProveedor = String.Format("{0} - {1}. {2}. {3}",
@@ -99,7 +99,7 @@ namespace ProyectoBigonHnos.dominio
         public void confirmarComprar()
         {
             compra.seHaCompletado();
-            compra.mostrar();
+            //compra.mostrar();
 
             PersistenciaFacade.getInstance().registrarObjeto<Compra>(compra);
             vista.close();

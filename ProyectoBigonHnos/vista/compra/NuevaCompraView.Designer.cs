@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.codigoTextView = new System.Windows.Forms.TextBox();
-            this.buscarButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,12 +52,13 @@
             this.colStockMinimo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStockDisponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
-            this.agregarButton = new System.Windows.Forms.Button();
-            this.quitarButton = new System.Windows.Forms.Button();
             this.confirmarButton = new System.Windows.Forms.Button();
             this.cancelarButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.fechaLabel = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnQuitar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.compraDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialesDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -87,17 +87,6 @@
             this.codigoTextView.Name = "codigoTextView";
             this.codigoTextView.Size = new System.Drawing.Size(124, 20);
             this.codigoTextView.TabIndex = 1;
-            // 
-            // buscarButton
-            // 
-            this.buscarButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buscarButton.Location = new System.Drawing.Point(233, 61);
-            this.buscarButton.Name = "buscarButton";
-            this.buscarButton.Size = new System.Drawing.Size(75, 23);
-            this.buscarButton.TabIndex = 2;
-            this.buscarButton.Text = "Buscar";
-            this.buscarButton.UseVisualStyleBackColor = true;
-            this.buscarButton.Click += new System.EventHandler(this.buscarButton_Click);
             // 
             // label3
             // 
@@ -181,14 +170,14 @@
             this.compraDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.compraDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.compraDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.compraDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.compraDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.compraDataGrid.ColumnHeadersHeight = 40;
             this.compraDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.compraDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -243,14 +232,14 @@
             this.materialesDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.materialesDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialesDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.materialesDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.materialesDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.materialesDataGrid.ColumnHeadersHeight = 40;
             this.materialesDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colIdMat,
@@ -301,27 +290,6 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Materiales Disponibles";
             // 
-            // agregarButton
-            // 
-            this.agregarButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.agregarButton.Location = new System.Drawing.Point(513, 206);
-            this.agregarButton.Name = "agregarButton";
-            this.agregarButton.Size = new System.Drawing.Size(65, 50);
-            this.agregarButton.TabIndex = 5;
-            this.agregarButton.Text = "Agregar";
-            this.agregarButton.UseVisualStyleBackColor = true;
-            this.agregarButton.Click += new System.EventHandler(this.agregarButton_Click);
-            // 
-            // quitarButton
-            // 
-            this.quitarButton.Location = new System.Drawing.Point(513, 282);
-            this.quitarButton.Name = "quitarButton";
-            this.quitarButton.Size = new System.Drawing.Size(65, 46);
-            this.quitarButton.TabIndex = 5;
-            this.quitarButton.Text = "Quitar";
-            this.quitarButton.UseVisualStyleBackColor = true;
-            this.quitarButton.Click += new System.EventHandler(this.quitarButton_Click);
-            // 
             // confirmarButton
             // 
             this.confirmarButton.Location = new System.Drawing.Point(910, 528);
@@ -361,19 +329,48 @@
             this.fechaLabel.TabIndex = 0;
             this.fechaLabel.Text = "-";
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(252, 59);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 6;
+            this.btnBuscar.Text = "buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Location = new System.Drawing.Point(512, 323);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(75, 23);
+            this.btnQuitar.TabIndex = 7;
+            this.btnQuitar.Text = "Quitar";
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(512, 252);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 7;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // NuevaCompraView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1047, 582);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnQuitar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.cancelarButton);
             this.Controls.Add(this.confirmarButton);
-            this.Controls.Add(this.quitarButton);
-            this.Controls.Add(this.agregarButton);
             this.Controls.Add(this.materialesDataGrid);
             this.Controls.Add(this.compraDataGrid);
-            this.Controls.Add(this.buscarButton);
             this.Controls.Add(this.codigoTextView);
             this.Controls.Add(this.telefonoLabel);
             this.Controls.Add(this.label12);
@@ -404,7 +401,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox codigoTextView;
-        private System.Windows.Forms.Button buscarButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -424,11 +420,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colStockMinimo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStockDisponible;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button agregarButton;
-        private System.Windows.Forms.Button quitarButton;
         private System.Windows.Forms.Button confirmarButton;
         private System.Windows.Forms.Button cancelarButton;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label fechaLabel;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnQuitar;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }

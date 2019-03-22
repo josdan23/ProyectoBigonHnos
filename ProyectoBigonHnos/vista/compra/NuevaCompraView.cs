@@ -12,7 +12,7 @@ using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.vista
 {
-    public partial class NuevaCompraView : Form, ICompraView
+     partial class NuevaCompraView : Form, ICompraView
     {
 
         private CompraControlador controlador { get; set; }
@@ -42,8 +42,6 @@ namespace ProyectoBigonHnos.vista
 
             controlador.iniciarNuevaCompra();
             controlador.mostrarMateriales();
-
-            //listar todos los materiales
         }
 
         public void mostratCamposProveedor(string razonSocial, string cuit, string domicilio, string telefono)
@@ -84,7 +82,34 @@ namespace ProyectoBigonHnos.vista
             //obtener el id de la fila, y llamar a controlador para que encuentra la linea de compra y actualziar
         }
 
-        private void agregarButton_Click(object sender, EventArgs e)
+      
+
+        private void confirmarButton_Click(object sender, EventArgs e)
+        {
+            //llamar al controlador y confirmar la compra
+            controlador.confirmarComprar();
+        }
+
+
+        public void close()
+        {
+            Dispose();
+        }
+
+        private void cancelarButton_Click(object sender, EventArgs e)
+        {
+            close();
+        }
+
+        
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            int idProveedor = int.Parse(codigoTextView.Text);
+
+            controlador.agregarProveedor(idProveedor);
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
             //llamar a controlador y agregar el material a la compra
             //agregar el material a la tabla
@@ -113,10 +138,10 @@ namespace ProyectoBigonHnos.vista
                 primeraVez = false;
 
             if (!estaAgregado)*/
-                controlador.agregarMaterial(idMaterial, cantidad);
+            controlador.agregarMaterial(idMaterial, cantidad);
         }
 
-        private void quitarButton_Click(object sender, EventArgs e)
+        private void btnQuitar_Click(object sender, EventArgs e)
         {
             //llamar el controlador y quitar el material de la compra
 
@@ -124,31 +149,6 @@ namespace ProyectoBigonHnos.vista
 
             Console.WriteLine("fila eliminada: " + index);
             controlador.cancelarMaterial(index + 1);
-        }
-
-        private void confirmarButton_Click(object sender, EventArgs e)
-        {
-            //llamar al controlador y confirmar la compra
-            controlador.confirmarComprar();
-        }
-
-        private void buscarButton_Click(object sender, EventArgs e)
-        {
-            //llamar el controlador para agregar el proveedor a la compra
-
-            int idProveedor = int.Parse(codigoTextView.Text);
-
-            controlador.agregarProveedor(idProveedor);
-        }
-
-        public void close()
-        {
-            Dispose();
-        }
-
-        private void cancelarButton_Click(object sender, EventArgs e)
-        {
-            close();
         }
     }
 }
