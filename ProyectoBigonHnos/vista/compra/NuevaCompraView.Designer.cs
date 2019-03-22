@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.codigoTextView = new System.Windows.Forms.TextBox();
@@ -42,9 +42,6 @@
             this.domicilioLabel = new System.Windows.Forms.Label();
             this.telefonoLabel = new System.Windows.Forms.Label();
             this.compraDataGrid = new System.Windows.Forms.DataGridView();
-            this.colIdMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.materialesDataGrid = new System.Windows.Forms.DataGridView();
             this.colIdMat = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +57,9 @@
             this.btnQuitar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.colIdMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.compraDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialesDataGrid)).BeginInit();
             this.panel1.SuspendLayout();
@@ -172,14 +172,14 @@
             this.compraDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.compraDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.compraDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.compraDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.compraDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.compraDataGrid.ColumnHeadersHeight = 40;
             this.compraDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.compraDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -200,21 +200,6 @@
             this.compraDataGrid.Size = new System.Drawing.Size(409, 385);
             this.compraDataGrid.TabIndex = 3;
             // 
-            // colIdMaterial
-            // 
-            this.colIdMaterial.HeaderText = "Id Material";
-            this.colIdMaterial.Name = "colIdMaterial";
-            // 
-            // colDescripcion
-            // 
-            this.colDescripcion.HeaderText = "Descripción";
-            this.colDescripcion.Name = "colDescripcion";
-            // 
-            // colCantidad
-            // 
-            this.colCantidad.HeaderText = "Cantidad";
-            this.colCantidad.Name = "colCantidad";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -234,14 +219,14 @@
             this.materialesDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.materialesDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialesDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.materialesDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.materialesDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.materialesDataGrid.ColumnHeadersHeight = 40;
             this.materialesDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colIdMat,
@@ -286,11 +271,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(40, 252);
+            this.label12.Location = new System.Drawing.Point(40, 261);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(112, 13);
+            this.label12.Size = new System.Drawing.Size(113, 13);
             this.label12.TabIndex = 0;
-            this.label12.Text = "Materiales Disponibles";
+            this.label12.Text = "Materiales en deposito";
             // 
             // confirmarButton
             // 
@@ -378,6 +363,21 @@
             this.panel1.Size = new System.Drawing.Size(442, 144);
             this.panel1.TabIndex = 8;
             // 
+            // colIdMaterial
+            // 
+            this.colIdMaterial.HeaderText = "Id Material";
+            this.colIdMaterial.Name = "colIdMaterial";
+            // 
+            // colDescripcion
+            // 
+            this.colDescripcion.HeaderText = "Descripción";
+            this.colDescripcion.Name = "colDescripcion";
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.HeaderText = "Cantidad Solicitada";
+            this.colCantidad.Name = "colCantidad";
+            // 
             // NuevaCompraView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -424,9 +424,6 @@
         private System.Windows.Forms.Label domicilioLabel;
         private System.Windows.Forms.Label telefonoLabel;
         private System.Windows.Forms.DataGridView compraDataGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colIdMaterial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView materialesDataGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdMat;
@@ -442,5 +439,8 @@
         private System.Windows.Forms.Button btnQuitar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIdMaterial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
     }
 }
