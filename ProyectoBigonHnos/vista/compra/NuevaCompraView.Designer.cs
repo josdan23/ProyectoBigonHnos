@@ -42,9 +42,6 @@
             this.domicilioLabel = new System.Windows.Forms.Label();
             this.telefonoLabel = new System.Windows.Forms.Label();
             this.compraDataGrid = new System.Windows.Forms.DataGridView();
-            this.colIdMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.materialesDataGrid = new System.Windows.Forms.DataGridView();
             this.colIdMat = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +57,10 @@
             this.btnQuitar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.idLineaCompraCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIdMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.compraDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialesDataGrid)).BeginInit();
             this.panel1.SuspendLayout();
@@ -183,6 +184,7 @@
             this.compraDataGrid.ColumnHeadersHeight = 40;
             this.compraDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.compraDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idLineaCompraCol,
             this.colIdMaterial,
             this.colDescripcion,
             this.colCantidad});
@@ -201,24 +203,6 @@
             this.compraDataGrid.ShowRowErrors = false;
             this.compraDataGrid.Size = new System.Drawing.Size(409, 385);
             this.compraDataGrid.TabIndex = 3;
-            // 
-            // colIdMaterial
-            // 
-            this.colIdMaterial.HeaderText = "Id Material";
-            this.colIdMaterial.Name = "colIdMaterial";
-            this.colIdMaterial.ReadOnly = true;
-            // 
-            // colDescripcion
-            // 
-            this.colDescripcion.HeaderText = "Descripción";
-            this.colDescripcion.Name = "colDescripcion";
-            this.colDescripcion.ReadOnly = true;
-            // 
-            // colCantidad
-            // 
-            this.colCantidad.HeaderText = "Cantidad Solicitada";
-            this.colCantidad.Name = "colCantidad";
-            this.colCantidad.ReadOnly = true;
             // 
             // label11
             // 
@@ -389,6 +373,30 @@
             this.panel1.Size = new System.Drawing.Size(442, 144);
             this.panel1.TabIndex = 8;
             // 
+            // idLineaCompraCol
+            // 
+            this.idLineaCompraCol.HeaderText = "#";
+            this.idLineaCompraCol.Name = "idLineaCompraCol";
+            this.idLineaCompraCol.ReadOnly = true;
+            // 
+            // colIdMaterial
+            // 
+            this.colIdMaterial.HeaderText = "Id Material";
+            this.colIdMaterial.Name = "colIdMaterial";
+            this.colIdMaterial.ReadOnly = true;
+            // 
+            // colDescripcion
+            // 
+            this.colDescripcion.HeaderText = "Descripción";
+            this.colDescripcion.Name = "colDescripcion";
+            this.colDescripcion.ReadOnly = true;
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.HeaderText = "Cantidad Solicitada";
+            this.colCantidad.Name = "colCantidad";
+            this.colCantidad.ReadOnly = true;
+            // 
             // NuevaCompraView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -450,6 +458,7 @@
         private System.Windows.Forms.Button btnQuitar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idLineaCompraCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdMaterial;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;

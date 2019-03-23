@@ -59,9 +59,9 @@ namespace ProyectoBigonHnos.vista.compra
             materialesDataGrid.Rows.Add(id, descripcion, stockMinimo, stockDisponible);
         }
 
-        public void agregarMaterialACompra(int id, string descripcion, int cantidad)
+        public void agregarMaterialACompra(int idLinea, int id, string descripcion, int cantidad)
         {
-            compraDataGrid.Rows.Add(id, descripcion, cantidad);
+            compraDataGrid.Rows.Add(idLinea, id, descripcion, cantidad);
         }
 
         public void quitarMaterialDeCompra(int id)
@@ -115,34 +115,10 @@ namespace ProyectoBigonHnos.vista.compra
             //llamar a controlador y agregar el material a la compra
             //agregar el material a la tabla
 
-            CantidadCompraMaterialView view = new CantidadCompraMaterialView();
-            view.ShowDialog().ToString();
-
-            int cantidad = view.dataIngresada;
+            int cantidad = mostrarDialogoDeCantidadIngresada(); 
 
             int idMaterial = int.Parse(materialesDataGrid.CurrentRow.Cells[0].Value.ToString());
 
-            bool estaAgregado = false;
-
-            /*if (!primeraVez)
-            {
-
-                foreach (DataGridViewRow row in compraDataGrid.Rows)
-                {
-                    int idMaterialCompra = int.Parse(row.Cells[0].Value.ToString());
-                    Console.WriteLine(idMaterialCompra);
-                    if (idMaterial == idMaterialCompra )
-                    {
-                        Console.WriteLine("esta agregado");
-                        estaAgregado = true;
-                    }
-
-                }
-            }
-            else
-                primeraVez = false;
-
-            if (!estaAgregado)*/
             controlador.agregarMaterial(idMaterial, cantidad);
         }
 
@@ -150,15 +126,22 @@ namespace ProyectoBigonHnos.vista.compra
         {
             //llamar el controlador y quitar el material de la compra
 
-            int index = compraDataGrid.CurrentCell.RowIndex;
+            int index = int.Parse(compraDataGrid.CurrentRow.Cells[0].Value.ToString());
 
-            Console.WriteLine("fila eliminada: " + index);
-            controlador.cancelarMaterial(index + 1);
+            controlador.cancelarMaterial(index);
         }
 
         public void mostrarFechaActualDeCompra(DateTime fechaDeCompra)
         {
             fechaLabel.Text = fechaDeCompra.ToString();
+        }
+
+        private int mostrarDialogoDeCantidadIngresada()
+        {
+            CantidadCompraMaterialView view = new CantidadCompraMaterialView();
+            view.ShowDialog().ToString();
+
+            return view.dataIngresada;
         }
     }
 }

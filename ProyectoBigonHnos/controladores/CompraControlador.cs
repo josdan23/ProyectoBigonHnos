@@ -114,10 +114,10 @@ namespace ProyectoBigonHnos.dominio
         {
             Material material = negocio.buscarMaterial(idMaterial);
            
-            compra.crearLineaDeCompra(material, cantidad);
+            int idLineaCompra = compra.crearLineaDeCompra(material, cantidad);
 
             NuevaCompraView view = (NuevaCompraView)vista;
-            view.agregarMaterialACompra(material.IdMaterial, material.Descripcion, cantidad);
+            view.agregarMaterialACompra(idLineaCompra, material.IdMaterial, material.Descripcion, cantidad);
         }
 
         public void confirmarComprar()
@@ -133,7 +133,6 @@ namespace ProyectoBigonHnos.dominio
         {
             compra.lineasDeCompra.RemoveAt(idLineaDeCompra);
             mostrarLineasDeCompra();
-
         }
 
         public void UnirVista(ICompraView view)
@@ -146,12 +145,13 @@ namespace ProyectoBigonHnos.dominio
             vista.ActualizarVista();
 
             NuevaCompraView view = (NuevaCompraView)vista;
-
+            int i = 0;
             foreach(LineaCompra linea in compra.lineasDeCompra)
             {
                 Material material = linea.material;
 
-                view.agregarMaterialACompra(material.IdMaterial, material.Descripcion, linea.cantidad);
+                view.agregarMaterialACompra(i,material.IdMaterial, material.Descripcion, linea.cantidad);
+                i++;
             }
         }
 

@@ -26,10 +26,11 @@ namespace ProyectoBigonHnos.dominio
             this.proveedor = proveedor;
         }
 
-        public void crearLineaDeCompra(Material material, int cantidad)
+        public int crearLineaDeCompra(Material material, int cantidad)
         {
             LineaCompra lc = new LineaCompra(material, cantidad);
             lineasDeCompra.Add(lc);
+            return lineasDeCompra.Count-1;
         }
 
         public void seHaCompletado()
