@@ -41,5 +41,10 @@ namespace ProyectoBigonHnos.dominio
         {
             return string.Format("idDomicilio: {0}\nCalle: {1}\nNumero: {2}\n{3}",IdDomicilio, Calle, Numero, Localidad);
         }
+
+        public string domicilioToString()
+        {
+            return string.Format("{0}-{1}, {2} - {3}", Calle, Numero, Localidad.Nombre, Localidad.Provincia.Nombre);
+        }
     }
 }

@@ -62,6 +62,10 @@ namespace ProyectoBigonHnos.dominio
             }
         }
 
+        internal void finalizarCompra()
+        {
+            estado = EstadoCompra.COMPLETADO;
+        }
     }
 
     public enum EstadoCompra

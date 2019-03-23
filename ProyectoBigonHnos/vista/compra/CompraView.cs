@@ -66,5 +66,21 @@ namespace ProyectoBigonHnos.vista.compra
 
             controlador.eliminarCompra(id);
         }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            CompraDetalleView vista = new CompraDetalleView();
+            vista.UnirControlador(controlador);
+
+            int idSeleccionado = int.Parse(comprasRealizadasDataGrid.CurrentRow.Cells[0].Value.ToString());
+            controlador.mostrarCompraCargada(idSeleccionado);
+            vista.ShowDialog();
+
+            controlador.UnirVista(this);
+            ActualizarVista();
+            
+        }
+
+   
     }
 }

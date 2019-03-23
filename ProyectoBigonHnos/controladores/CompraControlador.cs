@@ -73,10 +73,29 @@ namespace ProyectoBigonHnos.dominio
             }
         }
 
+        internal void finalizarCompra(int idCompraCargada)
+        {
+            Compra compra = PersistenciaFacade.getInstance().obtenerObjeto<Compra>(idCompraCargada);
+            compra.finalizarCompra();
+
+            CompraDetalleView view = (CompraDetalleView)vista;
+            view.mostrarEstado(compra.estado.ToString());
+        }
+
         internal void eliminarCompra(int id)
         {
             PersistenciaFacade.getInstance().eliminarObjeto<Compra>(id);
             vista.ActualizarVista();
+        }
+
+        internal bool esCompraConfirmada(int idCompra)
+        {
+            Compra compra = PersistenciaFacade.getInstance().obtenerObjeto<Compra>(idCompra);
+
+            if (compra.estado.Equals(EstadoCompra.COMPLETADO))
+                return true;
+            else
+                return false;
         }
 
         internal void mostrarMateriales()
@@ -110,7 +129,6 @@ namespace ProyectoBigonHnos.dominio
             vista.close();
         }
 
-
         internal void cancelarMaterial(int idLineaDeCompra)
         {
             compra.lineasDeCompra.RemoveAt(idLineaDeCompra);
@@ -135,7 +153,32 @@ namespace ProyectoBigonHnos.dominio
 
                 view.agregarMaterialACompra(material.IdMaterial, material.Descripcion, linea.cantidad);
             }
-
         }
+
+        public void mostrarCompraCargada(int idCompraCargada)
+        {
+            Compra compra = PersistenciaFacade.getInstance().obtenerObjeto<Compra>(idCompraCargada);
+
+            CompraDetalleView view = (CompraDetalleView)vista;
+            view.mostrarIdCompra(compra.IdCompra);
+            view.mostrarRazonSocial(compra.proveedor.RazonSocial);
+            view.mostrarCuil(compra.proveedor.Cuit);
+            view.mostrarDomicilio(compra.proveedor.Domicilios[0].domicilioToString());
+            view.mostrarTelefono(compra.proveedor.Telefonos[0].Numero);
+            view.mostrarFechaDeCompra(compra.fechaCompra);
+            view.mostrarEstado(compra.estado.ToString());
+
+            foreach(LineaCompra linea in compra.lineasDeCompra)
+            {
+                view.mostrarMaterial(linea.material.IdMaterial, linea.material.Descripcion, linea.cantidad);
+            }
+
+            if (compra.estado.Equals(EstadoCompra.COMPLETADO))
+                view.cambiarEstadoBotonAprobar(false);
+            else
+                view.cambiarEstadoBotonAprobar(true);
+        }
+
+        
     }
 }
