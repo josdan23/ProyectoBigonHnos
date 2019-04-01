@@ -40,13 +40,15 @@
             this.tboxMinimo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.unidadCmbox = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGuardar
             // 
             this.btnGuardar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnGuardar.Location = new System.Drawing.Point(325, 296);
+            this.btnGuardar.Location = new System.Drawing.Point(329, 333);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 6;
@@ -57,7 +59,7 @@
             // btnCancelar
             // 
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(232, 296);
+            this.btnCancelar.Location = new System.Drawing.Point(236, 333);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 7;
@@ -99,7 +101,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(93, 214);
+            this.label4.Location = new System.Drawing.Point(93, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 2;
@@ -107,7 +109,7 @@
             // 
             // tboxStockDisponible
             // 
-            this.tboxStockDisponible.Location = new System.Drawing.Point(202, 211);
+            this.tboxStockDisponible.Location = new System.Drawing.Point(202, 247);
             this.tboxStockDisponible.Name = "tboxStockDisponible";
             this.tboxStockDisponible.Size = new System.Drawing.Size(100, 20);
             this.tboxStockDisponible.TabIndex = 4;
@@ -115,7 +117,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(107, 250);
+            this.label5.Location = new System.Drawing.Point(107, 286);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 13);
             this.label5.TabIndex = 2;
@@ -123,7 +125,7 @@
             // 
             // tboxMinimo
             // 
-            this.tboxMinimo.Location = new System.Drawing.Point(202, 247);
+            this.tboxMinimo.Location = new System.Drawing.Point(202, 283);
             this.tboxMinimo.Name = "tboxMinimo";
             this.tboxMinimo.Size = new System.Drawing.Size(100, 20);
             this.tboxMinimo.TabIndex = 5;
@@ -150,6 +152,26 @@
             this.panel1.Size = new System.Drawing.Size(436, 93);
             this.panel1.TabIndex = 11;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(112, 212);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Precio sobre";
+            // 
+            // unidadCmbox
+            // 
+            this.unidadCmbox.FormattingEnabled = true;
+            this.unidadCmbox.Items.AddRange(new object[] {
+            "unidad",
+            "cm2"});
+            this.unidadCmbox.Location = new System.Drawing.Point(202, 209);
+            this.unidadCmbox.Name = "unidadCmbox";
+            this.unidadCmbox.Size = new System.Drawing.Size(100, 21);
+            this.unidadCmbox.TabIndex = 12;
+            // 
             // NuevoMaterialView
             // 
             this.AcceptButton = this.btnGuardar;
@@ -157,13 +179,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(436, 343);
+            this.ClientSize = new System.Drawing.Size(436, 382);
+            this.Controls.Add(this.unidadCmbox);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tboxMinimo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tboxStockDisponible);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tboxPrecio);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tboxDescripcion);
             this.Controls.Add(this.label1);
@@ -196,5 +220,7 @@
         private System.Windows.Forms.TextBox tboxMinimo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox unidadCmbox;
     }
 }

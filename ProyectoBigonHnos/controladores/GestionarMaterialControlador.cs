@@ -27,9 +27,9 @@ namespace ProyectoBigonHnos.controladores
             catalogo = CatalogoDeMateriales.getInstancia();
         }
 
-        public void agregarNuevoMaterial(String descripcion, double precio, int stockMinimo, int stockDisponible)
+        public void agregarNuevoMaterial(String descripcion, double precio, int stockMinimo, int stockDisponible, String unidad)
         {
-            catalogo.crearMaterial(descripcion, precio, stockDisponible, stockMinimo);
+            catalogo.crearMaterial(descripcion, precio, stockDisponible, stockMinimo, unidad);
         }
 
         public void eliminarMaterial (int idMaterial)
@@ -50,6 +50,7 @@ namespace ProyectoBigonHnos.controladores
             int stockDisponible = 0;
             int stockMinimo = 0;
             int idMaterial = 0;
+            string unidad = "";
 
             foreach(Material material in catalogo.obtenerMateriales())
             {
@@ -59,19 +60,22 @@ namespace ProyectoBigonHnos.controladores
                 precio = material.Precio;
                 stockDisponible = material.StockDisponible;
                 stockMinimo = material.StockMinimo;
+                unidad = material.tipoUnidad;
+                
 
-                vista.mostrarMaterial(idMaterial, descripcion, cantidad, precio, stockDisponible, stockMinimo);
+                vista.mostrarMaterial(idMaterial, descripcion, cantidad, precio, stockDisponible, stockMinimo, unidad );
             }
         }
 
         private void cargarMateriales()
         {
-            agregarNuevoMaterial("madera1",  31.2, 10, 12);
-            agregarNuevoMaterial("madera2",  31.2, 10, 12);
-            agregarNuevoMaterial("madera3", 31.2, 10, 12);
-            agregarNuevoMaterial("madera4", 31.2, 10, 12);
-            agregarNuevoMaterial("madera5", 31.2, 10, 12);
-            agregarNuevoMaterial("madera6", 31.2, 10, 12);
+            agregarNuevoMaterial("madera1", 31.2, 10, 12, "cm2");
+            agregarNuevoMaterial("madera2", 31.2, 10, 12, "cm2");
+            agregarNuevoMaterial("madera3", 31.2, 10, 12, "unidad");
+            agregarNuevoMaterial("madera4", 31.2, 10, 12, "unidad");
+            agregarNuevoMaterial("madera5", 31.2, 10, 12, "cm2");
+            agregarNuevoMaterial("madera6", 31.2, 10, 12, "unidad");
+            agregarNuevoMaterial("madera6", 31.2, 10, 12, "cm2");
         }
 
         public void detalleMaterial (int idMaterial)
@@ -84,7 +88,8 @@ namespace ProyectoBigonHnos.controladores
                 material.Cantidad,
                 material.Precio,
                 material.StockDisponible,
-                material.StockMinimo);
+                material.StockMinimo,
+                material.tipoUnidad);
         }
     }
 }

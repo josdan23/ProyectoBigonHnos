@@ -23,7 +23,7 @@ namespace ProyectoBigonHnos.vista.materiales
         }
 
 
-        public void mostrarMaterial(int id, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
+        public void mostrarMaterial(int id, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo, string unidad)
         {
             tboxIdMaterial.Text = id.ToString();
             tboxDescripcion.Text = descripcion;
@@ -31,7 +31,9 @@ namespace ProyectoBigonHnos.vista.materiales
             tboxPrecio.Text = precio.ToString();
             tboxStockDisponible.Text = stockDisponible.ToString();
             tboxMinimo.Text = stockMinimo.ToString();
+            
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {

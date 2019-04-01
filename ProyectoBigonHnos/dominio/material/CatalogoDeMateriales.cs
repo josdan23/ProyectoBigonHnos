@@ -40,9 +40,9 @@ namespace ProyectoBigonHnos.dominio
             }
         }
 
-        public void crearMaterial(string descripcion,  double precio, int stockDisponible, int stockMinimo)
+        public void crearMaterial(string descripcion, double precio, int stockDisponible, int stockMinimo, String unidad)
         {
-            persistencia.registrarObjeto(new Material(descripcion, precio, stockDisponible, stockMinimo));
+            persistencia.registrarObjeto(new Material(descripcion, precio, stockDisponible, stockMinimo, unidad));
 
         }
 

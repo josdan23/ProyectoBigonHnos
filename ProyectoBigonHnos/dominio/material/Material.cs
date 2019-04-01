@@ -14,14 +14,16 @@ namespace ProyectoBigonHnos.dominio
         public int StockDisponible { get; set; }
         public int StockMinimo { get; set; }
         public int Cantidad;
+        public string tipoUnidad{get;set;}
 
-        public Material(string descripcion, double precio, int stockDisponible, int stockMinimo)
+        public Material(string descripcion, double precio, int stockDisponible, int stockMinimo, string unidad)
         {
             Descripcion = descripcion;
             Precio = precio;
             StockDisponible = stockDisponible;
             StockMinimo = stockMinimo;
             Cantidad = stockDisponible;
+            this.tipoUnidad = unidad;
         }
 
         public Material(string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
@@ -54,6 +56,12 @@ namespace ProyectoBigonHnos.dominio
         }
 
 
+        public enum TipoUnidad
+        {
+            CM2,
+            UNIDAD,
+            PROBANDNO
+        };
 
     }
 }

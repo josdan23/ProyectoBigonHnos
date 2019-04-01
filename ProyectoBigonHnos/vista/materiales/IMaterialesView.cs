@@ -8,6 +8,6 @@ namespace ProyectoBigonHnos.vista.materiales
 {
     interface IMaterialesView
     {
-        void mostrarMaterial(int id, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo);
+        void mostrarMaterial(int id, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo, String unidad);
     }
 }

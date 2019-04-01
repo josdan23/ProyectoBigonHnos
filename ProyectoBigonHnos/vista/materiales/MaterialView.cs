@@ -60,9 +60,9 @@ namespace ProyectoBigonHnos.vista
             refrescarTabla();
         }
 
-        public void mostrarMaterial(int id, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
+        public void mostrarMaterial(int id, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo, string unidad)
         {
-            dgvMateriales.Rows.Add(id, descripcion, cantidad, precio, stockDisponible, stockMinimo);
+            dgvMateriales.Rows.Add(id, descripcion, cantidad, precio, stockDisponible, stockMinimo, unidad);
         }
 
         public int obtenerIdMaterialSeleccionado()
