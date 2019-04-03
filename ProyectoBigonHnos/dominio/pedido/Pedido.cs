@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoBigonHnos.dominio.pedido;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,9 +16,12 @@ namespace ProyectoBigonHnos.dominio
         public DateTime fechaDePedido;
         public DateTime fechaDeEntrega;
         public string estado;
-        public Cliente cliente{ get; set;}
+        public Cliente cliente { get; set; }
 
         public List<LineaPedido> lineasDePedido;
+        public List<ListaDeMateriales> ListaDeMateriales { get; set; }
+        public List<CostoExtra> costosExtras { get; set; }
+
 
         public Pedido()
         {
@@ -27,6 +31,8 @@ namespace ProyectoBigonHnos.dominio
             estado = "nuevo";
 
             lineasDePedido = new List<LineaPedido>();
+            ListaDeMateriales = new List<ListaDeMateriales>();
+            costosExtras = new List<CostoExtra>();
         }
 
 
@@ -38,13 +44,44 @@ namespace ProyectoBigonHnos.dominio
             
         }
 
+        public void agregarMaterialAUsar(Material material, int cantidad)
+        {
+            ListaDeMateriales.Add(new ListaDeMateriales(material, cantidad));
+        }
 
+        public double obtenerSubtotalDeMateriales()
+        {
+            double subtotal = 0;
+            foreach(ListaDeMateriales material in ListaDeMateriales)
+            {
+                subtotal = subtotal + material.getSubtotal();
+            }
+            return subtotal;
+        }
+
+        public void agregarCostoExtra(string descripcion, double subtotal)
+        {
+            costosExtras.Add(new CostoExtra(descripcion, subtotal));
+        }
+
+        public double obtenerSubtotalCostosExtras()
+        {
+            double subtotal = 0;
+            foreach(CostoExtra costo in costosExtras)
+            {
+                subtotal = subtotal + costo.importe;
+            }
+
+            return subtotal;
+        }
+        /*
         public void agregarComponente(string descripcion, double alto, double ancho, double profundidad, string colorPrimario, string colorSecundario, int cantidad, Material material)
         {
             //LineaDePedido lp = lineasDePedido.ElementAt(lineasDePedido.Count - 1);
             LineaPedido lp = lineasDePedido.Last();
             lp.crearComponente(descripcion, alto, ancho, profundidad, colorPrimario, colorSecundario, cantidad, material);
         }
+        */
 
 
         public void agregarCliente(Cliente cliente)
@@ -82,15 +119,7 @@ namespace ProyectoBigonHnos.dominio
 
         public double obtenerTotal()
         {
-            //TODO: obtener subtotal
-            double total = 0.0;
-
-            foreach(LineaPedido lp in lineasDePedido)
-            {
-                total += lp.obtenerSubtotal();
-            }
-
-            return total;
+            return obtenerSubtotalCostosExtras() + obtenerSubtotalDeMateriales();
         }
 
         public List<LineaPedido> obtenerLineasDePedido()

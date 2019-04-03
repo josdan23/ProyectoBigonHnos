@@ -1,15 +1,16 @@
 ﻿using ProyectoBigonHnos.vista;
 using ProyectoBigonHnos.vista.pedidos;
+using ProyectoBigonHnos.dominio.pedido;
 using System;
 
 namespace ProyectoBigonHnos.dominio
 {
-    class PedidoControlador
+    public class PedidoControlador
     {
         private Negocio negocio;
         private Pedido pedido;
 
-        IPedidoView vista;
+        private IPedidoView vista;
 
         public PedidoControlador()
         {
@@ -31,11 +32,25 @@ namespace ProyectoBigonHnos.dominio
             pedido.crearLineaDePedido(descripcion, alto, ancho, profundidad, colorPrimario, colorSecundario, cantidad);
         }
 
+        /*
         public void agregarComponente(string descripcion, double alto, double ancho, double profundidad, string colorPrimario, string colorSecundario, int cantidad, int idMaterial)
         {
             Material material = Negocio.getNegocio().buscarMaterial(idMaterial);
            
             pedido.agregarComponente(descripcion, alto, ancho, profundidad, colorPrimario, colorSecundario, cantidad, material);
+        }
+        */
+
+        public void agregarCostoExtra(string descripcion, double importe)
+        {
+            pedido.agregarCostoExtra(descripcion, importe);
+        }
+
+        public void agregarMaterialAUsar(int idMaterial, int cantidad)
+        {
+            Material material = negocio.buscarMaterial(idMaterial);
+
+            pedido.agregarMaterialAUsar(material, cantidad);
         }
 
         public void agregarCliente(string dni)
@@ -83,12 +98,12 @@ namespace ProyectoBigonHnos.dominio
 
         public void mostrarMateriales()
         {
-            if (vista.GetType() == typeof(NuevoComponenteView))
+            if (vista.GetType() == typeof(AgregarMaterialesNecesariosView))
             {
-                NuevoComponenteView viewNuevoComponente = (NuevoComponenteView)vista;
+                AgregarMaterialesNecesariosView view = (AgregarMaterialesNecesariosView)vista;
                 foreach (Material unMaterial in CatalogoDeMateriales.getInstancia().obtenerMateriales())
                 {
-                    viewNuevoComponente.listarMaterial(unMaterial.IdMaterial, unMaterial.Descripcion);
+                    view.mostrarMaterialDisponible(unMaterial.IdMaterial, unMaterial.Descripcion, unMaterial.tipoUnidad, unMaterial.Precio);
                 }
             }
         }
@@ -131,43 +146,53 @@ namespace ProyectoBigonHnos.dominio
 
                 //TODO: ver el precio del producto
             }
-        } 
-        
-        public void mostrarComponentes(int indexProducto)
-        {
-            NuevoPedidoView view = (NuevoPedidoView)vista;
-            if (indexProducto < pedido.lineasDePedido.Count)
-            {
-                foreach (Componente comp in pedido.lineasDePedido[indexProducto].producto.componentes)
-                {
-                    view.listarComponente(
-                        comp.descripcion,
-                        comp.altura,
-                        comp.ancho,
-                        comp.profundidad,
-                        comp.colorPrimario,
-                        comp.colorSecundario,
-                        comp.cantidad,
-                        comp.material.Descripcion,
-                        0.0); //TODO: arreglar el precio del producto
-                }
-            }  
         }
 
+        internal string mostrarSubtotalCargosExtras()
+        {
+            return pedido.obtenerSubtotalCostosExtras().ToString() ;
+        }
+
+        internal string mostrarSubtotalMaterial()
+        {
+            return pedido.obtenerSubtotalDeMateriales().ToString() ;
+        }
+
+        /*
+public void mostrarComponentes(int indexProducto)
+{
+   NuevoPedidoView view = (NuevoPedidoView)vista;
+   if (indexProducto < pedido.lineasDePedido.Count)
+   {
+       foreach (Componente comp in pedido.lineasDePedido[indexProducto].producto.componentes)
+       {
+           view.listarComponente(
+               comp.descripcion,
+               comp.altura,
+               comp.ancho,
+               comp.profundidad,
+               comp.colorPrimario,
+               comp.colorSecundario,
+               comp.cantidad,
+               comp.material.Descripcion,
+               0.0); //TODO: arreglar el precio del producto
+       }
+   }  
+}
+*/
         public void mostrarPedidos()
         {
             PedidosView view = (PedidosView) vista;
 
             foreach (Pedido pedido in Negocio.getNegocio().obtenerTodosPedidos())
             {
-                view.listarPedido(pedido.idPedido.ToString(), pedido.cliente.Apellido, pedido.fechaDePedido);
+                view.listarPedido(pedido.idPedido.ToString(), pedido.cliente.Apellido, pedido.fechaDePedido, pedido.obtenerTotal());
             }
         }
 
-        public void mostrarTotal()
+        public string mostrarTotal()
         {
-            NuevoPedidoView view = (NuevoPedidoView) vista;
-            view.mostrarTotal(pedido.obtenerTotal().ToString());
+            return pedido.obtenerTotal().ToString();
         }
 
         public void eliminarPedido(int idPedido)
@@ -175,5 +200,24 @@ namespace ProyectoBigonHnos.dominio
             Negocio.getNegocio().borrarPedido(idPedido);
         }
 
+        public void mostrarCargosExtrasDelPedido()
+        {
+            NuevoPedidoView view = (NuevoPedidoView)vista;
+
+            foreach(CostoExtra cargosExtra in pedido.costosExtras)
+            {
+                view.mostrarCargosExtras(cargosExtra.descripcion, cargosExtra.importe);
+            }
+        }
+
+        public void mostrarMaterialesDelPedido()
+        {
+            NuevoPedidoView view = (NuevoPedidoView)vista;
+
+            foreach (ListaDeMateriales materiales in pedido.ListaDeMateriales)
+            {
+                view.mostrarMaterialesSeleccionados(materiales.material.Descripcion, materiales.material.Precio, materiales.cantidad, materiales.getSubtotal());
+            }
+        }
     }
 }

@@ -33,6 +33,7 @@ namespace ProyectoBigonHnos.vista.pedidos
             //TODO: hacer funcionalidad para elegir el id del combobox
             int idMaterial = obtenerIdMaterialSeleccionado(cboxMaterial.SelectedItem.ToString());
 
+            /*
             controlador.agregarComponente(
                 descripcion,
                 alto,
@@ -42,6 +43,7 @@ namespace ProyectoBigonHnos.vista.pedidos
                 colorSecundario,
                 cantidad,
                 1);
+                */
 
             Dispose();
         }

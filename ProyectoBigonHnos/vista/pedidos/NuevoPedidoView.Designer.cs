@@ -44,26 +44,29 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dgvComponentes = new System.Windows.Forms.DataGridView();
-            this.colDescripcionComp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAltoComp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAnchoCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProfundidadCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colColorPCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colColorSCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaterialCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCantidadCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecioCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAgregarCostoExtra = new System.Windows.Forms.Button();
+            this.dgvCostosExtras = new System.Windows.Forms.DataGridView();
+            this.descripcionCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.montoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMateriales = new System.Windows.Forms.DataGridView();
+            this.materialCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCancelarPedido = new System.Windows.Forms.Button();
             this.btnGuardarPedido = new System.Windows.Forms.Button();
-            this.btnNuevoComponente = new System.Windows.Forms.Button();
+            this.btnAgregarMaterial = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.lblTotal = new System.Windows.Forms.Label();
+            this.subtotalMaterialLabel = new System.Windows.Forms.Label();
+            this.subtotalCostosExtrasLabel = new System.Windows.Forms.Label();
+            this.totalLabel = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.lblFechaPedido = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -81,7 +84,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvComponentes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCostosExtras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMateriales)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -120,7 +124,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(265, 77);
+            this.label7.Location = new System.Drawing.Point(261, 77);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 0;
@@ -129,7 +133,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(233, 47);
+            this.label6.Location = new System.Drawing.Point(229, 47);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 13);
             this.label6.TabIndex = 0;
@@ -140,9 +144,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(231, 14);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.Size = new System.Drawing.Size(62, 13);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Domicilio";
+            this.label5.Text = "DOMICILIO";
             // 
             // label4
             // 
@@ -174,7 +178,7 @@
             // lblMail
             // 
             this.lblMail.AutoSize = true;
-            this.lblMail.Location = new System.Drawing.Point(322, 77);
+            this.lblMail.Location = new System.Drawing.Point(311, 77);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(10, 13);
             this.lblMail.TabIndex = 0;
@@ -183,7 +187,7 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(322, 47);
+            this.lblTelefono.Location = new System.Drawing.Point(311, 47);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(10, 13);
             this.lblTelefono.TabIndex = 0;
@@ -192,7 +196,7 @@
             // lblDomicilio
             // 
             this.lblDomicilio.AutoSize = true;
-            this.lblDomicilio.Location = new System.Drawing.Point(322, 14);
+            this.lblDomicilio.Location = new System.Drawing.Point(311, 14);
             this.lblDomicilio.Name = "lblDomicilio";
             this.lblDomicilio.Size = new System.Drawing.Size(10, 13);
             this.lblDomicilio.TabIndex = 0;
@@ -237,10 +241,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Teal;
-            this.panel2.Controls.Add(this.dgvComponentes);
+            this.panel2.Controls.Add(this.btnAgregarCostoExtra);
+            this.panel2.Controls.Add(this.dgvCostosExtras);
+            this.panel2.Controls.Add(this.dgvMateriales);
             this.panel2.Controls.Add(this.btnCancelarPedido);
             this.panel2.Controls.Add(this.btnGuardarPedido);
-            this.panel2.Controls.Add(this.btnNuevoComponente);
+            this.panel2.Controls.Add(this.btnAgregarMaterial);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 393);
@@ -248,72 +254,73 @@
             this.panel2.Size = new System.Drawing.Size(1030, 258);
             this.panel2.TabIndex = 2;
             // 
-            // dgvComponentes
+            // btnAgregarCostoExtra
             // 
-            this.dgvComponentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvComponentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colDescripcionComp,
-            this.colAltoComp,
-            this.colAnchoCom,
-            this.colProfundidadCom,
-            this.colColorPCom,
-            this.colColorSCom,
-            this.colMaterialCom,
-            this.colCantidadCom,
-            this.colPrecioCom});
-            this.dgvComponentes.Location = new System.Drawing.Point(16, 44);
-            this.dgvComponentes.Name = "dgvComponentes";
-            this.dgvComponentes.Size = new System.Drawing.Size(984, 124);
-            this.dgvComponentes.TabIndex = 3;
+            this.btnAgregarCostoExtra.Location = new System.Drawing.Point(533, 20);
+            this.btnAgregarCostoExtra.Name = "btnAgregarCostoExtra";
+            this.btnAgregarCostoExtra.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarCostoExtra.TabIndex = 5;
+            this.btnAgregarCostoExtra.Text = "Agregar";
+            this.btnAgregarCostoExtra.UseVisualStyleBackColor = true;
+            this.btnAgregarCostoExtra.Click += new System.EventHandler(this.btnAgregarCostoExtra_Click);
             // 
-            // colDescripcionComp
+            // dgvCostosExtras
             // 
-            this.colDescripcionComp.HeaderText = "Descripción";
-            this.colDescripcionComp.Name = "colDescripcionComp";
+            this.dgvCostosExtras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCostosExtras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.descripcionCol,
+            this.montoCol});
+            this.dgvCostosExtras.Location = new System.Drawing.Point(533, 49);
+            this.dgvCostosExtras.Name = "dgvCostosExtras";
+            this.dgvCostosExtras.Size = new System.Drawing.Size(467, 145);
+            this.dgvCostosExtras.TabIndex = 4;
             // 
-            // colAltoComp
+            // descripcionCol
             // 
-            this.colAltoComp.HeaderText = "Alto";
-            this.colAltoComp.Name = "colAltoComp";
+            this.descripcionCol.HeaderText = "Descripción";
+            this.descripcionCol.Name = "descripcionCol";
             // 
-            // colAnchoCom
+            // montoCol
             // 
-            this.colAnchoCom.HeaderText = "Ancho";
-            this.colAnchoCom.Name = "colAnchoCom";
+            this.montoCol.HeaderText = "Monto";
+            this.montoCol.Name = "montoCol";
             // 
-            // colProfundidadCom
+            // dgvMateriales
             // 
-            this.colProfundidadCom.HeaderText = "Profundidad";
-            this.colProfundidadCom.Name = "colProfundidadCom";
+            this.dgvMateriales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMateriales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.materialCol,
+            this.precioCol,
+            this.cantidadCol,
+            this.totalCol});
+            this.dgvMateriales.Location = new System.Drawing.Point(16, 44);
+            this.dgvMateriales.Name = "dgvMateriales";
+            this.dgvMateriales.Size = new System.Drawing.Size(445, 150);
+            this.dgvMateriales.TabIndex = 3;
             // 
-            // colColorPCom
+            // materialCol
             // 
-            this.colColorPCom.HeaderText = "Color Primario";
-            this.colColorPCom.Name = "colColorPCom";
+            this.materialCol.HeaderText = "Material";
+            this.materialCol.Name = "materialCol";
             // 
-            // colColorSCom
+            // precioCol
             // 
-            this.colColorSCom.HeaderText = "Color Secundario";
-            this.colColorSCom.Name = "colColorSCom";
+            this.precioCol.HeaderText = "Precio";
+            this.precioCol.Name = "precioCol";
             // 
-            // colMaterialCom
+            // cantidadCol
             // 
-            this.colMaterialCom.HeaderText = "Material";
-            this.colMaterialCom.Name = "colMaterialCom";
+            this.cantidadCol.HeaderText = "Cantidad";
+            this.cantidadCol.Name = "cantidadCol";
             // 
-            // colCantidadCom
+            // totalCol
             // 
-            this.colCantidadCom.HeaderText = "Cantidad";
-            this.colCantidadCom.Name = "colCantidadCom";
-            // 
-            // colPrecioCom
-            // 
-            this.colPrecioCom.HeaderText = "Precio";
-            this.colPrecioCom.Name = "colPrecioCom";
+            this.totalCol.HeaderText = "Total";
+            this.totalCol.Name = "totalCol";
             // 
             // btnCancelarPedido
             // 
-            this.btnCancelarPedido.Location = new System.Drawing.Point(823, 191);
+            this.btnCancelarPedido.Location = new System.Drawing.Point(823, 223);
             this.btnCancelarPedido.Name = "btnCancelarPedido";
             this.btnCancelarPedido.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarPedido.TabIndex = 2;
@@ -323,7 +330,7 @@
             // 
             // btnGuardarPedido
             // 
-            this.btnGuardarPedido.Location = new System.Drawing.Point(925, 191);
+            this.btnGuardarPedido.Location = new System.Drawing.Point(925, 223);
             this.btnGuardarPedido.Name = "btnGuardarPedido";
             this.btnGuardarPedido.Size = new System.Drawing.Size(75, 23);
             this.btnGuardarPedido.TabIndex = 2;
@@ -331,24 +338,24 @@
             this.btnGuardarPedido.UseVisualStyleBackColor = true;
             this.btnGuardarPedido.Click += new System.EventHandler(this.btnGuardarPedido_Click);
             // 
-            // btnNuevoComponente
+            // btnAgregarMaterial
             // 
-            this.btnNuevoComponente.Location = new System.Drawing.Point(103, 15);
-            this.btnNuevoComponente.Name = "btnNuevoComponente";
-            this.btnNuevoComponente.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevoComponente.TabIndex = 2;
-            this.btnNuevoComponente.Text = "Nuevo";
-            this.btnNuevoComponente.UseVisualStyleBackColor = true;
-            this.btnNuevoComponente.Click += new System.EventHandler(this.btnNuevoComponente_Click);
+            this.btnAgregarMaterial.Location = new System.Drawing.Point(107, 15);
+            this.btnAgregarMaterial.Name = "btnAgregarMaterial";
+            this.btnAgregarMaterial.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarMaterial.TabIndex = 2;
+            this.btnAgregarMaterial.Text = "Agregar";
+            this.btnAgregarMaterial.UseVisualStyleBackColor = true;
+            this.btnAgregarMaterial.Click += new System.EventHandler(this.btnNuevoMaterial_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(13, 20);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 13);
+            this.label11.Size = new System.Drawing.Size(87, 13);
             this.label11.TabIndex = 0;
-            this.label11.Text = "COMPONENTE";
+            this.label11.Text = "Materiales a usar";
             // 
             // panel3
             // 
@@ -375,8 +382,12 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.dateTimePicker1);
-            this.panel5.Controls.Add(this.lblTotal);
+            this.panel5.Controls.Add(this.subtotalMaterialLabel);
+            this.panel5.Controls.Add(this.subtotalCostosExtrasLabel);
+            this.panel5.Controls.Add(this.totalLabel);
+            this.panel5.Controls.Add(this.label16);
             this.panel5.Controls.Add(this.lblFechaPedido);
+            this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.label8);
@@ -388,33 +399,69 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(180, 70);
+            this.dateTimePicker1.Location = new System.Drawing.Point(180, 47);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 4;
             // 
-            // lblTotal
+            // subtotalMaterialLabel
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(177, 106);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(31, 13);
-            this.lblTotal.TabIndex = 3;
-            this.lblTotal.Text = "Total";
+            this.subtotalMaterialLabel.AutoSize = true;
+            this.subtotalMaterialLabel.Location = new System.Drawing.Point(177, 83);
+            this.subtotalMaterialLabel.Name = "subtotalMaterialLabel";
+            this.subtotalMaterialLabel.Size = new System.Drawing.Size(31, 13);
+            this.subtotalMaterialLabel.TabIndex = 3;
+            this.subtotalMaterialLabel.Text = "Total";
+            // 
+            // subtotalCostosExtrasLabel
+            // 
+            this.subtotalCostosExtrasLabel.AutoSize = true;
+            this.subtotalCostosExtrasLabel.Location = new System.Drawing.Point(177, 107);
+            this.subtotalCostosExtrasLabel.Name = "subtotalCostosExtrasLabel";
+            this.subtotalCostosExtrasLabel.Size = new System.Drawing.Size(31, 13);
+            this.subtotalCostosExtrasLabel.TabIndex = 3;
+            this.subtotalCostosExtrasLabel.Text = "Total";
+            // 
+            // totalLabel
+            // 
+            this.totalLabel.AutoSize = true;
+            this.totalLabel.Location = new System.Drawing.Point(177, 131);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(31, 13);
+            this.totalLabel.TabIndex = 3;
+            this.totalLabel.Text = "Total";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(54, 86);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(94, 13);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "subtotal materiales";
             // 
             // lblFechaPedido
             // 
             this.lblFechaPedido.AutoSize = true;
-            this.lblFechaPedido.Location = new System.Drawing.Point(177, 38);
+            this.lblFechaPedido.Location = new System.Drawing.Point(177, 20);
             this.lblFechaPedido.Name = "lblFechaPedido";
             this.lblFechaPedido.Size = new System.Drawing.Size(80, 13);
             this.lblFechaPedido.TabIndex = 2;
             this.lblFechaPedido.Text = "lblFechaPedido";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(51, 107);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(98, 13);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "subtotal costos ext.";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(115, 106);
+            this.label9.Location = new System.Drawing.Point(115, 131);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(34, 13);
             this.label9.TabIndex = 0;
@@ -423,7 +470,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(58, 70);
+            this.label12.Location = new System.Drawing.Point(54, 53);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(95, 13);
             this.label12.TabIndex = 0;
@@ -432,7 +479,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(58, 39);
+            this.label8.Location = new System.Drawing.Point(58, 20);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 13);
             this.label8.TabIndex = 0;
@@ -542,7 +589,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvComponentes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCostosExtras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMateriales)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -567,19 +615,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dgvComponentes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcionComp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAltoComp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAnchoCom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colProfundidadCom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colColorPCom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colColorSCom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaterialCom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCantidadCom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioCom;
         private System.Windows.Forms.Button btnCancelarPedido;
         private System.Windows.Forms.Button btnGuardarPedido;
-        private System.Windows.Forms.Button btnNuevoComponente;
+        private System.Windows.Forms.Button btnAgregarMaterial;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label9;
@@ -603,9 +641,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colColorSecundario;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
-        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.Label lblFechaPedido;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnAgregarCostoExtra;
+        private System.Windows.Forms.DataGridView dgvCostosExtras;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn montoCol;
+        private System.Windows.Forms.DataGridView dgvMateriales;
+        private System.Windows.Forms.DataGridViewTextBoxColumn materialCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalCol;
+        private System.Windows.Forms.Label subtotalMaterialLabel;
+        private System.Windows.Forms.Label subtotalCostosExtrasLabel;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label13;
     }
 }

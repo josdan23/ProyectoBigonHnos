@@ -41,6 +41,7 @@
             this.columnCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.totalCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -157,7 +158,8 @@
             this.dgvPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columnPedido,
             this.columnCliente,
-            this.columnFecha});
+            this.columnFecha,
+            this.totalCol});
             this.dgvPedidos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvPedidos.Location = new System.Drawing.Point(63, 122);
             this.dgvPedidos.MultiSelect = false;
@@ -173,7 +175,7 @@
             this.dgvPedidos.ShowCellToolTips = false;
             this.dgvPedidos.ShowEditingIcon = false;
             this.dgvPedidos.ShowRowErrors = false;
-            this.dgvPedidos.Size = new System.Drawing.Size(425, 230);
+            this.dgvPedidos.Size = new System.Drawing.Size(469, 230);
             this.dgvPedidos.TabIndex = 2;
             // 
             // columnPedido
@@ -204,6 +206,12 @@
             this.label1.Size = new System.Drawing.Size(193, 18);
             this.label1.TabIndex = 3;
             this.label1.Text = "Lista de pedidos registrados";
+            // 
+            // totalCol
+            // 
+            this.totalCol.HeaderText = "Total";
+            this.totalCol.Name = "totalCol";
+            this.totalCol.ReadOnly = true;
             // 
             // PedidosView
             // 
@@ -237,5 +245,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnFecha;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalCol;
     }
 }

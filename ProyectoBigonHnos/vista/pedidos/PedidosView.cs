@@ -26,9 +26,9 @@ namespace ProyectoBigonHnos.vista
             ActualizarVista();
         }
 
-        public void listarPedido(string nroPedido, string cliente, DateTime fecha)
+        public void listarPedido(string nroPedido, string cliente, DateTime fecha, double total)
         {
-            dgvPedidos.Rows.Add(nroPedido, cliente, fecha);
+            dgvPedidos.Rows.Add(nroPedido, cliente, fecha, total);
         }
 
         public void unirControlador(PedidoControlador controlador)

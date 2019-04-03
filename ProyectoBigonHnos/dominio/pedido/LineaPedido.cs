@@ -24,12 +24,12 @@ namespace ProyectoBigonHnos.dominio
         {
             producto = new Producto(descripcion, alto, ancho, profundidad, colorPrimario, colorSecundario);
         }
-
+        /*
         public void crearComponente(string descripcion, double alto, double ancho, double profundidad,
             string colorPrimario, string colorSecundario, int cantidad, Material material) 
         {
             producto.crearComponente(descripcion, alto, ancho, profundidad, colorPrimario, colorSecundario, cantidad, material);
-        }
+        }*/
 
         public void mostrar()
         {
@@ -37,10 +37,12 @@ namespace ProyectoBigonHnos.dominio
             producto.mostrar();
         }
 
+        /*
         public double obtenerSubtotal()
         {
             //TODO: calcular el subtotal de acuerdo al producto 
             return 0.1;
         }
+        */
     }
 }

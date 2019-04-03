@@ -42,10 +42,12 @@ namespace ProyectoBigonHnos.vista.pedidos
 
         private void btnNuevoComponente_Click(object sender, EventArgs e)
         {
-            NuevoComponenteView vista = new NuevoComponenteView();
+            /*
+            NuevoComponenteView vista = new NuevoComponenteView()
             vista.unirControlador(controlador);
             vista.ShowDialog();
             ActualizarVista();
+            */
         }
 
         public void unirControlador(PedidoControlador controlador)
@@ -100,13 +102,18 @@ namespace ProyectoBigonHnos.vista.pedidos
 
         public void ActualizarVista()
         {
-            dgvComponentes.Rows.Clear();
+
             dgvProductos.Rows.Clear();
             controlador.unirVista(this);
             controlador.mostrarCliente();
             controlador.mostrarProductos();
-            controlador.mostrarComponentes(0);
+            //controlador.mostrarComponentes(0);
             controlador.mostrarTotal();
+            dgvCostosExtras.Rows.Clear();
+            controlador.mostrarCargosExtrasDelPedido();
+            dgvMateriales.Rows.Clear();
+            controlador.mostrarMaterialesDelPedido();
+            mostrarSubtotalyTotal();
         }
 
         public void listarProducto(string descripcion, double alto, double ancho, double prof, string colorP, string colorS, int cant, double precio)
@@ -121,7 +128,7 @@ namespace ProyectoBigonHnos.vista.pedidos
                 cant,
                 precio);
         }
-
+        /*
         public void listarComponente(string descripcion, double alto, double ancho, double prof, string colorP, string colorS, int cant, string material, double precio)
         {
             dgvComponentes.Rows.Add(
@@ -135,10 +142,56 @@ namespace ProyectoBigonHnos.vista.pedidos
                 material,
                 precio);
         }
-
-        public void mostrarTotal(string total)
+        */
+        public void mostrarTotal(double total)
         {
-            lblTotal.Text = total;
+            totalLabel.Text = total.ToString();
+        }
+
+        public void mostrarSubtotalMateriales(double subtotal)
+        {
+            subtotalMaterialLabel.Text = subtotal.ToString();
+        }
+
+        public void mostrarSubtotalCostosExtras(double subtotal)
+        {
+            subtotalCostosExtrasLabel.Text = subtotal.ToString();
+        }
+
+        private void btnAgregarCostoExtra_Click(object sender, EventArgs e)
+        {
+            AgregarCostosExtrasView vista = new AgregarCostosExtrasView();
+            vista.unirControlador(controlador);
+            vista.ShowDialog();
+            unirControlador(controlador);
+            ActualizarVista();
+        }
+
+        public void mostrarCargosExtras(string descripcion, double monto)
+        {
+            dgvCostosExtras.Rows.Add(descripcion, monto);
+        }
+
+        private void btnNuevoMaterial_Click(object sender, EventArgs e)
+        {
+            AgregarMaterialesNecesariosView vista = new AgregarMaterialesNecesariosView();
+            vista.unirControlador(controlador);
+            vista.ShowDialog();
+            unirControlador(controlador);
+            ActualizarVista();
+        }
+
+        public void mostrarMaterialesSeleccionados(string descripcionMaterial, double precio, int cantidad, double subtotal)
+        {
+            dgvMateriales.Rows.Add(descripcionMaterial, precio, cantidad, subtotal);
+            
+        }
+
+        public void mostrarSubtotalyTotal()
+        {
+            subtotalCostosExtrasLabel.Text = controlador.mostrarSubtotalCargosExtras();
+            subtotalMaterialLabel.Text = controlador.mostrarSubtotalMaterial();
+            totalLabel.Text = controlador.mostrarTotal();
         }
     }
 }

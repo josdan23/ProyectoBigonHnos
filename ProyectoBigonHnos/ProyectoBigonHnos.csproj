@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -73,8 +74,12 @@
     <Compile Include="data\CompraDao\ICompraDao.cs" />
     <Compile Include="data\ConceptoDao\ConceptoDaoListImpl.cs" />
     <Compile Include="data\ConceptoDao\IConceptoDao.cs" />
+    <Compile Include="data\CostoExtraDao\CostoExtraDaoListImpl.cs" />
+    <Compile Include="data\CostoExtraDao\ICostoExtraDao.cs" />
     <Compile Include="data\CRUD.cs" />
     <Compile Include="data\DaoFactory.cs" />
+    <Compile Include="data\ListaMaterialesDao\IListaMaterialDao.cs" />
+    <Compile Include="data\ListaMaterialesDao\ListaMaterialDaoListImpl.cs" />
     <Compile Include="data\PersistenciaFacade.cs" />
     <Compile Include="data\DBConector.cs" />
     <Compile Include="data\DomicilioDao\DomicilioDAOImpl.cs" />
@@ -136,9 +141,11 @@
     <Compile Include="dominio\empleado\Empleado.cs" />
     <Compile Include="dominio\comunes\Localidad.cs" />
     <Compile Include="dominio\empleado\GrupoFamiliar.cs" />
+    <Compile Include="dominio\pedido\CostoExtra.cs" />
     <Compile Include="dominio\pedido\LineaPedido.cs" />
     <Compile Include="dominio\material\Material.cs" />
     <Compile Include="dominio\Negocio.cs" />
+    <Compile Include="dominio\pedido\ListaDeMateriales.cs" />
     <Compile Include="dominio\pedido\Pedido.cs" />
     <Compile Include="controladores\PedidoControlador.cs" />
     <Compile Include="dominio\comunes\Persona.cs" />
@@ -279,6 +286,18 @@
     <Compile Include="vista\pedidos\AgregarClienteView.Designer.cs">
       <DependentUpon>AgregarClienteView.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\pedidos\AgregarCostosExtrasView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\pedidos\AgregarCostosExtrasView.Designer.cs">
+      <DependentUpon>AgregarCostosExtrasView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\pedidos\AgregarMaterialesNecesariosView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\pedidos\AgregarMaterialesNecesariosView.Designer.cs">
+      <DependentUpon>AgregarMaterialesNecesariosView.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\pedidos\IPedidoView.cs" />
     <Compile Include="vista\pedidos\NuevoComponenteView.cs">
       <SubType>Form</SubType>
@@ -344,7 +363,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include=".dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
     <None Include="App.config" />
+    <None Include="Dockerfile" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -408,6 +431,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\pedidos\AgregarClienteView.resx">
       <DependentUpon>AgregarClienteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\pedidos\AgregarCostosExtrasView.resx">
+      <DependentUpon>AgregarCostosExtrasView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\pedidos\AgregarMaterialesNecesariosView.resx">
+      <DependentUpon>AgregarMaterialesNecesariosView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\pedidos\NuevoComponenteView.resx">
       <DependentUpon>NuevoComponenteView.cs</DependentUpon>

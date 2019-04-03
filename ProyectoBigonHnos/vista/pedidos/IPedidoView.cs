@@ -3,7 +3,7 @@ using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.vista.pedidos
 {
-    interface IPedidoView
+    public interface IPedidoView
     {
         void unirControlador(PedidoControlador controlador);
 
