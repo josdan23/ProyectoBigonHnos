@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoBigonHnos.controladores;
 using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.vista.pedidos
 {
     public partial class AgregarCostosExtrasView : Form, IPedidoView
     {
-        private PedidoControlador controlador;
+        private IPedidoController controlador;
 
         public AgregarCostosExtrasView()
         {
@@ -26,10 +27,16 @@ namespace ProyectoBigonHnos.vista.pedidos
             MontoTxtBox.Text = "";
         }
 
-        public void unirControlador(PedidoControlador controlador)
+        public void unirControlador(IPedidoController controlador)
         {
             this.controlador = controlador;
-            controlador.unirVista(this);
+            if (controlador is PedidoControlador)
+            {
+                ((PedidoControlador)controlador).unirVista(this);
+            }
+            else
+                ((EditarPedidoControlador)controlador).unirVista(this);
+            
         }
 
         private void AgregarBtn_Click(object sender, EventArgs e)
@@ -37,7 +44,10 @@ namespace ProyectoBigonHnos.vista.pedidos
             string descripcion = descripcionTxtBox.Text;
             double monto = double.Parse(MontoTxtBox.Text);
 
-            controlador.agregarCostoExtra(descripcion, monto);
+            if (controlador is PedidoControlador)
+                ((PedidoControlador)controlador).agregarCostoExtra(descripcion, monto);
+            else
+                ((EditarPedidoControlador)controlador).agregarCostoExtra(descripcion, monto);
             ActualizarVista();
         }
 

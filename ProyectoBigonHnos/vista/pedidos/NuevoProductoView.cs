@@ -1,4 +1,5 @@
-﻿using ProyectoBigonHnos.dominio;
+﻿using ProyectoBigonHnos.controladores;
+using ProyectoBigonHnos.dominio;
 using System;
 using System.Windows.Forms;
 
@@ -7,7 +8,7 @@ namespace ProyectoBigonHnos.vista.pedidos
      partial class NuevoProductoView : Form, IPedidoView
     {
 
-        private PedidoControlador controlador;
+        private IPedidoController controlador;
 
         public NuevoProductoView()
         {
@@ -49,10 +50,17 @@ namespace ProyectoBigonHnos.vista.pedidos
             tboxCantidad.Text = cantidad.ToString();
         }
 
-        public void unirControlador(PedidoControlador controlador)
+        public void unirControlador(IPedidoController controlador)
         {
             this.controlador = controlador;
-            controlador.unirVista(this);
+            if (controlador is PedidoControlador)
+                ((PedidoControlador)controlador).unirVista(this);
+            else
+                ((EditarPedidoControlador)controlador).unirVista(this);
+        }
+
+        public void unirControlador(EditarPedidoControlador controlador)
+        { 
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -65,7 +73,9 @@ namespace ProyectoBigonHnos.vista.pedidos
             string colorSecundario = tboxColorS.Text;
             int cantidad = int.Parse(tboxCantidad.Text);
 
-            controlador.agregarProducto(
+            if (controlador is PedidoControlador) { 
+
+            ((PedidoControlador)controlador).agregarProducto(
                 descripcion,
                 alto,
                 ancho,
@@ -73,6 +83,18 @@ namespace ProyectoBigonHnos.vista.pedidos
                 colorPrimario,
                 colorSecundario,
                 cantidad);
+            }
+            else
+            {
+                ((EditarPedidoControlador)controlador).agregarNuevoProducto(
+                descripcion,
+                alto,
+                ancho,
+                profundidad,
+                colorPrimario,
+                colorSecundario,
+                cantidad);
+            }
 
             Dispose();
         }

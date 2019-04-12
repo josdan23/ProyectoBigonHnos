@@ -1,4 +1,5 @@
-﻿using ProyectoBigonHnos.dominio;
+﻿using ProyectoBigonHnos.controladores;
+using ProyectoBigonHnos.dominio;
 using System;
 using System.Windows.Forms;
 
@@ -6,18 +7,18 @@ namespace ProyectoBigonHnos.vista.pedidos
 {
     partial class NuevoComponenteView : Form, IPedidoView
     {
-        private PedidoControlador controlador;
+        private IPedidoController controlador;
 
         public NuevoComponenteView()
         {
             InitializeComponent();
         }
 
-        public void unirControlador(PedidoControlador controlador)
+        public void unirControlador(IPedidoController controlador)
         {
             this.controlador = controlador;
-            controlador.unirVista(this);
-            controlador.mostrarMateriales();
+            ((PedidoControlador)controlador).unirVista(this);
+            ((PedidoControlador)controlador).mostrarMateriales();
         }
 
         private void button1_Click(object sender, EventArgs e)

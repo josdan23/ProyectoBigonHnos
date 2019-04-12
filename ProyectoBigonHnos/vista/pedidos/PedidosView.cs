@@ -2,12 +2,13 @@
 using System.Windows.Forms;
 using ProyectoBigonHnos.vista.pedidos;
 using ProyectoBigonHnos.dominio;
+using ProyectoBigonHnos.controladores;
 
 namespace ProyectoBigonHnos.vista
 {
     partial class PedidosView : UserControl, IPedidoView
     {
-        public PedidoControlador Controlador { get; set; }
+        public IPedidoController Controlador { get; set; }
 
         public PedidosView()
         {
@@ -20,9 +21,9 @@ namespace ProyectoBigonHnos.vista
         {
             NuevoPedidoView vista = new NuevoPedidoView();
             vista.unirControlador(Controlador);
-            Controlador.crearNuevoPedido();
+            ((PedidoControlador)Controlador).crearNuevoPedido();
             vista.ShowDialog();
-            Controlador.unirVista(this);
+            ((PedidoControlador)Controlador).unirVista(this);
             ActualizarVista();
         }
 
@@ -31,16 +32,16 @@ namespace ProyectoBigonHnos.vista
             dgvPedidos.Rows.Add(nroPedido, cliente, fecha, total);
         }
 
-        public void unirControlador(PedidoControlador controlador)
+        public void unirControlador(IPedidoController controlador)
         {
             Controlador = controlador;
-            Controlador.unirVista(this);
+            ((PedidoControlador)Controlador).unirVista(this);
         }
 
         public void ActualizarVista()
         {
             limpiarTabla();
-            Controlador.mostrarPedidos();
+            ((PedidoControlador)Controlador).mostrarPedidos();
         }
 
         private void limpiarTabla()
@@ -53,8 +54,21 @@ namespace ProyectoBigonHnos.vista
             int idPedidoSeleccionado = int.Parse(dgvPedidos.CurrentRow.Cells[0].Value.ToString());
 
             Console.WriteLine(idPedidoSeleccionado);
-            Controlador.eliminarPedido(idPedidoSeleccionado);
+            ((PedidoControlador)Controlador).eliminarPedido(idPedidoSeleccionado);
             ActualizarVista();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            int idPedido = int.Parse(dgvPedidos.CurrentRow.Cells[0].Value.ToString());
+
+            EditarPedidoView vista = new EditarPedidoView();
+            IPedidoController controlador = new EditarPedidoControlador();
+            vista.unirControlador(controlador);
+            ((EditarPedidoControlador)controlador).recuperarPedido(idPedido);
+
+            vista.ShowDialog();
+            
         }
     }
 }

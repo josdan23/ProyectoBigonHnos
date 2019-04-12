@@ -1,4 +1,5 @@
-﻿using ProyectoBigonHnos.dominio;
+﻿using ProyectoBigonHnos.controladores;
+using ProyectoBigonHnos.dominio;
 using System;
 using System.Windows.Forms;
 
@@ -6,8 +7,8 @@ namespace ProyectoBigonHnos.vista.pedidos
 {
     partial class AgregarClienteView : Form, IPedidoView
     {
-        public PedidoControlador controlador;
-
+        public IPedidoController controller;
+        
         public AgregarClienteView()
         {
             InitializeComponent();
@@ -56,21 +57,32 @@ namespace ProyectoBigonHnos.vista.pedidos
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             string dni = tbBuscarDni.Text;
-            controlador.buscarCliente(dni);
+            if (controller is PedidoControlador)
+                ((PedidoControlador)controller).buscarCliente(dni);
+            else
+                ((EditarPedidoControlador)controller).buscarCliente(dni);
 
         }
 
-        public void unirControlador(PedidoControlador controlador)
+        public void unirControlador(IPedidoController controlador)
         {
-            this.controlador = controlador;
-            controlador.unirVista(this);
+            controller = controlador;
+            if (controlador is PedidoControlador)
+                ((PedidoControlador)controller).unirVista(this);
+            else
+                ((EditarPedidoControlador)controller).unirVista(this);
             Console.WriteLine("estoy en vista de agregarCliente");
         }
+
+   
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string dniClienteDePedido = lblDni.Text;
-            controlador.agregarCliente(dniClienteDePedido);
+            if (controller is PedidoControlador)
+                ((PedidoControlador)controller).agregarCliente(dniClienteDePedido);
+            else
+                ((EditarPedidoControlador)controller).actualizarCliente(dniClienteDePedido);
             Dispose();
         }
 

@@ -40,8 +40,8 @@
             this.columnPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
             this.totalCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -116,6 +116,7 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -196,6 +197,12 @@
             this.columnFecha.Name = "columnFecha";
             this.columnFecha.ReadOnly = true;
             // 
+            // totalCol
+            // 
+            this.totalCol.HeaderText = "Total";
+            this.totalCol.Name = "totalCol";
+            this.totalCol.ReadOnly = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -206,12 +213,6 @@
             this.label1.Size = new System.Drawing.Size(193, 18);
             this.label1.TabIndex = 3;
             this.label1.Text = "Lista de pedidos registrados";
-            // 
-            // totalCol
-            // 
-            this.totalCol.HeaderText = "Total";
-            this.totalCol.Name = "totalCol";
-            this.totalCol.ReadOnly = true;
             // 
             // PedidosView
             // 

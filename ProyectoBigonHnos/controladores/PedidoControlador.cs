@@ -2,10 +2,11 @@
 using ProyectoBigonHnos.vista.pedidos;
 using ProyectoBigonHnos.dominio.pedido;
 using System;
+using ProyectoBigonHnos.controladores;
 
 namespace ProyectoBigonHnos.dominio
 {
-    public class PedidoControlador
+    public class PedidoControlador: IPedidoController
     {
         private Negocio negocio;
         private Pedido pedido;

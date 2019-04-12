@@ -58,10 +58,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controladores\ConceptoControlador.cs" />
+    <Compile Include="controladores\EditarPedidoControlador.cs" />
     <Compile Include="controladores\EmpleadoControlador.cs" />
     <Compile Include="controladores\GestionarClientesControlador.cs" />
     <Compile Include="controladores\GestionarEmpleadoControlador.cs" />
     <Compile Include="controladores\GestionarProveedorControlador.cs" />
+    <Compile Include="controladores\IPedidoController.cs" />
     <Compile Include="controladores\LiquidacionControlador.cs" />
     <Compile Include="controladores\LoginControlador.cs" />
     <Compile Include="controladores\VentaControlador.cs" />
@@ -305,6 +307,12 @@
     <Compile Include="vista\pedidos\NuevoComponenteView.Designer.cs">
       <DependentUpon>NuevoComponenteView.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\pedidos\EditarPedidoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\pedidos\EditarPedidoView.Designer.cs">
+      <DependentUpon>EditarPedidoView.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\pedidos\NuevoPedidoView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -440,6 +448,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\pedidos\NuevoComponenteView.resx">
       <DependentUpon>NuevoComponenteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\pedidos\EditarPedidoView.resx">
+      <DependentUpon>EditarPedidoView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\pedidos\NuevoPedidoView.resx">
       <DependentUpon>NuevoPedidoView.cs</DependentUpon>

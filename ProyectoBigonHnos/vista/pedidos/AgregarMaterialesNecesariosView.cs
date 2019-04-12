@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoBigonHnos.controladores;
 using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.vista.pedidos
 {
     public partial class AgregarMaterialesNecesariosView : Form, IPedidoView
     {
-        public PedidoControlador controlador { get; set; }
+        public IPedidoController controlador { get; set; }
 
         public AgregarMaterialesNecesariosView()
         {
@@ -28,11 +29,19 @@ namespace ProyectoBigonHnos.vista.pedidos
         }
 
 
-        public void unirControlador(PedidoControlador controlador)
+        public void unirControlador(IPedidoController controlador)
         {
             this.controlador = controlador;
-            controlador.unirVista(this);
-            controlador.mostrarMateriales();
+            if (controlador is PedidoControlador)
+            {
+                ((PedidoControlador)controlador).unirVista(this);
+                ((PedidoControlador)controlador).mostrarMateriales();
+            }
+            else
+            {
+                ((EditarPedidoControlador)controlador).unirVista(this);
+                ((EditarPedidoControlador)controlador).mostrarMateriales();
+            }
         }
 
         public void mostrarMaterialDisponible(int id, string descripcion, string unidad, double precio)
@@ -45,7 +54,10 @@ namespace ProyectoBigonHnos.vista.pedidos
             int idMaterial = int.Parse(materialesDisponiblesDGV.CurrentRow.Cells[0].Value.ToString());
             int cantidad = int.Parse(cantidadTxBox.Text);
 
-            controlador.agregarMaterialAUsar(idMaterial, cantidad);
+            if (controlador is PedidoControlador)
+                ((PedidoControlador)controlador).agregarMaterialAUsar(idMaterial, cantidad);
+            else
+                ((EditarPedidoControlador)controlador).agregarNuevoMaterialDisponible(idMaterial, cantidad);
             ActualizarVista();
         }
 

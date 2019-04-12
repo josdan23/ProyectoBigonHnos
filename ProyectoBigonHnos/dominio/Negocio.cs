@@ -251,5 +251,10 @@ namespace ProyectoBigonHnos.dominio
         {
             persistencia.actualiarObjeto<Empleado>(empleadoActualizado);
         }
+
+        public void actualizarPedido(Pedido pedidoActualizado)
+        {
+            persistencia.actualiarObjeto<Pedido>(pedidoActualizado);
+        }
     }
 }
