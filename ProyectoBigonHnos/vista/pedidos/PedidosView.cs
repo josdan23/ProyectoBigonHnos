@@ -29,7 +29,7 @@ namespace ProyectoBigonHnos.vista
 
         public void listarPedido(string nroPedido, string cliente, DateTime fecha, double total)
         {
-            dgvPedidos.Rows.Add(nroPedido, cliente, fecha, total);
+            dgvPedidos.Rows.Add(nroPedido, cliente, fecha.ToShortDateString(), total);
         }
 
         public void unirControlador(IPedidoController controlador)
