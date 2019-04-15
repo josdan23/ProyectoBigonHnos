@@ -34,7 +34,6 @@ namespace ProyectoBigonHnos.vista.empleado
             Controlador.agregarInformacionPersonal(
                 tboxApellido.Text,
                 tboxNombre.Text,
-                tboxDni.Text,
                 tboxCuil.Text);
 
             Controlador.agregarDomicilio(
@@ -48,7 +47,6 @@ namespace ProyectoBigonHnos.vista.empleado
 
 
             Controlador.agregarUsuario(
-                tboxUserName.Text,
                 tboxPassword.Text,
                 ckboxAdministrador.Checked);
 

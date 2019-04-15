@@ -28,7 +28,7 @@ namespace ProyectoBigonHnos.controladores
         {
             foreach (Empleado empleado in Negocio.getNegocio().obtenerTodosEmpleados())
             {
-                if (empleado.Usuario.Username == usuario && empleado.Usuario.Password == password)
+                if (  empleado.Usuario.Password == password)
                 {
                     EmpleadoLogeado = empleado;
                     mostrarVistaPrincipal();

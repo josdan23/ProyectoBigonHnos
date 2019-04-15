@@ -19,7 +19,7 @@ namespace ProyectoBigonHnos.data.UsuarioDao
         public void actualizar(dominio.Usuario t)
         {
             string query = string.Format("update usuario set nameuser = \'{0}\', password = \'{1}\', es_admin = {2} where id_usuario = {3};",
-                t.Username, 
+           
                 t.Password,
                 t.Administrador == true ? 1:0,
                 t.IdUsuario);
@@ -68,7 +68,7 @@ namespace ProyectoBigonHnos.data.UsuarioDao
             int admin = t.esAdmin() ? 1 : 0;
 
             string query = string.Format("insert into usuario (nameuser, password, es_admin) values (\'{0}\', \'{1}\', {2});",
-                t.Username,
+         
                 t.Password,
                 admin);
 
@@ -82,7 +82,7 @@ namespace ProyectoBigonHnos.data.UsuarioDao
             string password = (string)registro.ElementAt(2);
             bool esAdmin = (bool) registro.ElementAt(3);
 
-            dominio.Usuario nuevoUsuario = new dominio.Usuario(userName, password, esAdmin);
+            dominio.Usuario nuevoUsuario = new dominio.Usuario( password, esAdmin);
             nuevoUsuario.IdUsuario  = idUsuario;
 
             return nuevoUsuario;

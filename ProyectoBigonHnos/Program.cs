@@ -27,9 +27,9 @@ namespace ProyectoBigonHnos
 
             EmpleadoControlador controlador = new EmpleadoControlador();
             controlador.crearEmpleado();
-            controlador.agregarInformacionPersonal("yapura", "daniel", "23234234", "234234234");
+            controlador.agregarInformacionPersonal("yapura", "daniel", "20350533444");
             controlador.agregarLegajo("1111");
-            controlador.agregarUsuario("daniel", "daniel", true);
+            controlador.agregarUsuario("daniel", true);
             controlador.confimarEmpleado();
 
 
@@ -79,7 +79,7 @@ namespace ProyectoBigonHnos
         static void liquidacion()
         {
             Empleado empleado = new Empleado();
-            empleado.agregarInformacionPersonal("daniel", "Yapura", "35053344", "20-35053344-4");
+            empleado.agregarInformacionPersonal("daniel", "Yapura", "20350533444");
 
             double valorbase = 4000;
 

@@ -30,15 +30,16 @@ namespace ProyectoBigonHnos.dominio
             Cuil = cuil;
             FechaIngreso = fechaIngreso;
 
-            Usuario = new Usuario(nombre, password, admin);
+            Usuario = new Usuario( password, admin);
             Familiares = new List<GrupoFamiliar>();
         }
 
-        public void agregarInformacionPersonal(string nombre, string apellido, string dni, string cuil)
+        public void agregarInformacionPersonal(string nombre, string apellido, string cuil)
         {
+            Dni = cuil.Substring(2, 8);
+
             Nombre = nombre;
             Apellido = apellido;
-            Dni = dni;
             Cuil = cuil;
         }
 
@@ -60,7 +61,7 @@ namespace ProyectoBigonHnos.dominio
 
         internal void agregarInfoUsuario(string username, string password, bool esAdmin)
         {
-            Usuario.Username = username;
+           
             Usuario.Password = password;
             Usuario.Administrador = esAdmin;
         }
@@ -76,9 +77,9 @@ namespace ProyectoBigonHnos.dominio
             Familiares.Add(new GrupoFamiliar(dni, parentesco, fechaNacimiento, discapacidad));
         }
 
-        public void agregarCuenta (string nombreUsuario, string password, bool admin)
+        public void agregarCuenta ( string password, bool admin)
         {
-            Usuario = new Usuario(nombreUsuario, password, admin); 
+            Usuario = new Usuario( password, admin); 
         }
 
         public void mostrar()

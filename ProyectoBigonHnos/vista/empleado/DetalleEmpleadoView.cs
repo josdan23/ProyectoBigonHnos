@@ -52,10 +52,10 @@ namespace ProyectoBigonHnos.vista.empleado
             tboxTelefono.Text = telefono;
         }
 
-        public void mostrarInfoEmpleado(string legajo, string usuario, string password, bool esAdmin, string categoria)
+        public void mostrarInfoEmpleado(string legajo, string password, bool esAdmin, string categoria)
         {
             tboxLegajo.Text = legajo;
-            tboxUsuario.Text = usuario;
+
             tboxContrasenia.Text = password;
             tboxCategoria.Text = categoria;
             ckboxAdministrador.Checked = esAdmin;

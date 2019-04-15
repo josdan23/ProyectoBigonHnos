@@ -30,9 +30,9 @@ namespace ProyectoBigonHnos.controladores
             Empleado = new Empleado();
         }
 
-        public void agregarInformacionPersonal(string apellido, string nombre, string dni, string cuil)
+        public void agregarInformacionPersonal(string apellido, string nombre, string cuil)
         {
-            Empleado.agregarInformacionPersonal(nombre, apellido, dni, cuil);
+            Empleado.agregarInformacionPersonal(nombre, apellido, cuil);
         }
 
         public void agregarDomicilio(string calle, int numero, string localidad, string provincia)
@@ -71,9 +71,9 @@ namespace ProyectoBigonHnos.controladores
             Empleado.agregarFamiliar(dni, parentesco, fechaNacimiento, discapacidad);
         }
 
-        public void agregarUsuario(string username, string password, bool admin)
+        public void agregarUsuario( string password, bool admin)
         {
-            Empleado.agregarCuenta(username, password, admin);
+            Empleado.agregarCuenta( password, admin);
         }
 
         internal void eliminarEmpleado(string legajo)
@@ -152,7 +152,7 @@ namespace ProyectoBigonHnos.controladores
 
                 view.mostrarInfoEmpleado(
                 empleado.Legajo,
-                empleado.Usuario.Username,
+            
                 empleado.Usuario.Password,
                 empleado.Usuario.Administrador,
                 empleado.Categoria);
@@ -190,7 +190,7 @@ namespace ProyectoBigonHnos.controladores
 
                 view.mostrarInfoEmpleado(
                 empleado.Legajo,
-                empleado.Usuario.Username,
+        
                 empleado.Usuario.Password,
                 empleado.Usuario.Administrador,
                 empleado.Categoria);
@@ -221,6 +221,16 @@ namespace ProyectoBigonHnos.controladores
                 }
             }
 
+        }
+
+        internal void actualizarFechaIngreso(DateTime fechaIngreso)
+        {
+            empleadoActualizado.FechaIngreso = fechaIngreso;
+        }
+
+        public void actualizarFechaEgreso(DateTime fechaEgreso)
+        {
+            empleadoActualizado.FechaEgreso = fechaEgreso;
         }
 
         public void mostrarEmpleados()
@@ -277,7 +287,7 @@ namespace ProyectoBigonHnos.controladores
 
         public void actualizarDatosUsuarioEmpleado(string usuario, string password, bool esAdmin)
         {
-            empleadoActualizado.Usuario.Username = usuario;
+           
             empleadoActualizado.Usuario.Password = password;
             empleadoActualizado.Usuario.Administrador = esAdmin;
         }

@@ -53,10 +53,9 @@ namespace ProyectoBigonHnos.vista.empleado
             tboxTelefono.Text = telefono;
         }
 
-        public void mostrarInfoEmpleado(string legajo, string usuario, string password, bool administrador, string categoria)
+        public void mostrarInfoEmpleado(string legajo, string password, bool administrador, string categoria)
         {
             tboxLegajo.Text = legajo;
-            tboxUsuario.Text = usuario;
             tboxContrasenia.Text = password;
             cboxAdministrador.Checked = administrador;
             tboxCategoria.Text = categoria;
@@ -106,7 +105,6 @@ namespace ProyectoBigonHnos.vista.empleado
             String provincia = tboxProvincia.Text;
             String telefono = tboxTelefono.Text;
             String categoria = tboxCategoria.Text;
-            String usuario = tboxUsuario.Text;
             String Contraseña = tboxContrasenia.Text;
 
             DateTime fechaIngreso = dtpFechaIngreso.Value;
@@ -118,8 +116,20 @@ namespace ProyectoBigonHnos.vista.empleado
             Controlador.actualizarTelefonoEmpleado(telefono);
             Controlador.actuzalizarDomicilioEmpleado(calle, numero, localidad, provincia);
             Controlador.actualizarFechas(fechaIngreso, fechaEgreso);
+            Controlador.actualizarFechaIngreso(fechaIngreso);
+            if (egresoCheckbox.Checked)
+                Controlador.actualizarFechaEgreso(fechaEgreso);
+
             Controlador.confirmarActualizacion();
             Dispose();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (egresoCheckbox.Checked)
+                dtpFechaEgreso.Enabled = true;
+            else
+                dtpFechaEgreso.Enabled = false;
         }
     }
 }

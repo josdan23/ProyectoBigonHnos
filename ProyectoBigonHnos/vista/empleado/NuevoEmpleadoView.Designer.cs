@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGuardarEmpleados = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -36,8 +36,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tboxNombre = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tboxDni = new System.Windows.Forms.TextBox();
             this.dtpFechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,9 +44,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tboxLegajo = new System.Windows.Forms.TextBox();
             this.tboxCategoria = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.tboxUserName = new System.Windows.Forms.TextBox();
             this.tboxPassword = new System.Windows.Forms.TextBox();
             this.dgvFamiliares = new System.Windows.Forms.DataGridView();
             this.colDni = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -155,23 +151,6 @@
             this.tboxNombre.Size = new System.Drawing.Size(110, 23);
             this.tboxNombre.TabIndex = 2;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 72);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Dni";
-            // 
-            // tboxDni
-            // 
-            this.tboxDni.Location = new System.Drawing.Point(24, 91);
-            this.tboxDni.Name = "tboxDni";
-            this.tboxDni.Size = new System.Drawing.Size(100, 23);
-            this.tboxDni.TabIndex = 3;
-            // 
             // dtpFechaIngreso
             // 
             this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -238,34 +217,18 @@
             this.tboxCategoria.Size = new System.Drawing.Size(100, 20);
             this.tboxCategoria.TabIndex = 11;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(27, 112);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(96, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Nombre de usuario";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(151, 112);
+            this.label10.Location = new System.Drawing.Point(27, 119);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 13);
             this.label10.TabIndex = 0;
             this.label10.Text = "Password";
             // 
-            // tboxUserName
-            // 
-            this.tboxUserName.Location = new System.Drawing.Point(30, 131);
-            this.tboxUserName.Name = "tboxUserName";
-            this.tboxUserName.Size = new System.Drawing.Size(100, 20);
-            this.tboxUserName.TabIndex = 14;
-            // 
             // tboxPassword
             // 
-            this.tboxPassword.Location = new System.Drawing.Point(154, 131);
+            this.tboxPassword.Location = new System.Drawing.Point(30, 138);
             this.tboxPassword.Name = "tboxPassword";
             this.tboxPassword.Size = new System.Drawing.Size(100, 20);
             this.tboxPassword.TabIndex = 15;
@@ -280,14 +243,14 @@
             this.dgvFamiliares.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvFamiliares.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFamiliares.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFamiliares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFamiliares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFamiliares.ColumnHeadersHeight = 40;
             this.dgvFamiliares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvFamiliares.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -337,17 +300,17 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(147, 72);
+            this.label12.Location = new System.Drawing.Point(27, 74);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(24, 13);
+            this.label12.Size = new System.Drawing.Size(47, 13);
             this.label12.TabIndex = 0;
-            this.label12.Text = "Cuil";
+            this.label12.Text = "Cuil/Cuit";
             // 
             // tboxCuil
             // 
-            this.tboxCuil.Location = new System.Drawing.Point(150, 91);
+            this.tboxCuil.Location = new System.Drawing.Point(26, 93);
             this.tboxCuil.Name = "tboxCuil";
-            this.tboxCuil.Size = new System.Drawing.Size(110, 23);
+            this.tboxCuil.Size = new System.Drawing.Size(100, 23);
             this.tboxCuil.TabIndex = 4;
             // 
             // label13
@@ -523,7 +486,6 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.tboxApellido);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.tboxProvincia);
@@ -534,7 +496,6 @@
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.tboxNombre);
-            this.groupBox1.Controls.Add(this.tboxDni);
             this.groupBox1.Controls.Add(this.tboxLocalidad);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(28, 35);
@@ -549,13 +510,11 @@
             this.groupBox2.Controls.Add(this.ckboxAdministrador);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.dtpFechaIngreso);
             this.groupBox2.Controls.Add(this.tboxLegajo);
             this.groupBox2.Controls.Add(this.tboxPassword);
-            this.groupBox2.Controls.Add(this.tboxUserName);
             this.groupBox2.Controls.Add(this.tboxCategoria);
             this.groupBox2.Location = new System.Drawing.Point(28, 347);
             this.groupBox2.Name = "groupBox2";
@@ -637,8 +596,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tboxNombre;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tboxDni;
         private System.Windows.Forms.DateTimePicker dtpFechaIngreso;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -647,9 +604,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tboxLegajo;
         private System.Windows.Forms.TextBox tboxCategoria;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox tboxUserName;
         private System.Windows.Forms.TextBox tboxPassword;
         private System.Windows.Forms.DataGridView dgvFamiliares;
         private System.Windows.Forms.Label label12;

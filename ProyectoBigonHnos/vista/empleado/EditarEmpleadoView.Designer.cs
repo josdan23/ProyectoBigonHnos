@@ -39,10 +39,8 @@
             this.tboxContrasenia = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.tboxUsuario = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.Usuario = new System.Windows.Forms.Label();
             this.tboxTelefono = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tboxProvincia = new System.Windows.Forms.TextBox();
@@ -69,6 +67,7 @@
             this.dtpFechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaEgreso = new System.Windows.Forms.DateTimePicker();
             this.cboxAdministrador = new System.Windows.Forms.CheckBox();
+            this.egresoCheckbox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFamiliares)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,7 +153,7 @@
             // 
             // tboxContrasenia
             // 
-            this.tboxContrasenia.Location = new System.Drawing.Point(137, 291);
+            this.tboxContrasenia.Location = new System.Drawing.Point(21, 291);
             this.tboxContrasenia.Name = "tboxContrasenia";
             this.tboxContrasenia.Size = new System.Drawing.Size(100, 20);
             this.tboxContrasenia.TabIndex = 13;
@@ -162,7 +161,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(558, 163);
+            this.label15.Location = new System.Drawing.Point(556, 204);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(88, 13);
             this.label15.TabIndex = 30;
@@ -177,13 +176,6 @@
             this.label11.TabIndex = 29;
             this.label11.Text = "Categoria";
             // 
-            // tboxUsuario
-            // 
-            this.tboxUsuario.Location = new System.Drawing.Point(21, 291);
-            this.tboxUsuario.Name = "tboxUsuario";
-            this.tboxUsuario.Size = new System.Drawing.Size(100, 20);
-            this.tboxUsuario.TabIndex = 12;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -196,20 +188,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(134, 274);
+            this.label12.Location = new System.Drawing.Point(18, 274);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(61, 13);
             this.label12.TabIndex = 26;
             this.label12.Text = "Contraseña";
-            // 
-            // Usuario
-            // 
-            this.Usuario.AutoSize = true;
-            this.Usuario.Location = new System.Drawing.Point(18, 274);
-            this.Usuario.Name = "Usuario";
-            this.Usuario.Size = new System.Drawing.Size(43, 13);
-            this.Usuario.TabIndex = 25;
-            this.Usuario.Text = "Usuario";
             // 
             // tboxTelefono
             // 
@@ -409,8 +392,9 @@
             // 
             // dtpFechaEgreso
             // 
+            this.dtpFechaEgreso.Enabled = false;
             this.dtpFechaEgreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaEgreso.Location = new System.Drawing.Point(561, 179);
+            this.dtpFechaEgreso.Location = new System.Drawing.Point(559, 220);
             this.dtpFechaEgreso.Name = "dtpFechaEgreso";
             this.dtpFechaEgreso.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaEgreso.TabIndex = 46;
@@ -419,12 +403,23 @@
             // cboxAdministrador
             // 
             this.cboxAdministrador.AutoSize = true;
-            this.cboxAdministrador.Location = new System.Drawing.Point(272, 294);
+            this.cboxAdministrador.Location = new System.Drawing.Point(137, 291);
             this.cboxAdministrador.Name = "cboxAdministrador";
             this.cboxAdministrador.Size = new System.Drawing.Size(89, 17);
             this.cboxAdministrador.TabIndex = 14;
             this.cboxAdministrador.Text = "Administrador";
             this.cboxAdministrador.UseVisualStyleBackColor = true;
+            // 
+            // egresoCheckbox
+            // 
+            this.egresoCheckbox.AutoSize = true;
+            this.egresoCheckbox.Location = new System.Drawing.Point(559, 180);
+            this.egresoCheckbox.Name = "egresoCheckbox";
+            this.egresoCheckbox.Size = new System.Drawing.Size(59, 17);
+            this.egresoCheckbox.TabIndex = 14;
+            this.egresoCheckbox.Text = "Egreso";
+            this.egresoCheckbox.UseVisualStyleBackColor = true;
+            this.egresoCheckbox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // EditarEmpleadoView
             // 
@@ -433,6 +428,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button3;
             this.ClientSize = new System.Drawing.Size(850, 521);
+            this.Controls.Add(this.egresoCheckbox);
             this.Controls.Add(this.cboxAdministrador);
             this.Controls.Add(this.dtpFechaEgreso);
             this.Controls.Add(this.dtpFechaIngreso);
@@ -446,10 +442,8 @@
             this.Controls.Add(this.tboxContrasenia);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.tboxUsuario);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.Usuario);
             this.Controls.Add(this.tboxTelefono);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.tboxProvincia);
@@ -491,10 +485,8 @@
         private System.Windows.Forms.TextBox tboxContrasenia;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox tboxUsuario;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label Usuario;
         private System.Windows.Forms.TextBox tboxTelefono;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tboxProvincia;
@@ -521,5 +513,6 @@
         private System.Windows.Forms.DateTimePicker dtpFechaIngreso;
         private System.Windows.Forms.DateTimePicker dtpFechaEgreso;
         private System.Windows.Forms.CheckBox cboxAdministrador;
+        private System.Windows.Forms.CheckBox egresoCheckbox;
     }
 }
