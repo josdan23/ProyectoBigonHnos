@@ -37,7 +37,7 @@ namespace ProyectoBigonHnos.vista
 
         public void listarVenta(int idVenta, string apellidoCliente, DateTime fechaVenta, double total)
         {
-            dgvVentas.Rows.Add(idVenta, apellidoCliente, fechaVenta, total);
+            dgvVentas.Rows.Add(idVenta, apellidoCliente, fechaVenta.ToShortDateString(), total);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -52,6 +52,7 @@ namespace ProyectoBigonHnos.vista
         {
             NuevaVentaView vista = new NuevaVentaView();
             vista.UnirControlador(Controlador);
+            Controlador.iniciarVenta();
             vista.ShowDialog();
 
             UnirControlador(Controlador);

@@ -1,8 +1,7 @@
-﻿using System;
+﻿using ProyectoBigonHnos.dominio.pedido;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ProyectoBigonHnos.dominio.venta
 {
@@ -26,6 +25,8 @@ namespace ProyectoBigonHnos.dominio.venta
         public List<LineaVenta> lineasDeVenta { get; set; }
         public Pedido pedido { get; set; }
         public Pago pago { get; set; }
+        public List<ListaDeMateriales> materialesNecesarios { get; set; }
+        public List<CostoExtra> costosExtras { get; set; }
 
         public Venta()
         {
@@ -38,6 +39,8 @@ namespace ProyectoBigonHnos.dominio.venta
             tipoFactura = "A";
 
             lineasDeVenta = new List<LineaVenta>();
+            materialesNecesarios = new List<ListaDeMateriales>();
+            costosExtras = new List<CostoExtra>();
         }
 
         public Venta(Empleado empleado)
@@ -55,8 +58,7 @@ namespace ProyectoBigonHnos.dominio.venta
         }
 
         public void agregarPedido(Pedido pedido)
-        {
-
+        { 
             this.pedido = pedido;
 
             List<LineaPedido> lineasDePedido = pedido.obtenerLineasDePedido();
@@ -64,8 +66,11 @@ namespace ProyectoBigonHnos.dominio.venta
             foreach (LineaPedido lp in lineasDePedido) {
                 LineaVenta lv = new LineaVenta(lp.cantidad, lp.producto);
                 lineasDeVenta.Add(lv);
-
             }
+
+            materialesNecesarios = this.pedido.ListaDeMateriales;
+            costosExtras = this.pedido.costosExtras;
+            Cliente = pedido.cliente;
         }
 
         public void agregarNumeroDeCuotas(int nroCuotas)
@@ -87,7 +92,6 @@ namespace ProyectoBigonHnos.dominio.venta
         {
             estado = "Realizado";
             Pago pago = new Pago(this.nroCuotas);
-        
         }
 
         public double obtenerTotal()
@@ -97,6 +101,16 @@ namespace ProyectoBigonHnos.dominio.venta
             foreach (LineaVenta lv in lineasDeVenta)
             {
                 total += lv.obtenerSubtotal();
+            }
+
+            foreach (ListaDeMateriales lm in materialesNecesarios)
+            {
+                total = total + lm.getSubtotal();
+            }
+
+            foreach (CostoExtra cx in costosExtras)
+            {
+                total = total + cx.importe;
             }
 
             return total;
