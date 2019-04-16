@@ -35,19 +35,29 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.liquidacionDgv = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.periodoCombobox = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.detalleBtn = new System.Windows.Forms.Button();
+            this.periodoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.legajoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.liquidacionDgv)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(783, 87);
+            this.panel1.Size = new System.Drawing.Size(854, 87);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -75,7 +85,7 @@
             this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.btnNuevo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(71, 0);
+            this.panel2.Location = new System.Drawing.Point(142, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(712, 87);
             this.panel2.TabIndex = 4;
@@ -124,29 +134,96 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // liquidacionDgv
+            // 
+            this.liquidacionDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.liquidacionDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.periodoCol,
+            this.legajoCol,
+            this.colApellido,
+            this.nombreCol});
+            this.liquidacionDgv.Location = new System.Drawing.Point(29, 208);
+            this.liquidacionDgv.Name = "liquidacionDgv";
+            this.liquidacionDgv.Size = new System.Drawing.Size(770, 275);
+            this.liquidacionDgv.TabIndex = 1;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(29, 130);
+            this.label1.Location = new System.Drawing.Point(26, 146);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Liquidaciones realizadas";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Periodo";
+            // 
+            // periodoCombobox
+            // 
+            this.periodoCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.periodoCombobox.FormattingEnabled = true;
+            this.periodoCombobox.Location = new System.Drawing.Point(29, 162);
+            this.periodoCombobox.Name = "periodoCombobox";
+            this.periodoCombobox.Size = new System.Drawing.Size(132, 21);
+            this.periodoCombobox.TabIndex = 3;
+            this.periodoCombobox.SelectedIndexChanged += new System.EventHandler(this.periodoCombobox_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 114);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Lista de liquidaciones";
+            // 
+            // detalleBtn
+            // 
+            this.detalleBtn.Location = new System.Drawing.Point(724, 160);
+            this.detalleBtn.Name = "detalleBtn";
+            this.detalleBtn.Size = new System.Drawing.Size(75, 23);
+            this.detalleBtn.TabIndex = 4;
+            this.detalleBtn.Text = "Detalle";
+            this.detalleBtn.UseVisualStyleBackColor = true;
+            this.detalleBtn.Click += new System.EventHandler(this.detalleBtn_Click);
+            // 
+            // periodoCol
+            // 
+            this.periodoCol.HeaderText = "Periodo";
+            this.periodoCol.Name = "periodoCol";
+            // 
+            // legajoCol
+            // 
+            this.legajoCol.HeaderText = "Legajo";
+            this.legajoCol.Name = "legajoCol";
+            this.legajoCol.ReadOnly = true;
+            // 
+            // colApellido
+            // 
+            this.colApellido.HeaderText = "Apellido";
+            this.colApellido.Name = "colApellido";
+            this.colApellido.ReadOnly = true;
+            // 
+            // nombreCol
+            // 
+            this.nombreCol.HeaderText = "Nombre";
+            this.nombreCol.Name = "nombreCol";
             // 
             // LiquidacionPanelView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.detalleBtn);
+            this.Controls.Add(this.periodoCombobox);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.liquidacionDgv);
             this.Controls.Add(this.panel1);
             this.Name = "LiquidacionPanelView";
-            this.Size = new System.Drawing.Size(789, 514);
+            this.Size = new System.Drawing.Size(854, 556);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.liquidacionDgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,6 +238,14 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.DataGridView liquidacionDgv;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox periodoCombobox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button detalleBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn periodoCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn legajoCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCol;
     }
 }

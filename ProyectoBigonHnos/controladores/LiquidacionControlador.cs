@@ -41,19 +41,24 @@ namespace ProyectoBigonHnos.controladores
 
         public void buscarEmpleado(string legajo)
         {
+            
             empleado = Negocio.getNegocio().buscarEmpleado(legajo);
-            liquidacion.Empleado = empleado;
 
-            vista.mostrarDatosEmpleado(empleado.IdEmpleado, empleado.Legajo, empleado.Categoria, empleado.Cuil, empleado.FechaIngreso);
-
-            foreach (GrupoFamiliar familiar in empleado.Familiares)
+            if (empleado != null)
             {
-                vista.mostrarFamiliar(
-                    familiar.IdGrupoFamiliar,
-                    familiar.Dni,
-                    familiar.Parentesco,
-                    familiar.FechaNacimiento,
-                    familiar.Discapacidad);
+                liquidacion.Empleado = empleado;
+
+                vista.mostrarDatosEmpleado(empleado.IdEmpleado, empleado.Legajo, empleado.Categoria, empleado.Cuil, empleado.FechaIngreso);
+
+                foreach (GrupoFamiliar familiar in empleado.Familiares)
+                {
+                    vista.mostrarFamiliar(
+                        familiar.IdGrupoFamiliar,
+                        familiar.Dni,
+                        familiar.Parentesco,
+                        familiar.FechaNacimiento,
+                        familiar.Discapacidad);
+                }
             }
 
         }
@@ -97,9 +102,26 @@ namespace ProyectoBigonHnos.controladores
             vista.mostrarTotalDescuento(liquidacion.getTotalDescuento());
         }
 
-        public void confimarLiquidacion()
+        internal void filtrarLiquidacionPorPeriodo(MesesItemCombobox selectedItem)
         {
-            //se guarda la liquidacion en la base de datos.
+            List<Liquidacion> todasLasLiquidaciones = PersistenciaFacade.getInstance().obtenerTodos<Liquidacion>();
+
+            foreach (Liquidacion unaLiquidacion in todasLasLiquidaciones)
+            {
+                if (selectedItem.numero == unaLiquidacion.PeriodoLiquidacion)
+                {
+                    ((LiquidacionPanelView)vista).listarLiquidacion(
+                    unaLiquidacion.PeriodoLiquidacion.ToString(),
+                    unaLiquidacion.Empleado.Legajo,
+                    unaLiquidacion.Empleado.Apellido,
+                    unaLiquidacion.Empleado.Nombre);
+                }
+                
+            }
+        }
+
+        public void confimarLiquidacion()
+        { 
             liquidacion.Imprimir();
             PersistenciaFacade.getInstance().registrarObjeto(liquidacion);
             vista.cerrar();
@@ -144,6 +166,20 @@ namespace ProyectoBigonHnos.controladores
             vista.mostrarTotalNoRemunerativo(liquidacion.getTotalNoRemunerativo());
             vista.mostrarTotalDescuento(liquidacion.getTotalDescuento());
             vista.mostrarTotal(liquidacion.GetImporteTotal());
+        }
+
+        public void motrarLiquidaciones()
+        {
+            List<Liquidacion> todasLasLiquidaciones = PersistenciaFacade.getInstance().obtenerTodos<Liquidacion>();
+
+            foreach (Liquidacion unaLiquidacion in todasLasLiquidaciones)
+            {
+                ((LiquidacionPanelView)vista).listarLiquidacion(
+                    unaLiquidacion.PeriodoLiquidacion.ToString(),
+                    unaLiquidacion.Empleado.Legajo,
+                    unaLiquidacion.Empleado.Apellido,
+                    unaLiquidacion.Empleado.Nombre);
+            }
         }
     }
 }

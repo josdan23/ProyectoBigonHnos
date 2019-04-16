@@ -12,6 +12,7 @@ using ProyectoBigonHnos.vista.empleado;
 using ProyectoBigonHnos.vista.liquidacion;
 using ProyectoBigonHnos.vista.proveedor;
 using ProyectoBigonHnos.vista.compra;
+using ProyectoBigonHnos.controladores;
 
 namespace ProyectoBigonHnos.vista
 {
@@ -118,13 +119,6 @@ namespace ProyectoBigonHnos.vista
             ocultarPaneles();
             pnlActivoLiquidacion.Show();
             agregarVista(new LiquidacionPanelView());
-            /*
-            LiquidacionView vistaLiq = new LiquidacionView();
-            controladores.LiquidacionControlador controller = new controladores.LiquidacionControlador();
-            controller.unirVista(vistaLiq);
-            vistaLiq.UnirControlador(controller);
-            vistaLiq.ShowDialog();
-            */
         }
     }
 }

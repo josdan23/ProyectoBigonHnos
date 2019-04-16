@@ -35,9 +35,9 @@ namespace ProyectoBigonHnos.vista.liquidacion
         public void UnirControlador(LiquidacionControlador controlador)
         {
             this.controlador = controlador;
-            controlador.unirVista(this);
-            controlador.iniciarLiquidacion();
-            controlador.listarConceptos();
+            this.controlador.unirVista(this);
+            this.controlador.iniciarLiquidacion();
+            this.controlador.listarConceptos();
         }
 
         public void cerrar()
@@ -99,7 +99,7 @@ namespace ProyectoBigonHnos.vista.liquidacion
         private void confirmarLiquidacionButton_Click(object sender, EventArgs e)
         {
             //int periodo = int.Parse(periodoLiquidacionTextView.Text);
-            int periodo = int.Parse(periodoComboBox.SelectedValue.ToString());
+            int periodo = ((MesesItemCombobox)periodoComboBox.SelectedItem).numero;
 
             controlador.agregarPeriodo(periodo);
 
@@ -146,21 +146,21 @@ namespace ProyectoBigonHnos.vista.liquidacion
 
         private void mostrarPeriodoComboBox()
         {
-            periodoComboBox.DisplayMember = "Text";
-            periodoComboBox.ValueMember = "Value";
+            periodoComboBox.DisplayMember = "nombre";
+            periodoComboBox.ValueMember = "numero";
 
-            periodoComboBox.Items.Add(new { Text = "Enero", Value = "1" });
-            periodoComboBox.Items.Add(new { Text = "Febrero", Value = "2" });
-            periodoComboBox.Items.Add(new { Text = "Marzo", Value = "3" });
-            periodoComboBox.Items.Add(new { Text = "Abril", Value = "4" });
-            periodoComboBox.Items.Add(new { Text = "Mayo", Value = "5" });
-            periodoComboBox.Items.Add(new { Text = "Junio", Value = "6" });
-            periodoComboBox.Items.Add(new { Text = "Julio", Value = "7" });
-            periodoComboBox.Items.Add(new { Text = "Agosto", Value = "8" });
-            periodoComboBox.Items.Add(new { Text = "Septiembre", Value = "9" });
-            periodoComboBox.Items.Add(new { Text = "Octubre", Value = "10" });
-            periodoComboBox.Items.Add(new { Text = "Noviembre", Value = "11" });
-            periodoComboBox.Items.Add(new { Text = "Diciembre", Value = "12" });
+            periodoComboBox.Items.Add(new MesesItemCombobox("Enero", 1));
+            periodoComboBox.Items.Add(new MesesItemCombobox("Febrero", 2));
+            periodoComboBox.Items.Add(new MesesItemCombobox("Marzo", 3));
+            periodoComboBox.Items.Add(new MesesItemCombobox("Abril", 4));
+            periodoComboBox.Items.Add(new MesesItemCombobox("Mayo", 5));
+            periodoComboBox.Items.Add(new MesesItemCombobox("Junio", 6));
+            periodoComboBox.Items.Add(new MesesItemCombobox("Julio", 7));
+            periodoComboBox.Items.Add(new MesesItemCombobox("Agosto", 8));
+            periodoComboBox.Items.Add(new MesesItemCombobox("Septiembre", 9));
+            periodoComboBox.Items.Add(new MesesItemCombobox("Octubre", 10));
+            periodoComboBox.Items.Add(new MesesItemCombobox("Noviembre", 11));
+            periodoComboBox.Items.Add(new MesesItemCombobox("Diciembre", 12));
 
         }
 
