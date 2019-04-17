@@ -28,10 +28,10 @@ namespace ProyectoBigonHnos.vista.login
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            string user = tboxUsuario.Text;
+            string legajo = tboxUsuario.Text;
             string password = tboxPassword.Text;
 
-            Controlador.iniciarSesion(user, password);
+            Controlador.iniciarSesion(legajo, password);
         }
     }
 }

@@ -17,6 +17,11 @@ namespace ProyectoBigonHnos.controladores
         {
         }
 
+        public void agregarEmpleado(Empleado empleadoLoguado)
+        {
+            Venta.Empleado = empleadoLoguado;
+        }
+
         public void iniciarVenta()
         {
             //TODO: agregar Empleado en sesion
@@ -104,6 +109,7 @@ namespace ProyectoBigonHnos.controladores
                     Venta.Cliente.Domicilioes[0].Localidad.Nombre,
                     Venta.Cliente.Domicilioes[0].Localidad.Provincia.Nombre);
 
+                ((NuevaVentaView)Vista).mostrarLegajoVendedor(Venta.Empleado.Legajo);
             }
         }
 

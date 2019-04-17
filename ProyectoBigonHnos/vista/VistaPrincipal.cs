@@ -18,9 +18,12 @@ namespace ProyectoBigonHnos.vista
 {
     public partial class VistaPrincipal : Form
     {
-        public VistaPrincipal()
+        private Empleado EmpleadoLogeado { get; set; }
+
+        public VistaPrincipal(Empleado empleado)
         {
             InitializeComponent();
+            EmpleadoLogeado = empleado;
         }
 
 
@@ -49,7 +52,7 @@ namespace ProyectoBigonHnos.vista
         {
             ocultarPaneles();
             pnlActivoVentas.Show();
-            agregarVista(new VentasView());
+            agregarVista(new VentasView(EmpleadoLogeado));
         }
 
         private void btnPagos_Click(object sender, EventArgs e)
@@ -85,7 +88,7 @@ namespace ProyectoBigonHnos.vista
             ocultarPaneles();
             pnlActivoEmpleados.Show();
             agregarVista(new EmpleadoView());
-           
+
         }
 
         private void btnUsuario_Click(object sender, EventArgs e)

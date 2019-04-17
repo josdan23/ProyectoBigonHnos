@@ -17,6 +17,8 @@ namespace ProyectoBigonHnos.vista
             ActualizarVista();
         }
 
+       
+
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             NuevoPedidoView vista = new NuevoPedidoView();

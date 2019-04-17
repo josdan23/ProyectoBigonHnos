@@ -1,4 +1,5 @@
 ﻿using ProyectoBigonHnos.controladores;
+using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.vista.ventas;
 using System;
 using System.Windows.Forms;
@@ -7,7 +8,7 @@ namespace ProyectoBigonHnos.vista
 {
     partial class VentasView : UserControl, IVentaView
     {
-
+        private Empleado EmpleadoLogueado { get; set; }
         public VentaControlador Controlador { get; set; }
 
         public VentasView()
@@ -15,6 +16,17 @@ namespace ProyectoBigonHnos.vista
             InitializeComponent();
             UnirControlador(new VentaControlador());
             ActualizarVista();
+        }
+
+        public VentasView(Empleado empleado)
+        {
+            if (empleado == null)
+                Console.WriteLine("empleado nulo");
+            EmpleadoLogueado = empleado;
+            InitializeComponent();
+            UnirControlador(new VentaControlador());
+            ActualizarVista();
+
         }
 
         public void ActualizarVista()
@@ -50,9 +62,12 @@ namespace ProyectoBigonHnos.vista
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            NuevaVentaView vista = new NuevaVentaView();
+            NuevaVentaView vista = new NuevaVentaView(EmpleadoLogueado);
+            if (EmpleadoLogueado == null)
+                Console.WriteLine("empleado nuleo2");
             vista.UnirControlador(Controlador);
             Controlador.iniciarVenta();
+            Controlador.agregarEmpleado(EmpleadoLogueado);
             vista.ShowDialog();
 
             UnirControlador(Controlador);

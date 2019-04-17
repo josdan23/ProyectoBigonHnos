@@ -24,6 +24,8 @@ namespace ProyectoBigonHnos
     {
         static void Main(string[] args)
         {
+            
+
 
             EmpleadoControlador controlador = new EmpleadoControlador();
             controlador.crearEmpleado();
@@ -34,12 +36,13 @@ namespace ProyectoBigonHnos
 
 
             Login vista = new Login();
-            vista.unirControlador(LoginControlador.getInstance());
+            vista.unirControlador(new LoginControlador());
 
 
-            agregarConceptos();
+            //agregarConceptos();
             Application.EnableVisualStyles();
-            Application.Run(new VistaPrincipal());            
+            Application.Run(vista);
+
 
             //Persona t = new Persona("daniel", "yaprua", "232342");
             //t.agregarTelefono(new Telefono("234234"));

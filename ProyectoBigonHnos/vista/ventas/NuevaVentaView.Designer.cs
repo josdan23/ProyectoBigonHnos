@@ -78,6 +78,8 @@
             this.domicilioLabel = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.fechaDeVentaLabel = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.vendedorLegajoLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.productosTab.SuspendLayout();
@@ -512,7 +514,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(949, 49);
+            this.label10.Location = new System.Drawing.Point(947, 88);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(82, 13);
             this.label10.TabIndex = 7;
@@ -521,11 +523,29 @@
             // fechaDeVentaLabel
             // 
             this.fechaDeVentaLabel.AutoSize = true;
-            this.fechaDeVentaLabel.Location = new System.Drawing.Point(1047, 49);
+            this.fechaDeVentaLabel.Location = new System.Drawing.Point(1045, 88);
             this.fechaDeVentaLabel.Name = "fechaDeVentaLabel";
             this.fechaDeVentaLabel.Size = new System.Drawing.Size(10, 13);
             this.fechaDeVentaLabel.TabIndex = 7;
             this.fechaDeVentaLabel.Text = "-";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(942, 36);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(87, 13);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Legajo vendedor";
+            // 
+            // vendedorLegajoLbl
+            // 
+            this.vendedorLegajoLbl.AutoSize = true;
+            this.vendedorLegajoLbl.Location = new System.Drawing.Point(1045, 36);
+            this.vendedorLegajoLbl.Name = "vendedorLegajoLbl";
+            this.vendedorLegajoLbl.Size = new System.Drawing.Size(10, 13);
+            this.vendedorLegajoLbl.TabIndex = 7;
+            this.vendedorLegajoLbl.Text = "-";
             // 
             // NuevaVentaView
             // 
@@ -536,8 +556,10 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.montoDeCuotasLabel);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.vendedorLegajoLbl);
             this.Controls.Add(this.fechaDeVentaLabel);
             this.Controls.Add(this.dniLabel);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.clienteLabel);
@@ -624,5 +646,7 @@
         private System.Windows.Forms.Label domicilioLabel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label fechaDeVentaLabel;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label vendedorLegajoLbl;
     }
 }

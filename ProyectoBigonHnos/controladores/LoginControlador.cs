@@ -7,28 +7,19 @@ namespace ProyectoBigonHnos.controladores
 {
     class LoginControlador
     {
-        static LoginControlador Controlador { get; set; }
         private Login Vista { get; set; }
         private Empleado EmpleadoLogeado { get; set; }
-
-        public static LoginControlador getInstance()
-        {
-            if (Controlador == null)
-                Controlador = new LoginControlador();
-
-            return Controlador;
-        }
 
         public void unirVista(Login vista)
         {
             Vista = vista;
         }
 
-        public void iniciarSesion(string usuario, string password)
+        public void iniciarSesion(string legajo, string password)
         {
             foreach (Empleado empleado in Negocio.getNegocio().obtenerTodosEmpleados())
             {
-                if (  empleado.Usuario.Password == password)
+                if (empleado.Legajo == legajo && empleado.Usuario.Password == password)
                 {
                     EmpleadoLogeado = empleado;
                     mostrarVistaPrincipal();
@@ -39,10 +30,10 @@ namespace ProyectoBigonHnos.controladores
         private void mostrarVistaPrincipal()
         {
             Vista.Visible = false;
-
-            VistaPrincipal view = new VistaPrincipal();
+            VistaPrincipal view = new VistaPrincipal(EmpleadoLogeado);
             view.ShowDialog();
 
+            
             Vista.Dispose();
         }
 

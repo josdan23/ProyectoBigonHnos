@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoBigonHnos.controladores;
+using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.vista.ventas
 {
     partial class NuevaVentaView : Form, IVentaView
     {
         private VentaControlador Controlador { get; set; }
+        private Empleado EmpleadoLogueado { get; set; }
 
-        public NuevaVentaView()
+        public NuevaVentaView(Empleado empleadoLog)
         {
             InitializeComponent();
+            EmpleadoLogueado = empleadoLog;
         }
 
         public void ActualizarVista()
@@ -51,16 +54,16 @@ namespace ProyectoBigonHnos.vista.ventas
             string dniCliente = tboxDni.Text;
             ActualizarVista();
             Controlador.MostrarPedidos(dniCliente);
-            Console.WriteLine("se muestra los pedidos");
-            
+            Console.WriteLine("se muestra los pedidos");  
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             int idPedido = int.Parse(dgvPedidos.CurrentRow.Cells[0].Value.ToString());
-            Controlador.iniciarVenta();
+            //Controlador.iniciarVenta();
             Controlador.agregarPedido(idPedido);
             Controlador.confirmarVenta();
+            //Controlador.agregarEmpleado(EmpleadoLogueado);
             Dispose();
         }
 
@@ -137,6 +140,11 @@ namespace ProyectoBigonHnos.vista.ventas
         public void mostrarFechaDeVenta(DateTime fechaDeVenta)
         {
             fechaDeVentaLabel.Text = fechaDeVenta.ToShortDateString();
+        }
+
+        public void mostrarLegajoVendedor(String legajo)
+        {
+            vendedorLegajoLbl.Text = legajo;
         }
     }
 }
