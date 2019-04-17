@@ -87,7 +87,7 @@ namespace ProyectoBigonHnos.vista
         {
             ocultarPaneles();
             pnlActivoEmpleados.Show();
-            agregarVista(new EmpleadoView());
+            agregarVista(new EmpleadoView(EmpleadoLogeado));
 
         }
 

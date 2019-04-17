@@ -8,16 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoBigonHnos.controladores;
+using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.vista.empleado
 {
     partial class EmpleadoView : UserControl, IEmpleadosView
     {
         private EmpleadoControlador Controlador { get; set; }
+        private Empleado EmpleadoLogueado { get; set; }
 
         public EmpleadoView()
         {
             InitializeComponent();
+            UnirControlador(new EmpleadoControlador());
+            ActualizarVista();
+        }
+
+        public EmpleadoView(Empleado empleadoLogueado)
+        {
+            InitializeComponent();
+            EmpleadoLogueado = empleadoLogueado;
             UnirControlador(new EmpleadoControlador());
             ActualizarVista();
         }
@@ -36,11 +46,16 @@ namespace ProyectoBigonHnos.vista.empleado
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            NuevoEmpleadoView vista = new NuevoEmpleadoView();
-            vista.UnirControlador(Controlador);
-            vista.ShowDialog();
-            UnirControlador(Controlador);
-            ActualizarVista();
+            if (EmpleadoLogueado.Usuario.esAdmin())
+            {
+                NuevoEmpleadoView vista = new NuevoEmpleadoView();
+                vista.UnirControlador(Controlador);
+                vista.ShowDialog();
+                UnirControlador(Controlador);
+                ActualizarVista();
+            }
+
+            
         }
 
         public void listarEmpleado(string legajo, string apellido, string nombre, string dni, DateTime fechaIngreso, string categoria)
@@ -75,16 +90,21 @@ namespace ProyectoBigonHnos.vista.empleado
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            string legajoSeleccionado = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
 
-            EditarEmpleadoView vista = new EditarEmpleadoView();
-            vista.UnirControlador(Controlador);
-            vista.mostrarDetalle(legajoSeleccionado);
-            vista.ShowDialog();
+            if (EmpleadoLogueado.Usuario.esAdmin())
+            {
+                string legajoSeleccionado = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
 
-            Controlador.unirVista(this);
+                EditarEmpleadoView vista = new EditarEmpleadoView();
+                vista.UnirControlador(Controlador);
+                vista.mostrarDetalle(legajoSeleccionado);
+                vista.ShowDialog();
 
-            ActualizarVista();
+                Controlador.unirVista(this);
+
+                ActualizarVista();
+            }
+           
         }
     }
 }
