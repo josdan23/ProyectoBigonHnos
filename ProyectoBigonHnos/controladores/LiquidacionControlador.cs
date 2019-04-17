@@ -102,6 +102,40 @@ namespace ProyectoBigonHnos.controladores
             vista.mostrarTotalDescuento(liquidacion.getTotalDescuento());
         }
 
+        internal void mostrarDetalleLiquidacion(int idLiquidacion)
+        {
+            Liquidacion liquidacion = PersistenciaFacade.getInstance().obtenerObjeto<Liquidacion>(idLiquidacion);
+
+            vista.mostrarDatosEmpleado(
+                liquidacion.Empleado.IdEmpleado,
+                liquidacion.Empleado.Legajo,
+                liquidacion.Empleado.Categoria,
+                liquidacion.Empleado.Cuil,
+                liquidacion.Empleado.FechaIngreso);
+
+            vista.mostrarTotalRemunerativo(liquidacion.getTotalRemunerativo());
+            vista.mostrarTotalNoRemunerativo(liquidacion.getTotalNoRemunerativo());
+            vista.mostrarTotalDescuento(liquidacion.getTotalDescuento());
+
+            ((DetalleLiquidacionView)vista).mostrarInfoEmpleado(
+                liquidacion.Empleado.Nombre,
+                liquidacion.Empleado.Apellido);
+
+            foreach(LineaLiquidacion lq in liquidacion.LineasLiquidacion)
+            {
+                if (lq.Concepto.Tipo == TipoConcepto.REMUNERATIVO)
+                {
+                    vista.mostrarLiquidacion(lq.Concepto.Descripcion, lq.Cantidad, lq.getImporte(), 0, 0);
+                }
+                else if (lq.Concepto.Tipo == TipoConcepto.NO_REMUNERATIVO)
+                {
+                    vista.mostrarLiquidacion(lq.Concepto.Descripcion, lq.Cantidad, 0, lq.getImporte(), 0);
+                }
+                else
+                    vista.mostrarLiquidacion(lq.Concepto.Descripcion, lq.Cantidad,0 ,0 ,lq.getImporte());
+            }
+        }
+
         internal void filtrarLiquidacionPorPeriodo(MesesItemCombobox selectedItem)
         {
             List<Liquidacion> todasLasLiquidaciones = PersistenciaFacade.getInstance().obtenerTodos<Liquidacion>();
@@ -114,7 +148,8 @@ namespace ProyectoBigonHnos.controladores
                     unaLiquidacion.PeriodoLiquidacion.ToString(),
                     unaLiquidacion.Empleado.Legajo,
                     unaLiquidacion.Empleado.Apellido,
-                    unaLiquidacion.Empleado.Nombre);
+                    unaLiquidacion.Empleado.Nombre,
+                    unaLiquidacion.IdLiquidacion);
                 }
                 
             }
@@ -178,7 +213,8 @@ namespace ProyectoBigonHnos.controladores
                     unaLiquidacion.PeriodoLiquidacion.ToString(),
                     unaLiquidacion.Empleado.Legajo,
                     unaLiquidacion.Empleado.Apellido,
-                    unaLiquidacion.Empleado.Nombre);
+                    unaLiquidacion.Empleado.Nombre,
+                    unaLiquidacion.IdLiquidacion);
             }
         }
     }

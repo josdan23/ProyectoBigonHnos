@@ -36,14 +36,15 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.liquidacionDgv = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.periodoCombobox = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.detalleBtn = new System.Windows.Forms.Button();
             this.periodoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.legajoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.periodoCombobox = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.detalleBtn = new System.Windows.Forms.Button();
+            this.idLiquidacionCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -141,11 +142,34 @@
             this.periodoCol,
             this.legajoCol,
             this.colApellido,
-            this.nombreCol});
+            this.nombreCol,
+            this.idLiquidacionCol});
             this.liquidacionDgv.Location = new System.Drawing.Point(29, 208);
             this.liquidacionDgv.Name = "liquidacionDgv";
             this.liquidacionDgv.Size = new System.Drawing.Size(770, 275);
             this.liquidacionDgv.TabIndex = 1;
+            // 
+            // periodoCol
+            // 
+            this.periodoCol.HeaderText = "Periodo";
+            this.periodoCol.Name = "periodoCol";
+            // 
+            // legajoCol
+            // 
+            this.legajoCol.HeaderText = "Legajo";
+            this.legajoCol.Name = "legajoCol";
+            this.legajoCol.ReadOnly = true;
+            // 
+            // colApellido
+            // 
+            this.colApellido.HeaderText = "Apellido";
+            this.colApellido.Name = "colApellido";
+            this.colApellido.ReadOnly = true;
+            // 
+            // nombreCol
+            // 
+            this.nombreCol.HeaderText = "Nombre";
+            this.nombreCol.Name = "nombreCol";
             // 
             // label1
             // 
@@ -185,27 +209,10 @@
             this.detalleBtn.UseVisualStyleBackColor = true;
             this.detalleBtn.Click += new System.EventHandler(this.detalleBtn_Click);
             // 
-            // periodoCol
+            // idLiquidacionCol
             // 
-            this.periodoCol.HeaderText = "Periodo";
-            this.periodoCol.Name = "periodoCol";
-            // 
-            // legajoCol
-            // 
-            this.legajoCol.HeaderText = "Legajo";
-            this.legajoCol.Name = "legajoCol";
-            this.legajoCol.ReadOnly = true;
-            // 
-            // colApellido
-            // 
-            this.colApellido.HeaderText = "Apellido";
-            this.colApellido.Name = "colApellido";
-            this.colApellido.ReadOnly = true;
-            // 
-            // nombreCol
-            // 
-            this.nombreCol.HeaderText = "Nombre";
-            this.nombreCol.Name = "nombreCol";
+            this.idLiquidacionCol.HeaderText = "Id liquidacion";
+            this.idLiquidacionCol.Name = "idLiquidacionCol";
             // 
             // LiquidacionPanelView
             // 
@@ -247,5 +254,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn legajoCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn colApellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idLiquidacionCol;
     }
 }

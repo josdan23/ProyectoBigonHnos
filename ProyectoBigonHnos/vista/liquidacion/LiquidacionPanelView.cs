@@ -42,9 +42,9 @@ namespace ProyectoBigonHnos.vista.liquidacion
             UnirControlador(controlador);
         }
 
-        public void listarLiquidacion(string periodo, string legajo, string apellido, string nombre)
+        public void listarLiquidacion(string periodo, string legajo, string apellido, string nombre, int idLiquidacion)
         {
-            liquidacionDgv.Rows.Add(periodo, legajo, apellido, nombre);
+            liquidacionDgv.Rows.Add(periodo, legajo, apellido, nombre, idLiquidacion);
         }
 
         private void configurarComboBox()
@@ -77,7 +77,13 @@ namespace ProyectoBigonHnos.vista.liquidacion
 
         private void detalleBtn_Click(object sender, EventArgs e)
         {
-            //ver detalles de la liquidación
+            int idLiquidacion = int.Parse(liquidacionDgv.CurrentRow.Cells[4].Value.ToString());
+
+            DetalleLiquidacionView view = new DetalleLiquidacionView();
+
+            view.UnirControlador(controlador);
+            controlador.mostrarDetalleLiquidacion(idLiquidacion);
+            view.ShowDialog();
         }
 
         public void UnirControlador(LiquidacionControlador controlador)
