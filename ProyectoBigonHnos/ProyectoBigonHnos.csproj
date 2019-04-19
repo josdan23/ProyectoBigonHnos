@@ -521,6 +521,8 @@
     <None Include="Resources\View Details_32px.png" />
     <None Include="Resources\PedidoIcon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\1449819-muebleria.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

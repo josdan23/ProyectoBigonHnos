@@ -33,5 +33,7 @@ namespace ProyectoBigonHnos.vista.login
 
             Controlador.iniciarSesion(legajo, password);
         }
+
+   
     }
 }

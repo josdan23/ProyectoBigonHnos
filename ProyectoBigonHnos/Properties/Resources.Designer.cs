@@ -63,6 +63,16 @@ namespace ProyectoBigonHnos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1449819_muebleria {
+            get {
+                object obj = ResourceManager.GetObject("_1449819_muebleria", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clientes_icon {
             get {
                 object obj = ResourceManager.GetObject("clientes_icon", resourceCulture);

@@ -59,7 +59,7 @@ namespace ProyectoBigonHnos
             liquidacion.agregarLineaLiquidacion(1, new Concepto(TipoConcepto.NO_REMUNERATIVO, "concepto5", 1, true), valorbase);
             liquidacion.agregarLineaLiquidacion(1, new Concepto(TipoConcepto.DESCUENTO, "concepto6", 1, true), valorbase);
             
-            liquidacion.Imprimir();
+            liquidacion.Imprimir();     
             Console.WriteLine(liquidacion.GetImporteTotal());
         }
         
