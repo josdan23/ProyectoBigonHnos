@@ -23,6 +23,7 @@ namespace ProyectoBigonHnos.controladores
                 {
                     EmpleadoLogeado = empleado;
                     mostrarVistaPrincipal();
+                    break;
                 }
             }
         }

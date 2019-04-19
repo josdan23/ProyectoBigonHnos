@@ -13,6 +13,7 @@ using ProyectoBigonHnos.vista.liquidacion;
 using ProyectoBigonHnos.vista.proveedor;
 using ProyectoBigonHnos.vista.compra;
 using ProyectoBigonHnos.controladores;
+using ProyectoBigonHnos.vista.usuario;
 
 namespace ProyectoBigonHnos.vista
 {
@@ -95,6 +96,7 @@ namespace ProyectoBigonHnos.vista
         {
             ocultarPaneles();
             pnlActivoUsuario.Show();
+            agregarVista(new UsuarioView(EmpleadoLogeado.Legajo));
         }
 
        

@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controladores\CabiarContraseniaControlador.cs" />
     <Compile Include="controladores\ConceptoControlador.cs" />
     <Compile Include="controladores\EditarPedidoControlador.cs" />
     <Compile Include="controladores\EmpleadoControlador.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="controladores\IPedidoController.cs" />
     <Compile Include="controladores\LiquidacionControlador.cs" />
     <Compile Include="controladores\LoginControlador.cs" />
+    <Compile Include="controladores\UsuarioControlador.cs" />
     <Compile Include="controladores\VentaControlador.cs" />
     <Compile Include="data\ClienteDao\ClienteDAOImpl.cs" />
     <Compile Include="data\ClienteDao\ClienteDaoListImpl.cs" />
@@ -356,6 +358,18 @@
     <Compile Include="vista\proveedor\ProveedorView.Designer.cs">
       <DependentUpon>ProveedorView.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\usuario\CambiarContraseniaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\usuario\CambiarContraseniaView.Designer.cs">
+      <DependentUpon>CambiarContraseniaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\usuario\UsuarioView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vista\usuario\UsuarioView.Designer.cs">
+      <DependentUpon>UsuarioView.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\ventas\IVentaView.cs" />
     <Compile Include="vista\ventas\NuevaVentaView.cs">
       <SubType>Form</SubType>
@@ -478,6 +492,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\proveedor\ProveedorView.resx">
       <DependentUpon>ProveedorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\usuario\CambiarContraseniaView.resx">
+      <DependentUpon>CambiarContraseniaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\usuario\UsuarioView.resx">
+      <DependentUpon>UsuarioView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\ventas\NuevaVentaView.resx">
       <DependentUpon>NuevaVentaView.cs</DependentUpon>
