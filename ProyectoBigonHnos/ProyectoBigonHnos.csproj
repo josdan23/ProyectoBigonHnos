@@ -524,5 +524,23 @@
   <ItemGroup>
     <None Include="Resources\1449819-muebleria.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wheels-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-simple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\single-01.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

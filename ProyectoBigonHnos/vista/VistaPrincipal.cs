@@ -32,41 +32,47 @@ namespace ProyectoBigonHnos.vista
         {
             ocultarPaneles();
             pnlActivoPedidos.Show();
+            btnPedidos.BackColor = Color.White;
             agregarVista(new PedidosView());
         }
 
         public void ocultarPaneles()
         {
             pnlActivoPedidos.Hide();
+            btnPedidos.BackColor = Color.Transparent;
             pnlActivoVentas.Hide();
+            btnVentas.BackColor = Color.Transparent;
             pnlActivoCompras.Hide();
-            pnlActivoPago.Hide();
+            btnCompras.BackColor = Color.Transparent;
             pnlActivoMateriales.Hide();
+            btnMateriales.BackColor = Color.Transparent;
             pnlActivoClientes.Hide();
+            btnClientes.BackColor = Color.Transparent;
             pnlActivoEmpleados.Hide();
+            btnEmpleados.BackColor = Color.Transparent;
             pnlActivoUsuario.Hide();
+            btnUsuario.BackColor = Color.Transparent;
             pnlActivoProveedor.Hide();
+            btnProveedores.BackColor = Color.Transparent;
             pnlActivoLiquidacion.Hide();
+            btnLiquidacion.BackColor = Color.Transparent;
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
             ocultarPaneles();
             pnlActivoVentas.Show();
+            btnVentas.BackColor = Color.White;
             agregarVista(new VentasView(EmpleadoLogeado));
         }
 
-        private void btnPagos_Click(object sender, EventArgs e)
-        {
-            ocultarPaneles();
-            pnlActivoPago.Show();
 
-        }
 
         private void btnCompras_Click(object sender, EventArgs e)
         {
             ocultarPaneles();
             pnlActivoCompras.Show();
+            btnCompras.BackColor = Color.White;
             agregarVista(new CompraView());
         }
 
@@ -74,6 +80,7 @@ namespace ProyectoBigonHnos.vista
         {
             ocultarPaneles();
             pnlActivoMateriales.Show();
+            btnMateriales.BackColor = Color.White;
             agregarVista(new MaterialView());
         }
 
@@ -81,6 +88,7 @@ namespace ProyectoBigonHnos.vista
         {
             ocultarPaneles();
             pnlActivoClientes.Show();
+            btnClientes.BackColor = Color.White;
             agregarVista(new ClientesView());
         }
 
@@ -88,6 +96,7 @@ namespace ProyectoBigonHnos.vista
         {
             ocultarPaneles();
             pnlActivoEmpleados.Show();
+            btnEmpleados.BackColor = Color.White;
             agregarVista(new EmpleadoView(EmpleadoLogeado));
 
         }
@@ -96,6 +105,7 @@ namespace ProyectoBigonHnos.vista
         {
             ocultarPaneles();
             pnlActivoUsuario.Show();
+            btnUsuario.BackColor = Color.White;
             agregarVista(new UsuarioView(EmpleadoLogeado.Legajo));
         }
 
@@ -104,6 +114,7 @@ namespace ProyectoBigonHnos.vista
         {
             ocultarPaneles();
             pnlActivoProveedor.Show();
+            btnProveedores.BackColor = Color.White;
             agregarVista(new ProveedorView());
         }
 
@@ -123,6 +134,7 @@ namespace ProyectoBigonHnos.vista
         {
             ocultarPaneles();
             pnlActivoLiquidacion.Show();
+            btnLiquidacion.BackColor = Color.White;
             agregarVista(new LiquidacionPanelView());
         }
     }
