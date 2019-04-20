@@ -156,183 +156,183 @@
             this.cboxProveedores.FormattingEnabled = true;
             this.cboxProveedores.Location = new System.Drawing.Point(29, 105);
             this.cboxProveedores.Name = "cboxProveedores";
-            this.cboxProveedores.Size = new System.Drawing.Size(201, 21);
+            this.cboxProveedores.Size = new System.Drawing.Size(295, 21);
             this.cboxProveedores.TabIndex = 2;
             this.cboxProveedores.SelectedIndexChanged += new System.EventHandler(this.onSeleccionarItem);
             // 
             // razonSocialProveedorTituloLabel
             // 
             this.razonSocialProveedorTituloLabel.AutoSize = true;
-            this.razonSocialProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.razonSocialProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.razonSocialProveedorTituloLabel.ForeColor = System.Drawing.Color.Black;
-            this.razonSocialProveedorTituloLabel.Location = new System.Drawing.Point(68, 89);
+            this.razonSocialProveedorTituloLabel.Location = new System.Drawing.Point(22, 117);
             this.razonSocialProveedorTituloLabel.Name = "razonSocialProveedorTituloLabel";
-            this.razonSocialProveedorTituloLabel.Size = new System.Drawing.Size(97, 18);
+            this.razonSocialProveedorTituloLabel.Size = new System.Drawing.Size(91, 17);
             this.razonSocialProveedorTituloLabel.TabIndex = 3;
             this.razonSocialProveedorTituloLabel.Text = "Razón Social";
             // 
             // lblRazonSocial
             // 
             this.lblRazonSocial.AutoSize = true;
-            this.lblRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRazonSocial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblRazonSocial.Location = new System.Drawing.Point(189, 91);
+            this.lblRazonSocial.Location = new System.Drawing.Point(22, 139);
             this.lblRazonSocial.Name = "lblRazonSocial";
-            this.lblRazonSocial.Size = new System.Drawing.Size(12, 17);
+            this.lblRazonSocial.Size = new System.Drawing.Size(10, 15);
             this.lblRazonSocial.TabIndex = 3;
             this.lblRazonSocial.Text = ".";
             // 
             // cuitProveedorTituloLabel
             // 
             this.cuitProveedorTituloLabel.AutoSize = true;
-            this.cuitProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cuitProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuitProveedorTituloLabel.ForeColor = System.Drawing.Color.Black;
-            this.cuitProveedorTituloLabel.Location = new System.Drawing.Point(131, 132);
+            this.cuitProveedorTituloLabel.Location = new System.Drawing.Point(22, 176);
             this.cuitProveedorTituloLabel.Name = "cuitProveedorTituloLabel";
-            this.cuitProveedorTituloLabel.Size = new System.Drawing.Size(34, 18);
+            this.cuitProveedorTituloLabel.Size = new System.Drawing.Size(32, 17);
             this.cuitProveedorTituloLabel.TabIndex = 3;
             this.cuitProveedorTituloLabel.Text = "Cuit";
             // 
             // lblCuit
             // 
             this.lblCuit.AutoSize = true;
-            this.lblCuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCuit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCuit.Location = new System.Drawing.Point(189, 134);
+            this.lblCuit.Location = new System.Drawing.Point(22, 198);
             this.lblCuit.Name = "lblCuit";
-            this.lblCuit.Size = new System.Drawing.Size(12, 17);
+            this.lblCuit.Size = new System.Drawing.Size(10, 15);
             this.lblCuit.TabIndex = 3;
             this.lblCuit.Text = ".";
             // 
             // TelefonoProveedorTituloLabel
             // 
             this.TelefonoProveedorTituloLabel.AutoSize = true;
-            this.TelefonoProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TelefonoProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TelefonoProveedorTituloLabel.ForeColor = System.Drawing.Color.Black;
-            this.TelefonoProveedorTituloLabel.Location = new System.Drawing.Point(99, 175);
+            this.TelefonoProveedorTituloLabel.Location = new System.Drawing.Point(22, 236);
             this.TelefonoProveedorTituloLabel.Name = "TelefonoProveedorTituloLabel";
-            this.TelefonoProveedorTituloLabel.Size = new System.Drawing.Size(66, 18);
+            this.TelefonoProveedorTituloLabel.Size = new System.Drawing.Size(64, 17);
             this.TelefonoProveedorTituloLabel.TabIndex = 3;
             this.TelefonoProveedorTituloLabel.Text = "Telefono";
             // 
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTelefono.Location = new System.Drawing.Point(189, 177);
+            this.lblTelefono.Location = new System.Drawing.Point(22, 258);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(12, 17);
+            this.lblTelefono.Size = new System.Drawing.Size(10, 15);
             this.lblTelefono.TabIndex = 3;
             this.lblTelefono.Text = ".";
             // 
             // calleProveedortituloLabel
             // 
             this.calleProveedortituloLabel.AutoSize = true;
-            this.calleProveedortituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calleProveedortituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calleProveedortituloLabel.ForeColor = System.Drawing.Color.Black;
-            this.calleProveedortituloLabel.Location = new System.Drawing.Point(375, 46);
+            this.calleProveedortituloLabel.Location = new System.Drawing.Point(319, 59);
             this.calleProveedortituloLabel.Name = "calleProveedortituloLabel";
-            this.calleProveedortituloLabel.Size = new System.Drawing.Size(41, 18);
+            this.calleProveedortituloLabel.Size = new System.Drawing.Size(39, 17);
             this.calleProveedortituloLabel.TabIndex = 3;
             this.calleProveedortituloLabel.Text = "Calle";
             // 
             // lblCalle
             // 
             this.lblCalle.AutoSize = true;
-            this.lblCalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCalle.Location = new System.Drawing.Point(443, 48);
+            this.lblCalle.Location = new System.Drawing.Point(319, 81);
             this.lblCalle.Name = "lblCalle";
-            this.lblCalle.Size = new System.Drawing.Size(12, 17);
+            this.lblCalle.Size = new System.Drawing.Size(10, 15);
             this.lblCalle.TabIndex = 3;
             this.lblCalle.Text = ".";
             // 
             // numeroProveedorTituloLabel
             // 
             this.numeroProveedorTituloLabel.AutoSize = true;
-            this.numeroProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numeroProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numeroProveedorTituloLabel.ForeColor = System.Drawing.Color.Black;
-            this.numeroProveedorTituloLabel.Location = new System.Drawing.Point(354, 88);
+            this.numeroProveedorTituloLabel.Location = new System.Drawing.Point(319, 117);
             this.numeroProveedorTituloLabel.Name = "numeroProveedorTituloLabel";
-            this.numeroProveedorTituloLabel.Size = new System.Drawing.Size(62, 18);
+            this.numeroProveedorTituloLabel.Size = new System.Drawing.Size(58, 17);
             this.numeroProveedorTituloLabel.TabIndex = 3;
             this.numeroProveedorTituloLabel.Text = "Número";
             // 
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
-            this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNumero.Location = new System.Drawing.Point(443, 90);
+            this.lblNumero.Location = new System.Drawing.Point(319, 139);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(12, 17);
+            this.lblNumero.Size = new System.Drawing.Size(10, 15);
             this.lblNumero.TabIndex = 3;
             this.lblNumero.Text = ".";
             // 
             // localidadProveedorTituloLabel
             // 
             this.localidadProveedorTituloLabel.AutoSize = true;
-            this.localidadProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.localidadProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.localidadProveedorTituloLabel.ForeColor = System.Drawing.Color.Black;
-            this.localidadProveedorTituloLabel.Location = new System.Drawing.Point(345, 131);
+            this.localidadProveedorTituloLabel.Location = new System.Drawing.Point(319, 176);
             this.localidadProveedorTituloLabel.Name = "localidadProveedorTituloLabel";
-            this.localidadProveedorTituloLabel.Size = new System.Drawing.Size(71, 18);
+            this.localidadProveedorTituloLabel.Size = new System.Drawing.Size(69, 17);
             this.localidadProveedorTituloLabel.TabIndex = 3;
             this.localidadProveedorTituloLabel.Text = "Localidad";
             // 
             // lblLocalidad
             // 
             this.lblLocalidad.AutoSize = true;
-            this.lblLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblLocalidad.Location = new System.Drawing.Point(443, 133);
+            this.lblLocalidad.Location = new System.Drawing.Point(319, 198);
             this.lblLocalidad.Name = "lblLocalidad";
-            this.lblLocalidad.Size = new System.Drawing.Size(12, 17);
+            this.lblLocalidad.Size = new System.Drawing.Size(10, 15);
             this.lblLocalidad.TabIndex = 3;
             this.lblLocalidad.Text = ".";
             // 
             // provinciaProveedorTituloLabel
             // 
             this.provinciaProveedorTituloLabel.AutoSize = true;
-            this.provinciaProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.provinciaProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.provinciaProveedorTituloLabel.ForeColor = System.Drawing.Color.Black;
-            this.provinciaProveedorTituloLabel.Location = new System.Drawing.Point(347, 173);
+            this.provinciaProveedorTituloLabel.Location = new System.Drawing.Point(319, 236);
             this.provinciaProveedorTituloLabel.Name = "provinciaProveedorTituloLabel";
-            this.provinciaProveedorTituloLabel.Size = new System.Drawing.Size(69, 18);
+            this.provinciaProveedorTituloLabel.Size = new System.Drawing.Size(66, 17);
             this.provinciaProveedorTituloLabel.TabIndex = 3;
             this.provinciaProveedorTituloLabel.Text = "Provincia";
             // 
             // lblProvincia
             // 
             this.lblProvincia.AutoSize = true;
-            this.lblProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProvincia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblProvincia.Location = new System.Drawing.Point(443, 175);
+            this.lblProvincia.Location = new System.Drawing.Point(319, 258);
             this.lblProvincia.Name = "lblProvincia";
-            this.lblProvincia.Size = new System.Drawing.Size(12, 17);
+            this.lblProvincia.Size = new System.Drawing.Size(10, 15);
             this.lblProvincia.TabIndex = 3;
             this.lblProvincia.Text = ".";
             // 
             // lblIdProveedor
             // 
             this.lblIdProveedor.AutoSize = true;
-            this.lblIdProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblIdProveedor.Location = new System.Drawing.Point(189, 48);
+            this.lblIdProveedor.Location = new System.Drawing.Point(22, 81);
             this.lblIdProveedor.Name = "lblIdProveedor";
-            this.lblIdProveedor.Size = new System.Drawing.Size(12, 17);
+            this.lblIdProveedor.Size = new System.Drawing.Size(10, 15);
             this.lblIdProveedor.TabIndex = 3;
             this.lblIdProveedor.Text = ".";
             // 
             // idProveedorTituloLabel
             // 
             this.idProveedorTituloLabel.AutoSize = true;
-            this.idProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idProveedorTituloLabel.ForeColor = System.Drawing.Color.Black;
-            this.idProveedorTituloLabel.Location = new System.Drawing.Point(73, 46);
+            this.idProveedorTituloLabel.Location = new System.Drawing.Point(22, 59);
             this.idProveedorTituloLabel.Name = "idProveedorTituloLabel";
-            this.idProveedorTituloLabel.Size = new System.Drawing.Size(92, 18);
+            this.idProveedorTituloLabel.Size = new System.Drawing.Size(89, 17);
             this.idProveedorTituloLabel.TabIndex = 3;
             this.idProveedorTituloLabel.Text = "Id Proveedor";
             // 
@@ -351,8 +351,8 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(25, 165);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(21, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(190, 20);
             this.label6.TabIndex = 5;
@@ -360,44 +360,40 @@
             // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.AutoSize = true;
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.TelefonoProveedorTituloLabel);
-            this.panel4.Controls.Add(this.provinciaProveedorTituloLabel);
-            this.panel4.Controls.Add(this.lblNumero);
-            this.panel4.Controls.Add(this.razonSocialProveedorTituloLabel);
-            this.panel4.Controls.Add(this.calleProveedortituloLabel);
-            this.panel4.Controls.Add(this.lblLocalidad);
-            this.panel4.Controls.Add(this.lblCalle);
+            this.panel4.Controls.Add(this.idProveedorTituloLabel);
             this.panel4.Controls.Add(this.lblIdProveedor);
-            this.panel4.Controls.Add(this.lblCuit);
-            this.panel4.Controls.Add(this.localidadProveedorTituloLabel);
+            this.panel4.Controls.Add(this.provinciaProveedorTituloLabel);
             this.panel4.Controls.Add(this.lblProvincia);
+            this.panel4.Controls.Add(this.lblNumero);
             this.panel4.Controls.Add(this.lblTelefono);
+            this.panel4.Controls.Add(this.localidadProveedorTituloLabel);
+            this.panel4.Controls.Add(this.razonSocialProveedorTituloLabel);
             this.panel4.Controls.Add(this.numeroProveedorTituloLabel);
+            this.panel4.Controls.Add(this.lblCuit);
+            this.panel4.Controls.Add(this.calleProveedortituloLabel);
             this.panel4.Controls.Add(this.lblRazonSocial);
             this.panel4.Controls.Add(this.cuitProveedorTituloLabel);
-            this.panel4.Controls.Add(this.idProveedorTituloLabel);
+            this.panel4.Controls.Add(this.lblLocalidad);
+            this.panel4.Controls.Add(this.lblCalle);
             this.panel4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.panel4.Location = new System.Drawing.Point(125, 204);
+            this.panel4.Location = new System.Drawing.Point(29, 166);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(581, 277);
+            this.panel4.Size = new System.Drawing.Size(467, 391);
             this.panel4.TabIndex = 6;
             // 
             // ProveedorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cboxProveedores);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Name = "ProveedorView";
-            this.Size = new System.Drawing.Size(860, 509);
+            this.Size = new System.Drawing.Size(860, 596);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
