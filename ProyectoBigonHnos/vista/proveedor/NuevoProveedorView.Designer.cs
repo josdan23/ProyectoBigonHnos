@@ -52,7 +52,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(101, 130);
+            this.label1.Location = new System.Drawing.Point(63, 130);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 0;
@@ -60,7 +60,7 @@
             // 
             // tboxRazonSocial
             // 
-            this.tboxRazonSocial.Location = new System.Drawing.Point(187, 127);
+            this.tboxRazonSocial.Location = new System.Drawing.Point(149, 127);
             this.tboxRazonSocial.Name = "tboxRazonSocial";
             this.tboxRazonSocial.Size = new System.Drawing.Size(100, 20);
             this.tboxRazonSocial.TabIndex = 1;
@@ -68,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(146, 166);
+            this.label2.Location = new System.Drawing.Point(108, 166);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 13);
             this.label2.TabIndex = 0;
@@ -76,7 +76,7 @@
             // 
             // tboxCuit
             // 
-            this.tboxCuit.Location = new System.Drawing.Point(187, 163);
+            this.tboxCuit.Location = new System.Drawing.Point(149, 163);
             this.tboxCuit.Name = "tboxCuit";
             this.tboxCuit.Size = new System.Drawing.Size(100, 20);
             this.tboxCuit.TabIndex = 2;
@@ -84,7 +84,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(122, 202);
+            this.label3.Location = new System.Drawing.Point(84, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 0;
@@ -92,7 +92,7 @@
             // 
             // tboxTelefono
             // 
-            this.tboxTelefono.Location = new System.Drawing.Point(187, 199);
+            this.tboxTelefono.Location = new System.Drawing.Point(149, 199);
             this.tboxTelefono.Name = "tboxTelefono";
             this.tboxTelefono.Size = new System.Drawing.Size(100, 20);
             this.tboxTelefono.TabIndex = 3;
@@ -100,7 +100,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(141, 238);
+            this.label4.Location = new System.Drawing.Point(103, 238);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(30, 13);
             this.label4.TabIndex = 0;
@@ -108,7 +108,7 @@
             // 
             // tboxCalle
             // 
-            this.tboxCalle.Location = new System.Drawing.Point(187, 235);
+            this.tboxCalle.Location = new System.Drawing.Point(149, 235);
             this.tboxCalle.Name = "tboxCalle";
             this.tboxCalle.Size = new System.Drawing.Size(100, 20);
             this.tboxCalle.TabIndex = 4;
@@ -116,7 +116,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(127, 274);
+            this.label5.Location = new System.Drawing.Point(89, 274);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 0;
@@ -124,7 +124,7 @@
             // 
             // tboxNumero
             // 
-            this.tboxNumero.Location = new System.Drawing.Point(187, 271);
+            this.tboxNumero.Location = new System.Drawing.Point(149, 271);
             this.tboxNumero.Name = "tboxNumero";
             this.tboxNumero.Size = new System.Drawing.Size(100, 20);
             this.tboxNumero.TabIndex = 5;
@@ -132,7 +132,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(118, 310);
+            this.label6.Location = new System.Drawing.Point(80, 310);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 0;
@@ -140,7 +140,7 @@
             // 
             // tboxLocalidad
             // 
-            this.tboxLocalidad.Location = new System.Drawing.Point(187, 307);
+            this.tboxLocalidad.Location = new System.Drawing.Point(149, 307);
             this.tboxLocalidad.Name = "tboxLocalidad";
             this.tboxLocalidad.Size = new System.Drawing.Size(100, 20);
             this.tboxLocalidad.TabIndex = 6;
@@ -148,7 +148,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(120, 346);
+            this.label7.Location = new System.Drawing.Point(82, 346);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 13);
             this.label7.TabIndex = 0;
@@ -156,14 +156,14 @@
             // 
             // tboxProvincia
             // 
-            this.tboxProvincia.Location = new System.Drawing.Point(187, 343);
+            this.tboxProvincia.Location = new System.Drawing.Point(149, 343);
             this.tboxProvincia.Name = "tboxProvincia";
             this.tboxProvincia.Size = new System.Drawing.Size(100, 20);
             this.tboxProvincia.TabIndex = 7;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(348, 400);
+            this.btnGuardar.Location = new System.Drawing.Point(276, 400);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 8;
@@ -174,7 +174,7 @@
             // btnCancelar
             // 
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(248, 400);
+            this.btnCancelar.Location = new System.Drawing.Point(176, 400);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 9;
@@ -210,7 +210,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(435, 447);
+            this.ClientSize = new System.Drawing.Size(377, 447);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancelar);
