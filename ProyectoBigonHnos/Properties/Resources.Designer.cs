@@ -103,6 +103,16 @@ namespace ProyectoBigonHnos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap edit_78 {
+            get {
+                object obj = ResourceManager.GetObject("edit_78", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap editar_icon {
             get {
                 object obj = ResourceManager.GetObject("editar_icon", resourceCulture);
@@ -126,6 +136,26 @@ namespace ProyectoBigonHnos.Properties {
         internal static System.Drawing.Bitmap empleados_icon {
             get {
                 object obj = ResourceManager.GetObject("empleados_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eye_19 {
+            get {
+                object obj = ResourceManager.GetObject("eye_19", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_error_outline_48px {
+            get {
+                object obj = ResourceManager.GetObject("ic_error_outline_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

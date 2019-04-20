@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,19 +56,21 @@
             this.contraseniaLbl = new System.Windows.Forms.TextBox();
             this.adminLbl = new System.Windows.Forms.TextBox();
             this.verContraseniaBtn = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 77);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(25, 99);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.Size = new System.Drawing.Size(113, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mi Información";
             // 
@@ -79,8 +82,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(873, 53);
+            this.panel1.Size = new System.Drawing.Size(873, 74);
             this.panel1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnEditar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(356, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(517, 74);
+            this.panel2.TabIndex = 2;
             // 
             // panel3
             // 
@@ -88,7 +101,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(207, 53);
+            this.panel3.Size = new System.Drawing.Size(207, 74);
             this.panel3.TabIndex = 1;
             // 
             // label2
@@ -104,7 +117,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(90, 130);
+            this.label3.Location = new System.Drawing.Point(148, 177);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 0;
@@ -113,7 +126,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(90, 107);
+            this.label4.Location = new System.Drawing.Point(153, 149);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 0;
@@ -122,7 +135,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(90, 153);
+            this.label5.Location = new System.Drawing.Point(148, 205);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 0;
@@ -131,7 +144,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(90, 199);
+            this.label6.Location = new System.Drawing.Point(162, 261);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 13);
             this.label6.TabIndex = 0;
@@ -140,7 +153,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(90, 176);
+            this.label7.Location = new System.Drawing.Point(131, 233);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 13);
             this.label7.TabIndex = 0;
@@ -149,7 +162,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(90, 222);
+            this.label8.Location = new System.Drawing.Point(148, 289);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 13);
             this.label8.TabIndex = 0;
@@ -158,7 +171,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(90, 245);
+            this.label9.Location = new System.Drawing.Point(139, 317);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 13);
             this.label9.TabIndex = 0;
@@ -167,7 +180,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(90, 268);
+            this.label11.Location = new System.Drawing.Point(141, 345);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(51, 13);
             this.label11.TabIndex = 0;
@@ -176,7 +189,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(90, 291);
+            this.label12.Location = new System.Drawing.Point(143, 373);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(49, 13);
             this.label12.TabIndex = 0;
@@ -185,7 +198,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(90, 348);
+            this.label13.Location = new System.Drawing.Point(131, 429);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(61, 13);
             this.label13.TabIndex = 0;
@@ -194,7 +207,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(90, 322);
+            this.label14.Location = new System.Drawing.Point(122, 401);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(70, 13);
             this.label14.TabIndex = 0;
@@ -203,70 +216,78 @@
             // legajoLbl
             // 
             this.legajoLbl.Enabled = false;
-            this.legajoLbl.Location = new System.Drawing.Point(177, 104);
+            this.legajoLbl.Location = new System.Drawing.Point(221, 146);
             this.legajoLbl.Name = "legajoLbl";
             this.legajoLbl.Size = new System.Drawing.Size(100, 20);
             this.legajoLbl.TabIndex = 3;
             // 
             // apellidoLbl
             // 
-            this.apellidoLbl.Location = new System.Drawing.Point(177, 127);
+            this.apellidoLbl.Enabled = false;
+            this.apellidoLbl.Location = new System.Drawing.Point(221, 174);
             this.apellidoLbl.Name = "apellidoLbl";
             this.apellidoLbl.Size = new System.Drawing.Size(100, 20);
             this.apellidoLbl.TabIndex = 3;
             // 
             // nombreLbl
             // 
-            this.nombreLbl.Location = new System.Drawing.Point(177, 150);
+            this.nombreLbl.Enabled = false;
+            this.nombreLbl.Location = new System.Drawing.Point(221, 202);
             this.nombreLbl.Name = "nombreLbl";
             this.nombreLbl.Size = new System.Drawing.Size(100, 20);
             this.nombreLbl.TabIndex = 3;
             // 
             // cuilLbl
             // 
-            this.cuilLbl.Location = new System.Drawing.Point(177, 173);
+            this.cuilLbl.Enabled = false;
+            this.cuilLbl.Location = new System.Drawing.Point(221, 230);
             this.cuilLbl.Name = "cuilLbl";
             this.cuilLbl.Size = new System.Drawing.Size(100, 20);
             this.cuilLbl.TabIndex = 3;
             // 
             // calleLbl
             // 
-            this.calleLbl.Location = new System.Drawing.Point(177, 196);
+            this.calleLbl.Enabled = false;
+            this.calleLbl.Location = new System.Drawing.Point(221, 258);
             this.calleLbl.Name = "calleLbl";
             this.calleLbl.Size = new System.Drawing.Size(100, 20);
             this.calleLbl.TabIndex = 3;
             // 
             // numeroLbl
             // 
-            this.numeroLbl.Location = new System.Drawing.Point(177, 219);
+            this.numeroLbl.Enabled = false;
+            this.numeroLbl.Location = new System.Drawing.Point(221, 286);
             this.numeroLbl.Name = "numeroLbl";
             this.numeroLbl.Size = new System.Drawing.Size(100, 20);
             this.numeroLbl.TabIndex = 3;
             // 
             // localidadLbl
             // 
-            this.localidadLbl.Location = new System.Drawing.Point(177, 242);
+            this.localidadLbl.Enabled = false;
+            this.localidadLbl.Location = new System.Drawing.Point(221, 314);
             this.localidadLbl.Name = "localidadLbl";
             this.localidadLbl.Size = new System.Drawing.Size(100, 20);
             this.localidadLbl.TabIndex = 3;
             // 
             // provinciaLbl
             // 
-            this.provinciaLbl.Location = new System.Drawing.Point(177, 265);
+            this.provinciaLbl.Enabled = false;
+            this.provinciaLbl.Location = new System.Drawing.Point(221, 342);
             this.provinciaLbl.Name = "provinciaLbl";
             this.provinciaLbl.Size = new System.Drawing.Size(100, 20);
             this.provinciaLbl.TabIndex = 3;
             // 
             // telLbl
             // 
-            this.telLbl.Location = new System.Drawing.Point(177, 288);
+            this.telLbl.Enabled = false;
+            this.telLbl.Location = new System.Drawing.Point(221, 370);
             this.telLbl.Name = "telLbl";
             this.telLbl.Size = new System.Drawing.Size(100, 20);
             this.telLbl.TabIndex = 3;
             // 
             // contraseniaLbl
             // 
-            this.contraseniaLbl.Location = new System.Drawing.Point(177, 345);
+            this.contraseniaLbl.Location = new System.Drawing.Point(221, 426);
             this.contraseniaLbl.Name = "contraseniaLbl";
             this.contraseniaLbl.Size = new System.Drawing.Size(100, 20);
             this.contraseniaLbl.TabIndex = 3;
@@ -275,39 +296,46 @@
             // adminLbl
             // 
             this.adminLbl.Enabled = false;
-            this.adminLbl.Location = new System.Drawing.Point(177, 319);
+            this.adminLbl.Location = new System.Drawing.Point(221, 398);
             this.adminLbl.Name = "adminLbl";
             this.adminLbl.Size = new System.Drawing.Size(100, 20);
             this.adminLbl.TabIndex = 3;
             // 
             // verContraseniaBtn
             // 
-            this.verContraseniaBtn.Location = new System.Drawing.Point(292, 343);
+            this.verContraseniaBtn.Image = global::ProyectoBigonHnos.Properties.Resources.eye_19;
+            this.verContraseniaBtn.Location = new System.Drawing.Point(327, 425);
             this.verContraseniaBtn.Name = "verContraseniaBtn";
-            this.verContraseniaBtn.Size = new System.Drawing.Size(75, 23);
+            this.verContraseniaBtn.Size = new System.Drawing.Size(30, 23);
             this.verContraseniaBtn.TabIndex = 4;
-            this.verContraseniaBtn.Text = "ver";
             this.verContraseniaBtn.UseVisualStyleBackColor = true;
             this.verContraseniaBtn.Click += new System.EventHandler(this.verContraseniaBtn_Click);
             // 
-            // panel2
+            // button1
             // 
-            this.panel2.Controls.Add(this.btnEditar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(161, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(712, 53);
-            this.panel2.TabIndex = 2;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::ProyectoBigonHnos.Properties.Resources.edit_78;
+            this.button1.Location = new System.Drawing.Point(231, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 74);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Cerrar Sesion";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnEditar
             // 
+            this.btnEditar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = global::ProyectoBigonHnos.Properties.Resources.editar_icon;
-            this.btnEditar.Location = new System.Drawing.Point(566, 8);
+            this.btnEditar.Location = new System.Drawing.Point(374, 0);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(143, 42);
+            this.btnEditar.Size = new System.Drawing.Size(143, 74);
             this.btnEditar.TabIndex = 0;
             this.btnEditar.Text = "Cambiar Contraseña";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -346,9 +374,9 @@
             this.Name = "UsuarioView";
             this.Size = new System.Drawing.Size(873, 495);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,5 +413,6 @@
         private System.Windows.Forms.Button verContraseniaBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button button1;
     }
 }

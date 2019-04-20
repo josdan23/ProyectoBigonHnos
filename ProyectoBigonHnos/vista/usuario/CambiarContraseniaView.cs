@@ -64,7 +64,7 @@ namespace ProyectoBigonHnos.vista.usuario
         {
             if (repetirTxb.Text != nuevaTxb.Text)
             {
-                msgLbl.Text = "incorrecta";
+                msgLbl.Text = "Incorrecta";
                 msgLbl.Visible = true;
                 Bandera1 = false;
             }
