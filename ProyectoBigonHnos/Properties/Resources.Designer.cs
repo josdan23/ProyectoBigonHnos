@@ -163,6 +163,16 @@ namespace ProyectoBigonHnos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_local_printshop_24px {
+            get {
+                object obj = ResourceManager.GetObject("ic_local_printshop_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Buy_24px {
             get {
                 object obj = ResourceManager.GetObject("icons8_Buy_24px", resourceCulture);
