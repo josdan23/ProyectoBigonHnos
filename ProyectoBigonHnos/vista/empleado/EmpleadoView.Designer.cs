@@ -168,7 +168,7 @@
             this.colFechaIngreo,
             this.colCategoria});
             this.dgvEmpleados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvEmpleados.Location = new System.Drawing.Point(61, 116);
+            this.dgvEmpleados.Location = new System.Drawing.Point(93, 126);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
             this.dgvEmpleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -180,7 +180,7 @@
             this.dgvEmpleados.ShowCellToolTips = false;
             this.dgvEmpleados.ShowEditingIcon = false;
             this.dgvEmpleados.ShowRowErrors = false;
-            this.dgvEmpleados.Size = new System.Drawing.Size(661, 277);
+            this.dgvEmpleados.Size = new System.Drawing.Size(604, 277);
             this.dgvEmpleados.TabIndex = 2;
             // 
             // colLegajo
@@ -225,7 +225,7 @@
             this.btnDetalle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetalle.Location = new System.Drawing.Point(647, 78);
+            this.btnDetalle.Location = new System.Drawing.Point(622, 85);
             this.btnDetalle.Name = "btnDetalle";
             this.btnDetalle.Size = new System.Drawing.Size(75, 32);
             this.btnDetalle.TabIndex = 3;
@@ -236,9 +236,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(57, 84);
+            this.label2.Location = new System.Drawing.Point(26, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(216, 18);
             this.label2.TabIndex = 4;

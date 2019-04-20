@@ -60,7 +60,7 @@ namespace ProyectoBigonHnos.vista.empleado
 
         public void listarEmpleado(string legajo, string apellido, string nombre, string dni, DateTime fechaIngreso, string categoria)
         {
-            dgvEmpleados.Rows.Add(legajo, apellido, nombre, dni, fechaIngreso, categoria);
+            dgvEmpleados.Rows.Add(legajo, apellido, nombre, dni, fechaIngreso.ToShortDateString(), categoria);
         }
 
         public void LimpiarVista()

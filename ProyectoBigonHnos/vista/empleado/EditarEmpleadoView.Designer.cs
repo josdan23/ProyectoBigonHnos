@@ -68,24 +68,30 @@
             this.dtpFechaEgreso = new System.Windows.Forms.DateTimePicker();
             this.cboxAdministrador = new System.Windows.Forms.CheckBox();
             this.egresoCheckbox = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFamiliares)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button3
             // 
             this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button3.Location = new System.Drawing.Point(624, 486);
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(622, 529);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(75, 32);
             this.button3.TabIndex = 41;
             this.button3.Text = "Cancelar";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(714, 486);
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(714, 529);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(75, 32);
             this.button2.TabIndex = 15;
             this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = true;
@@ -109,7 +115,7 @@
             this.colFechaNac,
             this.colDiscapacidad});
             this.dgvFamiliares.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvFamiliares.Location = new System.Drawing.Point(18, 350);
+            this.dgvFamiliares.Location = new System.Drawing.Point(18, 402);
             this.dgvFamiliares.Name = "dgvFamiliares";
             this.dgvFamiliares.ReadOnly = true;
             this.dgvFamiliares.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -146,14 +152,14 @@
             // 
             // tboxCategoria
             // 
-            this.tboxCategoria.Location = new System.Drawing.Point(137, 239);
+            this.tboxCategoria.Location = new System.Drawing.Point(138, 213);
             this.tboxCategoria.Name = "tboxCategoria";
             this.tboxCategoria.Size = new System.Drawing.Size(100, 20);
             this.tboxCategoria.TabIndex = 11;
             // 
             // tboxContrasenia
             // 
-            this.tboxContrasenia.Location = new System.Drawing.Point(21, 291);
+            this.tboxContrasenia.Location = new System.Drawing.Point(22, 265);
             this.tboxContrasenia.Name = "tboxContrasenia";
             this.tboxContrasenia.Size = new System.Drawing.Size(100, 20);
             this.tboxContrasenia.TabIndex = 13;
@@ -161,7 +167,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(556, 204);
+            this.label15.Location = new System.Drawing.Point(538, 194);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(88, 13);
             this.label15.TabIndex = 30;
@@ -170,7 +176,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(134, 222);
+            this.label11.Location = new System.Drawing.Point(135, 196);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(52, 13);
             this.label11.TabIndex = 29;
@@ -179,7 +185,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(556, 109);
+            this.label14.Location = new System.Drawing.Point(538, 83);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(90, 13);
             this.label14.TabIndex = 28;
@@ -188,7 +194,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(18, 274);
+            this.label12.Location = new System.Drawing.Point(19, 248);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(61, 13);
             this.label12.TabIndex = 26;
@@ -196,7 +202,7 @@
             // 
             // tboxTelefono
             // 
-            this.tboxTelefono.Location = new System.Drawing.Point(21, 239);
+            this.tboxTelefono.Location = new System.Drawing.Point(22, 213);
             this.tboxTelefono.Name = "tboxTelefono";
             this.tboxTelefono.Size = new System.Drawing.Size(100, 20);
             this.tboxTelefono.TabIndex = 10;
@@ -204,7 +210,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(18, 222);
+            this.label10.Location = new System.Drawing.Point(19, 196);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 13);
             this.label10.TabIndex = 24;
@@ -212,63 +218,63 @@
             // 
             // tboxProvincia
             // 
-            this.tboxProvincia.Location = new System.Drawing.Point(369, 180);
+            this.tboxProvincia.Location = new System.Drawing.Point(370, 154);
             this.tboxProvincia.Name = "tboxProvincia";
             this.tboxProvincia.Size = new System.Drawing.Size(100, 20);
             this.tboxProvincia.TabIndex = 9;
             // 
             // tboxCuit
             // 
-            this.tboxCuit.Location = new System.Drawing.Point(369, 126);
+            this.tboxCuit.Location = new System.Drawing.Point(370, 100);
             this.tboxCuit.Name = "tboxCuit";
             this.tboxCuit.Size = new System.Drawing.Size(100, 20);
             this.tboxCuit.TabIndex = 5;
             // 
             // tboxLocalidad
             // 
-            this.tboxLocalidad.Location = new System.Drawing.Point(252, 180);
+            this.tboxLocalidad.Location = new System.Drawing.Point(253, 154);
             this.tboxLocalidad.Name = "tboxLocalidad";
             this.tboxLocalidad.Size = new System.Drawing.Size(100, 20);
             this.tboxLocalidad.TabIndex = 8;
             // 
             // tboxDni
             // 
-            this.tboxDni.Location = new System.Drawing.Point(252, 126);
+            this.tboxDni.Location = new System.Drawing.Point(253, 100);
             this.tboxDni.Name = "tboxDni";
             this.tboxDni.Size = new System.Drawing.Size(100, 20);
             this.tboxDni.TabIndex = 4;
             // 
             // tboxNumero
             // 
-            this.tboxNumero.Location = new System.Drawing.Point(137, 180);
+            this.tboxNumero.Location = new System.Drawing.Point(138, 154);
             this.tboxNumero.Name = "tboxNumero";
             this.tboxNumero.Size = new System.Drawing.Size(100, 20);
             this.tboxNumero.TabIndex = 7;
             // 
             // tboxNombre
             // 
-            this.tboxNombre.Location = new System.Drawing.Point(137, 126);
+            this.tboxNombre.Location = new System.Drawing.Point(138, 100);
             this.tboxNombre.Name = "tboxNombre";
             this.tboxNombre.Size = new System.Drawing.Size(100, 20);
             this.tboxNombre.TabIndex = 3;
             // 
             // tboxCalle
             // 
-            this.tboxCalle.Location = new System.Drawing.Point(21, 180);
+            this.tboxCalle.Location = new System.Drawing.Point(22, 154);
             this.tboxCalle.Name = "tboxCalle";
             this.tboxCalle.Size = new System.Drawing.Size(100, 20);
             this.tboxCalle.TabIndex = 6;
             // 
             // tboxApellido
             // 
-            this.tboxApellido.Location = new System.Drawing.Point(21, 126);
+            this.tboxApellido.Location = new System.Drawing.Point(22, 100);
             this.tboxApellido.Name = "tboxApellido";
             this.tboxApellido.Size = new System.Drawing.Size(100, 20);
             this.tboxApellido.TabIndex = 2;
             // 
             // tboxLegajo
             // 
-            this.tboxLegajo.Location = new System.Drawing.Point(21, 72);
+            this.tboxLegajo.Location = new System.Drawing.Point(22, 46);
             this.tboxLegajo.Name = "tboxLegajo";
             this.tboxLegajo.Size = new System.Drawing.Size(100, 20);
             this.tboxLegajo.TabIndex = 1;
@@ -276,7 +282,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(366, 163);
+            this.label9.Location = new System.Drawing.Point(367, 137);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 13);
             this.label9.TabIndex = 7;
@@ -285,7 +291,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(366, 109);
+            this.label5.Location = new System.Drawing.Point(367, 83);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(25, 13);
             this.label5.TabIndex = 8;
@@ -294,7 +300,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(249, 163);
+            this.label8.Location = new System.Drawing.Point(250, 137);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 13);
             this.label8.TabIndex = 9;
@@ -303,7 +309,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(249, 109);
+            this.label4.Location = new System.Drawing.Point(250, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(23, 13);
             this.label4.TabIndex = 14;
@@ -312,7 +318,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(134, 163);
+            this.label7.Location = new System.Drawing.Point(135, 137);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 13);
             this.label7.TabIndex = 11;
@@ -321,7 +327,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(134, 109);
+            this.label3.Location = new System.Drawing.Point(135, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 12;
@@ -330,7 +336,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 163);
+            this.label6.Location = new System.Drawing.Point(19, 137);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 13);
             this.label6.TabIndex = 13;
@@ -339,7 +345,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 109);
+            this.label2.Location = new System.Drawing.Point(19, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 10;
@@ -348,7 +354,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 55);
+            this.label1.Location = new System.Drawing.Point(19, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 6;
@@ -357,26 +363,32 @@
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label16.Location = new System.Drawing.Point(18, 26);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(83, 13);
+            this.label16.Size = new System.Drawing.Size(115, 18);
             this.label16.TabIndex = 42;
             this.label16.Text = "Editar empleado";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(15, 334);
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label17.Location = new System.Drawing.Point(18, 373);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 13);
+            this.label17.Size = new System.Drawing.Size(76, 18);
             this.label17.TabIndex = 43;
             this.label17.Text = "Familiares";
             // 
             // btnBorrarFamiliar
             // 
-            this.btnBorrarFamiliar.Location = new System.Drawing.Point(714, 311);
+            this.btnBorrarFamiliar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnBorrarFamiliar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrarFamiliar.Location = new System.Drawing.Point(714, 359);
             this.btnBorrarFamiliar.Name = "btnBorrarFamiliar";
-            this.btnBorrarFamiliar.Size = new System.Drawing.Size(75, 23);
+            this.btnBorrarFamiliar.Size = new System.Drawing.Size(75, 32);
             this.btnBorrarFamiliar.TabIndex = 44;
             this.btnBorrarFamiliar.Text = "Borrar";
             this.btnBorrarFamiliar.UseVisualStyleBackColor = true;
@@ -385,7 +397,7 @@
             // dtpFechaIngreso
             // 
             this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaIngreso.Location = new System.Drawing.Point(559, 126);
+            this.dtpFechaIngreso.Location = new System.Drawing.Point(541, 100);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
             this.dtpFechaIngreso.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaIngreso.TabIndex = 45;
@@ -394,7 +406,7 @@
             // 
             this.dtpFechaEgreso.Enabled = false;
             this.dtpFechaEgreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaEgreso.Location = new System.Drawing.Point(559, 220);
+            this.dtpFechaEgreso.Location = new System.Drawing.Point(541, 210);
             this.dtpFechaEgreso.Name = "dtpFechaEgreso";
             this.dtpFechaEgreso.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaEgreso.TabIndex = 46;
@@ -403,7 +415,7 @@
             // cboxAdministrador
             // 
             this.cboxAdministrador.AutoSize = true;
-            this.cboxAdministrador.Location = new System.Drawing.Point(137, 291);
+            this.cboxAdministrador.Location = new System.Drawing.Point(138, 265);
             this.cboxAdministrador.Name = "cboxAdministrador";
             this.cboxAdministrador.Size = new System.Drawing.Size(89, 17);
             this.cboxAdministrador.TabIndex = 14;
@@ -413,7 +425,7 @@
             // egresoCheckbox
             // 
             this.egresoCheckbox.AutoSize = true;
-            this.egresoCheckbox.Location = new System.Drawing.Point(559, 180);
+            this.egresoCheckbox.Location = new System.Drawing.Point(541, 170);
             this.egresoCheckbox.Name = "egresoCheckbox";
             this.egresoCheckbox.Size = new System.Drawing.Size(59, 17);
             this.egresoCheckbox.TabIndex = 14;
@@ -421,52 +433,65 @@
             this.egresoCheckbox.UseVisualStyleBackColor = true;
             this.egresoCheckbox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dtpFechaIngreso);
+            this.groupBox1.Controls.Add(this.egresoCheckbox);
+            this.groupBox1.Controls.Add(this.tboxCategoria);
+            this.groupBox1.Controls.Add(this.dtpFechaEgreso);
+            this.groupBox1.Controls.Add(this.cboxAdministrador);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.tboxLegajo);
+            this.groupBox1.Controls.Add(this.tboxContrasenia);
+            this.groupBox1.Controls.Add(this.tboxApellido);
+            this.groupBox1.Controls.Add(this.tboxCalle);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.tboxNombre);
+            this.groupBox1.Controls.Add(this.tboxNumero);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.tboxDni);
+            this.groupBox1.Controls.Add(this.tboxTelefono);
+            this.groupBox1.Controls.Add(this.tboxLocalidad);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.tboxCuit);
+            this.groupBox1.Controls.Add(this.tboxProvincia);
+            this.groupBox1.Location = new System.Drawing.Point(18, 43);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(771, 307);
+            this.groupBox1.TabIndex = 47;
+            this.groupBox1.TabStop = false;
+            // 
             // EditarEmpleadoView
             // 
             this.AcceptButton = this.button2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.button3;
-            this.ClientSize = new System.Drawing.Size(850, 521);
-            this.Controls.Add(this.egresoCheckbox);
-            this.Controls.Add(this.cboxAdministrador);
-            this.Controls.Add(this.dtpFechaEgreso);
-            this.Controls.Add(this.dtpFechaIngreso);
+            this.ClientSize = new System.Drawing.Size(811, 577);
             this.Controls.Add(this.btnBorrarFamiliar);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dgvFamiliares);
-            this.Controls.Add(this.tboxCategoria);
-            this.Controls.Add(this.tboxContrasenia);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.tboxTelefono);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.tboxProvincia);
-            this.Controls.Add(this.tboxCuit);
-            this.Controls.Add(this.tboxLocalidad);
-            this.Controls.Add(this.tboxDni);
-            this.Controls.Add(this.tboxNumero);
-            this.Controls.Add(this.tboxNombre);
-            this.Controls.Add(this.tboxCalle);
-            this.Controls.Add(this.tboxApellido);
-            this.Controls.Add(this.tboxLegajo);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EditarEmpleadoView";
             this.Text = "EditarEmpleadoView";
             ((System.ComponentModel.ISupportInitialize)(this.dgvFamiliares)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,5 +539,6 @@
         private System.Windows.Forms.DateTimePicker dtpFechaEgreso;
         private System.Windows.Forms.CheckBox cboxAdministrador;
         private System.Windows.Forms.CheckBox egresoCheckbox;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
