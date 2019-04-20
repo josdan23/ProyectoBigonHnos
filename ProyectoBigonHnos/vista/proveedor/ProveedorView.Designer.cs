@@ -54,11 +54,11 @@
             this.idProveedorTituloLabel = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -165,7 +165,7 @@
             this.razonSocialProveedorTituloLabel.AutoSize = true;
             this.razonSocialProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.razonSocialProveedorTituloLabel.ForeColor = System.Drawing.Color.Black;
-            this.razonSocialProveedorTituloLabel.Location = new System.Drawing.Point(22, 117);
+            this.razonSocialProveedorTituloLabel.Location = new System.Drawing.Point(30, 138);
             this.razonSocialProveedorTituloLabel.Name = "razonSocialProveedorTituloLabel";
             this.razonSocialProveedorTituloLabel.Size = new System.Drawing.Size(91, 17);
             this.razonSocialProveedorTituloLabel.TabIndex = 3;
@@ -176,7 +176,7 @@
             this.lblRazonSocial.AutoSize = true;
             this.lblRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRazonSocial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblRazonSocial.Location = new System.Drawing.Point(22, 139);
+            this.lblRazonSocial.Location = new System.Drawing.Point(40, 160);
             this.lblRazonSocial.Name = "lblRazonSocial";
             this.lblRazonSocial.Size = new System.Drawing.Size(10, 15);
             this.lblRazonSocial.TabIndex = 3;
@@ -187,7 +187,7 @@
             this.cuitProveedorTituloLabel.AutoSize = true;
             this.cuitProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuitProveedorTituloLabel.ForeColor = System.Drawing.Color.Black;
-            this.cuitProveedorTituloLabel.Location = new System.Drawing.Point(22, 176);
+            this.cuitProveedorTituloLabel.Location = new System.Drawing.Point(30, 197);
             this.cuitProveedorTituloLabel.Name = "cuitProveedorTituloLabel";
             this.cuitProveedorTituloLabel.Size = new System.Drawing.Size(32, 17);
             this.cuitProveedorTituloLabel.TabIndex = 3;
@@ -198,7 +198,7 @@
             this.lblCuit.AutoSize = true;
             this.lblCuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCuit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCuit.Location = new System.Drawing.Point(22, 198);
+            this.lblCuit.Location = new System.Drawing.Point(40, 219);
             this.lblCuit.Name = "lblCuit";
             this.lblCuit.Size = new System.Drawing.Size(10, 15);
             this.lblCuit.TabIndex = 3;
@@ -209,7 +209,7 @@
             this.TelefonoProveedorTituloLabel.AutoSize = true;
             this.TelefonoProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TelefonoProveedorTituloLabel.ForeColor = System.Drawing.Color.Black;
-            this.TelefonoProveedorTituloLabel.Location = new System.Drawing.Point(22, 236);
+            this.TelefonoProveedorTituloLabel.Location = new System.Drawing.Point(30, 257);
             this.TelefonoProveedorTituloLabel.Name = "TelefonoProveedorTituloLabel";
             this.TelefonoProveedorTituloLabel.Size = new System.Drawing.Size(64, 17);
             this.TelefonoProveedorTituloLabel.TabIndex = 3;
@@ -220,7 +220,7 @@
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTelefono.Location = new System.Drawing.Point(22, 258);
+            this.lblTelefono.Location = new System.Drawing.Point(40, 279);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(10, 15);
             this.lblTelefono.TabIndex = 3;
@@ -231,7 +231,7 @@
             this.calleProveedortituloLabel.AutoSize = true;
             this.calleProveedortituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calleProveedortituloLabel.ForeColor = System.Drawing.Color.Black;
-            this.calleProveedortituloLabel.Location = new System.Drawing.Point(319, 59);
+            this.calleProveedortituloLabel.Location = new System.Drawing.Point(327, 80);
             this.calleProveedortituloLabel.Name = "calleProveedortituloLabel";
             this.calleProveedortituloLabel.Size = new System.Drawing.Size(39, 17);
             this.calleProveedortituloLabel.TabIndex = 3;
@@ -242,7 +242,7 @@
             this.lblCalle.AutoSize = true;
             this.lblCalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCalle.Location = new System.Drawing.Point(319, 81);
+            this.lblCalle.Location = new System.Drawing.Point(337, 102);
             this.lblCalle.Name = "lblCalle";
             this.lblCalle.Size = new System.Drawing.Size(10, 15);
             this.lblCalle.TabIndex = 3;
@@ -253,7 +253,7 @@
             this.numeroProveedorTituloLabel.AutoSize = true;
             this.numeroProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numeroProveedorTituloLabel.ForeColor = System.Drawing.Color.Black;
-            this.numeroProveedorTituloLabel.Location = new System.Drawing.Point(319, 117);
+            this.numeroProveedorTituloLabel.Location = new System.Drawing.Point(327, 138);
             this.numeroProveedorTituloLabel.Name = "numeroProveedorTituloLabel";
             this.numeroProveedorTituloLabel.Size = new System.Drawing.Size(58, 17);
             this.numeroProveedorTituloLabel.TabIndex = 3;
@@ -264,7 +264,7 @@
             this.lblNumero.AutoSize = true;
             this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNumero.Location = new System.Drawing.Point(319, 139);
+            this.lblNumero.Location = new System.Drawing.Point(337, 160);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(10, 15);
             this.lblNumero.TabIndex = 3;
@@ -275,7 +275,7 @@
             this.localidadProveedorTituloLabel.AutoSize = true;
             this.localidadProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.localidadProveedorTituloLabel.ForeColor = System.Drawing.Color.Black;
-            this.localidadProveedorTituloLabel.Location = new System.Drawing.Point(319, 176);
+            this.localidadProveedorTituloLabel.Location = new System.Drawing.Point(327, 197);
             this.localidadProveedorTituloLabel.Name = "localidadProveedorTituloLabel";
             this.localidadProveedorTituloLabel.Size = new System.Drawing.Size(69, 17);
             this.localidadProveedorTituloLabel.TabIndex = 3;
@@ -286,7 +286,7 @@
             this.lblLocalidad.AutoSize = true;
             this.lblLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblLocalidad.Location = new System.Drawing.Point(319, 198);
+            this.lblLocalidad.Location = new System.Drawing.Point(337, 219);
             this.lblLocalidad.Name = "lblLocalidad";
             this.lblLocalidad.Size = new System.Drawing.Size(10, 15);
             this.lblLocalidad.TabIndex = 3;
@@ -297,7 +297,7 @@
             this.provinciaProveedorTituloLabel.AutoSize = true;
             this.provinciaProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.provinciaProveedorTituloLabel.ForeColor = System.Drawing.Color.Black;
-            this.provinciaProveedorTituloLabel.Location = new System.Drawing.Point(319, 236);
+            this.provinciaProveedorTituloLabel.Location = new System.Drawing.Point(327, 257);
             this.provinciaProveedorTituloLabel.Name = "provinciaProveedorTituloLabel";
             this.provinciaProveedorTituloLabel.Size = new System.Drawing.Size(66, 17);
             this.provinciaProveedorTituloLabel.TabIndex = 3;
@@ -308,7 +308,7 @@
             this.lblProvincia.AutoSize = true;
             this.lblProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProvincia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblProvincia.Location = new System.Drawing.Point(319, 258);
+            this.lblProvincia.Location = new System.Drawing.Point(337, 279);
             this.lblProvincia.Name = "lblProvincia";
             this.lblProvincia.Size = new System.Drawing.Size(10, 15);
             this.lblProvincia.TabIndex = 3;
@@ -319,7 +319,7 @@
             this.lblIdProveedor.AutoSize = true;
             this.lblIdProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblIdProveedor.Location = new System.Drawing.Point(22, 81);
+            this.lblIdProveedor.Location = new System.Drawing.Point(40, 102);
             this.lblIdProveedor.Name = "lblIdProveedor";
             this.lblIdProveedor.Size = new System.Drawing.Size(10, 15);
             this.lblIdProveedor.TabIndex = 3;
@@ -330,7 +330,7 @@
             this.idProveedorTituloLabel.AutoSize = true;
             this.idProveedorTituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idProveedorTituloLabel.ForeColor = System.Drawing.Color.Black;
-            this.idProveedorTituloLabel.Location = new System.Drawing.Point(22, 59);
+            this.idProveedorTituloLabel.Location = new System.Drawing.Point(30, 80);
             this.idProveedorTituloLabel.Name = "idProveedorTituloLabel";
             this.idProveedorTituloLabel.Size = new System.Drawing.Size(89, 17);
             this.idProveedorTituloLabel.TabIndex = 3;
@@ -352,54 +352,55 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(21, 9);
+            this.label6.Location = new System.Drawing.Point(29, 30);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(190, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "Información de proveedor";
             // 
-            // panel4
+            // groupBox1
             // 
-            this.panel4.AutoSize = true;
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.TelefonoProveedorTituloLabel);
-            this.panel4.Controls.Add(this.idProveedorTituloLabel);
-            this.panel4.Controls.Add(this.lblIdProveedor);
-            this.panel4.Controls.Add(this.provinciaProveedorTituloLabel);
-            this.panel4.Controls.Add(this.lblProvincia);
-            this.panel4.Controls.Add(this.lblNumero);
-            this.panel4.Controls.Add(this.lblTelefono);
-            this.panel4.Controls.Add(this.localidadProveedorTituloLabel);
-            this.panel4.Controls.Add(this.razonSocialProveedorTituloLabel);
-            this.panel4.Controls.Add(this.numeroProveedorTituloLabel);
-            this.panel4.Controls.Add(this.lblCuit);
-            this.panel4.Controls.Add(this.calleProveedortituloLabel);
-            this.panel4.Controls.Add(this.lblRazonSocial);
-            this.panel4.Controls.Add(this.cuitProveedorTituloLabel);
-            this.panel4.Controls.Add(this.lblLocalidad);
-            this.panel4.Controls.Add(this.lblCalle);
-            this.panel4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.panel4.Location = new System.Drawing.Point(29, 166);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(467, 391);
-            this.panel4.TabIndex = 6;
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.TelefonoProveedorTituloLabel);
+            this.groupBox1.Controls.Add(this.lblCalle);
+            this.groupBox1.Controls.Add(this.idProveedorTituloLabel);
+            this.groupBox1.Controls.Add(this.lblLocalidad);
+            this.groupBox1.Controls.Add(this.lblIdProveedor);
+            this.groupBox1.Controls.Add(this.cuitProveedorTituloLabel);
+            this.groupBox1.Controls.Add(this.provinciaProveedorTituloLabel);
+            this.groupBox1.Controls.Add(this.lblRazonSocial);
+            this.groupBox1.Controls.Add(this.lblProvincia);
+            this.groupBox1.Controls.Add(this.calleProveedortituloLabel);
+            this.groupBox1.Controls.Add(this.lblNumero);
+            this.groupBox1.Controls.Add(this.lblCuit);
+            this.groupBox1.Controls.Add(this.lblTelefono);
+            this.groupBox1.Controls.Add(this.numeroProveedorTituloLabel);
+            this.groupBox1.Controls.Add(this.localidadProveedorTituloLabel);
+            this.groupBox1.Controls.Add(this.razonSocialProveedorTituloLabel);
+            this.groupBox1.Location = new System.Drawing.Point(29, 160);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(531, 353);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
             // 
             // ProveedorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cboxProveedores);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel4);
             this.Name = "ProveedorView";
             this.Size = new System.Drawing.Size(860, 596);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,6 +434,6 @@
         private System.Windows.Forms.Label idProveedorTituloLabel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
