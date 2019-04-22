@@ -100,6 +100,7 @@ namespace ProyectoBigonHnos.controladores
             vista.mostrarTotalRemunerativo(liquidacion.getTotalRemunerativo());
             vista.mostrarTotalNoRemunerativo(liquidacion.getTotalNoRemunerativo());
             vista.mostrarTotalDescuento(liquidacion.getTotalDescuento());
+            
         }
 
         internal void mostrarDetalleLiquidacion(int idLiquidacion)

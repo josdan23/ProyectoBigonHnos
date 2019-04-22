@@ -20,6 +20,7 @@ namespace ProyectoBigonHnos.vista.liquidacion
         {
             InitializeComponent();
             mostrarPeriodoComboBox();
+            fechaLbl.Text = DateTime.Now.ToShortDateString();
         }
 
         public void ActualizarVista()
@@ -129,6 +130,11 @@ namespace ProyectoBigonHnos.vista.liquidacion
         public void mostrarTotalNoRemunerativo(double totalNoRemunerativo)
         {
             totalNoRemunerativoTextView.Text = totalNoRemunerativo.ToString();
+        }
+
+        public void mostrarFechaDeLiquidacion(string fecha)
+        {
+            fechaLbl.Text = fecha;
         }
 
         public void mostrarTotalDescuento(double totalDescuento)

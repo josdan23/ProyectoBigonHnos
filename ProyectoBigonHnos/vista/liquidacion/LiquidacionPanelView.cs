@@ -149,6 +149,11 @@ namespace ProyectoBigonHnos.vista.liquidacion
         {
             throw new NotImplementedException();
         }
+
+        private void LiquidacionPanelView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
     class MesesItemCombobox

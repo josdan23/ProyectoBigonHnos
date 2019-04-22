@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,22 +61,28 @@
             this.fechaIngresoLbl = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.liquidacionDgv)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 30);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(14, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.Size = new System.Drawing.Size(64, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Empleado";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 62);
+            this.label2.Location = new System.Drawing.Point(110, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 0;
@@ -84,7 +91,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(95, 84);
+            this.label3.Location = new System.Drawing.Point(110, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 0;
@@ -93,7 +100,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(275, 358);
+            this.label4.Location = new System.Drawing.Point(269, 349);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 0;
@@ -102,7 +109,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(108, 107);
+            this.label5.Location = new System.Drawing.Point(123, 81);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 0;
@@ -111,7 +118,7 @@
             // apellidoLbl
             // 
             this.apellidoLbl.AutoSize = true;
-            this.apellidoLbl.Location = new System.Drawing.Point(166, 62);
+            this.apellidoLbl.Location = new System.Drawing.Point(181, 35);
             this.apellidoLbl.Name = "apellidoLbl";
             this.apellidoLbl.Size = new System.Drawing.Size(44, 13);
             this.apellidoLbl.TabIndex = 0;
@@ -120,7 +127,7 @@
             // nombreLbl
             // 
             this.nombreLbl.AutoSize = true;
-            this.nombreLbl.Location = new System.Drawing.Point(166, 84);
+            this.nombreLbl.Location = new System.Drawing.Point(181, 58);
             this.nombreLbl.Name = "nombreLbl";
             this.nombreLbl.Size = new System.Drawing.Size(44, 13);
             this.nombreLbl.TabIndex = 0;
@@ -129,7 +136,7 @@
             // remunertivoLbl
             // 
             this.remunertivoLbl.AutoSize = true;
-            this.remunertivoLbl.Location = new System.Drawing.Point(391, 358);
+            this.remunertivoLbl.Location = new System.Drawing.Point(358, 349);
             this.remunertivoLbl.Name = "remunertivoLbl";
             this.remunertivoLbl.Size = new System.Drawing.Size(39, 13);
             this.remunertivoLbl.TabIndex = 0;
@@ -138,7 +145,7 @@
             // cuilLbl
             // 
             this.cuilLbl.AutoSize = true;
-            this.cuilLbl.Location = new System.Drawing.Point(166, 107);
+            this.cuilLbl.Location = new System.Drawing.Point(181, 81);
             this.cuilLbl.Name = "cuilLbl";
             this.cuilLbl.Size = new System.Drawing.Size(23, 13);
             this.cuilLbl.TabIndex = 0;
@@ -147,7 +154,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(488, 111);
+            this.label10.Location = new System.Drawing.Point(464, 81);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 13);
             this.label10.TabIndex = 0;
@@ -156,7 +163,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(497, 133);
+            this.label11.Location = new System.Drawing.Point(473, 104);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(34, 13);
             this.label11.TabIndex = 0;
@@ -165,7 +172,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(257, 385);
+            this.label12.Location = new System.Drawing.Point(251, 373);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(85, 13);
             this.label12.TabIndex = 0;
@@ -174,7 +181,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(283, 407);
+            this.label13.Location = new System.Drawing.Point(277, 397);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(59, 13);
             this.label13.TabIndex = 0;
@@ -183,7 +190,7 @@
             // periodoLbl
             // 
             this.periodoLbl.AutoSize = true;
-            this.periodoLbl.Location = new System.Drawing.Point(550, 111);
+            this.periodoLbl.Location = new System.Drawing.Point(531, 81);
             this.periodoLbl.Name = "periodoLbl";
             this.periodoLbl.Size = new System.Drawing.Size(43, 13);
             this.periodoLbl.TabIndex = 0;
@@ -192,7 +199,7 @@
             // lugarLbl
             // 
             this.lugarLbl.AutoSize = true;
-            this.lugarLbl.Location = new System.Drawing.Point(550, 133);
+            this.lugarLbl.Location = new System.Drawing.Point(531, 104);
             this.lugarLbl.Name = "lugarLbl";
             this.lugarLbl.Size = new System.Drawing.Size(34, 13);
             this.lugarLbl.TabIndex = 0;
@@ -201,7 +208,7 @@
             // noRemunerativoLbl
             // 
             this.noRemunerativoLbl.AutoSize = true;
-            this.noRemunerativoLbl.Location = new System.Drawing.Point(391, 385);
+            this.noRemunerativoLbl.Location = new System.Drawing.Point(358, 373);
             this.noRemunerativoLbl.Name = "noRemunerativoLbl";
             this.noRemunerativoLbl.Size = new System.Drawing.Size(52, 13);
             this.noRemunerativoLbl.TabIndex = 0;
@@ -210,7 +217,7 @@
             // descuentoLbl
             // 
             this.descuentoLbl.AutoSize = true;
-            this.descuentoLbl.Location = new System.Drawing.Point(391, 407);
+            this.descuentoLbl.Location = new System.Drawing.Point(358, 397);
             this.descuentoLbl.Name = "descuentoLbl";
             this.descuentoLbl.Size = new System.Drawing.Size(89, 13);
             this.descuentoLbl.TabIndex = 0;
@@ -218,16 +225,41 @@
             // 
             // liquidacionDgv
             // 
-            this.liquidacionDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.liquidacionDgv.AllowUserToAddRows = false;
+            this.liquidacionDgv.AllowUserToDeleteRows = false;
+            this.liquidacionDgv.AllowUserToResizeColumns = false;
+            this.liquidacionDgv.AllowUserToResizeRows = false;
+            this.liquidacionDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.liquidacionDgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.liquidacionDgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.liquidacionDgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.liquidacionDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.liquidacionDgv.ColumnHeadersHeight = 40;
             this.liquidacionDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.conceptoCol,
             this.valorCol,
             this.RemunerativoCol,
             this.noRemunerativoCol,
             this.descuentoCol});
-            this.liquidacionDgv.Location = new System.Drawing.Point(21, 173);
+            this.liquidacionDgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.liquidacionDgv.Location = new System.Drawing.Point(21, 186);
+            this.liquidacionDgv.MultiSelect = false;
             this.liquidacionDgv.Name = "liquidacionDgv";
-            this.liquidacionDgv.Size = new System.Drawing.Size(670, 150);
+            this.liquidacionDgv.ReadOnly = true;
+            this.liquidacionDgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.liquidacionDgv.RowHeadersVisible = false;
+            this.liquidacionDgv.ShowCellErrors = false;
+            this.liquidacionDgv.ShowCellToolTips = false;
+            this.liquidacionDgv.ShowEditingIcon = false;
+            this.liquidacionDgv.ShowRowErrors = false;
+            this.liquidacionDgv.Size = new System.Drawing.Size(641, 150);
             this.liquidacionDgv.TabIndex = 1;
             // 
             // conceptoCol
@@ -240,26 +272,30 @@
             // 
             this.valorCol.HeaderText = "Valor";
             this.valorCol.Name = "valorCol";
+            this.valorCol.ReadOnly = true;
             // 
             // RemunerativoCol
             // 
             this.RemunerativoCol.HeaderText = "Remunerativo";
             this.RemunerativoCol.Name = "RemunerativoCol";
+            this.RemunerativoCol.ReadOnly = true;
             // 
             // noRemunerativoCol
             // 
             this.noRemunerativoCol.HeaderText = "No Remunerativo";
             this.noRemunerativoCol.Name = "noRemunerativoCol";
+            this.noRemunerativoCol.ReadOnly = true;
             // 
             // descuentoCol
             // 
             this.descuentoCol.HeaderText = "Descuento";
             this.descuentoCol.Name = "descuentoCol";
+            this.descuentoCol.ReadOnly = true;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(568, 407);
+            this.label18.Location = new System.Drawing.Point(580, 398);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(31, 13);
             this.label18.TabIndex = 0;
@@ -268,7 +304,7 @@
             // totalLbl
             // 
             this.totalLbl.AutoSize = true;
-            this.totalLbl.Location = new System.Drawing.Point(634, 407);
+            this.totalLbl.Location = new System.Drawing.Point(623, 398);
             this.totalLbl.Name = "totalLbl";
             this.totalLbl.Size = new System.Drawing.Size(39, 13);
             this.totalLbl.TabIndex = 0;
@@ -276,17 +312,20 @@
             // 
             // salirBtn
             // 
-            this.salirBtn.Location = new System.Drawing.Point(607, 438);
+            this.salirBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.salirBtn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.salirBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salirBtn.Location = new System.Drawing.Point(623, 467);
             this.salirBtn.Name = "salirBtn";
-            this.salirBtn.Size = new System.Drawing.Size(75, 23);
+            this.salirBtn.Size = new System.Drawing.Size(75, 32);
             this.salirBtn.TabIndex = 2;
             this.salirBtn.Text = "Salir";
-            this.salirBtn.UseVisualStyleBackColor = true;
+            this.salirBtn.UseVisualStyleBackColor = false;
             // 
             // legajoLbl
             // 
             this.legajoLbl.AutoSize = true;
-            this.legajoLbl.Location = new System.Drawing.Point(166, 133);
+            this.legajoLbl.Location = new System.Drawing.Point(181, 104);
             this.legajoLbl.Name = "legajoLbl";
             this.legajoLbl.Size = new System.Drawing.Size(67, 13);
             this.legajoLbl.TabIndex = 0;
@@ -295,7 +334,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(95, 133);
+            this.label21.Location = new System.Drawing.Point(115, 104);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(39, 13);
             this.label21.TabIndex = 0;
@@ -304,7 +343,7 @@
             // categoriaLbl
             // 
             this.categoriaLbl.AutoSize = true;
-            this.categoriaLbl.Location = new System.Drawing.Point(550, 62);
+            this.categoriaLbl.Location = new System.Drawing.Point(531, 35);
             this.categoriaLbl.Name = "categoriaLbl";
             this.categoriaLbl.Size = new System.Drawing.Size(85, 13);
             this.categoriaLbl.TabIndex = 0;
@@ -313,7 +352,7 @@
             // fechaIngresoLbl
             // 
             this.fechaIngresoLbl.AutoSize = true;
-            this.fechaIngresoLbl.Location = new System.Drawing.Point(550, 84);
+            this.fechaIngresoLbl.Location = new System.Drawing.Point(531, 58);
             this.fechaIngresoLbl.Name = "fechaIngresoLbl";
             this.fechaIngresoLbl.Size = new System.Drawing.Size(59, 13);
             this.fechaIngresoLbl.TabIndex = 0;
@@ -322,7 +361,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(466, 62);
+            this.label24.Location = new System.Drawing.Point(455, 35);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(52, 13);
             this.label24.TabIndex = 0;
@@ -331,49 +370,76 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(429, 84);
+            this.label25.Location = new System.Drawing.Point(418, 58);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(89, 13);
             this.label25.TabIndex = 0;
             this.label25.Text = "Fecha de ingreso";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.liquidacionDgv);
+            this.groupBox1.Controls.Add(this.label18);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.remunertivoLbl);
+            this.groupBox1.Controls.Add(this.totalLbl);
+            this.groupBox1.Controls.Add(this.descuentoLbl);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.noRemunerativoLbl);
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Location = new System.Drawing.Point(13, 24);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(685, 427);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Detalle";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.lugarLbl);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label25);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.fechaIngresoLbl);
+            this.panel1.Controls.Add(this.apellidoLbl);
+            this.panel1.Controls.Add(this.categoriaLbl);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.cuilLbl);
+            this.panel1.Controls.Add(this.legajoLbl);
+            this.panel1.Controls.Add(this.nombreLbl);
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Controls.Add(this.periodoLbl);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(21, 33);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(641, 137);
+            this.panel1.TabIndex = 1;
+            // 
             // DetalleLiquidacionView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 481);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(710, 511);
             this.Controls.Add(this.salirBtn);
-            this.Controls.Add(this.liquidacionDgv);
-            this.Controls.Add(this.label25);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.descuentoLbl);
-            this.Controls.Add(this.fechaIngresoLbl);
-            this.Controls.Add(this.noRemunerativoLbl);
-            this.Controls.Add(this.categoriaLbl);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.cuilLbl);
-            this.Controls.Add(this.lugarLbl);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.totalLbl);
-            this.Controls.Add(this.remunertivoLbl);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.periodoLbl);
-            this.Controls.Add(this.nombreLbl);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.legajoLbl);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.apellidoLbl);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DetalleLiquidacionView";
-            this.Text = "DetalleLiquidacionView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Detalle de liquidación";
             ((System.ComponentModel.ISupportInitialize)(this.liquidacionDgv)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -411,5 +477,7 @@
         private System.Windows.Forms.Label fechaIngresoLbl;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
