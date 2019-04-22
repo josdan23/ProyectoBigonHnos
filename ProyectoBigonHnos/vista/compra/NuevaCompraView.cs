@@ -133,7 +133,7 @@ namespace ProyectoBigonHnos.vista.compra
 
         public void mostrarFechaActualDeCompra(DateTime fechaDeCompra)
         {
-            fechaLabel.Text = fechaDeCompra.ToString();
+            fechaLabel.Text = fechaDeCompra.ToShortDateString();
         }
 
         private int mostrarDialogoDeCantidadIngresada()

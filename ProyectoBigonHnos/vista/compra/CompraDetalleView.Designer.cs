@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,21 +54,24 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterialesAComprar)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 238);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(16, 232);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 13);
+            this.label1.Size = new System.Drawing.Size(195, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Lista de Materiales a comprar";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 96);
+            this.label2.Location = new System.Drawing.Point(35, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 1;
@@ -77,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(106, 122);
+            this.label3.Location = new System.Drawing.Point(81, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(24, 13);
             this.label3.TabIndex = 1;
@@ -86,7 +89,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(81, 148);
+            this.label4.Location = new System.Drawing.Point(56, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 1;
@@ -95,7 +98,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(81, 174);
+            this.label5.Location = new System.Drawing.Point(56, 99);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 1;
@@ -111,14 +114,14 @@
             this.dgvMaterialesAComprar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvMaterialesAComprar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMaterialesAComprar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMaterialesAComprar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMaterialesAComprar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMaterialesAComprar.ColumnHeadersHeight = 40;
             this.dgvMaterialesAComprar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvMaterialesAComprar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -126,7 +129,7 @@
             this.descripcionCol,
             this.cantidadSolicitadaCol});
             this.dgvMaterialesAComprar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvMaterialesAComprar.Location = new System.Drawing.Point(46, 264);
+            this.dgvMaterialesAComprar.Location = new System.Drawing.Point(12, 258);
             this.dgvMaterialesAComprar.MultiSelect = false;
             this.dgvMaterialesAComprar.Name = "dgvMaterialesAComprar";
             this.dgvMaterialesAComprar.ReadOnly = true;
@@ -163,7 +166,7 @@
             // FechaLabel
             // 
             this.FechaLabel.AutoSize = true;
-            this.FechaLabel.Location = new System.Drawing.Point(590, 106);
+            this.FechaLabel.Location = new System.Drawing.Point(509, 26);
             this.FechaLabel.Name = "FechaLabel";
             this.FechaLabel.Size = new System.Drawing.Size(10, 13);
             this.FechaLabel.TabIndex = 1;
@@ -172,7 +175,7 @@
             // IdCompraLabel
             // 
             this.IdCompraLabel.AutoSize = true;
-            this.IdCompraLabel.Location = new System.Drawing.Point(589, 132);
+            this.IdCompraLabel.Location = new System.Drawing.Point(508, 52);
             this.IdCompraLabel.Name = "IdCompraLabel";
             this.IdCompraLabel.Size = new System.Drawing.Size(10, 13);
             this.IdCompraLabel.TabIndex = 1;
@@ -190,7 +193,7 @@
             // EstadoLabel
             // 
             this.EstadoLabel.AutoSize = true;
-            this.EstadoLabel.Location = new System.Drawing.Point(589, 158);
+            this.EstadoLabel.Location = new System.Drawing.Point(508, 78);
             this.EstadoLabel.Name = "EstadoLabel";
             this.EstadoLabel.Size = new System.Drawing.Size(10, 13);
             this.EstadoLabel.TabIndex = 1;
@@ -199,7 +202,7 @@
             // razonSocialLabel
             // 
             this.razonSocialLabel.AutoSize = true;
-            this.razonSocialLabel.Location = new System.Drawing.Point(168, 96);
+            this.razonSocialLabel.Location = new System.Drawing.Point(143, 21);
             this.razonSocialLabel.Name = "razonSocialLabel";
             this.razonSocialLabel.Size = new System.Drawing.Size(10, 13);
             this.razonSocialLabel.TabIndex = 1;
@@ -208,7 +211,7 @@
             // CuilLabel
             // 
             this.CuilLabel.AutoSize = true;
-            this.CuilLabel.Location = new System.Drawing.Point(168, 122);
+            this.CuilLabel.Location = new System.Drawing.Point(143, 47);
             this.CuilLabel.Name = "CuilLabel";
             this.CuilLabel.Size = new System.Drawing.Size(10, 13);
             this.CuilLabel.TabIndex = 1;
@@ -217,7 +220,7 @@
             // DomicilioLable
             // 
             this.DomicilioLable.AutoSize = true;
-            this.DomicilioLable.Location = new System.Drawing.Point(168, 148);
+            this.DomicilioLable.Location = new System.Drawing.Point(143, 73);
             this.DomicilioLable.Name = "DomicilioLable";
             this.DomicilioLable.Size = new System.Drawing.Size(10, 13);
             this.DomicilioLable.TabIndex = 1;
@@ -226,7 +229,7 @@
             // TelefonoLabel
             // 
             this.TelefonoLabel.AutoSize = true;
-            this.TelefonoLabel.Location = new System.Drawing.Point(168, 174);
+            this.TelefonoLabel.Location = new System.Drawing.Point(143, 99);
             this.TelefonoLabel.Name = "TelefonoLabel";
             this.TelefonoLabel.Size = new System.Drawing.Size(10, 13);
             this.TelefonoLabel.TabIndex = 1;
@@ -235,7 +238,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(462, 106);
+            this.label14.Location = new System.Drawing.Point(381, 26);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(90, 13);
             this.label14.TabIndex = 1;
@@ -244,7 +247,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(512, 158);
+            this.label15.Location = new System.Drawing.Point(431, 78);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(40, 13);
             this.label15.TabIndex = 1;
@@ -253,7 +256,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(497, 132);
+            this.label16.Location = new System.Drawing.Point(416, 52);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(55, 13);
             this.label16.TabIndex = 1;
@@ -261,37 +264,59 @@
             // 
             // btnAprobar
             // 
-            this.btnAprobar.Location = new System.Drawing.Point(612, 31);
+            this.btnAprobar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAprobar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAprobar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAprobar.Location = new System.Drawing.Point(578, 25);
             this.btnAprobar.Name = "btnAprobar";
-            this.btnAprobar.Size = new System.Drawing.Size(75, 23);
+            this.btnAprobar.Size = new System.Drawing.Size(75, 32);
             this.btnAprobar.TabIndex = 3;
             this.btnAprobar.Text = "Aprobar";
-            this.btnAprobar.UseVisualStyleBackColor = true;
+            this.btnAprobar.UseVisualStyleBackColor = false;
             this.btnAprobar.Click += new System.EventHandler(this.btnAprobar_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(615, 443);
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Location = new System.Drawing.Point(578, 441);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(75, 32);
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(50, 41);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Location = new System.Drawing.Point(16, 33);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 13);
+            this.label6.Size = new System.Drawing.Size(152, 17);
             this.label6.TabIndex = 4;
             this.label6.Text = "Información de compra";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Location = new System.Drawing.Point(49, 79);
+            this.panel1.Controls.Add(this.CuilLabel);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.razonSocialLabel);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.IdCompraLabel);
+            this.panel1.Controls.Add(this.TelefonoLabel);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.EstadoLabel);
+            this.panel1.Controls.Add(this.DomicilioLable);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.FechaLabel);
+            this.panel1.Location = new System.Drawing.Point(15, 73);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(638, 135);
             this.panel1.TabIndex = 5;
@@ -300,31 +325,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 478);
+            this.ClientSize = new System.Drawing.Size(673, 491);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAprobar);
             this.Controls.Add(this.dgvMaterialesAComprar);
-            this.Controls.Add(this.TelefonoLabel);
-            this.Controls.Add(this.DomicilioLable);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.IdCompraLabel);
-            this.Controls.Add(this.CuilLabel);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.EstadoLabel);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.razonSocialLabel);
-            this.Controls.Add(this.FechaLabel);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CompraDetalleView";
-            this.Text = "CompraDetalleView";
+            this.Text = "Detalle de la compra";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterialesAComprar)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
