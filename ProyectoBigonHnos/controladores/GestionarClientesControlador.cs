@@ -1,15 +1,16 @@
-﻿using ProyectoBigonHnos.dominio;
+﻿using System;
+using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.vista;
+using ProyectoBigonHnos.data;
 
 namespace ProyectoBigonHnos.controladores
 {
-    class GestionarClientesControlador
+    public class GestionarClientesControlador
     {
         public ClientesView vista;
 
         public Negocio Negocio { get; set; }
         public Cliente Cliente { get; set; }
-
 
         public GestionarClientesControlador(ClientesView vista)
         {
@@ -53,12 +54,31 @@ namespace ProyectoBigonHnos.controladores
             }
         }
 
+        internal void actualizarCliente(int idCliente, string dni, string apellido, string nombre, string calle, string numero, string localidad, string provincia, string telefono)
+        {
+            Cliente cliente = PersistenciaFacade.getInstance().obtenerObjeto<Cliente>(idCliente);
+
+            cliente.Dni = dni;
+            cliente.Apellido = apellido;
+            cliente.Nombre = nombre;
+            cliente.Domicilioes[0].Calle = calle;
+            cliente.Domicilioes[0].Numero = int.Parse(numero);
+            cliente.Domicilioes[0].Localidad.Nombre = localidad;
+            cliente.Domicilioes[0].Localidad.Provincia.Nombre = provincia;
+            cliente.Telefonos[0].Numero = telefono;
+
+            PersistenciaFacade.getInstance().actualiarObjeto(cliente);
+
+    
+
+        }
+
         public void detalleCliente(string dni)
         {
             Cliente cliente = Negocio.buscarCliente(dni);
 
             vista.mostrarInformmacion(cliente.Dni, cliente.Apellido, cliente.Nombre);
-            
+            vista.mostrarIdCliente(cliente.IdCliente.ToString());
             foreach(Telefono telefono in cliente.Telefonos)
             {
                 vista.mostrarTelefono(telefono.Numero);
@@ -84,6 +104,21 @@ namespace ProyectoBigonHnos.controladores
         public void cambiarInformacion(string dni)
         {
             Cliente = Negocio.buscarCliente(dni);
+        }
+
+        public void verDetalleActualizacionCliente(int idCliente, EditarClienteView view)
+        {
+            Cliente cliente = PersistenciaFacade.getInstance().obtenerObjeto<Cliente>(idCliente);
+
+
+            view.mostrarCliente(cliente.Dni, cliente.Nombre, cliente.Apellido);
+            view.mostrarDomicilio(
+                cliente.Domicilioes[0].Calle,
+                cliente.Domicilioes[0].Numero,
+                cliente.Domicilioes[0].Localidad.Nombre,
+                cliente.Domicilioes[0].Localidad.Provincia.Nombre);
+            view.mostrarTelefono(cliente.Telefonos[0].Numero);
+            view.mostrarIdCliente(idCliente);
         }
     }
 }

@@ -44,8 +44,10 @@ namespace ProyectoBigonHnos.vista
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            string dni = dgvClientes.CurrentRow.Cells[0].Value.ToString();
+            int idCliente = int.Parse(idClienteLbl.Text);
             EditarClienteView vista = new EditarClienteView();
+            vista.unirControlador(controlador);
+            controlador.verDetalleActualizacionCliente(idCliente, vista);
             vista.ShowDialog();
             refrescar();
         }
@@ -76,6 +78,7 @@ namespace ProyectoBigonHnos.vista
 
         public void mostrarInformmacion(string dni, string apellido, string nombre)
         {
+          
             tboxDni.Text = dni;
             tBoxNombre.Text = nombre;
             tBoxApellido.Text = apellido;
@@ -92,6 +95,11 @@ namespace ProyectoBigonHnos.vista
             tboxCalle.Text = calle;
             tboxLocalidad.Text = localidad;
             tboxProvincia.Text = provincia;
+        }
+
+        public void mostrarIdCliente(String idCliente)
+        {
+            idClienteLbl.Text = idCliente;
         }
 
         private void limpiarTabla()
