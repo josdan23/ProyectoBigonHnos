@@ -28,7 +28,7 @@ namespace ProyectoBigonHnos.vista
             string apellido = tboxApellido.Text;
 
             string calle = tboxCalle.Text;
-            int numero = int.Parse( tboxNumero.Text);
+            int numero = int.Parse( tboxNumero.Text.ToString());
             string localidad = tboxLocalidad.Text;
             string provincia = tboxProvincia.Text;
 

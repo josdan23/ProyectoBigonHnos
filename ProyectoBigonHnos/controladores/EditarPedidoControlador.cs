@@ -94,16 +94,12 @@ namespace ProyectoBigonHnos.controladores
         {
             Cliente cliente = Negocio.getNegocio().buscarCliente(dniClienteBuscado);
 
-            if ( view is AgregarClienteView)
+            if (cliente != null)
             {
-                ((AgregarClienteView)view).mostrarApellido(cliente.Apellido);
-                ((AgregarClienteView)view).mostrarNombre(cliente.Nombre);
-                ((AgregarClienteView)view).mostrarDni(cliente.Dni);
-                ((AgregarClienteView)view).mostrarCalle(cliente.Domicilioes[0].Calle);
-                ((AgregarClienteView)view).mostrarNumero(cliente.Domicilioes[0].Numero);
-                ((AgregarClienteView)view).mostrarLocalidad(cliente.Domicilioes[0].Localidad.Nombre);
-                ((AgregarClienteView)view).mostrarProvincia(cliente.Domicilioes[0].Localidad.Provincia.Nombre);
+
             }
+
+           
         }
 
         public void actualizarCliente(string dniCliente)

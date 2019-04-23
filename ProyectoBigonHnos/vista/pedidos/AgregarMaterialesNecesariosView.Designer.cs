@@ -41,7 +41,9 @@
             this.AgregarBtn = new System.Windows.Forms.Button();
             this.salirBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.materialesDisponiblesDGV)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialesDisponiblesDGV
@@ -70,13 +72,14 @@
             this.UnidadCol,
             this.PrecioCol});
             this.materialesDisponiblesDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.materialesDisponiblesDGV.Location = new System.Drawing.Point(32, 62);
+            this.materialesDisponiblesDGV.Location = new System.Drawing.Point(24, 62);
             this.materialesDisponiblesDGV.MultiSelect = false;
             this.materialesDisponiblesDGV.Name = "materialesDisponiblesDGV";
             this.materialesDisponiblesDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.materialesDisponiblesDGV.RowHeadersVisible = false;
             this.materialesDisponiblesDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.materialesDisponiblesDGV.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.materialesDisponiblesDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.materialesDisponiblesDGV.ShowCellErrors = false;
             this.materialesDisponiblesDGV.ShowCellToolTips = false;
             this.materialesDisponiblesDGV.ShowEditingIcon = false;
@@ -107,16 +110,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 29);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(11, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 13);
+            this.label1.Size = new System.Drawing.Size(150, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Materiales Disponibles";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 284);
+            this.label2.Location = new System.Drawing.Point(88, 280);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 2;
@@ -124,7 +129,7 @@
             // 
             // cantidadTxBox
             // 
-            this.cantidadTxBox.Location = new System.Drawing.Point(140, 281);
+            this.cantidadTxBox.Location = new System.Drawing.Point(143, 277);
             this.cantidadTxBox.Name = "cantidadTxBox";
             this.cantidadTxBox.Size = new System.Drawing.Size(100, 20);
             this.cantidadTxBox.TabIndex = 3;
@@ -133,7 +138,7 @@
             // SubtotalTxbox
             // 
             this.SubtotalTxbox.Enabled = false;
-            this.SubtotalTxbox.Location = new System.Drawing.Point(547, 281);
+            this.SubtotalTxbox.Location = new System.Drawing.Point(474, 277);
             this.SubtotalTxbox.Name = "SubtotalTxbox";
             this.SubtotalTxbox.Size = new System.Drawing.Size(100, 20);
             this.SubtotalTxbox.TabIndex = 3;
@@ -141,49 +146,70 @@
             // 
             // AgregarBtn
             // 
-            this.AgregarBtn.Location = new System.Drawing.Point(572, 332);
+            this.AgregarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AgregarBtn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.AgregarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AgregarBtn.Location = new System.Drawing.Point(579, 329);
             this.AgregarBtn.Name = "AgregarBtn";
-            this.AgregarBtn.Size = new System.Drawing.Size(75, 23);
+            this.AgregarBtn.Size = new System.Drawing.Size(75, 32);
             this.AgregarBtn.TabIndex = 4;
             this.AgregarBtn.Text = "Agregar";
-            this.AgregarBtn.UseVisualStyleBackColor = true;
+            this.AgregarBtn.UseVisualStyleBackColor = false;
             this.AgregarBtn.Click += new System.EventHandler(this.AgregarBtn_Click);
             // 
             // salirBtn
             // 
-            this.salirBtn.Location = new System.Drawing.Point(474, 332);
+            this.salirBtn.BackColor = System.Drawing.Color.White;
+            this.salirBtn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.salirBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salirBtn.Location = new System.Drawing.Point(487, 329);
             this.salirBtn.Name = "salirBtn";
-            this.salirBtn.Size = new System.Drawing.Size(75, 23);
+            this.salirBtn.Size = new System.Drawing.Size(75, 32);
             this.salirBtn.TabIndex = 5;
             this.salirBtn.Text = "Salir";
-            this.salirBtn.UseVisualStyleBackColor = true;
+            this.salirBtn.UseVisualStyleBackColor = false;
             this.salirBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(481, 284);
+            this.label4.Location = new System.Drawing.Point(408, 280);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Subtotal";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(642, 302);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            // 
             // AgregarMaterialesNecesariosView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 379);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(666, 373);
             this.Controls.Add(this.salirBtn);
             this.Controls.Add(this.AgregarBtn);
             this.Controls.Add(this.SubtotalTxbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cantidadTxBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.materialesDisponiblesDGV);
+            this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AgregarMaterialesNecesariosView";
-            this.Text = "AgregarMaterialesNecesariosView";
+            this.Text = "Agregar materiales";
             ((System.ComponentModel.ISupportInitialize)(this.materialesDisponiblesDGV)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +229,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnidadCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCol;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

@@ -69,10 +69,7 @@ namespace ProyectoBigonHnos.vista.pedidos
             lblTelefono.Text = telefono;
         }
 
-        public void mostrarMail(string mail)
-        {
-            lblMail.Text = mail;
-        }
+       
 
         public void listarProducto(string descripcion, double alto, double ancho, double prof, string colorP, string colorS, int cant, double precio)
         {
@@ -178,6 +175,11 @@ namespace ProyectoBigonHnos.vista.pedidos
             int index = dgvCostosExtras.CurrentRow.Index;
             ((EditarPedidoControlador)controlador).eliminarCostosExtras(index);
             ((EditarPedidoControlador)controlador).mostrarPedido();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

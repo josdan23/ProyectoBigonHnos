@@ -35,19 +35,21 @@
             this.AgregarBtn = new System.Windows.Forms.Button();
             this.salirBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // descripcionTxtBox
             // 
-            this.descripcionTxtBox.Location = new System.Drawing.Point(26, 66);
+            this.descripcionTxtBox.Location = new System.Drawing.Point(10, 36);
             this.descripcionTxtBox.Name = "descripcionTxtBox";
             this.descripcionTxtBox.Size = new System.Drawing.Size(201, 20);
-            this.descripcionTxtBox.TabIndex = 0;
+            this.descripcionTxtBox.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 50);
+            this.label1.Location = new System.Drawing.Point(7, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 1;
@@ -56,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 113);
+            this.label2.Location = new System.Drawing.Point(7, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 2;
@@ -64,26 +66,31 @@
             // 
             // MontoTxtBox
             // 
-            this.MontoTxtBox.Location = new System.Drawing.Point(26, 129);
+            this.MontoTxtBox.Location = new System.Drawing.Point(10, 89);
             this.MontoTxtBox.Name = "MontoTxtBox";
             this.MontoTxtBox.Size = new System.Drawing.Size(201, 20);
-            this.MontoTxtBox.TabIndex = 0;
+            this.MontoTxtBox.TabIndex = 2;
             // 
             // AgregarBtn
             // 
-            this.AgregarBtn.Location = new System.Drawing.Point(152, 176);
+            this.AgregarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AgregarBtn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.AgregarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AgregarBtn.Location = new System.Drawing.Point(173, 183);
             this.AgregarBtn.Name = "AgregarBtn";
-            this.AgregarBtn.Size = new System.Drawing.Size(75, 23);
+            this.AgregarBtn.Size = new System.Drawing.Size(75, 32);
             this.AgregarBtn.TabIndex = 3;
             this.AgregarBtn.Text = "Agregar";
-            this.AgregarBtn.UseVisualStyleBackColor = true;
+            this.AgregarBtn.UseVisualStyleBackColor = false;
             this.AgregarBtn.Click += new System.EventHandler(this.AgregarBtn_Click);
             // 
             // salirBtn
             // 
-            this.salirBtn.Location = new System.Drawing.Point(61, 176);
+            this.salirBtn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.salirBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salirBtn.Location = new System.Drawing.Point(82, 183);
             this.salirBtn.Name = "salirBtn";
-            this.salirBtn.Size = new System.Drawing.Size(75, 23);
+            this.salirBtn.Size = new System.Drawing.Size(75, 32);
             this.salirBtn.TabIndex = 3;
             this.salirBtn.Text = "Salir";
             this.salirBtn.UseVisualStyleBackColor = true;
@@ -92,26 +99,43 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 21);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(17, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 13);
+            this.label3.Size = new System.Drawing.Size(231, 17);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Agregar costo extra";
+            this.label3.Text = "Ingresar los costos extras al pedido\r\n";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.MontoTxtBox);
+            this.groupBox1.Controls.Add(this.descripcionTxtBox);
+            this.groupBox1.Location = new System.Drawing.Point(11, 39);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(237, 133);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
             // 
             // AgregarCostosExtrasView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(258, 222);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(263, 227);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.salirBtn);
             this.Controls.Add(this.AgregarBtn);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.MontoTxtBox);
-            this.Controls.Add(this.descripcionTxtBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AgregarCostosExtrasView";
-            this.Text = "AgregarCostosExtrasView";
+            this.Text = "Costos Extras";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,5 +150,6 @@
         private System.Windows.Forms.Button AgregarBtn;
         private System.Windows.Forms.Button salirBtn;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

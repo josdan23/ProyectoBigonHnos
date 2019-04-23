@@ -82,19 +82,23 @@ namespace ProyectoBigonHnos.dominio
 
         private void mostrarInfoCliente(Cliente cliente)
         {
-            if (vista.GetType() == typeof(AgregarClienteView))
+            if (cliente != null)
             {
-                AgregarClienteView agregarClienteView = (AgregarClienteView)vista;
-                agregarClienteView.mostrarNombre(cliente.Nombre);
-                agregarClienteView.mostrarApellido(cliente.Apellido);
-                agregarClienteView.mostrarDni(cliente.Dni);
-                agregarClienteView.mostrarCalle(cliente.Domicilioes[0].Calle);
-                agregarClienteView.mostrarNumero(cliente.Domicilioes[0].Numero);
-                agregarClienteView.mostrarLocalidad(cliente.Domicilioes[0].Localidad.Nombre);
-                agregarClienteView.mostrarProvincia(cliente.Domicilioes[0].Localidad.Provincia.Nombre);
-                agregarClienteView.mostrarTelefono(cliente.Telefonos[0].Numero);
+                if (vista.GetType() == typeof(AgregarClienteView))
+                {
+                    AgregarClienteView agregarClienteView = (AgregarClienteView)vista;
+                    agregarClienteView.mostrarNombre(cliente.Nombre);
+                    agregarClienteView.mostrarApellido(cliente.Apellido);
+                    agregarClienteView.mostrarDni(cliente.Dni);
+                    agregarClienteView.mostrarCalle(cliente.Domicilioes[0].Calle);
+                    agregarClienteView.mostrarNumero(cliente.Domicilioes[0].Numero);
+                    agregarClienteView.mostrarLocalidad(cliente.Domicilioes[0].Localidad.Nombre);
+                    agregarClienteView.mostrarProvincia(cliente.Domicilioes[0].Localidad.Provincia.Nombre);
+                    agregarClienteView.mostrarTelefono(cliente.Telefonos[0].Numero);
 
+                }
             }
+            
         }
 
         public void mostrarMateriales()
@@ -111,20 +115,24 @@ namespace ProyectoBigonHnos.dominio
 
         public void mostrarCliente()
         {
-            if (vista.GetType() == typeof(NuevoPedidoView))
+            if ( pedido.cliente != null)
             {
-                NuevoPedidoView view = (NuevoPedidoView)vista;
+                if (vista.GetType() == typeof(NuevoPedidoView))
+                {
+                    NuevoPedidoView view = (NuevoPedidoView)vista;
 
-                view.mostrarNombre(pedido.cliente.Nombre);
-                view.mostrarApellido(pedido.cliente.Apellido);
-                view.mostrarDni(pedido.cliente.Dni);
-                view.mostrarTelefono(pedido.cliente.Telefonos[0].Numero);
+                    view.mostrarNombre(pedido.cliente.Nombre);
+                    view.mostrarApellido(pedido.cliente.Apellido);
+                    view.mostrarDni(pedido.cliente.Dni);
+                    view.mostrarTelefono(pedido.cliente.Telefonos[0].Numero);
 
-                view.mostrarDomicilio(
-                    pedido.cliente.Domicilioes[0].Calle,
-                    pedido.cliente.Domicilioes[0].Numero,
-                    pedido.cliente.Domicilioes[0].Localidad.Provincia.Nombre);
+                    view.mostrarDomicilio(
+                        pedido.cliente.Domicilioes[0].Calle,
+                        pedido.cliente.Domicilioes[0].Numero,
+                        pedido.cliente.Domicilioes[0].Localidad.Provincia.Nombre);
+                }
             }
+            
         }
 
         public void mostrarProductos()
@@ -141,9 +149,7 @@ namespace ProyectoBigonHnos.dominio
                     lp.producto.profundidad,
                     lp.producto.colorPrimario,
                     lp.producto.colorSecundario,
-                    lp.cantidad,
-                    0.0
-                    );
+                    lp.cantidad);
 
                 //TODO: ver el precio del producto
             }

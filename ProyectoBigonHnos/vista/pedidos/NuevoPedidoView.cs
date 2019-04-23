@@ -86,10 +86,6 @@ namespace ProyectoBigonHnos.vista.pedidos
             lblTelefono.Text = telefono;
         }
 
-        public void mostrarMail(string mail)
-        {
-            lblMail.Text = mail;
-        }
 
         public void ActualizarVista()
         {
@@ -107,7 +103,7 @@ namespace ProyectoBigonHnos.vista.pedidos
             mostrarSubtotalyTotal();
         }
 
-        public void listarProducto(string descripcion, double alto, double ancho, double prof, string colorP, string colorS, int cant, double precio)
+        public void listarProducto(string descripcion, double alto, double ancho, double prof, string colorP, string colorS, int cant)
         {
             dgvProductos.Rows.Add(
                 descripcion,
@@ -116,8 +112,7 @@ namespace ProyectoBigonHnos.vista.pedidos
                 prof,
                 colorP,
                 colorS,
-                cant,
-                precio);
+                cant);
         }
         /*
         public void listarComponente(string descripcion, double alto, double ancho, double prof, string colorP, string colorS, int cant, string material, double precio)
