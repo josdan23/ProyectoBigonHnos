@@ -79,6 +79,24 @@ namespace ProyectoBigonHnos.dominio
             Compra compra = PersistenciaFacade.getInstance().obtenerObjeto<Compra>(idCompraCargada);
             compra.finalizarCompra();
 
+
+            int cantidadComprada = 0;
+
+            GestionarMaterialControlador controladorMaterial = new GestionarMaterialControlador();
+            foreach(LineaCompra lc in compra.lineasDeCompra)
+            {
+                cantidadComprada = lc.cantidad;
+
+                controladorMaterial.modificarMaterial(
+                    lc.material.IdMaterial,
+                    lc.material.Descripcion,
+                    lc.material.Cantidad,
+                    lc.material.Precio,
+                    cantidadComprada,
+                    lc.material.StockMinimo,
+                    lc.material.tipoUnidad);
+            }
+
             CompraDetalleView view = (CompraDetalleView)vista;
             view.mostrarEstado(compra.estado.ToString());
         }

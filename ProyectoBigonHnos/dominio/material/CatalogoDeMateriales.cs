@@ -51,9 +51,9 @@ namespace ProyectoBigonHnos.dominio
             persistencia.eliminarObjeto<Material>(idMaterial);
         }
 
-        public void editarMaterial(int id, string descripcion, int cantidad, double precio, int stockMinimo, int stockDisponible)
+        public void editarMaterial(int id, string descripcion,  double precio, int stockDisponible, int stockMinimo, string unidad)
         {
-            Material material = new Material(descripcion, cantidad, precio, stockDisponible, stockMinimo);
+            Material material = new Material(descripcion, precio, stockDisponible, stockMinimo, unidad);
             material.IdMaterial = id;
             persistencia.actualiarObjeto(material);
         }

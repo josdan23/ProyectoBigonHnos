@@ -87,6 +87,7 @@ namespace ProyectoBigonHnos.vista.compra
         {
             int idCompra = int.Parse(IdCompraLabel.Text);
             controlador.finalizarCompra(idCompra);
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

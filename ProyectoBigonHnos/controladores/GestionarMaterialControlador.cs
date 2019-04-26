@@ -37,9 +37,9 @@ namespace ProyectoBigonHnos.controladores
             catalogo.borrarMaterial(idMaterial);
         }
 
-        public void modificarMaterial(int idMaterial, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
+        public void modificarMaterial(int idMaterial, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo, string unidad)
         {
-            catalogo.editarMaterial(idMaterial, descripcion, cantidad, precio, stockDisponible, stockMinimo);
+            catalogo.editarMaterial(idMaterial, descripcion,  precio, stockDisponible, stockMinimo, unidad);
         }
 
         public void listarMateriales()

@@ -43,9 +43,9 @@ namespace ProyectoBigonHnos.vista.materiales
             double precio = double.Parse(tboxPrecio.Text);
             int stockDisponible = int.Parse(tboxStockDisponible.Text);
             int stockMinimo = int.Parse(tboxMinimo.Text);
+            string unidad = unidadTbox.Text;
 
-
-            controlador.modificarMaterial(idMaterial, descripcion, cantidad, precio, stockDisponible, stockMinimo);
+            controlador.modificarMaterial(idMaterial, descripcion, cantidad, precio, stockDisponible, stockMinimo, unidad);
 
             Dispose();
         }

@@ -26,13 +26,14 @@ namespace ProyectoBigonHnos.dominio
             this.tipoUnidad = unidad;
         }
 
-        public Material(string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo)
+        public Material(string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo, string unidad)
         {
             Descripcion = descripcion;
             Precio = precio;
             StockDisponible = stockDisponible;
             StockMinimo = stockMinimo;
             Cantidad = cantidad;
+            this.tipoUnidad = unidad;
         }
 
         public override string ToString()

@@ -44,6 +44,8 @@
             this.tboxIdMaterial = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.unidadTbox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,7 +134,7 @@
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(230, 375);
+            this.btnCancelar.Location = new System.Drawing.Point(230, 397);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 32);
             this.btnCancelar.TabIndex = 9;
@@ -145,7 +147,7 @@
             this.btnGuardar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Location = new System.Drawing.Point(323, 375);
+            this.btnGuardar.Location = new System.Drawing.Point(323, 397);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 32);
             this.btnGuardar.TabIndex = 18;
@@ -191,6 +193,22 @@
             this.panel1.Size = new System.Drawing.Size(436, 93);
             this.panel1.TabIndex = 19;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(122, 358);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 13);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Unidad";
+            // 
+            // unidadTbox
+            // 
+            this.unidadTbox.Location = new System.Drawing.Point(191, 355);
+            this.unidadTbox.Name = "unidadTbox";
+            this.unidadTbox.Size = new System.Drawing.Size(100, 20);
+            this.unidadTbox.TabIndex = 17;
+            // 
             // EditarMaterialView
             // 
             this.AcceptButton = this.btnGuardar;
@@ -198,8 +216,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(424, 417);
+            this.ClientSize = new System.Drawing.Size(424, 441);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.unidadTbox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.tboxMinimo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tboxStockDisponible);
@@ -245,5 +265,7 @@
         private System.Windows.Forms.TextBox tboxIdMaterial;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox unidadTbox;
     }
 }
