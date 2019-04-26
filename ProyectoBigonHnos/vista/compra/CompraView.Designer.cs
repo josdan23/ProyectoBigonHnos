@@ -221,6 +221,7 @@
             // btnDetalle
             // 
             this.btnDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDetalle.Enabled = false;
             this.btnDetalle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetalle.Location = new System.Drawing.Point(738, 77);

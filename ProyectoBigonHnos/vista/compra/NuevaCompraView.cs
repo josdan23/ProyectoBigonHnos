@@ -105,6 +105,7 @@ namespace ProyectoBigonHnos.vista.compra
         
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            
             int idProveedor = int.Parse(codigoTextView.Text);
 
             controlador.agregarProveedor(idProveedor);

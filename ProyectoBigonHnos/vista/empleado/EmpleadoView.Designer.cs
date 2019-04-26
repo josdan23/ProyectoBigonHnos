@@ -59,7 +59,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(791, 53);
+            this.panel1.Size = new System.Drawing.Size(877, 53);
             this.panel1.TabIndex = 1;
             // 
             // panel3
@@ -87,7 +87,7 @@
             this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.btnNuevo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(79, 0);
+            this.panel2.Location = new System.Drawing.Point(165, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(712, 53);
             this.panel2.TabIndex = 0;
@@ -170,7 +170,7 @@
             this.colFechaIngreo,
             this.colCategoria});
             this.dgvEmpleados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvEmpleados.Location = new System.Drawing.Point(93, 126);
+            this.dgvEmpleados.Location = new System.Drawing.Point(64, 121);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
             this.dgvEmpleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -182,7 +182,7 @@
             this.dgvEmpleados.ShowCellToolTips = false;
             this.dgvEmpleados.ShowEditingIcon = false;
             this.dgvEmpleados.ShowRowErrors = false;
-            this.dgvEmpleados.Size = new System.Drawing.Size(604, 277);
+            this.dgvEmpleados.Size = new System.Drawing.Size(749, 313);
             this.dgvEmpleados.TabIndex = 2;
             this.dgvEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.seleccionarFila);
             // 
@@ -225,10 +225,11 @@
             // btnDetalle
             // 
             this.btnDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDetalle.Enabled = false;
             this.btnDetalle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetalle.Location = new System.Drawing.Point(622, 85);
+            this.btnDetalle.Location = new System.Drawing.Point(708, 85);
             this.btnDetalle.Name = "btnDetalle";
             this.btnDetalle.Size = new System.Drawing.Size(75, 32);
             this.btnDetalle.TabIndex = 3;
@@ -256,7 +257,7 @@
             this.Controls.Add(this.dgvEmpleados);
             this.Controls.Add(this.panel1);
             this.Name = "EmpleadoView";
-            this.Size = new System.Drawing.Size(791, 444);
+            this.Size = new System.Drawing.Size(877, 487);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

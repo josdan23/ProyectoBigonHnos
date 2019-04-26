@@ -59,7 +59,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(854, 62);
+            this.panel1.Size = new System.Drawing.Size(877, 62);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -87,7 +87,7 @@
             this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.btnNuevo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(142, 0);
+            this.panel2.Location = new System.Drawing.Point(165, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(712, 62);
             this.panel2.TabIndex = 4;
@@ -166,7 +166,7 @@
             this.nombreCol,
             this.idLiquidacionCol});
             this.liquidacionDgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.liquidacionDgv.Location = new System.Drawing.Point(29, 171);
+            this.liquidacionDgv.Location = new System.Drawing.Point(64, 173);
             this.liquidacionDgv.MultiSelect = false;
             this.liquidacionDgv.Name = "liquidacionDgv";
             this.liquidacionDgv.ReadOnly = true;
@@ -178,7 +178,7 @@
             this.liquidacionDgv.ShowCellToolTips = false;
             this.liquidacionDgv.ShowEditingIcon = false;
             this.liquidacionDgv.ShowRowErrors = false;
-            this.liquidacionDgv.Size = new System.Drawing.Size(790, 340);
+            this.liquidacionDgv.Size = new System.Drawing.Size(772, 253);
             this.liquidacionDgv.TabIndex = 1;
             this.liquidacionDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.seleccionarFila);
             // 
@@ -217,7 +217,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(28, 131);
+            this.label1.Location = new System.Drawing.Point(65, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 15);
             this.label1.TabIndex = 2;
@@ -227,7 +227,7 @@
             // 
             this.periodoCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.periodoCombobox.FormattingEnabled = true;
-            this.periodoCombobox.Location = new System.Drawing.Point(94, 130);
+            this.periodoCombobox.Location = new System.Drawing.Point(131, 134);
             this.periodoCombobox.Name = "periodoCombobox";
             this.periodoCombobox.Size = new System.Drawing.Size(173, 21);
             this.periodoCombobox.TabIndex = 3;
@@ -247,9 +247,10 @@
             // detalleBtn
             // 
             this.detalleBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.detalleBtn.Enabled = false;
             this.detalleBtn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.detalleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.detalleBtn.Location = new System.Drawing.Point(730, 123);
+            this.detalleBtn.Location = new System.Drawing.Point(747, 123);
             this.detalleBtn.Name = "detalleBtn";
             this.detalleBtn.Size = new System.Drawing.Size(89, 32);
             this.detalleBtn.TabIndex = 4;
@@ -268,7 +269,7 @@
             this.Controls.Add(this.liquidacionDgv);
             this.Controls.Add(this.panel1);
             this.Name = "LiquidacionPanelView";
-            this.Size = new System.Drawing.Size(854, 556);
+            this.Size = new System.Drawing.Size(877, 487);
             this.Load += new System.EventHandler(this.LiquidacionPanelView_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

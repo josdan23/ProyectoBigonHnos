@@ -111,6 +111,7 @@ namespace ProyectoBigonHnos.vista.empleado
         {
             btnEliminar.Enabled = true;
             btnEditar.Enabled = true;
+            btnDetalle.Enabled = true;
         }
     }
 }

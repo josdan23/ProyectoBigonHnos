@@ -158,6 +158,7 @@ namespace ProyectoBigonHnos.vista.liquidacion
         private void seleccionarFila(object sender, DataGridViewCellEventArgs e)
         {
             btnEliminar.Enabled = true;
+            detalleBtn.Enabled = true;
         }
     }
 
