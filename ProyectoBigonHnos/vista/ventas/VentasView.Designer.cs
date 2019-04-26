@@ -54,7 +54,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 64);
+            this.panel1.Size = new System.Drawing.Size(877, 64);
             this.panel1.TabIndex = 2;
             // 
             // panel3
@@ -81,7 +81,7 @@
             this.panel2.Controls.Add(this.btnEliminar);
             this.panel2.Controls.Add(this.btnNuevo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(88, 0);
+            this.panel2.Location = new System.Drawing.Point(165, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(712, 64);
             this.panel2.TabIndex = 2;
@@ -146,7 +146,7 @@
             this.colFecha,
             this.colTotal});
             this.dgvVentas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvVentas.Location = new System.Drawing.Point(115, 125);
+            this.dgvVentas.Location = new System.Drawing.Point(64, 121);
             this.dgvVentas.MultiSelect = false;
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.ReadOnly = true;
@@ -160,7 +160,7 @@
             this.dgvVentas.ShowCellToolTips = false;
             this.dgvVentas.ShowEditingIcon = false;
             this.dgvVentas.ShowRowErrors = false;
-            this.dgvVentas.Size = new System.Drawing.Size(563, 302);
+            this.dgvVentas.Size = new System.Drawing.Size(749, 313);
             this.dgvVentas.TabIndex = 3;
             this.dgvVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.seleccionarFial);
             // 
@@ -207,7 +207,7 @@
             this.Controls.Add(this.dgvVentas);
             this.Controls.Add(this.panel1);
             this.Name = "VentasView";
-            this.Size = new System.Drawing.Size(800, 461);
+            this.Size = new System.Drawing.Size(877, 487);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

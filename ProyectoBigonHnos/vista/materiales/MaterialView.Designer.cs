@@ -60,7 +60,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(871, 53);
+            this.panel1.Size = new System.Drawing.Size(877, 53);
             this.panel1.TabIndex = 1;
             // 
             // panel3
@@ -89,7 +89,7 @@
             this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.btnNuevo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(168, 0);
+            this.panel2.Location = new System.Drawing.Point(174, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(703, 53);
             this.panel2.TabIndex = 0;
@@ -187,7 +187,7 @@
             this.unidadCol});
             this.dgvMateriales.EnableHeadersVisualStyles = false;
             this.dgvMateriales.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvMateriales.Location = new System.Drawing.Point(100, 121);
+            this.dgvMateriales.Location = new System.Drawing.Point(64, 121);
             this.dgvMateriales.MinimumSize = new System.Drawing.Size(643, 0);
             this.dgvMateriales.MultiSelect = false;
             this.dgvMateriales.Name = "dgvMateriales";
@@ -196,7 +196,7 @@
             this.dgvMateriales.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvMateriales.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvMateriales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMateriales.Size = new System.Drawing.Size(670, 327);
+            this.dgvMateriales.Size = new System.Drawing.Size(749, 322);
             this.dgvMateriales.TabIndex = 2;
             this.dgvMateriales.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.seleccionarFila);
             // 
@@ -261,7 +261,7 @@
             this.Controls.Add(this.dgvMateriales);
             this.Controls.Add(this.panel1);
             this.Name = "MaterialView";
-            this.Size = new System.Drawing.Size(871, 492);
+            this.Size = new System.Drawing.Size(877, 487);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

@@ -57,7 +57,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(798, 53);
+            this.panel1.Size = new System.Drawing.Size(877, 53);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -86,7 +86,7 @@
             this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.btnNuevo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(271, 0);
+            this.panel2.Location = new System.Drawing.Point(350, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(527, 53);
             this.panel2.TabIndex = 4;
@@ -166,7 +166,7 @@
             this.colFechaCompra,
             this.colEstado});
             this.comprasRealizadasDataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.comprasRealizadasDataGrid.Location = new System.Drawing.Point(85, 121);
+            this.comprasRealizadasDataGrid.Location = new System.Drawing.Point(64, 121);
             this.comprasRealizadasDataGrid.MultiSelect = false;
             this.comprasRealizadasDataGrid.Name = "comprasRealizadasDataGrid";
             this.comprasRealizadasDataGrid.ReadOnly = true;
@@ -179,7 +179,7 @@
             this.comprasRealizadasDataGrid.ShowCellToolTips = false;
             this.comprasRealizadasDataGrid.ShowEditingIcon = false;
             this.comprasRealizadasDataGrid.ShowRowErrors = false;
-            this.comprasRealizadasDataGrid.Size = new System.Drawing.Size(628, 313);
+            this.comprasRealizadasDataGrid.Size = new System.Drawing.Size(749, 313);
             this.comprasRealizadasDataGrid.TabIndex = 1;
             this.comprasRealizadasDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.seleccionarFila);
             // 
@@ -223,7 +223,7 @@
             this.btnDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDetalle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDetalle.Location = new System.Drawing.Point(638, 78);
+            this.btnDetalle.Location = new System.Drawing.Point(738, 77);
             this.btnDetalle.Name = "btnDetalle";
             this.btnDetalle.Size = new System.Drawing.Size(75, 32);
             this.btnDetalle.TabIndex = 3;
@@ -240,7 +240,7 @@
             this.Controls.Add(this.comprasRealizadasDataGrid);
             this.Controls.Add(this.panel1);
             this.Name = "CompraView";
-            this.Size = new System.Drawing.Size(798, 487);
+            this.Size = new System.Drawing.Size(877, 487);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);

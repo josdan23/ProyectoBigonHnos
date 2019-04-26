@@ -85,6 +85,7 @@ namespace ProyectoBigonHnos.vista.compra
         {
             btnEditar.Enabled = true;
             btnEliminar.Enabled = true;
+            btnDetalle.Enabled = true;
         }
     }
 }

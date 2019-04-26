@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaPrincipal));
             this.pnlNavBar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlActivoLiquidacion = new System.Windows.Forms.Panel();
+            this.btnLiquidacion = new System.Windows.Forms.Button();
             this.pnlActivoProveedor = new System.Windows.Forms.Panel();
             this.pnlActivoEmpleados = new System.Windows.Forms.Panel();
             this.pnlActivoClientes = new System.Windows.Forms.Panel();
@@ -39,14 +41,6 @@
             this.pnlActivoCompras = new System.Windows.Forms.Panel();
             this.pnlActivoVentas = new System.Windows.Forms.Panel();
             this.pnlActivoPedidos = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlActivoUsuario = new System.Windows.Forms.Panel();
-            this.pnlCuerpo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLiquidacion = new System.Windows.Forms.Button();
             this.btnProveedores = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
@@ -54,18 +48,24 @@
             this.btnCompras = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.btnPedidos = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlActivoUsuario = new System.Windows.Forms.Panel();
             this.btnUsuario = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pnlCuerpo = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlNavBar.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnlCuerpo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlNavBar
@@ -107,6 +107,16 @@
             this.panel1.Size = new System.Drawing.Size(198, 532);
             this.panel1.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoBigonHnos.Properties.Resources._1449819_muebleria;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(148, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // pnlActivoLiquidacion
             // 
             this.pnlActivoLiquidacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -115,6 +125,28 @@
             this.pnlActivoLiquidacion.Size = new System.Drawing.Size(6, 33);
             this.pnlActivoLiquidacion.TabIndex = 2;
             this.pnlActivoLiquidacion.Visible = false;
+            // 
+            // btnLiquidacion
+            // 
+            this.btnLiquidacion.BackColor = System.Drawing.Color.Transparent;
+            this.btnLiquidacion.FlatAppearance.BorderSize = 0;
+            this.btnLiquidacion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnLiquidacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLiquidacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLiquidacion.ForeColor = System.Drawing.Color.DimGray;
+            this.btnLiquidacion.Image = global::ProyectoBigonHnos.Properties.Resources.clientes_icon;
+            this.btnLiquidacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLiquidacion.Location = new System.Drawing.Point(0, 278);
+            this.btnLiquidacion.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLiquidacion.Name = "btnLiquidacion";
+            this.btnLiquidacion.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnLiquidacion.Size = new System.Drawing.Size(198, 48);
+            this.btnLiquidacion.TabIndex = 3;
+            this.btnLiquidacion.Text = "Liquidación";
+            this.btnLiquidacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLiquidacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLiquidacion.UseVisualStyleBackColor = false;
+            this.btnLiquidacion.Click += new System.EventHandler(this.button1_Click);
             // 
             // pnlActivoProveedor
             // 
@@ -178,109 +210,6 @@
             this.pnlActivoPedidos.Size = new System.Drawing.Size(6, 33);
             this.pnlActivoPedidos.TabIndex = 0;
             this.pnlActivoPedidos.Visible = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.pnlActivoUsuario);
-            this.panel2.Controls.Add(this.btnUsuario);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 532);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(198, 58);
-            this.panel2.TabIndex = 1;
-            // 
-            // pnlActivoUsuario
-            // 
-            this.pnlActivoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pnlActivoUsuario.Location = new System.Drawing.Point(0, 11);
-            this.pnlActivoUsuario.Name = "pnlActivoUsuario";
-            this.pnlActivoUsuario.Size = new System.Drawing.Size(6, 33);
-            this.pnlActivoUsuario.TabIndex = 0;
-            this.pnlActivoUsuario.Visible = false;
-            // 
-            // pnlCuerpo
-            // 
-            this.pnlCuerpo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlCuerpo.BackColor = System.Drawing.Color.White;
-            this.pnlCuerpo.Controls.Add(this.pictureBox5);
-            this.pnlCuerpo.Controls.Add(this.pictureBox4);
-            this.pnlCuerpo.Controls.Add(this.pictureBox3);
-            this.pnlCuerpo.Controls.Add(this.pictureBox2);
-            this.pnlCuerpo.Controls.Add(this.label1);
-            this.pnlCuerpo.Location = new System.Drawing.Point(198, 0);
-            this.pnlCuerpo.Name = "pnlCuerpo";
-            this.pnlCuerpo.Size = new System.Drawing.Size(793, 590);
-            this.pnlCuerpo.TabIndex = 1;
-            this.pnlCuerpo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCuerpo_Paint);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(291, 249);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 44);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bienvenido";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox3.Image = global::ProyectoBigonHnos.Properties.Resources.pencil;
-            this.pictureBox3.Location = new System.Drawing.Point(337, 337);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(266, 337);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoBigonHnos.Properties.Resources._1449819_muebleria;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(148, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnLiquidacion
-            // 
-            this.btnLiquidacion.BackColor = System.Drawing.Color.Transparent;
-            this.btnLiquidacion.FlatAppearance.BorderSize = 0;
-            this.btnLiquidacion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnLiquidacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLiquidacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLiquidacion.ForeColor = System.Drawing.Color.DimGray;
-            this.btnLiquidacion.Image = global::ProyectoBigonHnos.Properties.Resources.clientes_icon;
-            this.btnLiquidacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLiquidacion.Location = new System.Drawing.Point(0, 278);
-            this.btnLiquidacion.Margin = new System.Windows.Forms.Padding(0);
-            this.btnLiquidacion.Name = "btnLiquidacion";
-            this.btnLiquidacion.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnLiquidacion.Size = new System.Drawing.Size(198, 48);
-            this.btnLiquidacion.TabIndex = 3;
-            this.btnLiquidacion.Text = "Liquidación";
-            this.btnLiquidacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLiquidacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLiquidacion.UseVisualStyleBackColor = false;
-            this.btnLiquidacion.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnProveedores
             // 
@@ -436,6 +365,26 @@
             this.btnPedidos.UseVisualStyleBackColor = false;
             this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.pnlActivoUsuario);
+            this.panel2.Controls.Add(this.btnUsuario);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 532);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(198, 58);
+            this.panel2.TabIndex = 1;
+            // 
+            // pnlActivoUsuario
+            // 
+            this.pnlActivoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pnlActivoUsuario.Location = new System.Drawing.Point(0, 11);
+            this.pnlActivoUsuario.Name = "pnlActivoUsuario";
+            this.pnlActivoUsuario.Size = new System.Drawing.Size(6, 33);
+            this.pnlActivoUsuario.TabIndex = 0;
+            this.pnlActivoUsuario.Visible = false;
+            // 
             // btnUsuario
             // 
             this.btnUsuario.BackColor = System.Drawing.Color.Transparent;
@@ -458,16 +407,22 @@
             this.btnUsuario.UseVisualStyleBackColor = false;
             this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
-            // pictureBox4
+            // pnlCuerpo
             // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox4.Image = global::ProyectoBigonHnos.Properties.Resources.single_01;
-            this.pictureBox4.Location = new System.Drawing.Point(408, 337);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
+            this.pnlCuerpo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCuerpo.BackColor = System.Drawing.Color.White;
+            this.pnlCuerpo.Controls.Add(this.pictureBox5);
+            this.pnlCuerpo.Controls.Add(this.pictureBox4);
+            this.pnlCuerpo.Controls.Add(this.pictureBox3);
+            this.pnlCuerpo.Controls.Add(this.pictureBox2);
+            this.pnlCuerpo.Controls.Add(this.label1);
+            this.pnlCuerpo.Location = new System.Drawing.Point(198, 0);
+            this.pnlCuerpo.Name = "pnlCuerpo";
+            this.pnlCuerpo.Size = new System.Drawing.Size(793, 590);
+            this.pnlCuerpo.TabIndex = 1;
+            this.pnlCuerpo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCuerpo_Paint);
             // 
             // pictureBox5
             // 
@@ -480,6 +435,51 @@
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox4.Image = global::ProyectoBigonHnos.Properties.Resources.single_01;
+            this.pictureBox4.Location = new System.Drawing.Point(408, 337);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.Image = global::ProyectoBigonHnos.Properties.Resources.pencil;
+            this.pictureBox3.Location = new System.Drawing.Point(337, 337);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(266, 337);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(291, 249);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(208, 44);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Bienvenido";
+            // 
             // VistaPrincipal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -490,14 +490,14 @@
             this.Text = "VistaPrincipal";
             this.pnlNavBar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.pnlCuerpo.ResumeLayout(false);
             this.pnlCuerpo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
