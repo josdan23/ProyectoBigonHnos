@@ -487,7 +487,8 @@
             this.Controls.Add(this.pnlCuerpo);
             this.Controls.Add(this.pnlNavBar);
             this.Name = "VistaPrincipal";
-            this.Text = "VistaPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Bienvenido";
             this.pnlNavBar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
