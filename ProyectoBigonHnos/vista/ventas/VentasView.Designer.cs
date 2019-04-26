@@ -88,6 +88,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -161,6 +162,7 @@
             this.dgvVentas.ShowRowErrors = false;
             this.dgvVentas.Size = new System.Drawing.Size(563, 302);
             this.dgvVentas.TabIndex = 3;
+            this.dgvVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.seleccionarFial);
             // 
             // colIdVenta
             // 

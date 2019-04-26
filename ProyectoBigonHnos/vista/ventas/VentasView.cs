@@ -78,5 +78,10 @@ namespace ProyectoBigonHnos.vista
         {
             dgvVentas.Rows.Clear();
         }
+
+        private void seleccionarFial(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEliminar.Enabled = true;
+        }
     }
 }
