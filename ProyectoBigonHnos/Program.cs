@@ -42,6 +42,8 @@ namespace ProyectoBigonHnos
             agregarConceptos();
             Application.EnableVisualStyles();
             Application.Run(vista);
+            
+            
         }
 
         static void liquidacion()

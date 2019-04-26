@@ -34,7 +34,7 @@ namespace ProyectoBigonHnos.controladores
             VistaPrincipal view = new VistaPrincipal(EmpleadoLogeado);
             view.ShowDialog();
 
-            
+
             Vista.Dispose();
         }
 

@@ -39,7 +39,7 @@ namespace ProyectoBigonHnos.dominio
             {
                 compra.agregarProveedor(proveedor);
                 //Console.WriteLine("proveedor" + proveedor);
-            }
+            
 
             String domicilioProveedor = String.Format("{0} - {1}. {2}. {3}",
                 proveedor.Domicilios[0].Calle,
@@ -53,7 +53,8 @@ namespace ProyectoBigonHnos.dominio
                     proveedor.Cuit, 
                     domicilioProveedor, 
                     proveedor.Telefonos[0].Numero);
-            
+            }
+
         }
 
         internal void mostrarFechaActual()
