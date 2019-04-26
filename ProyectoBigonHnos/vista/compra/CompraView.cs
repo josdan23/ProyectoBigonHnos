@@ -81,6 +81,10 @@ namespace ProyectoBigonHnos.vista.compra
             
         }
 
-   
+        private void seleccionarFila(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEditar.Enabled = true;
+            btnEliminar.Enabled = true;
+        }
     }
 }
