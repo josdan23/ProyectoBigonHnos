@@ -72,5 +72,12 @@ namespace ProyectoBigonHnos.vista
             vista.ShowDialog();
             
         }
+
+        private void seleccionarFila(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEditar.Enabled = true;
+            btnEliminar.Enabled = true;
+        }
+
     }
 }
