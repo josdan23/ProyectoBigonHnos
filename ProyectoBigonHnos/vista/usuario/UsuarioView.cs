@@ -121,9 +121,6 @@ namespace ProyectoBigonHnos.vista.usuario
             contraseniaLbl.Text = "";
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            controlador.cerrarSesion();
-        }
+      
     }
 }
