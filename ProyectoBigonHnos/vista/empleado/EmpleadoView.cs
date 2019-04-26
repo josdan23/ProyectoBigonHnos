@@ -106,5 +106,11 @@ namespace ProyectoBigonHnos.vista.empleado
             }
            
         }
+
+        private void seleccionarFila(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEliminar.Enabled = true;
+            btnEditar.Enabled = true;
+        }
     }
 }
