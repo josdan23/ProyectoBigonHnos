@@ -54,11 +54,21 @@ namespace ProyectoBigonHnos.vista.pedidos
             int idMaterial = int.Parse(materialesDisponiblesDGV.CurrentRow.Cells[0].Value.ToString());
             int cantidad = int.Parse(cantidadTxBox.Text);
 
-            if (controlador is PedidoControlador)
-                ((PedidoControlador)controlador).agregarMaterialAUsar(idMaterial, cantidad);
-            else
-                ((EditarPedidoControlador)controlador).agregarNuevoMaterialDisponible(idMaterial, cantidad);
-            ActualizarVista();
+            cantidadTxBox.Text = "";
+
+            try
+            {
+                if (controlador is PedidoControlador)
+                    ((PedidoControlador)controlador).agregarMaterialAUsar(idMaterial, cantidad);
+                else
+                    ((EditarPedidoControlador)controlador).agregarNuevoMaterialDisponible(idMaterial, cantidad);
+
+                ActualizarVista();
+            }
+            catch (Exception a)
+            {
+                MessageBox.Show(a.Message);
+            }
         }
 
         private void ingresarTexto(object sender, EventArgs e)

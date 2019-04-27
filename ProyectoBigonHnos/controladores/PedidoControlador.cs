@@ -51,6 +51,12 @@ namespace ProyectoBigonHnos.dominio
         {
             Material material = negocio.buscarMaterial(idMaterial);
 
+            int cantidadDisponible = (material.StockDisponible - material.StockMinimo);
+
+            if (cantidad > cantidadDisponible)
+            {
+                throw new Exception("No hay cantidad suficiente ("+cantidadDisponible+")");
+            }
             pedido.agregarMaterialAUsar(material, cantidad);
         }
 
@@ -72,6 +78,20 @@ namespace ProyectoBigonHnos.dominio
             pedido.imprimirPedido();
 
             negocio.cargarPedidosRealizados(pedido);
+
+            GestionarMaterialControlador controlador = new GestionarMaterialControlador();
+
+            foreach (ListaDeMateriales materialNecesario in pedido.ListaDeMateriales)
+            {
+                controlador.modificarMaterial(
+                    materialNecesario.material.IdMaterial,
+                    materialNecesario.material.Descripcion,
+                    materialNecesario.material.Cantidad,
+                    materialNecesario.material.Precio,
+                    materialNecesario.material.StockDisponible - materialNecesario.cantidad,
+                    materialNecesario.material.StockMinimo,
+                    materialNecesario.material.tipoUnidad);
+            }
         }
 
         public void buscarCliente(string dni)
