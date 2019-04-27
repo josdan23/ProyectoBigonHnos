@@ -99,15 +99,23 @@ namespace ProyectoBigonHnos.vista.liquidacion
 
         private void confirmarLiquidacionButton_Click(object sender, EventArgs e)
         {
-            //int periodo = int.Parse(periodoLiquidacionTextView.Text);
-            int periodo = ((MesesItemCombobox)periodoComboBox.SelectedItem).numero;
+            try
+            {
+                //int periodo = int.Parse(periodoLiquidacionTextView.Text);
+                int periodo = ((MesesItemCombobox)periodoComboBox.SelectedItem).numero;
 
-            controlador.agregarPeriodo(periodo);
+                controlador.agregarPeriodo(periodo);
 
-            string lugarDePago = lugarPagoLiquidacionTextView.Text;
-            controlador.agregarLugarPago(lugarDePago);
+                string lugarDePago = lugarPagoLiquidacionTextView.Text;
+                controlador.agregarLugarPago(lugarDePago);
 
-            controlador.confimarLiquidacion();
+                controlador.confimarLiquidacion();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Los datos ingresados son incorrectos");
+            }
+            
         }
 
         private void cancelarLiquidacionButton_Click(object sender, EventArgs e)
