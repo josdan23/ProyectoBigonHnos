@@ -260,7 +260,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "NuevoClienteView";
-            this.Text = "NuevoCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Nuevo cliente";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

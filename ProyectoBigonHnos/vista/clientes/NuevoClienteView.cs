@@ -23,23 +23,31 @@ namespace ProyectoBigonHnos.vista
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string dni = tboxDni.Text;
-            string nombre = tboxNombre.Text;
-            string apellido = tboxApellido.Text;
+            try
+            {
+                string dni = tboxDni.Text;
+                string nombre = tboxNombre.Text;
+                string apellido = tboxApellido.Text;
 
-            string calle = tboxCalle.Text;
-            int numero = int.Parse( tboxNumero.Text.ToString());
-            string localidad = tboxLocalidad.Text;
-            string provincia = tboxProvincia.Text;
+                string calle = tboxCalle.Text;
+                int numero = int.Parse(tboxNumero.Text.ToString());
+                string localidad = tboxLocalidad.Text;
+                string provincia = tboxProvincia.Text;
 
-            string telefono = tboxTelefono.Text;
+                string telefono = tboxTelefono.Text;
 
-            controlador.nuevoCliente(nombre, apellido, dni);
-            controlador.agregarDomicilio(calle, numero, localidad, provincia);
-            controlador.agregarTelefono(telefono);
-            controlador.confirmarNuevoCliente();
+                controlador.nuevoCliente(nombre, apellido, dni);
+                controlador.agregarDomicilio(calle, numero, localidad, provincia);
+                controlador.agregarTelefono(telefono);
+                controlador.confirmarNuevoCliente();
 
-            Dispose();
+                Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Los datos ingresados son incorrectos");
+            }
+            
         }
 
         private void Cancelar_Click(object sender, EventArgs e)
