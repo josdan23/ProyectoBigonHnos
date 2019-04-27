@@ -24,21 +24,29 @@ namespace ProyectoBigonHnos.vista.proveedor
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string razonSocial = tboxRazonSocial.Text;
-            string cuit = tboxCuit.Text;
+            try
+            {
+                string razonSocial = tboxRazonSocial.Text;
+                string cuit = tboxCuit.Text;
 
-            string telefono = tboxTelefono.Text;
+                string telefono = tboxTelefono.Text;
 
-            string calle = tboxCalle.Text;
-            int numero = int.Parse(tboxNumero.Text);
-            string localidad = tboxLocalidad.Text;
-            string provincia = tboxProvincia.Text;
+                string calle = tboxCalle.Text;
+                int numero = int.Parse(tboxNumero.Text);
+                string localidad = tboxLocalidad.Text;
+                string provincia = tboxProvincia.Text;
 
-            controlador.crearNuevoProveedor(razonSocial, cuit);
-            controlador.agregarTelefono(telefono);
-            controlador.agregarDomicilio(calle, numero, localidad, provincia);
-            controlador.confirmarNuevoProveedor();
-            Dispose();
+                controlador.crearNuevoProveedor(razonSocial, cuit);
+                controlador.agregarTelefono(telefono);
+                controlador.agregarDomicilio(calle, numero, localidad, provincia);
+                controlador.confirmarNuevoProveedor();
+                Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Los datos ingresados son incorrectos" );
+            }
+            
 
         }
 
