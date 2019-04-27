@@ -105,15 +105,18 @@ namespace ProyectoBigonHnos.dominio
 
         public void imprimirPedido()
         {
-           
-            Console.WriteLine(fechaDePedido);
-            Console.WriteLine(fechaDeEntrega);
-            Console.WriteLine(estado);
-            cliente.mostrar();
 
-            foreach (LineaPedido linea in lineasDePedido) {
-                linea.mostrar();
-            }
+            
+                Console.WriteLine(fechaDePedido);
+                Console.WriteLine(fechaDeEntrega);
+                Console.WriteLine(estado);
+                cliente.mostrar();
+
+                foreach (LineaPedido linea in lineasDePedido)
+                {
+                    linea.mostrar();
+                }
+   
             
         }
 

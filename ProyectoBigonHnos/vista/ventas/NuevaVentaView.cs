@@ -59,12 +59,21 @@ namespace ProyectoBigonHnos.vista.ventas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            int idPedido = int.Parse(dgvPedidos.CurrentRow.Cells[0].Value.ToString());
-            //Controlador.iniciarVenta();
-            Controlador.agregarPedido(idPedido);
-            Controlador.confirmarVenta();
-            //Controlador.agregarEmpleado(EmpleadoLogueado);
-            Dispose();
+            try
+            {
+                int idPedido = int.Parse(dgvPedidos.CurrentRow.Cells[0].Value.ToString());
+                //Controlador.iniciarVenta();
+                Controlador.agregarPedido(idPedido);
+                Controlador.confirmarVenta();
+                //Controlador.agregarEmpleado(EmpleadoLogueado);
+                Dispose();
+            }
+
+            catch (Exception at)
+            {
+                MessageBox.Show(at.Message);
+            }
+            
         }
 
         public void listarProducto(int idProducto, string descripcion, double alto, double ancho, double profundidad, string colorP, string colorS, int cantidad)

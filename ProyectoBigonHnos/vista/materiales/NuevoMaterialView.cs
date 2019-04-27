@@ -23,15 +23,23 @@ namespace ProyectoBigonHnos.vista.materiales
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String descripcion = tboxDescripcion.Text;
-            double precio = double.Parse( tboxPrecio.Text);
-            int stockDisponible = int.Parse(tboxStockDisponible.Text);
-            int stockMinimo = int.Parse(tboxMinimo.Text);
+            try
+            {
+                String descripcion = tboxDescripcion.Text;
+                double precio = double.Parse(tboxPrecio.Text);
+                int stockDisponible = int.Parse(tboxStockDisponible.Text);
+                int stockMinimo = int.Parse(tboxMinimo.Text);
 
-            String unidadDelPrecio = unidadCmbox.Text;
+                String unidadDelPrecio = unidadCmbox.Text;
 
-            controlador.agregarNuevoMaterial(descripcion, precio, stockMinimo, stockDisponible, unidadDelPrecio);
-            Dispose();
+                controlador.agregarNuevoMaterial(descripcion, precio, stockMinimo, stockDisponible, unidadDelPrecio);
+                Dispose();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Los datos ingresados son incorrectos");
+            }
+            
         }
 
         public void mostrarMaterial(int id, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo, string unidad)

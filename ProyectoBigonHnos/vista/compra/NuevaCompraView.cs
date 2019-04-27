@@ -106,9 +106,17 @@ namespace ProyectoBigonHnos.vista.compra
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             
-            int idProveedor = int.Parse(codigoTextView.Text);
+            try
+            {
+                int idProveedor = int.Parse(codigoTextView.Text);
 
-            controlador.agregarProveedor(idProveedor);
+                controlador.agregarProveedor(idProveedor);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -116,11 +124,19 @@ namespace ProyectoBigonHnos.vista.compra
             //llamar a controlador y agregar el material a la compra
             //agregar el material a la tabla
 
-            int cantidad = mostrarDialogoDeCantidadIngresada(); 
+            try
+            {
+                int cantidad = mostrarDialogoDeCantidadIngresada();
 
-            int idMaterial = int.Parse(materialesDataGrid.CurrentRow.Cells[0].Value.ToString());
+                int idMaterial = int.Parse(materialesDataGrid.CurrentRow.Cells[0].Value.ToString());
 
-            controlador.agregarMaterial(idMaterial, cantidad);
+                controlador.agregarMaterial(idMaterial, cantidad);
+            }
+            catch (NullReferenceException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void btnQuitar_Click(object sender, EventArgs e)

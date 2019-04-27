@@ -11,11 +11,11 @@ using ProyectoBigonHnos.controladores;
 
 namespace ProyectoBigonHnos.vista.conceptos
 {
-    public partial class ConceptosView : Form, IConceptoView
+    public partial class Conceptos : Form, IConceptoView
     {
         private ConceptoControlador Controlador { get; set; }
 
-        public ConceptosView()
+        public Conceptos()
         {
             InitializeComponent();
             listarTipos();
@@ -100,14 +100,21 @@ namespace ProyectoBigonHnos.vista.conceptos
 
         public void agregarButton_Click(object sender, EventArgs e)
         {
-            
-            int tipo = ((KeyValuePair<int, string>)tipoNuevoComboBox.SelectedItem).Key;
-            Console.WriteLine( tipoNuevoComboBox.SelectedValue);
-            string descripcion = descripcionNuevoTextView.Text;
-            double porcentaje = double.Parse(porcentajeNuevoTextView.Text.ToString());
-            bool obligatorio = ((KeyValuePair<bool, string>)obligatorioNuevoComboBox.SelectedItem).Key;
+            try
+            {
+                int tipo = ((KeyValuePair<int, string>)tipoNuevoComboBox.SelectedItem).Key;
+                Console.WriteLine(tipoNuevoComboBox.SelectedValue);
+                string descripcion = descripcionNuevoTextView.Text;
+                double porcentaje = double.Parse(porcentajeNuevoTextView.Text.ToString());
+                bool obligatorio = ((KeyValuePair<bool, string>)obligatorioNuevoComboBox.SelectedItem).Key;
 
-            Controlador.nuevoConcepto(tipo, descripcion, porcentaje, obligatorio);
+                Controlador.nuevoConcepto(tipo, descripcion, porcentaje, obligatorio);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Los datos ingresados son incorrectos");
+            }
+            
         }
 
         public void limpiarCamposNuevoConcepto()

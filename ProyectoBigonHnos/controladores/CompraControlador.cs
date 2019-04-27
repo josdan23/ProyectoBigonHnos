@@ -54,6 +54,10 @@ namespace ProyectoBigonHnos.dominio
                     domicilioProveedor, 
                     proveedor.Telefonos[0].Numero);
             }
+            else
+            {
+                throw new Exception("Proveedor no registrado");
+            }
 
         }
 
@@ -70,8 +74,12 @@ namespace ProyectoBigonHnos.dominio
 
             foreach (Compra comp in comprasRealizadas)
             {
-                view.mostrarCompra(comp.IdCompra, comp.proveedor.RazonSocial, comp.fechaCompra, comp.estado.ToString());
+                if (comp.proveedor != null)
+                    view.mostrarCompra(comp.IdCompra, comp.proveedor.RazonSocial, comp.fechaCompra, comp.estado.ToString());
+                else
+                    throw new Exception("No ingreso proveedor");
             }
+            
         }
 
         internal void finalizarCompra(int idCompraCargada)

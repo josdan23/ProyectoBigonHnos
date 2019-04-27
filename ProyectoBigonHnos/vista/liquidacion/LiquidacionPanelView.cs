@@ -28,7 +28,7 @@ namespace ProyectoBigonHnos.vista.liquidacion
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            ConceptosView view = new ConceptosView();
+            Conceptos view = new Conceptos();
             view.UnirControlador(new ConceptoControlador());
             view.ShowDialog();
         }

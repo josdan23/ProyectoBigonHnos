@@ -21,8 +21,19 @@ namespace ProyectoBigonHnos.vista.compra
 
         private void ConfirmarBtn_Click(object sender, EventArgs e)
         {
-            dataIngresada = int.Parse(cantidadTxtBx.Text);
-            Close();
+            try {
+                dataIngresada = int.Parse(cantidadTxtBx.Text);
+                Close();
+            }
+            catch(ArgumentNullException ex)
+            {
+                MessageBox.Show("Debe ingresar un valor");
+            }
+            catch(FormatException ex)
+            {
+                MessageBox.Show("Debe ingresar un entero");
+            }
+            
         }
     }
 }

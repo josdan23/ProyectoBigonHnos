@@ -42,8 +42,19 @@ namespace ProyectoBigonHnos.vista
 
         public void ActualizarVista()
         {
-            limpiarTabla();
-            ((PedidoControlador)Controlador).mostrarPedidos();
+            try
+            {
+                limpiarTabla();
+                ((PedidoControlador)Controlador).mostrarPedidos();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se ha completado la venta");
+            }
+
+            
+          
+            
         }
 
         private void limpiarTabla()

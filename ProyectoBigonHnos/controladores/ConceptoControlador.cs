@@ -40,7 +40,7 @@ namespace ProyectoBigonHnos.controladores
         {
             Concepto concepto = new Concepto(tipo, descripcion, porcentaje, obligatorio);
             Negocio.getNegocio().agregarConcepto(concepto);
-            ((ConceptosView)Vista).limpiarCamposNuevoConcepto();
+            ((Conceptos)Vista).limpiarCamposNuevoConcepto();
 
             listarConceptos();
         }

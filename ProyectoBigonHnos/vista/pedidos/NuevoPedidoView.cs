@@ -51,9 +51,11 @@ namespace ProyectoBigonHnos.vista.pedidos
 
         private void btnGuardarPedido_Click(object sender, EventArgs e)
         {
-            ((PedidoControlador)controlador).agregarFechaDeEntrega(dateTimePicker1.Value.Date);
-            ((PedidoControlador)controlador).confirmarPedido();
-            Dispose();
+
+                ((PedidoControlador)controlador).agregarFechaDeEntrega(dateTimePicker1.Value.Date);
+                ((PedidoControlador)controlador).confirmarPedido();
+                Dispose();
+            
         }
 
         private void btnCancelarPedido_Click(object sender, EventArgs e)

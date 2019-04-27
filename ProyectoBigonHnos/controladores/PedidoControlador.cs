@@ -75,7 +75,7 @@ namespace ProyectoBigonHnos.dominio
         {
             pedido.seHaCompletado();
 
-            pedido.imprimirPedido();
+            //pedido.imprimirPedido();
 
             negocio.cargarPedidosRealizados(pedido);
 
