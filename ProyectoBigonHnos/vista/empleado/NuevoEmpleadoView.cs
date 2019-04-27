@@ -31,34 +31,43 @@ namespace ProyectoBigonHnos.vista.empleado
 
         private void btnGuardarEmpleados_Click(object sender, EventArgs e)
         {
-            Controlador.agregarInformacionPersonal(
+
+            try
+            {
+                Controlador.agregarInformacionPersonal(
                 tboxApellido.Text,
                 tboxNombre.Text,
                 tboxCuil.Text);
 
-            Controlador.agregarDomicilio(
-                tboxCalle.Text,
-                int.Parse(tboxNumero.Text),
-                tboxLocalidad.Text,
-                tboxProvincia.Text);
+                Controlador.agregarDomicilio(
+                    tboxCalle.Text,
+                    int.Parse(tboxNumero.Text),
+                    tboxLocalidad.Text,
+                    tboxProvincia.Text);
 
-            Controlador.agregarTelefono(tboxTelefono.Text);
+                Controlador.agregarTelefono(tboxTelefono.Text);
 
 
 
-            Controlador.agregarUsuario(
-                tboxPassword.Text,
-                ckboxAdministrador.Checked);
+                Controlador.agregarUsuario(
+                    tboxPassword.Text,
+                    ckboxAdministrador.Checked);
 
-            Controlador.agregarCategoria(tboxCategoria.Text);
-            Controlador.agregarLegajo(tboxLegajo.Text);
+                Controlador.agregarCategoria(tboxCategoria.Text);
+                Controlador.agregarLegajo(tboxLegajo.Text);
 
+
+                Controlador.agregarFechaIngreso(dtpFechaIngreso.Value);
+
+                Controlador.confimarEmpleado();
+
+                Dispose();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Los datos ingresados son incorrectos");
+            }
             
-            Controlador.agregarFechaIngreso(dtpFechaIngreso.Value);
-
-            Controlador.confimarEmpleado();
-
-            Dispose();
         }
 
         public void listarFamiliar(string dniFamiliar, string parentesco, DateTime fechaNacimiento, bool discacidad)

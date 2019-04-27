@@ -46,8 +46,6 @@ namespace ProyectoBigonHnos.vista.proveedor
             {
                 MessageBox.Show("Los datos ingresados son incorrectos" );
             }
-            
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
