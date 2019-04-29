@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProyectoBigonHnos.data;
 using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.vista;
 using ProyectoBigonHnos.vista.materiales;
+using ProyectoBigonHnos.vistasImpresas;
 
 namespace ProyectoBigonHnos.controladores
 {
@@ -76,6 +78,12 @@ namespace ProyectoBigonHnos.controladores
             agregarNuevoMaterial("madera5", 31.2, 10, 12, "cm2");
             agregarNuevoMaterial("madera6", 31.2, 10, 12, "unidad");
             agregarNuevoMaterial("madera6", 31.2, 10, 12, "cm2");
+        }
+
+        internal void imprimir()
+        {
+            MaterialesPdfView pdf = new MaterialesPdfView();
+            pdf.imprimir(PersistenciaFacade.getInstance().obtenerTodos<Material>());
         }
 
         public void detalleMaterial (int idMaterial)

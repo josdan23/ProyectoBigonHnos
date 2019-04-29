@@ -107,6 +107,7 @@
             this.imprimirBtn.Text = "Imprimir";
             this.imprimirBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.imprimirBtn.UseVisualStyleBackColor = true;
+            this.imprimirBtn.Click += new System.EventHandler(this.imprimirBtn_Click);
             // 
             // btnEliminar
             // 

@@ -75,5 +75,10 @@ namespace ProyectoBigonHnos.vista
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
         }
+
+        private void imprimirBtn_Click(object sender, EventArgs e)
+        {
+            controlador.imprimir();
+        }
     }
 }
