@@ -51,13 +51,14 @@ namespace ProyectoBigonHnos.vista.pedidos
 
         private void AgregarBtn_Click(object sender, EventArgs e)
         {
-            int idMaterial = int.Parse(materialesDisponiblesDGV.CurrentRow.Cells[0].Value.ToString());
-            int cantidad = int.Parse(cantidadTxBox.Text);
-
-            cantidadTxBox.Text = "";
-
             try
             {
+
+                int idMaterial = int.Parse(materialesDisponiblesDGV.CurrentRow.Cells[0].Value.ToString());
+                int cantidad = int.Parse(cantidadTxBox.Text);
+
+                cantidadTxBox.Text = "";
+
                 if (controlador is PedidoControlador)
                     ((PedidoControlador)controlador).agregarMaterialAUsar(idMaterial, cantidad);
                 else

@@ -65,38 +65,46 @@ namespace ProyectoBigonHnos.vista.pedidos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string descripcion = tboxDescripcion.Text;
-            double alto = double.Parse(tboxAlto.Text);
-            double ancho = double.Parse(tboxAncho.Text);
-            double profundidad = double.Parse(tboxProfundidad.Text);
-            string colorPrimario = tboxColorP.Text;
-            string colorSecundario = tboxColorS.Text;
-            int cantidad = int.Parse(tboxCantidad.Text);
-
-            if (controlador is PedidoControlador) { 
-
-            ((PedidoControlador)controlador).agregarProducto(
-                descripcion,
-                alto,
-                ancho,
-                profundidad,
-                colorPrimario,
-                colorSecundario,
-                cantidad);
-            }
-            else
+            try
             {
-                ((EditarPedidoControlador)controlador).agregarNuevoProducto(
-                descripcion,
-                alto,
-                ancho,
-                profundidad,
-                colorPrimario,
-                colorSecundario,
-                cantidad);
-            }
+                string descripcion = tboxDescripcion.Text;
+                double alto = double.Parse(tboxAlto.Text);
+                double ancho = double.Parse(tboxAncho.Text);
+                double profundidad = double.Parse(tboxProfundidad.Text);
+                string colorPrimario = tboxColorP.Text;
+                string colorSecundario = tboxColorS.Text;
+                int cantidad = int.Parse(tboxCantidad.Text);
 
-            Dispose();
+                if (controlador is PedidoControlador)
+                {
+
+                    ((PedidoControlador)controlador).agregarProducto(
+                        descripcion,
+                        alto,
+                        ancho,
+                        profundidad,
+                        colorPrimario,
+                        colorSecundario,
+                        cantidad);
+                }
+                else
+                {
+                    ((EditarPedidoControlador)controlador).agregarNuevoProducto(
+                    descripcion,
+                    alto,
+                    ancho,
+                    profundidad,
+                    colorPrimario,
+                    colorSecundario,
+                    cantidad);
+                }
+
+                Dispose();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Los datos ingresados son incorrectos");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -141,11 +141,19 @@ namespace ProyectoBigonHnos.vista.compra
 
         private void btnQuitar_Click(object sender, EventArgs e)
         {
-            //llamar el controlador y quitar el material de la compra
+            try
+            {
+                //llamar el controlador y quitar el material de la compra
 
-            int index = int.Parse(compraDataGrid.CurrentRow.Cells[0].Value.ToString());
+                int index = int.Parse(compraDataGrid.CurrentRow.Cells[0].Value.ToString());
 
-            controlador.cancelarMaterial(index);
+                controlador.cancelarMaterial(index);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No hay compras para borrar");
+            }
+            
         }
 
         public void mostrarFechaActualDeCompra(DateTime fechaDeCompra)

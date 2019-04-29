@@ -160,10 +160,11 @@ namespace ProyectoBigonHnos.controladores
 
             foreach (Pedido pedido in Negocio.getNegocio().obtenerTodosPedidosRealizados())
             {
-                if (pedido.cliente.Dni == dniClienteFiltro)
+                if (pedido.cliente != null && pedido.cliente.Dni == dniClienteFiltro)
                 {
                     view.listarPedido(pedido.idPedido, pedido.cliente.Apellido, pedido.fechaDePedido);
                 }
+
             }
         }
     }

@@ -2,6 +2,8 @@
 using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.vista;
 using ProyectoBigonHnos.data;
+using ProyectoBigonHnos.vistasImpresas;
+using System.Collections.Generic;
 
 namespace ProyectoBigonHnos.controladores
 {
@@ -119,6 +121,15 @@ namespace ProyectoBigonHnos.controladores
                 cliente.Domicilioes[0].Localidad.Provincia.Nombre);
             view.mostrarTelefono(cliente.Telefonos[0].Numero);
             view.mostrarIdCliente(idCliente);
+        }
+
+        internal void imprimir()
+        {
+            ClientesPdfView impresion = new ClientesPdfView();
+
+            List<Cliente> listaClientes = PersistenciaFacade.getInstance().obtenerTodos<Cliente>();
+
+            impresion.imprimir(listaClientes);
         }
     }
 }

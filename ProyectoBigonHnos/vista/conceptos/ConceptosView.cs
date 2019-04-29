@@ -125,8 +125,16 @@ namespace ProyectoBigonHnos.vista.conceptos
 
         private void eliminarConceptoButton_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(idConceptoDetalleTextView.Text);
-            Controlador.eliminarConcepto(id);
+            try
+            {
+                int id = int.Parse(idConceptoDetalleTextView.Text);
+                Controlador.eliminarConcepto(id);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No ingreso ningun concepto");
+            }
+            
         }
     }
 }

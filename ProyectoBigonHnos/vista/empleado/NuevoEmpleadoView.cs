@@ -95,9 +95,18 @@ namespace ProyectoBigonHnos.vista.empleado
 
         private void btonBorrarFamilar_Click(object sender, EventArgs e)
         {
-            String dniFamiliar = dgvFamiliares.CurrentRow.Cells[0].Value.ToString();
-            Controlador.eliminarFamiliar(dniFamiliar);
-            //Console.WriteLine(dniFamiliar);
+            try
+            {
+                String dniFamiliar = dgvFamiliares.CurrentRow.Cells[0].Value.ToString();
+                Controlador.eliminarFamiliar(dniFamiliar);
+                //Console.WriteLine(dniFamiliar);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No hay empleados para borrar");
+            }
+
+
         }
     }
 }

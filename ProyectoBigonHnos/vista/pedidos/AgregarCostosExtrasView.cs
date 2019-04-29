@@ -41,14 +41,22 @@ namespace ProyectoBigonHnos.vista.pedidos
 
         private void AgregarBtn_Click(object sender, EventArgs e)
         {
-            string descripcion = descripcionTxtBox.Text;
-            double monto = double.Parse(MontoTxtBox.Text);
+            try
+            {
+                string descripcion = descripcionTxtBox.Text;
+                double monto = double.Parse(MontoTxtBox.Text);
 
-            if (controlador is PedidoControlador)
-                ((PedidoControlador)controlador).agregarCostoExtra(descripcion, monto);
-            else
-                ((EditarPedidoControlador)controlador).agregarCostoExtra(descripcion, monto);
-            ActualizarVista();
+                if (controlador is PedidoControlador)
+                    ((PedidoControlador)controlador).agregarCostoExtra(descripcion, monto);
+                else
+                    ((EditarPedidoControlador)controlador).agregarCostoExtra(descripcion, monto);
+                ActualizarVista();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Los datos son ingresados");
+            }
+            
         }
 
         private void salirBtn_Click(object sender, EventArgs e)
