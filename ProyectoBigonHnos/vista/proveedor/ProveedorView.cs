@@ -136,5 +136,10 @@ namespace ProyectoBigonHnos.vista.proveedor
             localidadProveedorTituloLabel.Text = "Localidad";
             provinciaProveedorTituloLabel.Text = "Provincia";
         }
+
+        private void imprimirBtn_Click(object sender, EventArgs e)
+        {
+            controlador.imprimir();
+        }
     }
 }

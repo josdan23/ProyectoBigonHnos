@@ -55,6 +55,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.imprimirBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -95,6 +96,7 @@
             // 
             this.panel2.Controls.Add(this.btnEliminar);
             this.panel2.Controls.Add(this.btnEditar);
+            this.panel2.Controls.Add(this.imprimirBtn);
             this.panel2.Controls.Add(this.btnNuevo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(148, 0);
@@ -385,6 +387,21 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
+            // imprimirBtn
+            // 
+            this.imprimirBtn.FlatAppearance.BorderSize = 0;
+            this.imprimirBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imprimirBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imprimirBtn.Image = global::ProyectoBigonHnos.Properties.Resources.ic_local_printshop_24px;
+            this.imprimirBtn.Location = new System.Drawing.Point(309, 8);
+            this.imprimirBtn.Name = "imprimirBtn";
+            this.imprimirBtn.Size = new System.Drawing.Size(91, 42);
+            this.imprimirBtn.TabIndex = 0;
+            this.imprimirBtn.Text = "Imprimir";
+            this.imprimirBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.imprimirBtn.UseVisualStyleBackColor = true;
+            this.imprimirBtn.Click += new System.EventHandler(this.imprimirBtn_Click);
+            // 
             // ProveedorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,5 +452,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button imprimirBtn;
     }
 }

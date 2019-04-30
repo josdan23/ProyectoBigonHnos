@@ -1,5 +1,8 @@
-﻿using ProyectoBigonHnos.dominio;
+﻿using ProyectoBigonHnos.data;
+using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.vista.proveedor;
+using ProyectoBigonHnos.vistasImpresas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -123,6 +126,10 @@ namespace ProyectoBigonHnos.controladores
             Proveedor = null;
         }
 
-
+        internal void imprimir()
+        {
+            ProveedorPdfView pdf = new ProveedorPdfView();
+            pdf.imprimir(PersistenciaFacade.getInstance().obtenerTodos<Proveedor>());
+        }
     }
 }
