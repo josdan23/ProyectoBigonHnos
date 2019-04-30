@@ -3,6 +3,8 @@ using ProyectoBigonHnos.vista.pedidos;
 using ProyectoBigonHnos.dominio.pedido;
 using System;
 using ProyectoBigonHnos.controladores;
+using ProyectoBigonHnos.vistasImpresas;
+using ProyectoBigonHnos.data;
 
 namespace ProyectoBigonHnos.dominio
 {
@@ -92,6 +94,12 @@ namespace ProyectoBigonHnos.dominio
                     materialNecesario.material.StockMinimo,
                     materialNecesario.material.tipoUnidad);
             }
+        }
+
+        internal void imprimir()
+        {
+            PedidosPdfView pdf = new PedidosPdfView();
+            pdf.imprmir(PersistenciaFacade.getInstance().obtenerTodos<Pedido>());
         }
 
         public void buscarCliente(string dni)

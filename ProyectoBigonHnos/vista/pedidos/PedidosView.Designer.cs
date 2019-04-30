@@ -35,6 +35,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.imprimirBtn = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
             this.columnPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,6 +82,7 @@
             // 
             this.panel2.Controls.Add(this.btnEliminar);
             this.panel2.Controls.Add(this.btnEditar);
+            this.panel2.Controls.Add(this.imprimirBtn);
             this.panel2.Controls.Add(this.btnNuevo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(165, 0);
@@ -119,6 +121,21 @@
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // imprimirBtn
+            // 
+            this.imprimirBtn.FlatAppearance.BorderSize = 0;
+            this.imprimirBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imprimirBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imprimirBtn.Image = global::ProyectoBigonHnos.Properties.Resources.ic_local_printshop_24px;
+            this.imprimirBtn.Location = new System.Drawing.Point(315, 8);
+            this.imprimirBtn.Name = "imprimirBtn";
+            this.imprimirBtn.Size = new System.Drawing.Size(91, 42);
+            this.imprimirBtn.TabIndex = 0;
+            this.imprimirBtn.Text = "Imprimir";
+            this.imprimirBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.imprimirBtn.UseVisualStyleBackColor = true;
+            this.imprimirBtn.Click += new System.EventHandler(this.imprimirBtn_Click);
             // 
             // btnNuevo
             // 
@@ -251,5 +268,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnFecha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalCol;
+        private System.Windows.Forms.Button imprimirBtn;
     }
 }

@@ -8,5 +8,6 @@ namespace ProyectoBigonHnos.controladores
 {
     public interface IPedidoController
     {
+       
     }
 }
