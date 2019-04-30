@@ -1,6 +1,7 @@
 ﻿using ProyectoBigonHnos.controladores;
 using ProyectoBigonHnos.data;
 using ProyectoBigonHnos.vista.compra;
+using ProyectoBigonHnos.vistasImpresas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -107,6 +108,12 @@ namespace ProyectoBigonHnos.dominio
 
             CompraDetalleView view = (CompraDetalleView)vista;
             view.mostrarEstado(compra.estado.ToString());
+        }
+
+        internal void imprimir()
+        {
+            CompraPdfView pdf = new CompraPdfView();
+            pdf.imprimir(PersistenciaFacade.getInstance().obtenerTodos<Compra>());
         }
 
         internal void eliminarCompra(int id)

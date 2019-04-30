@@ -176,6 +176,7 @@
     </Compile>
     <Compile Include="services\ImpresionPdfServices.cs" />
     <Compile Include="vistasImpresas\ClientesPdfView.cs" />
+    <Compile Include="vistasImpresas\CompraPdfView.cs" />
     <Compile Include="vistasImpresas\IPdfView.cs" />
     <Compile Include="vistasImpresas\MaterialesPdfView.cs" />
     <Compile Include="vista\clientes\ClientesView.cs">
