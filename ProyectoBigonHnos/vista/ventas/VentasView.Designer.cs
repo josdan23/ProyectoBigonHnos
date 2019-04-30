@@ -41,6 +41,7 @@
             this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.imprimirBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,6 +80,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btnEliminar);
+            this.panel2.Controls.Add(this.imprimirBtn);
             this.panel2.Controls.Add(this.btnNuevo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(165, 0);
@@ -199,6 +201,21 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Lista de ventas registradas";
             // 
+            // imprimirBtn
+            // 
+            this.imprimirBtn.FlatAppearance.BorderSize = 0;
+            this.imprimirBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imprimirBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imprimirBtn.Image = global::ProyectoBigonHnos.Properties.Resources.ic_local_printshop_24px;
+            this.imprimirBtn.Location = new System.Drawing.Point(412, 8);
+            this.imprimirBtn.Name = "imprimirBtn";
+            this.imprimirBtn.Size = new System.Drawing.Size(91, 42);
+            this.imprimirBtn.TabIndex = 0;
+            this.imprimirBtn.Text = "Imprimir";
+            this.imprimirBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.imprimirBtn.UseVisualStyleBackColor = true;
+            this.imprimirBtn.Click += new System.EventHandler(this.imprimirBtn_Click);
+            // 
             // VentasView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,5 +249,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colFecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTotal;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button imprimirBtn;
     }
 }

@@ -1,8 +1,10 @@
-﻿using ProyectoBigonHnos.dominio;
+﻿using ProyectoBigonHnos.data;
+using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.dominio.pedido;
 using ProyectoBigonHnos.dominio.venta;
 using ProyectoBigonHnos.vista;
 using ProyectoBigonHnos.vista.ventas;
+using ProyectoBigonHnos.vistasImpresas;
 using System;
 
 namespace ProyectoBigonHnos.controladores
@@ -111,6 +113,12 @@ namespace ProyectoBigonHnos.controladores
 
                 ((NuevaVentaView)Vista).mostrarLegajoVendedor(Venta.Empleado.Legajo);
             }
+        }
+
+        internal void imprimir()
+        {
+            VentaPdfView pdf = new VentaPdfView();
+            pdf.imprimir(PersistenciaFacade.getInstance().obtenerTodos<Venta>());
         }
 
         public void agregarNumeroDeCuotas(int nroCuotas)

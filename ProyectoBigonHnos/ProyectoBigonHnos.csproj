@@ -180,6 +180,7 @@
     <Compile Include="vistasImpresas\IPdfView.cs" />
     <Compile Include="vistasImpresas\MaterialesPdfView.cs" />
     <Compile Include="vistasImpresas\PedidosPdfView.cs" />
+    <Compile Include="vistasImpresas\VentaPdfView.cs" />
     <Compile Include="vista\clientes\ClientesView.cs">
       <SubType>UserControl</SubType>
     </Compile>
