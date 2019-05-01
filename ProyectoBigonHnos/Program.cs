@@ -36,6 +36,12 @@ namespace ProyectoBigonHnos
             controlador.agregarTelefono("420368");
             controlador.confimarEmpleado();
 
+            GestionarClientesControlador con = new GestionarClientesControlador();
+            con.nuevoCliente("jose", "yapura", "123");
+            con.agregarDomicilio("san martin", 23, "santa maria", "catamarca");
+            con.agregarTelefono("2930230");
+            con.confirmarNuevoCliente();
+
             Login vista = new Login();
             vista.unirControlador(new LoginControlador());
 

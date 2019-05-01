@@ -102,6 +102,12 @@ namespace ProyectoBigonHnos.dominio
             pdf.imprmir(PersistenciaFacade.getInstance().obtenerTodos<Pedido>());
         }
 
+        public void imprimirNuevoPedido()
+        {
+            NuevoPedidoPdfView pdf = new NuevoPedidoPdfView();
+            pdf.imprimir(pedido);
+        }
+
         public void buscarCliente(string dni)
         {
             Cliente cliente = negocio.buscarCliente(dni);

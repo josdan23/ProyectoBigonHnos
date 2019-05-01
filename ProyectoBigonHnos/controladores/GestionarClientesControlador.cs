@@ -20,6 +20,11 @@ namespace ProyectoBigonHnos.controladores
             this.vista = vista;
         }
 
+        public GestionarClientesControlador()
+        {
+            Negocio = Negocio.getNegocio();
+        }
+
         public void nuevoCliente(string nombre, string apellido, string dni)
         { 
             Cliente = new Cliente(nombre, apellido, dni);
