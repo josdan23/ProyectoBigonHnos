@@ -89,6 +89,8 @@ namespace ProyectoBigonHnos.vista.compra
         {
             //llamar al controlador y confirmar la compra
             controlador.confirmarComprar();
+
+            controlador.imprimirOrden();
         }
 
 

@@ -110,6 +110,12 @@ namespace ProyectoBigonHnos.dominio
             view.mostrarEstado(compra.estado.ToString());
         }
 
+        internal void imprimirOrden()
+        {
+            NuevaCompraPdfView pdf = new NuevaCompraPdfView();
+            pdf.imprimir(compra);
+        }
+
         internal void imprimir()
         {
             CompraPdfView pdf = new CompraPdfView();
