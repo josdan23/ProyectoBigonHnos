@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using ProyectoBigonHnos.dominio;
@@ -15,7 +16,7 @@ namespace ProyectoBigonHnos.vistasImpresas
         internal void imprimir(List<Proveedor> lista)
         {
             Document doc = new Document();
-            PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"C:\Users\Daniel\Desktop\ListadoDeProveedores.pdf", FileMode.Create));
+            PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(Application.StartupPath + @"\ListadoDeProveedores.pdf", FileMode.Create));
             doc.Open();
 
             Font _standardFont = new Font(Font.FontFamily.HELVETICA, 10, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
@@ -122,7 +123,7 @@ namespace ProyectoBigonHnos.vistasImpresas
             doc.Close();
             writer.Close();
 
-            System.Diagnostics.Process.Start(@"C:\Users\Daniel\Desktop\ListadoDeProveedores.pdf");
+            System.Diagnostics.Process.Start(Application.StartupPath + @"\ListadoDeProveedores.pdf");
         }
 
     }

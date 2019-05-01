@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProyectoBigonHnos.vistasImpresas
 {
@@ -15,7 +16,7 @@ namespace ProyectoBigonHnos.vistasImpresas
         public void imprimir(Compra compra)
         {
             Document doc = new Document();
-            PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"C:\Users\Daniel\Desktop\OrdenDeCompra.pdf", FileMode.Create));
+            PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(Application.StartupPath + @"OrdenDeCompra.pdf", FileMode.Create));
             doc.Open();
 
             Font _standardFont = new Font(Font.FontFamily.HELVETICA, 20, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
@@ -217,7 +218,7 @@ namespace ProyectoBigonHnos.vistasImpresas
             doc.Close();
             writer.Close();
 
-            System.Diagnostics.Process.Start(@"C:\Users\Daniel\Desktop\OrdenDeCompra.pdf");
+            System.Diagnostics.Process.Start(Application.StartupPath + @"\OrdenDeCompra.pdf");
 
         }
     }
