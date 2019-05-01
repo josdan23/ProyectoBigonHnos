@@ -2,17 +2,22 @@
 using iTextSharp.text.pdf;
 using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.dominio.pedido;
+using ProyectoBigonHnos.dominio.venta;
+using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.vistasImpresas
 {
-    class NuevoPedidoPdfView
+    class NuevaVentaPdfView
     {
-
-        public void imprimir(Pedido pedido)
+        public void imprimir(Venta venta)
         {
             Document doc = new Document();
-            PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"C:\Users\Daniel\Desktop\Pedido.pdf", FileMode.Create));
+            PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"C:\Users\Daniel\Desktop\ReciboVenta.pdf", FileMode.Create));
             doc.Open();
 
             Font _standardFont = new Font(Font.FontFamily.HELVETICA, 20, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
@@ -33,7 +38,7 @@ namespace ProyectoBigonHnos.vistasImpresas
             tableHeader.AddCell(logoCell);
 
 
-            PdfPCell encabezadoCell = new PdfPCell(new Phrase("PEDIDO", _standardFont))
+            PdfPCell encabezadoCell = new PdfPCell(new Phrase("RECIBO", _standardFont))
             {
                 Colspan = 2,
                 Rowspan = 2,
@@ -66,7 +71,7 @@ namespace ProyectoBigonHnos.vistasImpresas
                 Border = 0
             });
 
-            tableHeader.AddCell(new PdfPCell(new Phrase("Fecha de pedido: " + pedido.fechaDePedido.ToShortDateString(), _standardFont3))
+            tableHeader.AddCell(new PdfPCell(new Phrase("Fecha: " + venta.fechaDeVenta, _standardFont3))
             {
                 Border = 0,
                 HorizontalAlignment = Element.ALIGN_RIGHT
@@ -82,7 +87,7 @@ namespace ProyectoBigonHnos.vistasImpresas
                 Border = 0
             });
 
-            tableHeader.AddCell(new PdfPCell(new Phrase("Nro pedido: " + pedido.idPedido, _standardFont3))
+            tableHeader.AddCell(new PdfPCell(new Phrase("Nro: " + venta.IdVenta, _standardFont3))
             {
                 Border = 0,
                 HorizontalAlignment = Element.ALIGN_RIGHT
@@ -99,7 +104,7 @@ namespace ProyectoBigonHnos.vistasImpresas
                 Border = 0
             });
 
-            tableHeader.AddCell(new PdfPCell(new Phrase("Fecha de entrega: " + pedido.fechaDeEntrega.ToShortDateString(), _standardFont3))
+            tableHeader.AddCell(new PdfPCell(new Phrase("", _standardFont3))
             {
                 Border = 0,
                 HorizontalAlignment = Element.ALIGN_RIGHT,
@@ -108,16 +113,13 @@ namespace ProyectoBigonHnos.vistasImpresas
 
             doc.Add(tableHeader);
 
-
-            //TABLA DE CLIENTES
-
             BaseColor colorAzulClaro = new BaseColor(157, 181, 204);
             doc.Add(new Paragraph("\n"));
             doc.Add(new Paragraph("\n"));
 
             PdfPTable tableCliente = new PdfPTable(new float[] { 1, 5 });
             tableCliente.WidthPercentage = 100;
-            
+
             tableCliente.AddCell(new PdfPCell(new Phrase("Cliente", fontNegraBold))
             {
                 Colspan = 2,
@@ -130,7 +132,7 @@ namespace ProyectoBigonHnos.vistasImpresas
                 BackgroundColor = grisClaro,
                 Border = 0
             });
-            tableCliente.AddCell(new PdfPCell(new Phrase(pedido.cliente.Dni, _standardFont3))
+            tableCliente.AddCell(new PdfPCell(new Phrase(venta.Cliente.Dni, _standardFont3))
             {
                 BackgroundColor = grisClaro,
                 Border = 0
@@ -140,7 +142,7 @@ namespace ProyectoBigonHnos.vistasImpresas
                 BackgroundColor = grisClaro,
                 Border = 0
             });
-            tableCliente.AddCell(new PdfPCell(new Phrase(pedido.cliente.Apellido, _standardFont3))
+            tableCliente.AddCell(new PdfPCell(new Phrase(venta.Cliente.Apellido, _standardFont3))
             {
                 BackgroundColor = grisClaro,
                 Border = 0
@@ -150,7 +152,7 @@ namespace ProyectoBigonHnos.vistasImpresas
                 BackgroundColor = grisClaro,
                 Border = 0
             });
-            tableCliente.AddCell(new PdfPCell(new Phrase(pedido.cliente.Nombre, _standardFont3))
+            tableCliente.AddCell(new PdfPCell(new Phrase(venta.Cliente.Nombre, _standardFont3))
             {
                 BackgroundColor = grisClaro,
                 Border = 0
@@ -171,8 +173,8 @@ namespace ProyectoBigonHnos.vistasImpresas
                 Colspan = 7
             });
 
-            tablaProductos.AddCell(new PdfPCell(new Phrase("Desc",fontNegraBold))
-            { 
+            tablaProductos.AddCell(new PdfPCell(new Phrase("Desc", fontNegraBold))
+            {
                 Border = 0,
                 BackgroundColor = grisClaro
             });
@@ -207,33 +209,33 @@ namespace ProyectoBigonHnos.vistasImpresas
                 BackgroundColor = grisClaro
             });
 
-            foreach (LineaPedido pl in pedido.lineasDePedido)
+            foreach (LineaVenta lv in venta.lineasDeVenta)
             {
-                tablaProductos.AddCell(new PdfPCell(new Phrase(pl.producto.descripcion, _standardFont3))
+                tablaProductos.AddCell(new PdfPCell(new Phrase(lv.producto.descripcion, _standardFont3))
                 {
                     Border = 0
                 });
-                tablaProductos.AddCell(new PdfPCell(new Phrase(pl.producto.alto.ToString(), _standardFont3))
+                tablaProductos.AddCell(new PdfPCell(new Phrase(lv.producto.alto.ToString(), _standardFont3))
                 {
                     Border = 0
                 });
-                tablaProductos.AddCell(new PdfPCell(new Phrase(pl.producto.ancho.ToString(), _standardFont3))
+                tablaProductos.AddCell(new PdfPCell(new Phrase(lv.producto.ancho.ToString(), _standardFont3))
                 {
                     Border = 0
                 });
-                tablaProductos.AddCell(new PdfPCell(new Phrase(pl.producto.profundidad.ToString(), _standardFont3))
+                tablaProductos.AddCell(new PdfPCell(new Phrase(lv.producto.profundidad.ToString(), _standardFont3))
                 {
                     Border = 0
                 });
-                tablaProductos.AddCell(new PdfPCell(new Phrase(pl.producto.colorPrimario.ToString(), _standardFont3))
+                tablaProductos.AddCell(new PdfPCell(new Phrase(lv.producto.colorPrimario.ToString(), _standardFont3))
                 {
                     Border = 0
                 });
-                tablaProductos.AddCell(new PdfPCell(new Phrase(pl.producto.colorSecundario, _standardFont3))
+                tablaProductos.AddCell(new PdfPCell(new Phrase(lv.producto.colorSecundario, _standardFont3))
                 {
                     Border = 0
                 });
-                tablaProductos.AddCell(new PdfPCell(new Phrase(pl.cantidad.ToString(), _standardFont3))
+                tablaProductos.AddCell(new PdfPCell(new Phrase(lv.cantidad.ToString(), _standardFont3))
                 {
                     Border = 0
                 });
@@ -275,7 +277,7 @@ namespace ProyectoBigonHnos.vistasImpresas
                 BackgroundColor = grisClaro
             });
 
-            foreach (ListaDeMateriales lm in pedido.ListaDeMateriales)
+            foreach (ListaDeMateriales lm in venta.materialesNecesarios)
             {
                 tablaMateriales.AddCell(new PdfPCell(new Phrase(lm.material.Descripcion, _standardFont3))
                 {
@@ -322,7 +324,7 @@ namespace ProyectoBigonHnos.vistasImpresas
                 BackgroundColor = grisClaro
             });
 
-            foreach(CostoExtra unCosto in pedido.costosExtras)
+            foreach (CostoExtra unCosto in venta.costosExtras)
             {
                 tablaExtras.AddCell(new PdfPCell(new Phrase(unCosto.descripcion, _standardFont3))
                 {
@@ -348,7 +350,7 @@ namespace ProyectoBigonHnos.vistasImpresas
                 HorizontalAlignment = Element.ALIGN_RIGHT,
                 Border = 0
             });
-            tablaTotal.AddCell(new PdfPCell(new Phrase( pedido.obtenerSubtotalDeMateriales().ToString()))
+            tablaTotal.AddCell(new PdfPCell(new Phrase(venta.obtenerSubtotalMateriales().ToString()))
             {
                 HorizontalAlignment = Element.ALIGN_CENTER,
                 Border = 0
@@ -358,17 +360,29 @@ namespace ProyectoBigonHnos.vistasImpresas
                 HorizontalAlignment = Element.ALIGN_RIGHT,
                 Border = 0
             });
-            tablaTotal.AddCell(new PdfPCell(new Phrase(pedido.obtenerSubtotalCostosExtras().ToString()))
+            tablaTotal.AddCell(new PdfPCell(new Phrase(venta.obtenerSubtotalCostosExtras().ToString()))
             {
                 HorizontalAlignment = Element.ALIGN_CENTER,
                 Border = 0
             });
+
+            tablaTotal.AddCell(new PdfPCell(new Phrase("IVA(21%)", fontNegraBold))
+            {
+                HorizontalAlignment = Element.ALIGN_RIGHT,
+                Border = 0
+            });
+            tablaTotal.AddCell(new PdfPCell(new Phrase(venta.obtenerTotalIva().ToString()))
+            {
+                HorizontalAlignment = Element.ALIGN_CENTER,
+                Border = 0
+            });
+
             tablaTotal.AddCell(new PdfPCell(new Phrase("Total", fontNegraBold))
             {
                 HorizontalAlignment = Element.ALIGN_RIGHT,
                 Border = 0
             });
-            tablaTotal.AddCell(new PdfPCell(new Phrase(pedido.obtenerTotal().ToString()))
+            tablaTotal.AddCell(new PdfPCell(new Phrase(venta.obtenerImporteTotal().ToString()))
             {
                 HorizontalAlignment = Element.ALIGN_CENTER,
                 Border = 0,
@@ -380,9 +394,8 @@ namespace ProyectoBigonHnos.vistasImpresas
             doc.Close();
             writer.Close();
 
-            System.Diagnostics.Process.Start(@"C:\Users\Daniel\Desktop\Pedido.pdf");
+            System.Diagnostics.Process.Start(@"C:\Users\Daniel\Desktop\ReciboVenta.pdf");
 
         }
-
     }
 }

@@ -96,17 +96,33 @@ namespace ProyectoBigonHnos.dominio.venta
 
         public double obtenerTotal()
         {
-            double total = 0.0;
+            return obtenerSubtotalMateriales() + obtenerSubtotalCostosExtras();
+        }
 
-            foreach (LineaVenta lv in lineasDeVenta)
-            {
-                total += lv.obtenerSubtotal();
-            }
+        public double obtenerTotalIva()
+        {
+            return (obtenerSubtotalMateriales() + obtenerSubtotalCostosExtras()) * iva;
+        }
 
+        public double obtenerImporteTotal()
+        {
+            return obtenerTotal() + obtenerTotalIva();
+        }
+
+        public double obtenerSubtotalMateriales() {
+
+            double total = 0;
             foreach (ListaDeMateriales lm in materialesNecesarios)
             {
                 total = total + lm.getSubtotal();
             }
+
+            return total;
+        }
+
+        public double obtenerSubtotalCostosExtras()
+        {
+            double total = 0;
 
             foreach (CostoExtra cx in costosExtras)
             {

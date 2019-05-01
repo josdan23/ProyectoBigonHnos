@@ -88,6 +88,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.ivaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.productosTab.SuspendLayout();
@@ -117,6 +119,7 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.White;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Location = new System.Drawing.Point(983, 529);
@@ -472,7 +475,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(514, 380);
+            this.label2.Location = new System.Drawing.Point(514, 374);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 15);
             this.label2.TabIndex = 6;
@@ -482,7 +485,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(499, 410);
+            this.label3.Location = new System.Drawing.Point(499, 397);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 15);
             this.label3.TabIndex = 6;
@@ -493,7 +496,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Maroon;
-            this.label4.Location = new System.Drawing.Point(593, 440);
+            this.label4.Location = new System.Drawing.Point(593, 445);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 15);
             this.label4.TabIndex = 6;
@@ -502,7 +505,7 @@
             // subtotalMaterialesLbl
             // 
             this.subtotalMaterialesLbl.AutoSize = true;
-            this.subtotalMaterialesLbl.Location = new System.Drawing.Point(640, 380);
+            this.subtotalMaterialesLbl.Location = new System.Drawing.Point(640, 374);
             this.subtotalMaterialesLbl.Name = "subtotalMaterialesLbl";
             this.subtotalMaterialesLbl.Size = new System.Drawing.Size(10, 13);
             this.subtotalMaterialesLbl.TabIndex = 6;
@@ -511,7 +514,7 @@
             // subtotalCargosExtrasLbl
             // 
             this.subtotalCargosExtrasLbl.AutoSize = true;
-            this.subtotalCargosExtrasLbl.Location = new System.Drawing.Point(640, 410);
+            this.subtotalCargosExtrasLbl.Location = new System.Drawing.Point(640, 398);
             this.subtotalCargosExtrasLbl.Name = "subtotalCargosExtrasLbl";
             this.subtotalCargosExtrasLbl.Size = new System.Drawing.Size(10, 13);
             this.subtotalCargosExtrasLbl.TabIndex = 6;
@@ -521,7 +524,7 @@
             // 
             this.totalLabel.AutoSize = true;
             this.totalLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.totalLabel.Location = new System.Drawing.Point(640, 440);
+            this.totalLabel.Location = new System.Drawing.Point(640, 447);
             this.totalLabel.Name = "totalLabel";
             this.totalLabel.Size = new System.Drawing.Size(10, 13);
             this.totalLabel.TabIndex = 6;
@@ -704,9 +707,11 @@
             this.groupBox2.Controls.Add(this.tabControl1);
             this.groupBox2.Controls.Add(this.montoDeCuotasLabel);
             this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.ivaLabel);
             this.groupBox2.Controls.Add(this.subtotalMaterialesLbl);
             this.groupBox2.Controls.Add(this.subtotalCargosExtrasLbl);
             this.groupBox2.Controls.Add(this.label4);
@@ -734,6 +739,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(694, 91);
             this.panel1.TabIndex = 9;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(567, 421);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 15);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "IVA(21%)";
+            // 
+            // ivaLabel
+            // 
+            this.ivaLabel.AutoSize = true;
+            this.ivaLabel.Location = new System.Drawing.Point(640, 423);
+            this.ivaLabel.Name = "ivaLabel";
+            this.ivaLabel.Size = new System.Drawing.Size(10, 13);
+            this.ivaLabel.TabIndex = 6;
+            this.ivaLabel.Text = "-";
             // 
             // NuevaVentaView
             // 
@@ -834,5 +858,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label ivaLabel;
     }
 }

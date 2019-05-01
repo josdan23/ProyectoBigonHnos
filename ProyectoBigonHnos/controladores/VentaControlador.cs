@@ -100,9 +100,10 @@ namespace ProyectoBigonHnos.controladores
                     subtotalCostosExtras += ce.importe;
                 }
                 total = subtotalMateriales + subtotalCostosExtras;
-                ((NuevaVentaView)Vista).mostrarSubtotalCostosExtras(subtotalCostosExtras);
-                ((NuevaVentaView)Vista).mostrarSubtotalMateriales(subtotalMateriales);
-                ((NuevaVentaView)Vista).mostrarTotal(total);
+                ((NuevaVentaView)Vista).mostrarSubtotalCostosExtras(Venta.obtenerSubtotalCostosExtras());
+                ((NuevaVentaView)Vista).mostrarSubtotalMateriales(Venta.obtenerSubtotalMateriales());
+                ((NuevaVentaView)Vista).mostrarTotalDeIva(Venta.obtenerTotalIva());
+                ((NuevaVentaView)Vista).mostrarTotal(Venta.obtenerImporteTotal());
 
                 ((NuevaVentaView)Vista).mostrarFechaDeVenta(Venta.fechaDeVenta);
                 ((NuevaVentaView)Vista).mostrarDomicilio(
@@ -115,7 +116,13 @@ namespace ProyectoBigonHnos.controladores
             }
         }
 
-        internal void imprimir()
+        internal void imprimirFacturaDeVenta()
+        {
+            NuevaVentaPdfView pdf = new NuevaVentaPdfView();
+            pdf.imprimir(Venta);
+        }
+
+        internal void imprimirFactura()
         {
             VentaPdfView pdf = new VentaPdfView();
             pdf.imprimir(PersistenciaFacade.getInstance().obtenerTodos<Venta>());
@@ -153,7 +160,7 @@ namespace ProyectoBigonHnos.controladores
                         venta.IdVenta,
                         venta.Cliente.Apellido,
                         DateTime.Now,
-                        venta.obtenerTotal());
+                        venta.obtenerImporteTotal());
             }
         }
 

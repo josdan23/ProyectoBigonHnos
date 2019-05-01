@@ -67,6 +67,7 @@ namespace ProyectoBigonHnos.vista.ventas
                 Controlador.confirmarVenta();
                 //Controlador.agregarEmpleado(EmpleadoLogueado);
                 Dispose();
+                Controlador.imprimirFacturaDeVenta();
             }
 
             catch (Exception at)
@@ -111,6 +112,11 @@ namespace ProyectoBigonHnos.vista.ventas
         public void mostrarTotal(double monto)
         {
             totalLabel.Text = monto.ToString();
+        }
+
+        public void mostrarTotalDeIva(double monto)
+        {
+            ivaLabel.Text = monto.ToString();
         }
 
         public void mostrarMontoXCuotas(double monto)

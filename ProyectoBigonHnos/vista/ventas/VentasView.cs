@@ -86,7 +86,7 @@ namespace ProyectoBigonHnos.vista
 
         private void imprimirBtn_Click(object sender, EventArgs e)
         {
-            Controlador.imprimir();
+            Controlador.imprimirFactura();
         }
     }
 }
