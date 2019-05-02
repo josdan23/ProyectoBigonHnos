@@ -17,6 +17,7 @@ using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.dominio.liquidacion;
 using ProyectoBigonHnos.data;
 using ProyectoBigonHnos.vista.liquidacion;
+using ProyectoBigonHnos.vistasImpresas;
 
 namespace ProyectoBigonHnos.controladores
 {
@@ -101,6 +102,12 @@ namespace ProyectoBigonHnos.controladores
             vista.mostrarTotalNoRemunerativo(liquidacion.getTotalNoRemunerativo());
             vista.mostrarTotalDescuento(liquidacion.getTotalDescuento());
             
+        }
+
+        internal void imprimir()
+        {
+            LiquidacionPdfView pdf = new LiquidacionPdfView();
+            pdf.imprimir(liquidacion);
         }
 
         internal void mostrarDetalleLiquidacion(int idLiquidacion)

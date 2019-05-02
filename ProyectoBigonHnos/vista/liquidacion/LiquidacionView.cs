@@ -110,6 +110,8 @@ namespace ProyectoBigonHnos.vista.liquidacion
                 controlador.agregarLugarPago(lugarDePago);
 
                 controlador.confimarLiquidacion();
+
+                controlador.imprimir();
             }
             catch(Exception ex)
             {

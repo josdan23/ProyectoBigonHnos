@@ -178,6 +178,7 @@
     <Compile Include="vistasImpresas\ClientesPdfView.cs" />
     <Compile Include="vistasImpresas\CompraPdfView.cs" />
     <Compile Include="vistasImpresas\IPdfView.cs" />
+    <Compile Include="vistasImpresas\LiquidacionPdfView.cs" />
     <Compile Include="vistasImpresas\MaterialesPdfView.cs" />
     <Compile Include="vistasImpresas\NuevaCompraPdfView.cs" />
     <Compile Include="vistasImpresas\NuevaVentaPdfView.cs" />
