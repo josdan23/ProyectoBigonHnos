@@ -20,7 +20,8 @@ namespace ProyectoBigonHnos.vista.liquidacion
         {
             InitializeComponent();
             controlador = new LiquidacionControlador();
-
+            controlador.unirVista(this);
+            controlador.motrarLiquidaciones();
             configurarComboBox();
         }
 
