@@ -13,7 +13,7 @@ namespace ProyectoBigonHnos.data
         public static DBConector conector;
 
         private string server = "DESKTOP-HGBHH3S\\SQLEXPRESS";
-        private string database = "BigonsHnosDB";
+        private string database = "BigonsHnosDatabase";
         private string security = "True";
         private SqlConnection con;
 

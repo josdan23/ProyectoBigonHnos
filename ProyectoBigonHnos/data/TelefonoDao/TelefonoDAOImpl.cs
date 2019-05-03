@@ -7,11 +7,11 @@ using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.data.TelefonoDao
 {
-    class TelefonoDAOImpl : ITelefonoDao
+    class TelefonoDaoImpl : ITelefonoDao
     {
         private DBConector db;
 
-        public TelefonoDAOImpl()
+        public TelefonoDaoImpl()
         {
             db = DBConector.getInstance();
         }

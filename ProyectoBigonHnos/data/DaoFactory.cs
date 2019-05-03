@@ -23,7 +23,7 @@ namespace ProyectoBigonHnos.data
         {
             string nombreCortoParametro = typeof(T).GetTypeInfo().Name;
 
-            var nombreDeClase = "ProyectoBigonHnos.data." + nombreCortoParametro + "Dao."+ nombreCortoParametro +"DaoListImpl";
+            var nombreDeClase = "ProyectoBigonHnos.data." + nombreCortoParametro + "Dao."+ nombreCortoParametro +"DaoImpl";
 
             Type tipo = Type.GetType(nombreDeClase);
 

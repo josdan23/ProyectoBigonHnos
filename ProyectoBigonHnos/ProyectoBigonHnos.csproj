@@ -81,6 +81,7 @@
     <Compile Include="data\CompraDao\ICompraDao.cs" />
     <Compile Include="data\ConceptoDao\ConceptoDaoListImpl.cs" />
     <Compile Include="data\ConceptoDao\IConceptoDao.cs" />
+    <Compile Include="data\CostoExtraDao\CostoExtraDaoImpl.cs" />
     <Compile Include="data\CostoExtraDao\CostoExtraDaoListImpl.cs" />
     <Compile Include="data\CostoExtraDao\ICostoExtraDao.cs" />
     <Compile Include="data\CRUD.cs" />
@@ -126,7 +127,7 @@
     <Compile Include="data\ProveedorDao\ProveedorDAOImpl.cs" />
     <Compile Include="data\ProvinciaDao\ProvinciaDaoListImpl.cs" />
     <Compile Include="data\TelefonoDao\ITelefonoDao.cs" />
-    <Compile Include="data\TelefonoDao\TelefonoDAOImpl.cs" />
+    <Compile Include="data\TelefonoDao\TelefonoDaoImpl.cs" />
     <Compile Include="data\TelefonoDao\TelefonoDaoListImpl.cs" />
     <Compile Include="data\UsuarioDao\IUsuarioDAO.cs" />
     <Compile Include="data\UsuarioDao\UsuarioDAOImpl.cs" />

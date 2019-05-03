@@ -27,7 +27,7 @@ namespace ProyectoBigonHnos.data.PersonaDao
             IDomicilioDAO dao = new DomicilioDAOImpl();
             dao.actualizar(t.Domicilioes.ElementAt(0));
 
-            ITelefonoDao daoTelefono = new TelefonoDAOImpl();
+            ITelefonoDao daoTelefono = new TelefonoDaoImpl();
             daoTelefono.actualizar(t.Telefonos.ElementAt(0));
 
             db.ejectuarQuery(query);
@@ -41,7 +41,7 @@ namespace ProyectoBigonHnos.data.PersonaDao
             string query = string.Format("delete from persona where id_persona = {0}", id);
             db.consultarQuery(query);
 
-            ITelefonoDao daoTelefono = new TelefonoDAOImpl();
+            ITelefonoDao daoTelefono = new TelefonoDaoImpl();
             daoTelefono.eliminar(idTelefono);
 
             IDomicilioDAO daoDomicilio = new DomicilioDAOImpl();
@@ -78,7 +78,7 @@ namespace ProyectoBigonHnos.data.PersonaDao
         public void registrar(Persona t)
         {
 
-            ITelefonoDao daoTelefono = new TelefonoDAOImpl();
+            ITelefonoDao daoTelefono = new TelefonoDaoImpl();
             daoTelefono.registrar(t.Telefonos.ElementAt(0));
 
             List<Telefono> todosLosTelefonos = daoTelefono.listarTodos();
@@ -112,7 +112,7 @@ namespace ProyectoBigonHnos.data.PersonaDao
             int idTelefono = (int)registro.ElementAt(4);
             int idDomicilio = (int)registro.ElementAt(5);
 
-            ITelefonoDao daoTelefono = new TelefonoDAOImpl();
+            ITelefonoDao daoTelefono = new TelefonoDaoImpl();
             nuevaPersona.agregarTelefono(daoTelefono.leerPorId(idTelefono));
 
             IDomicilioDAO daoDomicilio = new DomicilioDAOImpl();

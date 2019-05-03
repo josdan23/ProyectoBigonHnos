@@ -17,6 +17,7 @@ using System.Reflection;
 using ProyectoBigonHnos.dominio.venta;
 using ProyectoBigonHnos.vista.liquidacion;
 using ProyectoBigonHnos.vista.conceptos;
+using ProyectoBigonHnos.dominio.pedido;
 
 namespace ProyectoBigonHnos
 {
@@ -24,7 +25,7 @@ namespace ProyectoBigonHnos
     {
         static void Main(string[] args)
         {
-            
+            /*
             EmpleadoControlador controlador = new EmpleadoControlador();
             controlador.crearEmpleado();
             controlador.agregarInformacionPersonal("yapura", "daniel", "20350533444");
@@ -41,11 +42,26 @@ namespace ProyectoBigonHnos
             con.agregarDomicilio("san martin", 23, "santa maria", "catamarca");
             con.agregarTelefono("2930230");
             con.confirmarNuevoCliente();
-
+             */
             Login vista = new Login();
             vista.unirControlador(new LoginControlador());
 
-            agregarConceptos();
+
+            // agregarConceptos();
+
+
+            CostoExtra costoExtra2 = PersistenciaFacade.getInstance().obtenerObjeto<CostoExtra>(4);
+            //Console.WriteLine(costoExtra2.importe);
+            PersistenciaFacade.getInstance().eliminarObjeto<CostoExtra>(6);
+            costoExtra2.descripcion = "hola mundo";
+            PersistenciaFacade.getInstance().actualiarObjeto<CostoExtra>(costoExtra2);
+
+            foreach(CostoExtra costoextra in PersistenciaFacade.getInstance().obtenerTodos<CostoExtra>())
+            {
+                Console.WriteLine(costoextra.idCostoExtra.ToString() + ":" + costoextra.descripcion);
+            }
+
+
             Application.EnableVisualStyles();
             Application.Run(vista);
             
