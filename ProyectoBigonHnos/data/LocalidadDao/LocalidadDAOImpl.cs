@@ -19,6 +19,10 @@ namespace ProyectoBigonHnos.data.LocalidadDao
 
         public void actualizar(dominio.Localidad t)
         {
+            IProvinciaDAO daoProvincia = new ProvinciaDaoImpl();
+
+            daoProvincia.actualizar(t.Provincia);
+
             string query = string.Format("update localidad set nombre = \'{0}\', provincia_id_provincia = {1} where id_localidad = {2};",
                 t.Nombre,
                 t.Provincia.IdProvincia,
@@ -45,8 +49,6 @@ namespace ProyectoBigonHnos.data.LocalidadDao
             string query = string.Format("select * from localidad where id_localidad = {0};", id);
 
             List<List<Object>> registros = db.consultarQuery(query);
-
-            IProvinciaDAO daoProvincia = new ProvinciaDaoImpl();
 
             foreach ( List<Object> registroLocalidad in registros)
             {

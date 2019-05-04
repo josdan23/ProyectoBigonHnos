@@ -49,28 +49,14 @@ namespace ProyectoBigonHnos
 
             // agregarConceptos();
 
+            //Localidad localidad = new Localidad("santa maria", "catamarca");
+            //PersistenciaFacade.getInstance().registrarObjeto<Localidad>(localidad);
 
-            Producto producto = new Producto("descripcionde producto", 12.12, 13.13, 15.15, "blanco", "negro");
-            PersistenciaFacade.getInstance().registrarObjeto(producto);
-
+            Localidad localidadNew = PersistenciaFacade.getInstance().obtenerObjeto<Localidad>(1);
+            localidadNew.Nombre = "daniel";
+            localidadNew.Provincia.Nombre = "la rioja";
+            PersistenciaFacade.getInstance().actualiarObjeto<Localidad>(localidadNew);
             
-
-            Producto producto2 = PersistenciaFacade.getInstance().obtenerObjeto<Producto>(1);
-            Console.WriteLine("id: "+ producto2.IdProducto + "descr:" + producto2.descripcion);
-
-            foreach(Producto p in PersistenciaFacade.getInstance().obtenerTodos<Producto>())
-            {
-                Console.WriteLine("id: " + p.IdProducto + "descr:" + p.descripcion + "alto:" + p.alto + "color_p:" + p.colorPrimario);
-            }
-
-            producto.descripcion = "cambio";
-            producto.colorPrimario = "purpura";
-            producto.IdProducto = 2;
-            PersistenciaFacade.getInstance().actualiarObjeto<Producto>(producto);
-
-            PersistenciaFacade.getInstance().eliminarObjeto<Producto>(3);
-
-
             Application.EnableVisualStyles();
             Application.Run(vista);
             
