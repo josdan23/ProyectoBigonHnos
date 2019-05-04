@@ -119,6 +119,7 @@
     <Compile Include="data\PersonaDao\PersonaDaoImpl.cs" />
     <Compile Include="data\PersonaDao\PersonaDaoListImpl.cs" />
     <Compile Include="data\ProductoDao\IProductoDao.cs" />
+    <Compile Include="data\ProductoDao\ProductoDaoImpl.cs" />
     <Compile Include="data\ProductoDao\ProductoDaoListImpl.cs" />
     <Compile Include="data\ProveedorDao\ProveedorDaoListImpl.cs" />
     <Compile Include="data\ProvinciaDao\IProvinciaDAO.cs" />
