@@ -79,6 +79,7 @@
     <Compile Include="data\ComponenteDao\IComponenteDao.cs" />
     <Compile Include="data\CompraDao\CompraDaoListImpl.cs" />
     <Compile Include="data\CompraDao\ICompraDao.cs" />
+    <Compile Include="data\ConceptoDao\ConceptoDaoImpl.cs" />
     <Compile Include="data\ConceptoDao\ConceptoDaoListImpl.cs" />
     <Compile Include="data\ConceptoDao\IConceptoDao.cs" />
     <Compile Include="data\CostoExtraDao\CostoExtraDaoImpl.cs" />

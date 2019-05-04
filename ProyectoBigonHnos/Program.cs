@@ -49,6 +49,18 @@ namespace ProyectoBigonHnos
 
             // agregarConceptos();
 
+            Concepto concepto = new Concepto(2, "descripcion", 112.12, true);
+            PersistenciaFacade.getInstance().registrarObjeto<Concepto>(concepto);
+
+            Concepto concepto2 = PersistenciaFacade.getInstance().obtenerObjeto<Concepto>(1);
+            Console.WriteLine(concepto2.IdConcepto + concepto2.Descripcion + concepto2.Tipo);
+
+            PersistenciaFacade.getInstance().eliminarObjeto<Concepto>(2);
+            foreach(Concepto concept in PersistenciaFacade.getInstance().obtenerTodos<Concepto>())
+            {
+                Console.WriteLine(concept.IdConcepto + concept.Descripcion + concept.Tipo);
+            }
+
             Application.EnableVisualStyles();
             Application.Run(vista);
             
