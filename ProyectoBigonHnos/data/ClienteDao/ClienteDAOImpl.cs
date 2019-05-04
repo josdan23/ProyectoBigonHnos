@@ -8,19 +8,19 @@ using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.data.ClienteDao
 {
-    class ClienteDAOImpl : IClienteDAO
+    class ClienteDaoImpl : IClienteDAO
     {
 
         public DBConector db;
 
-        public ClienteDAOImpl()
+        public ClienteDaoImpl()
         {
             db = DBConector.getInstance();
         }
 
         public void actualizar(dominio.Cliente t)
         {
-            IPersonaDAO daoPersona = new PersonaDAOImpl();
+            IPersonaDAO daoPersona = new PersonaDaoImpl();
             daoPersona.actualizar(t);
         }
 
@@ -68,7 +68,7 @@ namespace ProyectoBigonHnos.data.ClienteDao
 
         public void registrar(dominio.Cliente t)
         {
-            IPersonaDAO dao = new PersonaDAOImpl();
+            IPersonaDAO dao = new PersonaDaoImpl();
             dao.registrar(t);
 
             List<dominio.Persona> todasLasPersonas = dao.listarTodos();

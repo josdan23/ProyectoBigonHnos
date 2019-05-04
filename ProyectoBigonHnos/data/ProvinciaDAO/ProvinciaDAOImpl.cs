@@ -7,12 +7,12 @@ using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.data.ProvinciaDao
 {
-    class ProvinciaDAOImpl : IProvinciaDAO
+    class ProvinciaDaoImpl : IProvinciaDAO
     {
         private DBConector db;
 
 
-        public ProvinciaDAOImpl()
+        public ProvinciaDaoImpl()
         {
             db = DBConector.getInstance();
         }

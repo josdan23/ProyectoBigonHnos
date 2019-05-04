@@ -7,11 +7,11 @@ using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.data.PersonaDao
 {
-    class PersonaDAOImpl : IPersonaDAO
+    class PersonaDaoImpl : IPersonaDAO
     {
         DBConector db;
 
-        public PersonaDAOImpl()
+        public PersonaDaoImpl()
         {
             db = DBConector.getInstance();
         }
@@ -24,7 +24,7 @@ namespace ProyectoBigonHnos.data.PersonaDao
                 t.Apellido,
                 t.IdPersona);
 
-            IDomicilioDAO dao = new DomicilioDAOImpl();
+            IDomicilioDAO dao = new DomicilioDaoImpl();
             dao.actualizar(t.Domicilioes.ElementAt(0));
 
             ITelefonoDao daoTelefono = new TelefonoDaoImpl();
@@ -44,7 +44,7 @@ namespace ProyectoBigonHnos.data.PersonaDao
             ITelefonoDao daoTelefono = new TelefonoDaoImpl();
             daoTelefono.eliminar(idTelefono);
 
-            IDomicilioDAO daoDomicilio = new DomicilioDAOImpl();
+            IDomicilioDAO daoDomicilio = new DomicilioDaoImpl();
             daoDomicilio.eliminar(idDomicilio);
 
 
@@ -84,7 +84,7 @@ namespace ProyectoBigonHnos.data.PersonaDao
             List<Telefono> todosLosTelefonos = daoTelefono.listarTodos();
             int idTelefono = todosLosTelefonos[todosLosTelefonos.Count -1 ].IdTelefono;
 
-            IDomicilioDAO daoDomicilio = new DomicilioDAOImpl();
+            IDomicilioDAO daoDomicilio = new DomicilioDaoImpl();
             daoDomicilio.registrar(t.Domicilioes.ElementAt(0));
 
             List<Domicilio> todosLosDomicilios = daoDomicilio.listarTodos();
@@ -115,7 +115,7 @@ namespace ProyectoBigonHnos.data.PersonaDao
             ITelefonoDao daoTelefono = new TelefonoDaoImpl();
             nuevaPersona.agregarTelefono(daoTelefono.leerPorId(idTelefono));
 
-            IDomicilioDAO daoDomicilio = new DomicilioDAOImpl();
+            IDomicilioDAO daoDomicilio = new DomicilioDaoImpl();
             nuevaPersona.agregarDomicilio(daoDomicilio.leerPorId(idDomicilio));
 
             return nuevaPersona;

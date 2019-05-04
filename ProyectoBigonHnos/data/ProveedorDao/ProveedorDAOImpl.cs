@@ -7,7 +7,7 @@ using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.data.ProveedorDao
 {
-    class ProveedorDAOImpl : IProveedorDAO
+    class ProveedorDaoImpl : IProveedorDAO
     {
 
         private DBConector con;
@@ -15,7 +15,7 @@ namespace ProyectoBigonHnos.data.ProveedorDao
         //actua como base de datos
         List<dominio.Proveedor> listaProveedoresDB;
 
-        public ProveedorDAOImpl()
+        public ProveedorDaoImpl()
         {
             listaProveedoresDB = new List<dominio.Proveedor>();
             con = DBConector.getInstance();

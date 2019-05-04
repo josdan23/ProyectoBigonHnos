@@ -7,7 +7,7 @@ using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.data.EmpleadoDao
 {
-    class EmpleadoDAOImpl : IEmpleadoDAO
+    class EmpleadoDaoImpl : IEmpleadoDAO
     {
         public void actualizar(Empleado t)
         {

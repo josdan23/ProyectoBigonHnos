@@ -6,12 +6,12 @@ using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.data.DomicilioDao
 {
-    class DomicilioDAOImpl : IDomicilioDAO
+    class DomicilioDaoImpl : IDomicilioDAO
     {
 
         private DBConector db;
 
-        public DomicilioDAOImpl()
+        public DomicilioDaoImpl()
         {
             db = DBConector.getInstance();
         }
@@ -39,7 +39,7 @@ namespace ProyectoBigonHnos.data.DomicilioDao
             string query = String.Format("delete from domicilio where id_domicilio = {0};", id);
             db.ejectuarQuery(query);
 
-            ILocalidadDAO daoLocalidad = new LocalidadDAOImpl();
+            ILocalidadDAO daoLocalidad = new LocalidadDaoImpl();
             daoLocalidad.eliminar(idLocalidad);
         }
 
@@ -56,7 +56,7 @@ namespace ProyectoBigonHnos.data.DomicilioDao
 
             int idLocalidad = (int)todosLosRegistros.ElementAt(0).ElementAt(3);
 
-            ILocalidadDAO dao = new LocalidadDAOImpl();
+            ILocalidadDAO dao = new LocalidadDaoImpl();
             dominio.Localidad localidad = dao.leerPorId(idLocalidad);
 
             domicilioRegistrado.Localidad = localidad;
@@ -83,7 +83,7 @@ namespace ProyectoBigonHnos.data.DomicilioDao
 
         public void registrar(Domicilio t)
         {
-            ILocalidadDAO dao = new LocalidadDAOImpl();
+            ILocalidadDAO dao = new LocalidadDaoImpl();
             dao.registrar(t.Localidad);
 
             List<dominio.Localidad> localidades = dao.listarTodos();
@@ -106,7 +106,7 @@ namespace ProyectoBigonHnos.data.DomicilioDao
             domicilio.Numero = (int) registro.ElementAt(2);
 
             int IdLocalidad = (int)registro.ElementAt(3);
-            ILocalidadDAO daoLocalidad = new LocalidadDAOImpl();
+            ILocalidadDAO daoLocalidad = new LocalidadDaoImpl();
             domicilio.Localidad = daoLocalidad.leerPorId(IdLocalidad);
 
             return domicilio;

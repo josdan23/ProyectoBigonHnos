@@ -49,19 +49,6 @@ namespace ProyectoBigonHnos
 
             // agregarConceptos();
 
-
-            CostoExtra costoExtra2 = PersistenciaFacade.getInstance().obtenerObjeto<CostoExtra>(4);
-            //Console.WriteLine(costoExtra2.importe);
-            PersistenciaFacade.getInstance().eliminarObjeto<CostoExtra>(6);
-            costoExtra2.descripcion = "hola mundo";
-            PersistenciaFacade.getInstance().actualiarObjeto<CostoExtra>(costoExtra2);
-
-            foreach(CostoExtra costoextra in PersistenciaFacade.getInstance().obtenerTodos<CostoExtra>())
-            {
-                Console.WriteLine(costoextra.idCostoExtra.ToString() + ":" + costoextra.descripcion);
-            }
-
-
             Application.EnableVisualStyles();
             Application.Run(vista);
             

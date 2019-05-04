@@ -90,8 +90,6 @@ namespace ProyectoBigonHnos.data.CostoExtraDao
                 t.descripcion,
                 t.importe.ToString(CultureInfo.InvariantCulture));
 
-            Console.WriteLine(query);
-
             dBConector.ejectuarQuery(query);
         }
     }

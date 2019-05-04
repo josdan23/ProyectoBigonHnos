@@ -8,11 +8,11 @@ using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.data.LocalidadDao
 {
-    class LocalidadDAOImpl : ILocalidadDAO
+    class LocalidadDaoImpl : ILocalidadDAO
     {
         private DBConector db;
 
-        public LocalidadDAOImpl()
+        public LocalidadDaoImpl()
         {
             db = DBConector.getInstance();
         }
@@ -35,7 +35,7 @@ namespace ProyectoBigonHnos.data.LocalidadDao
             string query = string.Format("delete from localidad where id_localidad = {0};", id);
             db.borrarRegistro(query);
 
-            IProvinciaDAO dao = new ProvinciaDAOImpl();
+            IProvinciaDAO dao = new ProvinciaDaoImpl();
             dao.eliminar(idProvincia);
 
         }
@@ -46,7 +46,7 @@ namespace ProyectoBigonHnos.data.LocalidadDao
 
             List<List<Object>> registros = db.consultarQuery(query);
 
-            IProvinciaDAO daoProvincia = new ProvinciaDAOImpl();
+            IProvinciaDAO daoProvincia = new ProvinciaDaoImpl();
 
             foreach ( List<Object> registroLocalidad in registros)
             {
@@ -71,7 +71,7 @@ namespace ProyectoBigonHnos.data.LocalidadDao
 
         public void registrar(dominio.Localidad t)
         {
-            IProvinciaDAO daoProvincia = new ProvinciaDAOImpl();
+            IProvinciaDAO daoProvincia = new ProvinciaDaoImpl();
             daoProvincia.registrar(t.Provincia);
 
             List<Provincia> provincias = daoProvincia.listarTodos();
@@ -93,7 +93,7 @@ namespace ProyectoBigonHnos.data.LocalidadDao
 
             int idProvincia = (int)registro.ElementAt(2);
 
-            IProvinciaDAO daoProvincia = new ProvinciaDAOImpl();
+            IProvinciaDAO daoProvincia = new ProvinciaDaoImpl();
             Provincia provinciaRecuperada = daoProvincia.leerPorId(idProvincia);
             localidadRecuperada.Provincia = provinciaRecuperada;
 

@@ -7,11 +7,11 @@ using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.data.UsuarioDao
 {
-    class UsuarioDAOImpl : IUsuarioDAO
+    class UsuarioDaoImpl : IUsuarioDAO
     {
         DBConector db;
 
-        public UsuarioDAOImpl()
+        public UsuarioDaoImpl()
         {
             db = DBConector.getInstance();
         }
