@@ -52,10 +52,7 @@ namespace ProyectoBigonHnos
             //Localidad localidad = new Localidad("santa maria", "catamarca");
             //PersistenciaFacade.getInstance().registrarObjeto<Localidad>(localidad);
 
-            Localidad localidadNew = PersistenciaFacade.getInstance().obtenerObjeto<Localidad>(1);
-            localidadNew.Nombre = "daniel";
-            localidadNew.Provincia.Nombre = "la rioja";
-            PersistenciaFacade.getInstance().actualiarObjeto<Localidad>(localidadNew);
+            PersistenciaFacade.getInstance().eliminarObjeto<Domicilio>(1);
             
             Application.EnableVisualStyles();
             Application.Run(vista);

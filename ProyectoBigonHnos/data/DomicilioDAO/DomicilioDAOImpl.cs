@@ -18,6 +18,9 @@ namespace ProyectoBigonHnos.data.DomicilioDao
 
         public void actualizar(Domicilio t)
         {
+            ILocalidadDAO dao = new LocalidadDaoImpl();
+            dao.actualizar(t.Localidad);
+
             string query = String.Format("update domicilio set calle = \'{0}\', numero = {1}, localidad_id_localidad = {2} where id_domicilio = {3};",
                 t.Calle,
                 t.Numero,
