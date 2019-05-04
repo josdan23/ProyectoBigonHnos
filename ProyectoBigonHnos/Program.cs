@@ -49,17 +49,20 @@ namespace ProyectoBigonHnos
 
             // agregarConceptos();
 
-            Concepto concepto = new Concepto(2, "descripcion", 112.12, true);
-            PersistenciaFacade.getInstance().registrarObjeto<Concepto>(concepto);
+            Usuario users = new Usuario("conser", true);
+            users.Activo = true;
 
-            Concepto concepto2 = PersistenciaFacade.getInstance().obtenerObjeto<Concepto>(1);
-            Console.WriteLine(concepto2.IdConcepto + concepto2.Descripcion + concepto2.Tipo);
+            PersistenciaFacade.getInstance().registrarObjeto<Usuario>(users);
 
-            PersistenciaFacade.getInstance().eliminarObjeto<Concepto>(2);
-            foreach(Concepto concept in PersistenciaFacade.getInstance().obtenerTodos<Concepto>())
+            Usuario user2 = PersistenciaFacade.getInstance().obtenerObjeto<Usuario>(1);
+            Console.WriteLine(user2.IdUsuario + "-" + user2.Password);
+
+            foreach(Usuario user in PersistenciaFacade.getInstance().obtenerTodos<Usuario>())
             {
-                Console.WriteLine(concept.IdConcepto + concept.Descripcion + concept.Tipo);
+                Console.WriteLine(user.IdUsuario + "-" + user.Password);
             }
+
+            PersistenciaFacade.getInstance().eliminarObjeto<Usuario>(2);
 
             Application.EnableVisualStyles();
             Application.Run(vista);

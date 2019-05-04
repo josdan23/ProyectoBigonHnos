@@ -18,9 +18,10 @@ namespace ProyectoBigonHnos.data.UsuarioDao
 
         public void actualizar(dominio.Usuario t)
         {
-            string query = string.Format("update usuario set nameuser = \'{0}\', password = \'{1}\', es_admin = {2} where id_usuario = {3};",
-           
+            string query = string.Format("update usuario set password = \'{0}\', activo = {1}, es_admin = {2} where id_usuario = {3};",
+
                 t.Password,
+                t.Activo == true ? 1 : 0,
                 t.Administrador == true ? 1:0,
                 t.IdUsuario);
 
@@ -67,9 +68,11 @@ namespace ProyectoBigonHnos.data.UsuarioDao
         {
             int admin = t.esAdmin() ? 1 : 0;
 
-            string query = string.Format("insert into usuario (nameuser, password, es_admin) values (\'{0}\', \'{1}\', {2});",
-         
+            int activo = t.esActivo() ? 1: 0;
+
+            string query = string.Format("insert into usuario (password, activo, es_admin) values (\'{0}\', \'{1}\', {2});",
                 t.Password,
+                t.Activo,
                 admin);
 
             db.ejectuarQuery(query);
@@ -78,12 +81,13 @@ namespace ProyectoBigonHnos.data.UsuarioDao
         private dominio.Usuario parseUsuario(List<Object> registro)
         {
             int idUsuario = (int)registro.ElementAt(0);
-            string userName = (string) registro.ElementAt(1);
-            string password = (string)registro.ElementAt(2);
-            bool esAdmin = (bool) registro.ElementAt(3);
+            string password = (string)registro.ElementAt(1);
+            bool activo = Convert.ToBoolean(registro.ElementAt(2));
+            bool admin = Convert.ToBoolean(registro.ElementAt(3));
 
-            dominio.Usuario nuevoUsuario = new dominio.Usuario( password, esAdmin);
+            dominio.Usuario nuevoUsuario = new dominio.Usuario(password, admin);
             nuevoUsuario.IdUsuario  = idUsuario;
+            nuevoUsuario.Activo = activo;
 
             return nuevoUsuario;
 

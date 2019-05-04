@@ -19,9 +19,13 @@ namespace ProyectoBigonHnos.dominio
  
             Password = password;
             Administrador = administrador;
+            Activo = true;
         }
 
-
+        public bool esActivo()
+        {
+            return Activo;
+        }
 
         public bool esAdmin()
         {
