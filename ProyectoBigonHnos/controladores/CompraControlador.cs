@@ -17,10 +17,16 @@ namespace ProyectoBigonHnos.dominio
 
         private ICompraView vista;
 
+        public CompraControlador(Empleado empleadoLogueado)
+        {
+            negocio = Negocio.getNegocio();
+            agregarEmpleado(empleadoLogueado);
+        }
+        /*
         public CompraControlador(Negocio negocio)
         {
             this.negocio = negocio;
-        }
+        }*/
 
         public CompraControlador()
         {
@@ -30,6 +36,11 @@ namespace ProyectoBigonHnos.dominio
         public void iniciarNuevaCompra()
         {
             compra = new Compra();
+        }
+
+        public void agregarEmpleado(Empleado empleadoLogueado)
+        {
+            compra.agregarEmpleado(empleadoLogueado);
         }
 
         public void agregarProveedor(int idProveedor)

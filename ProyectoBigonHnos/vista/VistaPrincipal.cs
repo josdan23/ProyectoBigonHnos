@@ -73,7 +73,7 @@ namespace ProyectoBigonHnos.vista
             ocultarPaneles();
             pnlActivoCompras.Show();
             btnCompras.BackColor = Color.White;
-            agregarVista(new CompraView());
+            agregarVista(new CompraView(EmpleadoLogeado));
         }
 
         private void btnMateriales_Click(object sender, EventArgs e)

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio
 {
@@ -12,6 +9,7 @@ namespace ProyectoBigonHnos.dominio
         public DateTime fechaCompra;
         public EstadoCompra estado;
         public Proveedor proveedor;
+        public Empleado empleado;
         public List<LineaCompra> lineasDeCompra { get; set; }
 
         public Compra()
@@ -24,6 +22,11 @@ namespace ProyectoBigonHnos.dominio
         public void agregarProveedor(Proveedor proveedor)
         {
             this.proveedor = proveedor;
+        }
+
+        public void agregarEmpleado(Empleado empleado)
+        {
+            this.empleado = empleado;
         }
 
         public int crearLineaDeCompra(Material material, int cantidad)

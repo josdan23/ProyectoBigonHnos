@@ -77,6 +77,7 @@
     <Compile Include="data\ClienteDao\IClienteDAO.cs" />
     <Compile Include="data\ComponenteDao\ComponenteDaoListImpl.cs" />
     <Compile Include="data\ComponenteDao\IComponenteDao.cs" />
+    <Compile Include="data\CompraDao\CompraDaoImpl.cs" />
     <Compile Include="data\CompraDao\CompraDaoListImpl.cs" />
     <Compile Include="data\CompraDao\ICompraDao.cs" />
     <Compile Include="data\ConceptoDao\ConceptoDaoImpl.cs" />
@@ -95,7 +96,7 @@
     <Compile Include="data\DomicilioDao\DomicilioDaoImpl.cs" />
     <Compile Include="data\DomicilioDao\DomicilioDaoListImpl.cs" />
     <Compile Include="data\DomicilioDao\IDomicilioDAO.cs" />
-    <Compile Include="data\EmpleadoDao\EmpleadoDaoListImpl.cs" />
+    <Compile Include="data\EmpleadoDao\EmpleadoDaoImpl.cs" />
     <Compile Include="data\GrupoFamiliarDao\GrupoFamiliarDaoListImpl.cs" />
     <Compile Include="data\GrupoFamiliarDao\IGrupoFamiliarDao.cs" />
     <Compile Include="data\LineaCompraDao\ILineaCompraDao.cs" />
@@ -125,7 +126,6 @@
     <Compile Include="data\ProvinciaDao\IProvinciaDAO.cs" />
     <Compile Include="data\ProvinciaDao\ProvinciaDaoImpl.cs" />
     <Compile Include="data\EmpleadoDao\IEmpleadoDAO.cs" />
-    <Compile Include="data\EmpleadoDao\EmpleadoDaoImpl.cs" />
     <Compile Include="data\ProveedorDao\IProveedorDAO.cs" />
     <Compile Include="data\ProveedorDao\ProveedorDaoImpl.cs" />
     <Compile Include="data\ProvinciaDao\ProvinciaDaoListImpl.cs" />

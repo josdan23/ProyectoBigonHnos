@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProyectoBigonHnos.data.DomicilioDao;
-using ProyectoBigonHnos.data.TelefonoDao;
+using ProyectoBigonHnos.data.TelefonoDaoList;
 using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.data.ProveedorDao

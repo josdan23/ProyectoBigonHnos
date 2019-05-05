@@ -2,7 +2,7 @@
 using System.Linq;
 using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.data.DomicilioDao;
-using ProyectoBigonHnos.data.TelefonoDao;
+using ProyectoBigonHnos.data.TelefonoDaoList;
 using System;
 
 namespace ProyectoBigonHnos.data.PersonaDao

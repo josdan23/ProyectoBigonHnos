@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using ProyectoBigonHnos.controladores;
 using ProyectoBigonHnos.vista.login;
 using ProyectoBigonHnos.dominio.liquidacion;
-using ProyectoBigonHnos.data.TelefonoDao;
+using ProyectoBigonHnos.data.TelefonoDaoList;
 using ProyectoBigonHnos.data;
 using ProyectoBigonHnos.data.PersonaDao;
 using ProyectoBigonHnos.data.DomicilioDao;
@@ -48,27 +48,28 @@ namespace ProyectoBigonHnos
 
 
             // agregarConceptos();
-
-            Proveedor proveedor = new Proveedor();
-            proveedor.RazonSocial = "SOVOS";
-            proveedor.Cuit = "8238849234";
-            proveedor.agregarNuevaDomicilio("lavalle", 23, "santa maria", "catamarca");
-            proveedor.agregarNuevoTelefono("4206848");
-
-            PersistenciaFacade.getInstance().registrarObjeto(proveedor);
-
-            Proveedor provNuevo = PersistenciaFacade.getInstance().obtenerObjeto<Proveedor>(4);
-            provNuevo.RazonSocial = "La Tucumana";
-
-            PersistenciaFacade.getInstance().actualiarObjeto<Proveedor>(provNuevo);
             
-            foreach(Proveedor pro in PersistenciaFacade.getInstance().obtenerTodos<Proveedor>())
+            Persona persona = new Persona("daniel", "yapura", "35053344");
+            persona.agregarDomicilio(new Domicilio("Sarmiento", 1234, "santa maria", "catamarca"));
+            persona.agregarTelefono(new Telefono("420648"));
+
+            PersistenciaFacade.getInstance().registrarObjeto(persona);
+            
+            Persona personaEditada = PersistenciaFacade.getInstance().obtenerObjeto<Persona>(4);
+            Console.WriteLine(personaEditada.ToString());
+            
+            personaEditada.Domicilioes[0].Calle = "Arturo gimenez";
+            personaEditada.Nombre = "Rocio";
+
+            PersistenciaFacade.getInstance().actualiarObjeto(personaEditada);
+            Console.WriteLine(PersistenciaFacade.getInstance().obtenerObjeto<Persona>(1));
+            
+            foreach(Persona per in PersistenciaFacade.getInstance().obtenerTodos<Persona>())
             {
-                Console.WriteLine(pro.ToString());
+                Console.WriteLine(per.ToString());
             }
-
-            PersistenciaFacade.getInstance().eliminarObjeto<Proveedor>(8);
-
+            
+            PersistenciaFacade.getInstance().eliminarObjeto<Persona>(14);
             
             Application.EnableVisualStyles();
             Application.Run(vista);

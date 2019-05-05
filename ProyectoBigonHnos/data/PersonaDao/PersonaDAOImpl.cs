@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using ProyectoBigonHnos.data.DomicilioDao;
-using ProyectoBigonHnos.data.TelefonoDao;
+using ProyectoBigonHnos.data.TelefonoDaoList;
 using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.data.PersonaDao
@@ -29,7 +29,6 @@ namespace ProyectoBigonHnos.data.PersonaDao
 
             ITelefonoDao daoTelefono = new TelefonoDaoImpl();
             daoTelefono.actualizar(t.Telefonos.ElementAt(0));
-
             db.ejectuarQuery(query);
         }
 
@@ -79,7 +78,7 @@ namespace ProyectoBigonHnos.data.PersonaDao
         {
 
             ITelefonoDao daoTelefono = new TelefonoDaoImpl();
-            daoTelefono.registrar(t.Telefonos.ElementAt(0));
+            daoTelefono.registrar(t.Telefonos[0]);
 
             List<Telefono> todosLosTelefonos = daoTelefono.listarTodos();
             int idTelefono = todosLosTelefonos[todosLosTelefonos.Count -1 ].IdTelefono;
@@ -109,8 +108,8 @@ namespace ProyectoBigonHnos.data.PersonaDao
             nuevaPersona.Nombre = (string) registro.ElementAt(2);
             nuevaPersona.Apellido = (string)registro.ElementAt(3);
 
-            int idTelefono = (int)registro.ElementAt(4);
-            int idDomicilio = (int)registro.ElementAt(5);
+            int idTelefono = (int)registro.ElementAt(5);
+            int idDomicilio = (int)registro.ElementAt(4);
 
             ITelefonoDao daoTelefono = new TelefonoDaoImpl();
             nuevaPersona.agregarTelefono(daoTelefono.leerPorId(idTelefono));

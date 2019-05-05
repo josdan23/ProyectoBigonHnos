@@ -15,6 +15,15 @@ namespace ProyectoBigonHnos.vista.compra
     {
         public CompraControlador controlador { get; set; }
 
+
+        public CompraView(Empleado empleadoLogueado)
+        {
+            InitializeComponent();
+           
+            UnirControlador(new CompraControlador(empleadoLogueado));
+            ActualizarVista();
+        }
+
         public CompraView()
         {
             InitializeComponent();

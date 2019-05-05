@@ -3,35 +3,63 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProyectoBigonHnos.data.PersonaDao;
+using ProyectoBigonHnos.data.UsuarioDao;
 using ProyectoBigonHnos.dominio;
 
 namespace ProyectoBigonHnos.data.EmpleadoDao
 {
     class EmpleadoDaoImpl : IEmpleadoDAO
     {
+
+        private static List<Empleado> todosLosEmpleados = new List<Empleado>();
+        private static int IdContador = 0;
+
         public void actualizar(Empleado t)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < todosLosEmpleados.Count; i++)
+            {
+                if (todosLosEmpleados.ElementAt(i).IdEmpleado == t.IdEmpleado)
+                {
+                    todosLosEmpleados[i] = t;
+                }
+            }
         }
 
         public void eliminar(int id)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < todosLosEmpleados.Count; i++)
+            {
+                if (todosLosEmpleados.ElementAt(i).IdEmpleado == id)
+                    todosLosEmpleados.RemoveAt(i);
+            }
         }
 
         public Empleado leerPorId(int id)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < todosLosEmpleados.Count; i++)
+            {
+                if ( todosLosEmpleados.ElementAt(i).IdEmpleado == id)
+                {
+                    return todosLosEmpleados.ElementAt(i);
+                }
+            }
+            return null;
         }
 
         public List<Empleado> listarTodos()
         {
-            throw new NotImplementedException();
+            return todosLosEmpleados;
         }
 
         public void registrar(Empleado t)
         {
-            throw new NotImplementedException();
+            t.IdEmpleado = IdContador;
+
+            IdContador++;
+
+            todosLosEmpleados.Add(t);
+
         }
     }
 }

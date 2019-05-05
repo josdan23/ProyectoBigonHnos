@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ProyectoBigonHnos.dominio;
 
-namespace ProyectoBigonHnos.data.TelefonoDao
+namespace ProyectoBigonHnos.data.TelefonoDaoList
 {
     class TelefonoDaoImpl : ITelefonoDao
     {
