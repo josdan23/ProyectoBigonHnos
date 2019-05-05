@@ -49,10 +49,26 @@ namespace ProyectoBigonHnos
 
             // agregarConceptos();
 
-            //Localidad localidad = new Localidad("santa maria", "catamarca");
-            //PersistenciaFacade.getInstance().registrarObjeto<Localidad>(localidad);
+            Proveedor proveedor = new Proveedor();
+            proveedor.RazonSocial = "SOVOS";
+            proveedor.Cuit = "8238849234";
+            proveedor.agregarNuevaDomicilio("lavalle", 23, "santa maria", "catamarca");
+            proveedor.agregarNuevoTelefono("4206848");
 
-            PersistenciaFacade.getInstance().eliminarObjeto<Domicilio>(1);
+            PersistenciaFacade.getInstance().registrarObjeto(proveedor);
+
+            Proveedor provNuevo = PersistenciaFacade.getInstance().obtenerObjeto<Proveedor>(4);
+            provNuevo.RazonSocial = "La Tucumana";
+
+            PersistenciaFacade.getInstance().actualiarObjeto<Proveedor>(provNuevo);
+            
+            foreach(Proveedor pro in PersistenciaFacade.getInstance().obtenerTodos<Proveedor>())
+            {
+                Console.WriteLine(pro.ToString());
+            }
+
+            PersistenciaFacade.getInstance().eliminarObjeto<Proveedor>(8);
+
             
             Application.EnableVisualStyles();
             Application.Run(vista);
