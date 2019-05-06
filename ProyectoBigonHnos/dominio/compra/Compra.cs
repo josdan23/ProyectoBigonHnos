@@ -32,6 +32,7 @@ namespace ProyectoBigonHnos.dominio
         public int crearLineaDeCompra(Material material, int cantidad)
         {
             LineaCompra lc = new LineaCompra(material, cantidad);
+            Console.WriteLine("idMaterial:" + material.IdMaterial);
             lineasDeCompra.Add(lc);
             return lineasDeCompra.Count-1;
         }

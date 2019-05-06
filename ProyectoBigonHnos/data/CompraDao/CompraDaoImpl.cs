@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProyectoBigonHnos.data.EmpleadoDao;
+using ProyectoBigonHnos.data.LineaCompraDao;
 using ProyectoBigonHnos.data.ProveedorDao;
 using ProyectoBigonHnos.data.TelefonoDaoList;
 using ProyectoBigonHnos.dominio;
@@ -22,7 +23,12 @@ namespace ProyectoBigonHnos.data.CompraDao
 
         public void actualizar(Compra t)
         {
-            //actualizar las lineas de compra
+            ILineaCompraDao lineaCompraDao = new LineaCompraDaoImpl();
+            foreach(LineaCompra lc in t.lineasDeCompra)
+            {
+                lineaCompraDao.actualizar(lc);
+            }
+
 
             string query = string.Format("update compra set fecha_compra = \'{0}\', importe_total={1}, estado=\'{2}\', proveedor_id_proveedor={3}, empleado_id_empleado={4} where id_compra = {5};",
                 t.fechaCompra.ToShortDateString(),
@@ -37,10 +43,17 @@ namespace ProyectoBigonHnos.data.CompraDao
 
         public void eliminar(int id)
         {
+            Compra compraRegistrada = leerPorId(id);
+
+            foreach(LineaCompra lc in compraRegistrada.lineasDeCompra)
+            {
+                ILineaCompraDao lineaCompraDao = new LineaCompraDaoImpl();
+                lineaCompraDao.eliminar(lc.IdLineaCompra);
+            }
+
             String query = String.Format("delete from compra where id_compra={0}", id);
             db.borrarRegistro(query);
 
-            //borrar las lineas de compra
         }
 
         public Compra leerPorId(int id)
@@ -50,6 +63,7 @@ namespace ProyectoBigonHnos.data.CompraDao
             foreach(List<Object> unRegistro in db.consultarQuery(query))
             {
                 return parse(unRegistro);
+
             }
             return null;
         }
@@ -70,8 +84,6 @@ namespace ProyectoBigonHnos.data.CompraDao
         public void registrar(Compra t)
         {
   
-            
-
             String query = String.Format("insert into compra (fecha_compra, importe_total, estado, proveedor_id_proveedor, empleado_id_empleado) values (\'{0}\',{1},\'{2}\',{3},{4})",
                 t.fechaCompra.ToShortDateString(),
                 t.obtenerTotal().ToString(CultureInfo.InvariantCulture),
@@ -79,9 +91,21 @@ namespace ProyectoBigonHnos.data.CompraDao
                 t.proveedor.IdProveedor,
                 t.empleado.IdEmpleado);
 
+    
             db.ejectuarQuery(query);
 
-            //falta registrar las lineas de compra
+            //Compra compra = listarTodos().Last();
+     
+            ILineaCompraDao lineaCompraDao = new LineaCompraDaoImpl();
+            int idCompraRegistrada = obtenerIndexDelUltimoAgregado();
+            foreach(LineaCompra lc in t.lineasDeCompra)
+            {
+                lc.IdCompra = idCompraRegistrada;
+                
+                lineaCompraDao.registrar(lc);
+                
+
+            }
         }
 
         private Compra parse(List<Object> unRegistro)
@@ -109,11 +133,41 @@ namespace ProyectoBigonHnos.data.CompraDao
             compra.estado = estado;
             compra.agregarEmpleado(empleado);
             compra.agregarProveedor(proveedor);
-            
+
 
             //falta agregar las lineas de compra. 
 
+            ILineaCompraDao lineaCompraDao = new LineaCompraDaoImpl();
+            List<LineaCompra> lineasComprasRegistradasParaUnaVenta = new List<LineaCompra>();
+            foreach(LineaCompra lc in lineaCompraDao.listarTodos())
+            {
+                
+                if (lc.IdCompra == compra.IdCompra)
+                {
+                    LineaCompra lineaCompra = new LineaCompra();
+
+                    lineaCompra.material = lc.material;
+                    lineaCompra.cantidad = lc.cantidad;
+                    lineaCompra.IdLineaCompra = lc.IdLineaCompra;
+                    lineaCompra.IdCompra = lc.IdCompra;
+
+                    lineasComprasRegistradasParaUnaVenta.Add(lineaCompra);
+                    
+                    Console.WriteLine(lineaCompra.IdLineaCompra);
+                }
+                    
+            }
+
+            compra.lineasDeCompra = lineasComprasRegistradasParaUnaVenta;
+            Console.WriteLine(compra.lineasDeCompra.Last().material.Descripcion);
             return compra;
+        }
+
+        private int obtenerIndexDelUltimoAgregado()
+        {
+            String query = string.Format("select * from compra");
+
+            return (int) db.consultarQuery(query).Last().ElementAt(0);
         }
     }
 }
