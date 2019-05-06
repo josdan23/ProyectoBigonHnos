@@ -26,8 +26,16 @@ namespace ProyectoBigonHnos.data.ClienteDao
 
         public void eliminar(int id)
         {
+
+            IPersonaDAO personaDao = new PersonaDaoImpl();
+
+            int idPersona = leerPorId(id).IdPersona;
+
+
             string query = string.Format("delete cliente where id_cliente = {0}", id);
             db.ejectuarQuery(query);
+
+            personaDao.eliminar(idPersona);
         }
 
         public dominio.Cliente leerPorId(int id)
