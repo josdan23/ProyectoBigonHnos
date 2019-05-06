@@ -48,32 +48,36 @@ namespace ProyectoBigonHnos
 
 
             // agregarConceptos();
+            /*
+            Empleado empleado = new Empleado("Mathias", "Yapura", "35053344", "empleado", "32039292", "pass", true, DateTime.Now);
+            empleado.agregarTelefono("420358");
+            empleado.agregarDomicilio(new Domicilio("Rivadavia", 1234, "santa maria", "catamarca"));
+            PersistenciaFacade.getInstance().registrarObjeto(empleado);
+            */
+            Empleado empleadoRecuperado = PersistenciaFacade.getInstance().obtenerObjeto<Empleado>(6);
+            Console.WriteLine(empleadoRecuperado.ToString());
+            Console.WriteLine(empleadoRecuperado.FechaEgreso);
+            Console.WriteLine(empleadoRecuperado.Usuario.IdUsuario);
             
-            Persona persona = new Persona("daniel", "yapura", "35053344");
-            persona.agregarDomicilio(new Domicilio("Sarmiento", 1234, "santa maria", "catamarca"));
-            persona.agregarTelefono(new Telefono("420648"));
+            empleadoRecuperado.Nombre = "Marita";
+            empleadoRecuperado.Legajo = "legajonuevo";
+            empleadoRecuperado.Telefonos[0].Numero = "numeroTelefono";
+            empleadoRecuperado.Domicilioes[0].Calle = "calleDelDomicilio";
+            empleadoRecuperado.Usuario.Password = "nuevoPass";
+            empleadoRecuperado.FechaEgreso = DateTime.Parse("03/12/2019");
 
-            PersistenciaFacade.getInstance().registrarObjeto(persona);
+            PersistenciaFacade.getInstance().actualiarObjeto<Empleado>(empleadoRecuperado);
             
-            Persona personaEditada = PersistenciaFacade.getInstance().obtenerObjeto<Persona>(4);
-            Console.WriteLine(personaEditada.ToString());
-            
-            personaEditada.Domicilioes[0].Calle = "Arturo gimenez";
-            personaEditada.Nombre = "Rocio";
-
-            PersistenciaFacade.getInstance().actualiarObjeto(personaEditada);
-            Console.WriteLine(PersistenciaFacade.getInstance().obtenerObjeto<Persona>(1));
-            
-            foreach(Persona per in PersistenciaFacade.getInstance().obtenerTodos<Persona>())
+            foreach(Empleado empl in PersistenciaFacade.getInstance().obtenerTodos<Empleado>())
             {
-                Console.WriteLine(per.ToString());
+                Console.WriteLine(empl.ToString());
             }
-            
-            PersistenciaFacade.getInstance().eliminarObjeto<Persona>(14);
-            
+
+            PersistenciaFacade.getInstance().eliminarObjeto<Empleado>(8);
+             
             Application.EnableVisualStyles();
             Application.Run(vista);
-            
+           
             
         }
 

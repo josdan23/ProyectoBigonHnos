@@ -70,7 +70,7 @@ namespace ProyectoBigonHnos.data.CompraDao
             proveedorDao.registrar(t.proveedor);
             int idProveedor = proveedorDao.listarTodos().Last().IdProveedor;
 
-            IEmpleadoDAO empleadoDao = new EmpleadoDaoImpl();
+            IEmpleadoDAO empleadoDao = new EmpleadoDaoImplList();
             empleadoDao.registrar(t.empleado);
             int idEmpleado = empleadoDao.listarTodos().Last().IdEmpleado;
 
@@ -100,7 +100,7 @@ namespace ProyectoBigonHnos.data.CompraDao
             Proveedor proveedor = proveedorDAO.leerPorId(idProveedor);
 
             int idEmpleado = (int)unRegistro.ElementAt(4);
-            IEmpleadoDAO empleadoDao = new EmpleadoDaoImpl();
+            IEmpleadoDAO empleadoDao = new EmpleadoDaoImplList();
             Empleado empleado = empleadoDao.leerPorId(idEmpleado);
 
             Compra compra = new Compra();

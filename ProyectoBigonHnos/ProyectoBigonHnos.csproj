@@ -88,6 +88,7 @@
     <Compile Include="data\CostoExtraDao\ICostoExtraDao.cs" />
     <Compile Include="data\CRUD.cs" />
     <Compile Include="data\DaoFactory.cs" />
+    <Compile Include="data\EmpleadoDao\EmpleadoDaoImpl.cs" />
     <Compile Include="data\ListaMaterialesDao\IListaMaterialDao.cs" />
     <Compile Include="data\ListaMaterialesDao\ListaMaterialDaoListImpl.cs" />
     <Compile Include="data\MaterialDao\MaterialDaoImpl.cs" />
@@ -96,7 +97,7 @@
     <Compile Include="data\DomicilioDao\DomicilioDaoImpl.cs" />
     <Compile Include="data\DomicilioDao\DomicilioDaoListImpl.cs" />
     <Compile Include="data\DomicilioDao\IDomicilioDAO.cs" />
-    <Compile Include="data\EmpleadoDao\EmpleadoDaoImpl.cs" />
+    <Compile Include="data\EmpleadoDao\EmpleadoDaoImplList.cs" />
     <Compile Include="data\GrupoFamiliarDao\GrupoFamiliarDaoListImpl.cs" />
     <Compile Include="data\GrupoFamiliarDao\IGrupoFamiliarDao.cs" />
     <Compile Include="data\LineaCompraDao\ILineaCompraDao.cs" />
