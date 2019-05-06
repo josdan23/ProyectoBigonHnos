@@ -91,6 +91,7 @@
     <Compile Include="data\EmpleadoDao\EmpleadoDaoImpl.cs" />
     <Compile Include="data\GrupoFamiliarDao\GrupoFamiliarDaoImpl.cs" />
     <Compile Include="data\LineaCompraDao\LineaCompraDaoImpl.cs" />
+    <Compile Include="data\LineaLiquidacionDao\LineaLiquidacionDaoImpl.cs" />
     <Compile Include="data\LiquidacionDao\LiquidacionDaoImpl.cs" />
     <Compile Include="data\ListaMaterialesDao\IListaMaterialDao.cs" />
     <Compile Include="data\ListaMaterialesDao\ListaMaterialDaoListImpl.cs" />

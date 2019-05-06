@@ -48,15 +48,28 @@ namespace ProyectoBigonHnos
 
 
             // agregarConceptos();
-
+           
 
             Empleado empleado = PersistenciaFacade.getInstance().obtenerObjeto<Empleado>(5);
+            /*
+           Liquidacion liquidacion = PersistenciaFacade.getInstance().obtenerObjeto<Liquidacion>(4);
+           liquidacion.LugarPago = "la casa de mi abuela nana";
 
-            Liquidacion liquidacion = PersistenciaFacade.getInstance().obtenerObjeto<Liquidacion>(4);
-            liquidacion.LugarPago = "la casa de mi abuela nana";
+           PersistenciaFacade.getInstance().actualiarObjeto(liquidacion);
 
-            PersistenciaFacade.getInstance().actualiarObjeto(liquidacion);
 
+           Concepto concepto1 = PersistenciaFacade.getInstance().obtenerObjeto<Concepto>(1);
+           Concepto concepto2 = PersistenciaFacade.getInstance().obtenerObjeto<Concepto>(3);
+
+           Liquidacion nuevaLiquidacion = new Liquidacion(empleado, 2, "banco nacion de la argentina");
+           nuevaLiquidacion.agregarLineaLiquidacion(3, concepto1, 2003);
+           nuevaLiquidacion.agregarLineaLiquidacion(3, concepto1, 1899);
+           nuevaLiquidacion.agregarLineaLiquidacion(3, concepto2, 3823);
+
+           PersistenciaFacade.getInstance().registrarObjeto(nuevaLiquidacion);
+           */
+
+            PersistenciaFacade.getInstance().eliminarObjeto<Liquidacion>(6);
 
             Application.EnableVisualStyles();
             Application.Run(vista);

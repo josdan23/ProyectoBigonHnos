@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProyectoBigonHnos.data.EmpleadoDao;
+using ProyectoBigonHnos.data.LineaLiquidacionDao;
 using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.dominio.liquidacion;
 
@@ -30,16 +31,29 @@ namespace ProyectoBigonHnos.data.LiquidacionDao
 
             db.ejectuarQuery(query);
 
-            //actualizar las lineas de liquidacion
+            ILineaLiquidacionDao lineaLiquidacionDao = new LineaLiquidacionDaoImpl();
+            foreach(LineaLiquidacion lineas in t.LineasLiquidacion)
+            {
+                lineaLiquidacionDao.actualizar(lineas);
+            }
 
         }
 
         public void eliminar(int id)
         {
+            ILineaLiquidacionDao lineaLiquidacionDao = new LineaLiquidacionDaoImpl();
+
+            Liquidacion liquidacion = leerPorId(id);
+
+            foreach (LineaLiquidacion lineas in liquidacion.LineasLiquidacion)
+            {
+                lineaLiquidacionDao.eliminar(lineas.IdLineaLiquidacion);
+            }
+
             String query = String.Format("delete from liquidacion where id_liquidacion={0};", id);
             db.borrarRegistro(query);
 
-            //eliminar las lineas de liquidacion
+        
         }
 
         public Liquidacion leerPorId(int id)
@@ -78,6 +92,15 @@ namespace ProyectoBigonHnos.data.LiquidacionDao
             db.ejectuarQuery(query);
 
             //registrar las lineas de liquidacion
+            int idLiquidacion = obtenerIdUltimoAgregado();
+
+            ILineaLiquidacionDao lineaLiquidacionDao = new LineaLiquidacionDaoImpl();
+            foreach (LineaLiquidacion linea in t.LineasLiquidacion)
+            {
+                linea.idLiquidacion = idLiquidacion;
+                lineaLiquidacionDao.registrar(linea);
+            }
+
         }
 
         private Liquidacion parse(List<Object> unRegistro)
@@ -94,8 +117,25 @@ namespace ProyectoBigonHnos.data.LiquidacionDao
             liquidacion.IdLiquidacion = idLiquidacion;
 
 
-            //agregar las lineas de liquidacion
+            
+            ILineaLiquidacionDao lineaLiquidacionDao = new LineaLiquidacionDaoImpl();
+            
+            foreach(LineaLiquidacion linea in lineaLiquidacionDao.listarTodos())
+            {
+                if (linea.idLiquidacion == liquidacion.IdLiquidacion)
+                {
+                    liquidacion.LineasLiquidacion.Add(linea);
+                }
+            }
+
             return liquidacion;
+        }
+
+        public int obtenerIdUltimoAgregado()
+        {
+            String query = String.Format("select * from liquidacion;");
+            int idLiquidacion = (int)db.consultarQuery(query).Last().ElementAt(0);
+            return idLiquidacion;
         }
     }
 }

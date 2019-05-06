@@ -9,9 +9,10 @@ namespace ProyectoBigonHnos.dominio.liquidacion
     public class LineaLiquidacion
     {
         public int IdLineaLiquidacion { get; set; }
-        public double Cantidad { get; set; }
+        public int Cantidad { get; set; }
         public Concepto Concepto { get; set; }
         public double ValorBase { get; set; }
+        public int idLiquidacion { get; set; }
 
         public LineaLiquidacion(int cantidad, Concepto concepto, double valor)
         {
