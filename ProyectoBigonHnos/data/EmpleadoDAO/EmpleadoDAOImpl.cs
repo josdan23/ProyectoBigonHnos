@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProyectoBigonHnos.data.GrupoFamiliarDao;
 using ProyectoBigonHnos.data.PersonaDao;
 using ProyectoBigonHnos.data.UsuarioDao;
 using ProyectoBigonHnos.dominio;
@@ -49,6 +50,16 @@ namespace ProyectoBigonHnos.data.EmpleadoDao
             int idPersona = leerPorId(id).IdPersona;
             int idUsuario = leerPorId(id).Usuario.IdUsuario;
 
+            Empleado empleado = leerPorId(id);
+            IGrupoFamiliarDao grupoFamiliarDao = new GrupoFamiliarDaoImpl();
+            foreach(GrupoFamiliar gf in empleado.Familiares)
+            {
+                if (gf.IdEmpleado == id)
+                {
+                    grupoFamiliarDao.eliminar(gf.IdGrupoFamiliar);
+                }
+            }
+
             db.borrarRegistro(query);
 
             IPersonaDAO personaDao = new PersonaDaoImpl();
@@ -56,6 +67,8 @@ namespace ProyectoBigonHnos.data.EmpleadoDao
 
             IUsuarioDAO usuarioDao = new UsuarioDaoImpl();
             usuarioDao.eliminar(idUsuario);
+
+
 
         }
 
@@ -107,6 +120,17 @@ namespace ProyectoBigonHnos.data.EmpleadoDao
 
 
             //faltan registrar los familiares
+            int idEmpleado =(int)  db.consultarQuery("select * from empleado;").Last().ElementAt(0);
+
+            IGrupoFamiliarDao grupoFamiliarDao = new GrupoFamiliarDaoImpl();
+            if (t.Familiares.Count != 0)
+            {
+                foreach(GrupoFamiliar gf in t.Familiares)
+                {
+                    gf.IdEmpleado = idEmpleado;
+                    grupoFamiliarDao.registrar(gf);
+                }
+            }
         }
 
         private Empleado parse(List<Object> unRegistro)
@@ -119,23 +143,8 @@ namespace ProyectoBigonHnos.data.EmpleadoDao
             string apellido = persona.Apellido;
             string dni = persona.Dni;
 
-            /*
-            int idTelefono = persona.Telefonos[0].IdTelefono;
-            string numeroTelefono = persona.Telefonos[0].Numero;
-            */
+
             Telefono telefono = persona.Telefonos[0];
-
-            /*
-            int idDomicilio = persona.Domicilioes[0].IdDomicilio;
-            string calle = persona.Domicilioes[0].Calle;
-            int numeroDomicilio = persona.Domicilioes[0].Numero;
-
-            int idLocalidad = persona.Domicilioes[0].Localidad.IdLocalidad;
-            string nombreLocalidad = persona.Domicilioes[0].Localidad.Nombre;
-
-            int idProvincia = persona.Domicilioes[0].Localidad.Provincia.IdProvincia;
-            string nombreProvincia = persona.Domicilioes[0].Localidad.Provincia.Nombre;
-            */
 
             Domicilio domicilio = persona.Domicilioes[0];
 
@@ -169,6 +178,15 @@ namespace ProyectoBigonHnos.data.EmpleadoDao
             empleado.Domicilioes.Add(domicilio);
             empleado.IdEmpleado = idEmpleado;
             //faltan crear los familiares
+
+            IGrupoFamiliarDao grupoFamiliarDao = new GrupoFamiliarDaoImpl();
+            foreach (GrupoFamiliar gf in grupoFamiliarDao.listarTodos())
+            {
+                if (gf.IdEmpleado == empleado.IdEmpleado)
+                {
+                    empleado.Familiares.Add(gf);
+                }
+            }
 
             return empleado;
         }

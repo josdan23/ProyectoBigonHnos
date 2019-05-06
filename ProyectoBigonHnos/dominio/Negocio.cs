@@ -125,7 +125,10 @@ namespace ProyectoBigonHnos.dominio
 
         public void agregarEmpleado(Empleado empleado)
         {
+
             persistencia.registrarObjeto(empleado);
+            
+            
         }
 
         //PEDIDOS

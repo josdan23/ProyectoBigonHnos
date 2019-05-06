@@ -48,53 +48,10 @@ namespace ProyectoBigonHnos
 
 
             // agregarConceptos();
-            /*
-            Empleado empleado = new Empleado("Mathias", "Yapura", "35053344", "empleado", "32039292", "pass", true, DateTime.Now);
-            empleado.agregarTelefono("420358");
-            empleado.agregarDomicilio(new Domicilio("Rivadavia", 1234, "santa maria", "catamarca"));
-            PersistenciaFacade.getInstance().registrarObjeto(empleado);
-
-            Proveedor nuevoProveedor = new Proveedor("ProvedorNorteño", "cuitProveedor");
-            nuevoProveedor.agregarNuevaDomicilio("calleProveeodr", 12, "localidadProveedor", "provinciaProveedor");
-            nuevoProveedor.agregarNuevoTelefono("92929");
-            PersistenciaFacade.getInstance().registrarObjeto(nuevoProveedor);
-
-            Empleado empleadoRegistrado = PersistenciaFacade.getInstance().obtenerObjeto<Empleado>(1);
-            Proveedor proveedorRegistrado = PersistenciaFacade.getInstance().obtenerObjeto<Proveedor>(1);
 
 
-
-            Material material = PersistenciaFacade.getInstance().obtenerObjeto<Material>(1);
-            Material material2 = PersistenciaFacade.getInstance().obtenerObjeto<Material>(3);
-
-            Console.WriteLine("idmaterial " + material.IdMaterial);
-
-            Compra compra = new Compra();
-            compra.agregarEmpleado(empleadoRegistrado);
-            compra.agregarProveedor(proveedorRegistrado);
-            compra.estado = EstadoCompra.COMPLETADO;
-            compra.fechaCompra = DateTime.Now;
-
-            Console.WriteLine(material);
-            compra.crearLineaDeCompra(material, 2);
-            compra.crearLineaDeCompra(material2, 5);
-
-            PersistenciaFacade.getInstance().registrarObjeto<Compra>(compra);
-            */
-            Compra compraRegistrada = PersistenciaFacade.getInstance().obtenerObjeto<Compra>(55);
-            compraRegistrada.estado = EstadoCompra.EN_PROCESO;
-            
-            foreach(LineaCompra lc in compraRegistrada.lineasDeCompra)
-            {
-                lc.material.Descripcion = "NombreCambiado";
-                Console.WriteLine("Linea:" + lc.IdLineaCompra + ",," + lc.material.Descripcion);
-            }
-
-            PersistenciaFacade.getInstance().actualiarObjeto<Compra>(compraRegistrada);
-
-            
-
-           // PersistenciaFacade.getInstance().eliminarObjeto<Compra>(2);
+            PersistenciaFacade.getInstance().eliminarObjeto<Empleado>(81);
+    
             Application.EnableVisualStyles();
             Application.Run(vista);
         }

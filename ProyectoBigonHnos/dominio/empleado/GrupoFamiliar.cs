@@ -14,13 +14,17 @@ namespace ProyectoBigonHnos.dominio
         public DateTime FechaNacimiento { get; set; }
         public bool Discapacidad { get; set; }
 
+        public int IdEmpleado { get; set; }
+
         public GrupoFamiliar (string dni, string parentesco, DateTime fechaNac, bool discapacidad)
         {
             Dni = dni;
             Parentesco = parentesco;
             FechaNacimiento = fechaNac;
             Discapacidad = discapacidad;
+
         }
+        
 
         public override string ToString()
         {
