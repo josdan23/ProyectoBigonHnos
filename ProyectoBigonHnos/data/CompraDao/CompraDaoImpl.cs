@@ -22,19 +22,23 @@ namespace ProyectoBigonHnos.data.CompraDao
 
         public void actualizar(Compra t)
         {
-            string query = string.Format("update compra set fecha_compra = \'{0}\', importe_total={1}, estado={2}, proveedor_id_proveedor={3}, empleado_id_empleado={4};",
+            string query = string.Format("update compra set fecha_compra = \'{0}\', importe_total={1}, estado=\'{2}\', proveedor_id_proveedor={3}, empleado_id_empleado={4} where id_compra = {5};",
                 t.fechaCompra.ToShortDateString(),
                 t.obtenerTotal().ToString(CultureInfo.InvariantCulture),
                 t.estado,
                 t.proveedor.IdProveedor,
-                t.empleado.IdEmpleado);
+                t.empleado.IdEmpleado,
+                t.IdCompra);
+
+            db.ejectuarQuery(query);
         }
 
         public void eliminar(int id)
         {
             String query = String.Format("delete from compra where id_compra={0}", id);
 
-            //obtener las lineas de compra
+            
+
             db.borrarRegistro(query);
 
             //borrar las lineas de compra
@@ -66,25 +70,19 @@ namespace ProyectoBigonHnos.data.CompraDao
 
         public void registrar(Compra t)
         {
-            IProveedorDAO proveedorDao = new ProveedorDaoImpl();
-            proveedorDao.registrar(t.proveedor);
-            int idProveedor = proveedorDao.listarTodos().Last().IdProveedor;
-
-            IEmpleadoDAO empleadoDao = new EmpleadoDaoImplList();
-            empleadoDao.registrar(t.empleado);
-            int idEmpleado = empleadoDao.listarTodos().Last().IdEmpleado;
-
-
-            //falta registrar las lineas de compra
+  
+            
 
             String query = String.Format("insert into compra (fecha_compra, importe_total, estado, proveedor_id_proveedor, empleado_id_empleado) values (\'{0}\',{1},\'{2}\',{3},{4})",
                 t.fechaCompra.ToShortDateString(),
                 t.obtenerTotal().ToString(CultureInfo.InvariantCulture),
                 t.estado.ToString(),
-                idProveedor,
-                idEmpleado);
+                t.proveedor.IdProveedor,
+                t.empleado.IdEmpleado);
 
             db.ejectuarQuery(query);
+
+            //falta registrar las lineas de compra
         }
 
         private Compra parse(List<Object> unRegistro)
@@ -92,22 +90,27 @@ namespace ProyectoBigonHnos.data.CompraDao
             int idCompra = (int)unRegistro.ElementAt(0);
             DateTime fechaCompra = (DateTime) unRegistro.ElementAt(1);
 
-            EstadoCompra estado;
-            Enum.TryParse<EstadoCompra>(unRegistro.ElementAt(2).ToString(), true, out estado);
+            double total = Convert.ToDouble(unRegistro.ElementAt(2));
 
-            int idProveedor = (int)unRegistro.ElementAt(3);
+            EstadoCompra estado;
+            Enum.TryParse<EstadoCompra>(unRegistro.ElementAt(3).ToString(), true, out estado);
+
+            int idProveedor = (int)unRegistro.ElementAt(4);
             IProveedorDAO proveedorDAO = new ProveedorDaoImpl();
             Proveedor proveedor = proveedorDAO.leerPorId(idProveedor);
 
-            int idEmpleado = (int)unRegistro.ElementAt(4);
-            IEmpleadoDAO empleadoDao = new EmpleadoDaoImplList();
+            int idEmpleado = (int)unRegistro.ElementAt(5);
+            
+            IEmpleadoDAO empleadoDao = new EmpleadoDaoImpl();
             Empleado empleado = empleadoDao.leerPorId(idEmpleado);
-
+           
             Compra compra = new Compra();
             compra.IdCompra = idCompra;
             compra.fechaCompra = fechaCompra;
             compra.estado = estado;
-            compra.empleado = empleado;
+            compra.agregarEmpleado(empleado);
+            compra.agregarProveedor(proveedor);
+            
 
             //falta agregar las lineas de compra. 
 

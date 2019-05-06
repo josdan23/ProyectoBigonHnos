@@ -48,37 +48,43 @@ namespace ProyectoBigonHnos
 
 
             // agregarConceptos();
-            /*
+            
             Empleado empleado = new Empleado("Mathias", "Yapura", "35053344", "empleado", "32039292", "pass", true, DateTime.Now);
             empleado.agregarTelefono("420358");
             empleado.agregarDomicilio(new Domicilio("Rivadavia", 1234, "santa maria", "catamarca"));
             PersistenciaFacade.getInstance().registrarObjeto(empleado);
-            */
-            Empleado empleadoRecuperado = PersistenciaFacade.getInstance().obtenerObjeto<Empleado>(6);
-            Console.WriteLine(empleadoRecuperado.ToString());
-            Console.WriteLine(empleadoRecuperado.FechaEgreso);
-            Console.WriteLine(empleadoRecuperado.Usuario.IdUsuario);
-            
-            empleadoRecuperado.Nombre = "Marita";
-            empleadoRecuperado.Legajo = "legajonuevo";
-            empleadoRecuperado.Telefonos[0].Numero = "numeroTelefono";
-            empleadoRecuperado.Domicilioes[0].Calle = "calleDelDomicilio";
-            empleadoRecuperado.Usuario.Password = "nuevoPass";
-            empleadoRecuperado.FechaEgreso = DateTime.Parse("03/12/2019");
 
-            PersistenciaFacade.getInstance().actualiarObjeto<Empleado>(empleadoRecuperado);
-            
-            foreach(Empleado empl in PersistenciaFacade.getInstance().obtenerTodos<Empleado>())
+            Proveedor nuevoProveedor = new Proveedor("ProvedorNorteño", "cuitProveedor");
+            nuevoProveedor.agregarNuevaDomicilio("calleProveeodr", 12, "localidadProveedor", "provinciaProveedor");
+            nuevoProveedor.agregarNuevoTelefono("92929");
+            PersistenciaFacade.getInstance().registrarObjeto(nuevoProveedor);
+
+            Empleado empleadoRegistrado = PersistenciaFacade.getInstance().obtenerObjeto<Empleado>(1);
+            Proveedor proveedorRegistrado = PersistenciaFacade.getInstance().obtenerObjeto<Proveedor>(1);
+
+
+            Compra compra = new Compra();
+            compra.agregarEmpleado(empleadoRegistrado);
+            compra.agregarProveedor(proveedorRegistrado);
+            compra.estado = EstadoCompra.COMPLETADO;
+            compra.fechaCompra = DateTime.Now;
+
+            PersistenciaFacade.getInstance().registrarObjeto<Compra>(compra);
+
+            Compra compraRegistrada = PersistenciaFacade.getInstance().obtenerObjeto<Compra>(3);
+            Console.WriteLine(compraRegistrada.empleado.ToString());
+
+
+            foreach(Compra com in PersistenciaFacade.getInstance().obtenerTodos<Compra>())
             {
-                Console.WriteLine(empl.ToString());
+                Console.WriteLine("idcompra: " + com.IdCompra + "EMPLEADO:" + com.empleado);
             }
 
-            PersistenciaFacade.getInstance().eliminarObjeto<Empleado>(8);
-             
+            compraRegistrada.estado = EstadoCompra.EN_PROCESO;
+            compraRegistrada.fechaCompra = DateTime.Parse("03/05/1990");
+            PersistenciaFacade.getInstance().actualiarObjeto(compraRegistrada);
             Application.EnableVisualStyles();
             Application.Run(vista);
-           
-            
         }
 
         static void liquidacion()
