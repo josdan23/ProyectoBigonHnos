@@ -43,6 +43,10 @@ namespace ProyectoBigonHnos
             con.agregarTelefono("2930230");
             con.confirmarNuevoCliente();
              */
+
+            Cliente cliente = PersistenciaFacade.getInstance().obtenerObjeto<Cliente>(1);
+            Console.WriteLine(cliente);
+
             Login vista = new Login();
             vista.unirControlador(new LoginControlador());
 
@@ -69,7 +73,7 @@ namespace ProyectoBigonHnos
            PersistenciaFacade.getInstance().registrarObjeto(nuevaLiquidacion);
            */
 
-            PersistenciaFacade.getInstance().eliminarObjeto<Liquidacion>(6);
+            //PersistenciaFacade.getInstance().eliminarObjeto<Liquidacion>(6);
 
             Application.EnableVisualStyles();
             Application.Run(vista);
