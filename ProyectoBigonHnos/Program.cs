@@ -50,8 +50,14 @@ namespace ProyectoBigonHnos
             // agregarConceptos();
 
 
-            PersistenciaFacade.getInstance().eliminarObjeto<Empleado>(81);
-    
+            Empleado empleado = PersistenciaFacade.getInstance().obtenerObjeto<Empleado>(5);
+
+            Liquidacion liquidacion = PersistenciaFacade.getInstance().obtenerObjeto<Liquidacion>(4);
+            liquidacion.LugarPago = "la casa de mi abuela nana";
+
+            PersistenciaFacade.getInstance().actualiarObjeto(liquidacion);
+
+
             Application.EnableVisualStyles();
             Application.Run(vista);
         }
