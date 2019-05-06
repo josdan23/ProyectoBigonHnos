@@ -83,6 +83,8 @@ namespace ProyectoBigonHnos
             compraRegistrada.estado = EstadoCompra.EN_PROCESO;
             compraRegistrada.fechaCompra = DateTime.Parse("03/05/1990");
             PersistenciaFacade.getInstance().actualiarObjeto(compraRegistrada);
+
+            PersistenciaFacade.getInstance().eliminarObjeto<Compra>(4);
             Application.EnableVisualStyles();
             Application.Run(vista);
         }

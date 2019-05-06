@@ -22,6 +22,8 @@ namespace ProyectoBigonHnos.data.CompraDao
 
         public void actualizar(Compra t)
         {
+            //actualizar las lineas de compra
+
             string query = string.Format("update compra set fecha_compra = \'{0}\', importe_total={1}, estado=\'{2}\', proveedor_id_proveedor={3}, empleado_id_empleado={4} where id_compra = {5};",
                 t.fechaCompra.ToShortDateString(),
                 t.obtenerTotal().ToString(CultureInfo.InvariantCulture),
@@ -36,9 +38,6 @@ namespace ProyectoBigonHnos.data.CompraDao
         public void eliminar(int id)
         {
             String query = String.Format("delete from compra where id_compra={0}", id);
-
-            
-
             db.borrarRegistro(query);
 
             //borrar las lineas de compra
