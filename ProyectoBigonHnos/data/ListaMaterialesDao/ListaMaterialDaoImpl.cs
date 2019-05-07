@@ -7,7 +7,7 @@ using ProyectoBigonHnos.data.MaterialDao;
 using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.dominio.pedido;
 
-namespace ProyectoBigonHnos.data.ListaMaterialesDao
+namespace ProyectoBigonHnos.data.ListaMaterialDao
 {
     class ListaMaterialDaoImpl : IListaMaterialDao
     {
@@ -18,7 +18,7 @@ namespace ProyectoBigonHnos.data.ListaMaterialesDao
             db = DBConector.getInstance();
         }
 
-        public void actualizar(ListaDeMateriales t)
+        public void actualizar(ListaMaterial t)
         {
             String query = String.Format("update linea_material set cantidad = {0}, pedido_id_pedido = {1}, material_id_material={2} where id_linea_material = {3};",
                 t.cantidad,
@@ -35,7 +35,7 @@ namespace ProyectoBigonHnos.data.ListaMaterialesDao
             db.borrarRegistro(query);
         }
 
-        public ListaDeMateriales leerPorId(int id)
+        public ListaMaterial leerPorId(int id)
         {
             String query = String.Format("select * from linea_material where id_linea_material = {0};", id);
 
@@ -47,11 +47,11 @@ namespace ProyectoBigonHnos.data.ListaMaterialesDao
             return null;
         }
 
-        public List<ListaDeMateriales> listarTodos()
+        public List<ListaMaterial> listarTodos()
         {
             String query = String.Format("select * from linea_material;");
 
-            List<ListaDeMateriales> listaMateriales = new List<ListaDeMateriales>();
+            List<ListaMaterial> listaMateriales = new List<ListaMaterial>();
 
             foreach (List<Object> unRegistro in db.consultarQuery(query))
             {
@@ -61,7 +61,7 @@ namespace ProyectoBigonHnos.data.ListaMaterialesDao
             return listaMateriales;
         }
 
-        public void registrar(ListaDeMateriales t)
+        public void registrar(ListaMaterial t)
         {
             String query = String.Format("insert into linea_material (cantidad, pedido_id_pedido, material_id_material) values ({0}, {1}, {2});",
                 t.cantidad,
@@ -71,7 +71,7 @@ namespace ProyectoBigonHnos.data.ListaMaterialesDao
             db.ejectuarQuery(query);
         }
 
-        private ListaDeMateriales parse(List<Object> unRegistro)
+        private ListaMaterial parse(List<Object> unRegistro)
         {
             int idListaMaterial = (int)unRegistro.ElementAt(0);
             int cantidad = (int)unRegistro.ElementAt(1);
@@ -80,7 +80,7 @@ namespace ProyectoBigonHnos.data.ListaMaterialesDao
 
             IMaterialDao materialDao = new MaterialDaoImpl();
             Material material = materialDao.leerPorId(idMaterial);
-            ListaDeMateriales listaDeMateriales = new ListaDeMateriales(material, cantidad);
+            ListaMaterial listaDeMateriales = new ListaMaterial(material, cantidad);
             listaDeMateriales.idPedido = idPedido;
             listaDeMateriales.idListaDeMateriales = idListaMaterial;
 

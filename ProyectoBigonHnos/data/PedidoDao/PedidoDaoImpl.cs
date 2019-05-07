@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using ProyectoBigonHnos.data.ClienteDao;
 using ProyectoBigonHnos.data.CostoExtraDao;
 using ProyectoBigonHnos.data.LineaPedidoDao;
-using ProyectoBigonHnos.data.ListaMaterialesDao;
+using ProyectoBigonHnos.data.ListaMaterialDao;
 using ProyectoBigonHnos.data.MaterialDao;
 using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.dominio.pedido;
@@ -27,7 +27,7 @@ namespace ProyectoBigonHnos.data.PedidoDao
         {
             //actualizar las lines de materiales
             IListaMaterialDao listaMaterialDao = new ListaMaterialDaoImpl();
-            foreach (ListaDeMateriales unaLinea in t.ListaDeMateriales)
+            foreach (ListaMaterial unaLinea in t.ListaDeMateriales)
             {
                 listaMaterialDao.actualizar(unaLinea);
             }
@@ -44,12 +44,13 @@ namespace ProyectoBigonHnos.data.PedidoDao
 
 
 
-            string query = string.Format("udpate pedido set fecha_pedido=\'{0}\', fecha_entrega=\'{1}\', estado=\'{2}\', importe_total={3}, cliente_id_cliente = {4} where id_pedido = {5};",
+            string query = string.Format("update pedido set fecha_pedido=\'{0}\', fecha_entrega=\'{1}\', estado=\'{2}\', importe_total={3}, cliente_id_cliente = {4} where id_pedido = {5};",
                 t.fechaDePedido.ToShortDateString(),
                 t.fechaDeEntrega.ToShortDateString(),
                 t.estado,
                 t.obtenerTotal().ToString(CultureInfo.InvariantCulture),
-                t.cliente.IdCliente);
+                t.cliente.IdCliente,
+                t.idPedido);
 
             db.ejectuarQuery(query);
 
@@ -63,7 +64,7 @@ namespace ProyectoBigonHnos.data.PedidoDao
 
             //eliminar las las lineas de materiales
             IListaMaterialDao listaMaterialDao = new ListaMaterialDaoImpl();
-            foreach (ListaDeMateriales unaLinea in pedido.ListaDeMateriales)
+            foreach (ListaMaterial unaLinea in pedido.ListaDeMateriales)
             {
                 listaMaterialDao.eliminar(unaLinea.idListaDeMateriales);
             }
@@ -150,7 +151,7 @@ namespace ProyectoBigonHnos.data.PedidoDao
 
             //registra line de materiales
             IListaMaterialDao listaMaterialDao = new ListaMaterialDaoImpl();
-            foreach (ListaDeMateriales unaLinea in t.ListaDeMateriales)
+            foreach (ListaMaterial unaLinea in t.ListaDeMateriales)
             {
                 unaLinea.idPedido = idPedido;
                 listaMaterialDao.registrar(unaLinea);
@@ -209,7 +210,7 @@ namespace ProyectoBigonHnos.data.PedidoDao
 
             //lineas de materiales necesarios
             IListaMaterialDao listaMaterialDao = new ListaMaterialDaoImpl();
-            foreach (ListaDeMateriales unaLinea in listaMaterialDao.listarTodos())
+            foreach (ListaMaterial unaLinea in listaMaterialDao.listarTodos())
             {
                 if (unaLinea.idPedido == id_pedido)
                     pedido.ListaDeMateriales.Add(unaLinea);

@@ -25,7 +25,7 @@ namespace ProyectoBigonHnos.dominio.venta
         public List<LineaVenta> lineasDeVenta { get; set; }
         public Pedido pedido { get; set; }
         public Pago pago { get; set; }
-        public List<ListaDeMateriales> materialesNecesarios { get; set; }
+        public List<ListaMaterial> materialesNecesarios { get; set; }
         public List<CostoExtra> costosExtras { get; set; }
 
         public Venta()
@@ -39,7 +39,7 @@ namespace ProyectoBigonHnos.dominio.venta
             tipoFactura = "A";
 
             lineasDeVenta = new List<LineaVenta>();
-            materialesNecesarios = new List<ListaDeMateriales>();
+            materialesNecesarios = new List<ListaMaterial>();
             costosExtras = new List<CostoExtra>();
         }
 
@@ -112,7 +112,7 @@ namespace ProyectoBigonHnos.dominio.venta
         public double obtenerSubtotalMateriales() {
 
             double total = 0;
-            foreach (ListaDeMateriales lm in materialesNecesarios)
+            foreach (ListaMaterial lm in materialesNecesarios)
             {
                 total = total + lm.getSubtotal();
             }

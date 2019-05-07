@@ -278,7 +278,7 @@ namespace ProyectoBigonHnos.vistasImpresas
                 BackgroundColor = grisClaro
             });
 
-            foreach (ListaDeMateriales lm in venta.materialesNecesarios)
+            foreach (ListaMaterial lm in venta.materialesNecesarios)
             {
                 tablaMateriales.AddCell(new PdfPCell(new Phrase(lm.material.Descripcion, _standardFont3))
                 {

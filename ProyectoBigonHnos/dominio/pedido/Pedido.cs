@@ -19,7 +19,7 @@ namespace ProyectoBigonHnos.dominio
         public Cliente cliente { get; set; }
 
         public List<LineaPedido> lineasDePedido;
-        public List<ListaDeMateriales> ListaDeMateriales { get; set; }
+        public List<ListaMaterial> ListaDeMateriales { get; set; }
         public List<CostoExtra> costosExtras { get; set; }
 
 
@@ -31,7 +31,7 @@ namespace ProyectoBigonHnos.dominio
             estado = "nuevo";
 
             lineasDePedido = new List<LineaPedido>();
-            ListaDeMateriales = new List<ListaDeMateriales>();
+            ListaDeMateriales = new List<ListaMaterial>();
             costosExtras = new List<CostoExtra>();
         }
 
@@ -46,13 +46,13 @@ namespace ProyectoBigonHnos.dominio
 
         public void agregarMaterialAUsar(Material material, int cantidad)
         {
-            ListaDeMateriales.Add(new ListaDeMateriales(material, cantidad));
+            ListaDeMateriales.Add(new ListaMaterial(material, cantidad));
         }
 
         public double obtenerSubtotalDeMateriales()
         {
             double subtotal = 0;
-            foreach(ListaDeMateriales material in ListaDeMateriales)
+            foreach(ListaMaterial material in ListaDeMateriales)
             {
                 subtotal = subtotal + material.getSubtotal();
             }

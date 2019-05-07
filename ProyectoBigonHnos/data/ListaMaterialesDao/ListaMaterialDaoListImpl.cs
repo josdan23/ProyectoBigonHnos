@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using ProyectoBigonHnos.dominio.pedido;
 
-namespace ProyectoBigonHnos.data.ListaMaterialesDao
+namespace ProyectoBigonHnos.data.ListaMaterialDao
 {
     class ListaMaterialDaoListImpl : IListaMaterialDao
     {
-        private static List<ListaDeMateriales> todosLosMaterialesNecesarios = new List<ListaDeMateriales>();
+        private static List<ListaMaterial> todosLosMaterialesNecesarios = new List<ListaMaterial>();
         private static int IdContador = 0;
 
-        public void actualizar(ListaDeMateriales t)
+        public void actualizar(ListaMaterial t)
         {
             for (int i = 0; i < todosLosMaterialesNecesarios.Count; i++)
             {
@@ -30,7 +30,7 @@ namespace ProyectoBigonHnos.data.ListaMaterialesDao
             }
         }
 
-        public ListaDeMateriales leerPorId(int id)
+        public ListaMaterial leerPorId(int id)
         {
             for (int i = 0; i < todosLosMaterialesNecesarios.Count; i++)
             {
@@ -41,12 +41,12 @@ namespace ProyectoBigonHnos.data.ListaMaterialesDao
             return null;
         }
 
-        public List<ListaDeMateriales> listarTodos()
+        public List<ListaMaterial> listarTodos()
         {
             return todosLosMaterialesNecesarios;
         }
 
-        public void registrar(ListaDeMateriales t)
+        public void registrar(ListaMaterial t)
         {
             t.idListaDeMateriales = IdContador;
             IdContador++;

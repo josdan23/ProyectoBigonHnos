@@ -3,6 +3,7 @@ using ProyectoBigonHnos.vista.pedidos;
 using ProyectoBigonHnos.dominio.pedido;
 using ProyectoBigonHnos.dominio;
 using ProyectoBigonHnos.data;
+using ProyectoBigonHnos.data.LineaPedidoDao;
 
 namespace ProyectoBigonHnos.controladores
 {
@@ -59,7 +60,7 @@ namespace ProyectoBigonHnos.controladores
                         0);
                 }
 
-                foreach(ListaDeMateriales lm in pedidoSelecionado.ListaDeMateriales)
+                foreach(ListaMaterial lm in pedidoSelecionado.ListaDeMateriales)
                 {
                     ((EditarPedidoView)view).mostrarMaterialesSeleccionados(
                         lm.material.Descripcion,
@@ -115,7 +116,10 @@ namespace ProyectoBigonHnos.controladores
         {
             for (int i = 0; i < pedidoSelecionado.lineasDePedido.Count; i++)
             {
+                
+                int idLineaPedido = pedidoSelecionado.lineasDePedido[indiceProductoAEliminar].IdLineaPedido;
                 pedidoSelecionado.lineasDePedido.RemoveAt(indiceProductoAEliminar);
+                PersistenciaFacade.getInstance().eliminarObjeto<LineaPedido>(idLineaPedido);
             }
         }
 
@@ -123,7 +127,10 @@ namespace ProyectoBigonHnos.controladores
         {
             for (int i = 0; i < pedidoSelecionado.ListaDeMateriales.Count; i++)
             {
+                int idListaMaterial = pedidoSelecionado.ListaDeMateriales[indiceMaterialAEliminar].idListaDeMateriales;
                 pedidoSelecionado.ListaDeMateriales.RemoveAt(indiceMaterialAEliminar);
+
+                PersistenciaFacade.getInstance().eliminarObjeto<ListaMaterial>(idListaMaterial);
             }
         }
 
@@ -145,13 +152,26 @@ namespace ProyectoBigonHnos.controladores
                 colorP,
                 colorS,
                 cantidad);
+            LineaPedido lineaPedido = new LineaPedido(cantidad);
+            lineaPedido.crearProducto(descripcion, alto, ancho, profundidad, colorP, colorS);
+            lineaPedido.IdPedido = pedidoSelecionado.idPedido;
+
+            PersistenciaFacade.getInstance().registrarObjeto<LineaPedido>(lineaPedido);
         }
 
         public void agregarNuevoMaterialDisponible(int idMaterial, int cantidad)
         {
             Material material = Negocio.getNegocio().buscarMaterial(idMaterial);
             if (material != null)
+            {
                 pedidoSelecionado.agregarMaterialAUsar(material, cantidad);
+
+                ListaMaterial listaMaterial = new ListaMaterial(material, cantidad);
+                listaMaterial.idPedido = pedidoSelecionado.idPedido;
+                PersistenciaFacade.getInstance().registrarObjeto(listaMaterial);
+            }
+            
+
         }
 
         public void agregarCostoExtra(string descripcionCostoExtra, double monto)

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace ProyectoBigonHnos.dominio.pedido
 {
-    public class ListaDeMateriales
+    public class ListaMaterial
     {
         public int idListaDeMateriales { get; set; }
         public Material material { get; set; }
         public int cantidad { get; set; }
         public int idPedido { get; set; }
 
-        public ListaDeMateriales(Material material, int cantidad)
+        public ListaMaterial(Material material, int cantidad)
         {
             this.material = material;
             this.cantidad = cantidad;

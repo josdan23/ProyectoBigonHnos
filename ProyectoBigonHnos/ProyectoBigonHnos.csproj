@@ -165,7 +165,7 @@
     <Compile Include="dominio\pedido\LineaPedido.cs" />
     <Compile Include="dominio\material\Material.cs" />
     <Compile Include="dominio\Negocio.cs" />
-    <Compile Include="dominio\pedido\ListaDeMateriales.cs" />
+    <Compile Include="dominio\pedido\ListaMaterial.cs" />
     <Compile Include="dominio\pedido\Pedido.cs" />
     <Compile Include="controladores\PedidoControlador.cs" />
     <Compile Include="dominio\comunes\Persona.cs" />

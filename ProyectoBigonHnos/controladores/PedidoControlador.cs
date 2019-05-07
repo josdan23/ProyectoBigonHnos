@@ -83,7 +83,7 @@ namespace ProyectoBigonHnos.dominio
 
             GestionarMaterialControlador controlador = new GestionarMaterialControlador();
 
-            foreach (ListaDeMateriales materialNecesario in pedido.ListaDeMateriales)
+            foreach (ListaMaterial materialNecesario in pedido.ListaDeMateriales)
             {
                 controlador.modificarMaterial(
                     materialNecesario.material.IdMaterial,
@@ -254,7 +254,7 @@ public void mostrarComponentes(int indexProducto)
         {
             NuevoPedidoView view = (NuevoPedidoView)vista;
 
-            foreach (ListaDeMateriales materiales in pedido.ListaDeMateriales)
+            foreach (ListaMaterial materiales in pedido.ListaDeMateriales)
             {
                 view.mostrarMaterialesSeleccionados(materiales.material.Descripcion, materiales.material.Precio, materiales.cantidad, materiales.getSubtotal());
             }

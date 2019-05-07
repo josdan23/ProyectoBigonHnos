@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using ProyectoBigonHnos.dominio.pedido;
 
-namespace ProyectoBigonHnos.data.ListaMaterialesDao
+namespace ProyectoBigonHnos.data.ListaMaterialDao
 {
-    interface IListaMaterialDao : CRUD<ListaDeMateriales>
+    interface IListaMaterialDao : CRUD<ListaMaterial>
     {
     }
 }

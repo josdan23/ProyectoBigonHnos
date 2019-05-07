@@ -78,7 +78,7 @@ namespace ProyectoBigonHnos.controladores
                         lv.cantidad);
                 }
 
-                foreach(ListaDeMateriales lm in Venta.materialesNecesarios)
+                foreach(ListaMaterial lm in Venta.materialesNecesarios)
                 {
                     ((NuevaVentaView)Vista).listarMaterial(
                         lm.material.IdMaterial,

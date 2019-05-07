@@ -23,7 +23,7 @@ namespace ProyectoBigonHnos.data.LineaPedidoDao
             IProductoDao productoDao = new ProductoDaoImpl();
             productoDao.actualizar(t.producto);
 
-            string query = string.Format("udpate linea_pedido set descripcion = \'{0}\', cantidad={1}, pedido_id_pedido={2}, producto_id_producto={3} where id_linea_pedido = {4};", 
+            string query = string.Format("update linea_pedido set descripcion = \'{0}\', cantidad={1}, pedido_id_pedido={2}, producto_id_producto={3} where id_linea_pedido = {4};", 
                 t.producto.descripcion,
                 t.cantidad,
                 t.IdPedido,
