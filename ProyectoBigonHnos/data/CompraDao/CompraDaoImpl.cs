@@ -159,7 +159,7 @@ namespace ProyectoBigonHnos.data.CompraDao
             }
 
             compra.lineasDeCompra = lineasComprasRegistradasParaUnaVenta;
-            Console.WriteLine(compra.lineasDeCompra.Last().material.Descripcion);
+            //Console.WriteLine(compra.lineasDeCompra.Last().material.Descripcion);
             return compra;
         }
 

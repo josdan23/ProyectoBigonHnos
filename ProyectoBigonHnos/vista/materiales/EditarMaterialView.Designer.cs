@@ -32,8 +32,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tboxStockDisponible = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tboxCantidad = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.tboxPrecio = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tboxDescripcion = new System.Windows.Forms.TextBox();
@@ -51,7 +49,7 @@
             // 
             // tboxMinimo
             // 
-            this.tboxMinimo.Location = new System.Drawing.Point(191, 319);
+            this.tboxMinimo.Location = new System.Drawing.Point(191, 284);
             this.tboxMinimo.Name = "tboxMinimo";
             this.tboxMinimo.Size = new System.Drawing.Size(100, 20);
             this.tboxMinimo.TabIndex = 17;
@@ -59,7 +57,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(92, 322);
+            this.label5.Location = new System.Drawing.Point(92, 287);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 13);
             this.label5.TabIndex = 10;
@@ -67,7 +65,7 @@
             // 
             // tboxStockDisponible
             // 
-            this.tboxStockDisponible.Location = new System.Drawing.Point(191, 282);
+            this.tboxStockDisponible.Location = new System.Drawing.Point(191, 247);
             this.tboxStockDisponible.Name = "tboxStockDisponible";
             this.tboxStockDisponible.Size = new System.Drawing.Size(100, 20);
             this.tboxStockDisponible.TabIndex = 16;
@@ -75,27 +73,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(78, 285);
+            this.label4.Location = new System.Drawing.Point(78, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 11;
             this.label4.Text = "Stock disponible";
-            // 
-            // tboxCantidad
-            // 
-            this.tboxCantidad.Location = new System.Drawing.Point(191, 247);
-            this.tboxCantidad.Name = "tboxCantidad";
-            this.tboxCantidad.Size = new System.Drawing.Size(100, 20);
-            this.tboxCantidad.TabIndex = 12;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(114, 250);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Cantidad";
             // 
             // tboxPrecio
             // 
@@ -196,7 +178,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(122, 358);
+            this.label7.Location = new System.Drawing.Point(122, 323);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 13);
             this.label7.TabIndex = 10;
@@ -204,7 +186,7 @@
             // 
             // unidadTbox
             // 
-            this.unidadTbox.Location = new System.Drawing.Point(191, 355);
+            this.unidadTbox.Location = new System.Drawing.Point(191, 320);
             this.unidadTbox.Name = "unidadTbox";
             this.unidadTbox.Size = new System.Drawing.Size(100, 20);
             this.unidadTbox.TabIndex = 17;
@@ -224,8 +206,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tboxStockDisponible);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.tboxCantidad);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.tboxPrecio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tboxIdMaterial);
@@ -253,8 +233,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tboxStockDisponible;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tboxCantidad;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tboxPrecio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tboxDescripcion;

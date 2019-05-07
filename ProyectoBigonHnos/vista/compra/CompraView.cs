@@ -34,14 +34,14 @@ namespace ProyectoBigonHnos.vista.compra
 
         public void ActualizarVista()
         {
+            comprasRealizadasDataGrid.Rows.Clear();
+            controlador.cargarComprasRealizadas();
             try
             {
-                comprasRealizadasDataGrid.Rows.Clear();
-                controlador.cargarComprasRealizadas();
             }
             catch(Exception ex)
             {
-                MessageBox.Show("No se completo la compra");
+                MessageBox.Show(ex.Message);
             }
             
         }

@@ -27,7 +27,7 @@ namespace ProyectoBigonHnos.vista.materiales
         {
             tboxIdMaterial.Text = id.ToString();
             tboxDescripcion.Text = descripcion;
-            tboxCantidad.Text = cantidad.ToString();
+            //tboxCantidad.Text = cantidad.ToString();
             tboxPrecio.Text = precio.ToString();
             tboxStockDisponible.Text = stockDisponible.ToString();
             tboxMinimo.Text = stockMinimo.ToString();
@@ -39,13 +39,13 @@ namespace ProyectoBigonHnos.vista.materiales
         {
             int idMaterial = int.Parse(tboxIdMaterial.Text);
             string descripcion = tboxDescripcion.Text;
-            int cantidad = int.Parse(tboxCantidad.Text);
+            
             double precio = double.Parse(tboxPrecio.Text);
             int stockDisponible = int.Parse(tboxStockDisponible.Text);
             int stockMinimo = int.Parse(tboxMinimo.Text);
             string unidad = unidadTbox.Text;
 
-            controlador.modificarMaterial(idMaterial, descripcion, cantidad, precio, stockDisponible, stockMinimo, unidad);
+            controlador.modificarMaterial(idMaterial, descripcion, precio, stockDisponible, stockMinimo, unidad);
 
             Dispose();
         }

@@ -21,7 +21,7 @@ namespace ProyectoBigonHnos.controladores
             this.vista = vista;
             catalogo = CatalogoDeMateriales.getInstancia();
 
-            cargarMateriales();
+            //cargarMateriales();
         }
 
         public GestionarMaterialControlador()
@@ -39,7 +39,7 @@ namespace ProyectoBigonHnos.controladores
             catalogo.borrarMaterial(idMaterial);
         }
 
-        public void modificarMaterial(int idMaterial, string descripcion, int cantidad, double precio, int stockDisponible, int stockMinimo, string unidad)
+        public void modificarMaterial(int idMaterial, string descripcion, double precio, int stockDisponible, int stockMinimo, string unidad)
         {
             catalogo.editarMaterial(idMaterial, descripcion,  precio, stockDisponible, stockMinimo, unidad);
         }

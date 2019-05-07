@@ -16,11 +16,13 @@ namespace ProyectoBigonHnos.dominio
         private Negocio negocio;
 
         private ICompraView vista;
+        Empleado empleadoLogueado;
 
         public CompraControlador(Empleado empleadoLogueado)
         {
             negocio = Negocio.getNegocio();
-            agregarEmpleado(empleadoLogueado);
+            this.empleadoLogueado = empleadoLogueado;
+            //agregarEmpleado(empleadoLogueado);
         }
         /*
         public CompraControlador(Negocio negocio)
@@ -81,7 +83,7 @@ namespace ProyectoBigonHnos.dominio
         internal void cargarComprasRealizadas()
         {
             List<Compra> comprasRealizadas = PersistenciaFacade.getInstance().obtenerTodos<Compra>();
-
+            
             CompraView view = (CompraView)vista;
 
             foreach (Compra comp in comprasRealizadas)
@@ -110,13 +112,14 @@ namespace ProyectoBigonHnos.dominio
                 controladorMaterial.modificarMaterial(
                     lc.material.IdMaterial,
                     lc.material.Descripcion,
-                    lc.material.Cantidad,
+
                     lc.material.Precio,
                     cantidadComprada,
                     lc.material.StockMinimo,
                     lc.material.tipoUnidad);
             }
 
+            PersistenciaFacade.getInstance().actualiarObjeto(compra);
             CompraDetalleView view = (CompraDetalleView)vista;
             view.mostrarEstado(compra.estado.ToString());
         }
@@ -173,6 +176,7 @@ namespace ProyectoBigonHnos.dominio
 
         public void confirmarComprar()
         {
+            agregarEmpleado(empleadoLogueado);
             compra.seHaCompletado();
             //compra.mostrar();
 

@@ -88,7 +88,6 @@ namespace ProyectoBigonHnos.dominio
                 controlador.modificarMaterial(
                     materialNecesario.material.IdMaterial,
                     materialNecesario.material.Descripcion,
-                    materialNecesario.material.Cantidad,
                     materialNecesario.material.Precio,
                     materialNecesario.material.StockDisponible - materialNecesario.cantidad,
                     materialNecesario.material.StockMinimo,

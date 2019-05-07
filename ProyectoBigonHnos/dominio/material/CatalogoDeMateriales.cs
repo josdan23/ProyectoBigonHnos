@@ -53,9 +53,15 @@ namespace ProyectoBigonHnos.dominio
 
         public void editarMaterial(int id, string descripcion,  double precio, int stockDisponible, int stockMinimo, string unidad)
         {
-            Material material = new Material(descripcion, precio, stockDisponible, stockMinimo, unidad);
-            material.IdMaterial = id;
-            persistencia.actualiarObjeto(material);
+            Material materialRecuperado = persistencia.obtenerObjeto<Material>(id);
+            materialRecuperado.Descripcion = descripcion;
+            materialRecuperado.Precio = precio;
+            materialRecuperado.StockDisponible = stockDisponible;
+            materialRecuperado.StockMinimo = stockMinimo;
+            materialRecuperado.tipoUnidad = unidad;
+            //Material material = new Material(descripcion, precio, stockDisponible, stockMinimo, unidad);
+            //material.IdMaterial = id;
+            persistencia.actualiarObjeto(materialRecuperado);
         }
 
         public List<Material> obtenerMateriales()
