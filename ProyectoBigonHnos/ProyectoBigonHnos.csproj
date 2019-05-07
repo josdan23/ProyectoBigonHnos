@@ -92,10 +92,12 @@
     <Compile Include="data\GrupoFamiliarDao\GrupoFamiliarDaoImpl.cs" />
     <Compile Include="data\LineaCompraDao\LineaCompraDaoImpl.cs" />
     <Compile Include="data\LineaLiquidacionDao\LineaLiquidacionDaoImpl.cs" />
+    <Compile Include="data\LineaPedidoDao\LineaPedidoDaoImpl.cs" />
     <Compile Include="data\LiquidacionDao\LiquidacionDaoImpl.cs" />
     <Compile Include="data\ListaMaterialesDao\IListaMaterialDao.cs" />
     <Compile Include="data\ListaMaterialesDao\ListaMaterialDaoListImpl.cs" />
     <Compile Include="data\MaterialDao\MaterialDaoImpl.cs" />
+    <Compile Include="data\PedidoDao\PedidoDaoImpl.cs" />
     <Compile Include="data\PersistenciaFacade.cs" />
     <Compile Include="data\DBConector.cs" />
     <Compile Include="data\DomicilioDao\DomicilioDaoImpl.cs" />
