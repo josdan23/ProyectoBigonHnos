@@ -42,16 +42,12 @@ namespace ProyectoBigonHnos
             con.agregarDomicilio("san martin", 23, "santa maria", "catamarca");
             con.agregarTelefono("2930230");
             con.confirmarNuevoCliente();
-             */
-          
+             
+          */
             Login vista = new Login();
             vista.unirControlador(new LoginControlador());
 
-            // agregarConceptos();
-
-            Cliente cliente = PersistenciaFacade.getInstance().obtenerObjeto<Cliente>(1);
-            Console.WriteLine(cliente);
-
+             //agregarConceptos();
 
             Application.EnableVisualStyles();
             Application.Run(vista);

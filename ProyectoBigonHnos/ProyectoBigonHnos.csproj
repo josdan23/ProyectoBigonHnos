@@ -95,6 +95,7 @@
     <Compile Include="data\LineaPedidoDao\LineaPedidoDaoImpl.cs" />
     <Compile Include="data\LiquidacionDao\LiquidacionDaoImpl.cs" />
     <Compile Include="data\ListaMaterialesDao\IListaMaterialDao.cs" />
+    <Compile Include="data\ListaMaterialesDao\ListaMaterialDaoImpl.cs" />
     <Compile Include="data\ListaMaterialesDao\ListaMaterialDaoListImpl.cs" />
     <Compile Include="data\MaterialDao\MaterialDaoImpl.cs" />
     <Compile Include="data\PedidoDao\PedidoDaoImpl.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="data\UsuarioDao\UsuarioDaoImpl.cs" />
     <Compile Include="data\UsuarioDao\UsuarioDaoListImpl.cs" />
     <Compile Include="data\VentaDao\IVentaDao.cs" />
+    <Compile Include="data\VentaDao\VentaDaoImpl.cs" />
     <Compile Include="data\VentaDao\VentaDaoListImpl.cs" />
     <Compile Include="dominio\liquidacion\Concepto.cs" />
     <Compile Include="dominio\liquidacion\ConceptosDatos.cs" />

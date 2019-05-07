@@ -11,6 +11,7 @@ namespace ProyectoBigonHnos.dominio.pedido
         public int idListaDeMateriales { get; set; }
         public Material material { get; set; }
         public int cantidad { get; set; }
+        public int idPedido { get; set; }
 
         public ListaDeMateriales(Material material, int cantidad)
         {
