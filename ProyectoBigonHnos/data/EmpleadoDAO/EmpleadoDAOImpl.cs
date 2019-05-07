@@ -27,8 +27,7 @@ namespace ProyectoBigonHnos.data.EmpleadoDao
 
             IUsuarioDAO usuarioDao = new UsuarioDaoImpl();
             usuarioDao.actualizar(t.Usuario);
-            Console.WriteLine("fechaEgreso: "+t.FechaEgreso.ToShortDateString());
-            
+
             string query = String.Format("update empleado set legajo = \'{0}\', fecha_ingreso=\'{1}\', fecha_egreso=\'{2}\', categoria = \'{3}\', cuil=\'{4}\', persona_id_persona={5}, usuario_id_usuario={6} where id_empleado={7};",
                 t.Legajo,
                 t.FechaIngreso.ToShortDateString(),

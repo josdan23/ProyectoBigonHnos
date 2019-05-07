@@ -40,13 +40,16 @@ namespace ProyectoBigonHnos.data.ClienteDao
 
         public dominio.Cliente leerPorId(int id)
         {
+            /*
             string query = string.Format("select * from cliente, persona, domicilio, telefono, localidad, provincia " +
                 "where persona_id_persona = id_persona and" +
                 " telefono_id_telefono = id_telefono " +
                 "and domicilio_id_domicilio = id_domicilio " +
                 "and localidad_id_localidad = id_localidad " +
                 "and provincia_id_provincia = id_provincia " +
-                "and id_cliente = {0};", id);
+                "and id_cliente = {0};", id);*/
+
+            string query = string.Format("select * from cliente where id_cliente = {0};", id);
 
             foreach (List<Object> unRegistro in db.consultarQuery(query))
             {
@@ -59,11 +62,21 @@ namespace ProyectoBigonHnos.data.ClienteDao
 
         public List<dominio.Cliente> listarTodos()
         {
+            /*
             string query = string.Format("select * from cliente, persona, domicilio, telefono " +
                 "where persona_id_persona = id_persona " +
                 "and telefono_id_telefono = id_telefono " +
-                "and domicilio_id_domicilio = id_domicilio");
-
+ 
+            string query = string.Format("select * from cliente, persona, domicilio, telefono, localidad, provincia " +
+                        "select * from cliente, persona, domicilio, telefono, localidad, provincia " +
+                "where persona_id_persona = id_persona and" +
+                " telefono_id_telefono = id_telefono " +
+                "and domicilio_id_domicilio = id_domicilio " +
+                "and localidad_id_localidad = id_localidad " +
+                "and provincia_id_provincia = id_provincia ");
+                               "and domicilio_id_domicilio = id_domicilio");
+*/
+            String query = string.Format("select * from cliente");
             List<List<Object>> todosLosRegistros = db.consultarQuery(query);
 
             List<dominio.Cliente> todosLosClientes = new List<dominio.Cliente>();
@@ -92,6 +105,11 @@ namespace ProyectoBigonHnos.data.ClienteDao
         {
             int idCliente = (int) registro.ElementAt(0);
             int idPersona = (int)registro.ElementAt(1);
+
+            IPersonaDAO personaDAO = new PersonaDaoImpl();
+            Persona persona = personaDAO.leerPorId(idPersona);
+
+            /*
             string dni = (string)registro.ElementAt(3);
             string nombre = (string)registro.ElementAt(4);
             string apellido = (string)registro.ElementAt(5);
@@ -104,23 +122,27 @@ namespace ProyectoBigonHnos.data.ClienteDao
             string nombreProvincia = (string)registro.ElementAt(18);
             int idTelefono = (int)registro.ElementAt(12);
             string numeroTelefono = (string)registro.ElementAt(13);
+            */
 
-            dominio.Domicilio domicilio = new Domicilio(calle, numero, localidad, nombreProvincia);
-            domicilio.IdDomicilio = idDomicilio;
+            //dominio.Domicilio domicilio = new Domicilio(calle, numero, localidad, nombreProvincia);
+            Domicilio domicilio = persona.Domicilioes[0];
+            //domicilio.IdDomicilio = idDomicilio;
 
-            domicilio.Localidad.IdLocalidad = idLocalidad;
+            //domicilio.Localidad.IdLocalidad = idLocalidad;
 
-            domicilio.Localidad.Provincia.IdProvincia = idProvincia;
+            // domicilio.Localidad.Provincia.IdProvincia = idProvincia;
 
-            dominio.Telefono telefono = new Telefono(numeroTelefono);
-            telefono.IdTelefono = idTelefono;
+            //dominio.Telefono telefono = new Telefono(numeroTelefono);
+            Telefono telefono = persona.Telefonos[0];
+           // telefono.IdTelefono = idTelefono;
 
-            dominio.Cliente cliente = new dominio.Cliente(nombre, apellido, dni);
+            dominio.Cliente cliente = new dominio.Cliente(persona.Nombre, persona.Apellido, persona.Dni);
             cliente.agregarDomicilio(domicilio);
             cliente.agregarTelefono(telefono);
             cliente.IdCliente = idCliente;
 
             cliente.IdPersona = idPersona;
+           
 
             return cliente;
         }
