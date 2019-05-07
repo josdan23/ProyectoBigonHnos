@@ -81,6 +81,8 @@ namespace ProyectoBigonHnos.data.ListaMaterialesDao
             IMaterialDao materialDao = new MaterialDaoImpl();
             Material material = materialDao.leerPorId(idMaterial);
             ListaDeMateriales listaDeMateriales = new ListaDeMateriales(material, cantidad);
+            listaDeMateriales.idPedido = idPedido;
+            listaDeMateriales.idListaDeMateriales = idListaMaterial;
 
             return listaDeMateriales;
         }

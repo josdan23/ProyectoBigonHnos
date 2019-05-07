@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
+            this.imprimirBtn = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.comprasRealizadasDataGrid = new System.Windows.Forms.DataGridView();
             this.colIdCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +43,6 @@
             this.colEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDetalle = new System.Windows.Forms.Button();
-            this.imprimirBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -84,7 +83,6 @@
             // 
             this.panel2.AutoSize = true;
             this.panel2.Controls.Add(this.btnEliminar);
-            this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.imprimirBtn);
             this.panel2.Controls.Add(this.btnNuevo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -109,20 +107,20 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // btnEditar
+            // imprimirBtn
             // 
-            this.btnEditar.Enabled = false;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Image = global::ProyectoBigonHnos.Properties.Resources.editar_icon;
-            this.btnEditar.Location = new System.Drawing.Point(336, 8);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(91, 42);
-            this.btnEditar.TabIndex = 0;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.imprimirBtn.FlatAppearance.BorderSize = 0;
+            this.imprimirBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imprimirBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imprimirBtn.Image = global::ProyectoBigonHnos.Properties.Resources.ic_local_printshop_24px;
+            this.imprimirBtn.Location = new System.Drawing.Point(238, 8);
+            this.imprimirBtn.Name = "imprimirBtn";
+            this.imprimirBtn.Size = new System.Drawing.Size(91, 42);
+            this.imprimirBtn.TabIndex = 0;
+            this.imprimirBtn.Text = "Imprimir";
+            this.imprimirBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.imprimirBtn.UseVisualStyleBackColor = true;
+            this.imprimirBtn.Click += new System.EventHandler(this.imprimirBtn_Click);
             // 
             // btnNuevo
             // 
@@ -130,7 +128,7 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Image = global::ProyectoBigonHnos.Properties.Resources.nuevo_icon;
-            this.btnNuevo.Location = new System.Drawing.Point(239, 8);
+            this.btnNuevo.Location = new System.Drawing.Point(336, 8);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(91, 42);
             this.btnNuevo.TabIndex = 0;
@@ -152,14 +150,14 @@
             this.comprasRealizadasDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.comprasRealizadasDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.comprasRealizadasDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.comprasRealizadasDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.comprasRealizadasDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.comprasRealizadasDataGrid.ColumnHeadersHeight = 40;
             this.comprasRealizadasDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.comprasRealizadasDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -234,21 +232,6 @@
             this.btnDetalle.UseVisualStyleBackColor = true;
             this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
-            // imprimirBtn
-            // 
-            this.imprimirBtn.FlatAppearance.BorderSize = 0;
-            this.imprimirBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.imprimirBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.imprimirBtn.Image = global::ProyectoBigonHnos.Properties.Resources.ic_local_printshop_24px;
-            this.imprimirBtn.Location = new System.Drawing.Point(141, 8);
-            this.imprimirBtn.Name = "imprimirBtn";
-            this.imprimirBtn.Size = new System.Drawing.Size(91, 42);
-            this.imprimirBtn.TabIndex = 0;
-            this.imprimirBtn.Text = "Imprimir";
-            this.imprimirBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.imprimirBtn.UseVisualStyleBackColor = true;
-            this.imprimirBtn.Click += new System.EventHandler(this.imprimirBtn_Click);
-            // 
             // CompraView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,7 +260,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DataGridView comprasRealizadasDataGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdCompra;

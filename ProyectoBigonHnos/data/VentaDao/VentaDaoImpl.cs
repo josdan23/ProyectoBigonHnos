@@ -61,7 +61,7 @@ namespace ProyectoBigonHnos.data.VentaDao
 
         public void registrar(Venta t)
         {
-            string query = string.Format("insert into venta (fecha, iva, importe_total, cliente_id_cliente, empleado_id_empleado, pedido_id_pedido) values (\'{0}\', {1}, {2}, {3}, {4}, {5};",
+            string query = string.Format("insert into venta (fecha, iva, importe_total, cliente_id_cliente, empleado_id_empleado, pedido_id_pedido) values (\'{0}\', {1}, {2}, {3}, {4}, {5});",
                 t.fechaDeVenta.ToShortDateString(),
                 t.iva.ToString(CultureInfo.InvariantCulture),
                 t.obtenerImporteTotal().ToString(CultureInfo.InvariantCulture),

@@ -100,7 +100,7 @@ namespace ProyectoBigonHnos.vista.compra
 
         private void seleccionarFila(object sender, DataGridViewCellEventArgs e)
         {
-            btnEditar.Enabled = true;
+          
             btnEliminar.Enabled = true;
             btnDetalle.Enabled = true;
         }
@@ -108,6 +108,11 @@ namespace ProyectoBigonHnos.vista.compra
         private void imprimirBtn_Click(object sender, EventArgs e)
         {
             controlador.imprimir();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
